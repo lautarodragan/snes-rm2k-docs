@@ -1,0 +1,12 @@
+[book]
+title = "RPG Maker 2000 on the Super Nintendo"
+authors = ["taro"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "docs"
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/lautarodragan/snes-rm2k-docs"
