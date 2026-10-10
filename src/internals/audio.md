@@ -41,7 +41,7 @@ writes            --dsp_music-->        the SPC700 driver
   `parches/auto/musica/techos.toml` in the ABL port (`just techos`): see
   `ceilings` in `game.rs`.
 - **The samples come from the SoundFont** the game was composed with
-  (`samples.rs`; `ABL_SOUNDFONT` points to another), and Gunter, which the
+  (`samples.rs`; `SOUNDFONT` points to another), and Gunter, which the
   compiler uses as a library, turns them into BRR.
 - **A single sample bank for the whole cartridge, uploaded in packages, one
   per map**, and each sample with the budget of its worst package: `Bank`

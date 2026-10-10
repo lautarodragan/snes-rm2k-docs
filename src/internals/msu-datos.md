@@ -108,7 +108,7 @@ named by the `EnemyEncounter` and `ChangeBattleBG` commands of the whole
 game, those of the map tree and those of the terrains. They are sorted by
 name ignoring case, which is how RM2k looks them up, and each one's place in
 that list is its **number**: `scene.game_backdrops`. A name that is in
-neither the game nor the RTP (`ABL_RTP_DIR`) doesn't go in; that battle
+neither the game nor the RTP (`RTP_DIR`) doesn't go in; that battle
 goes without a backdrop, as in RM2k.
 
 Which backdrop a battle asks for is RM2k's rule —`Game_Map::SetupBattle`
