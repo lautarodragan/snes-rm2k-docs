@@ -68,7 +68,7 @@ writes            --dsp_music-->        the SPC700 driver
   `paid_by_music` —the thunder of the opening and the ones taro chose whole
   even if they cost— are paid for by the music of their package: [the
   thunder goes whole and the rain pays for
-  it](../decisions/el-trueno-va-entero-y-paga-la-lluvia.md). One that
+  it](../ports/abl/decisions/el-trueno-va-entero-y-paga-la-lluvia.md). One that
   sounds with another sample in one map is an alias: `per_map`. All three
   belong to the game, and each entry carries its reason in the file.
 - **`FadeOutBGM` lowers the theme and nothing else**: the volume of each

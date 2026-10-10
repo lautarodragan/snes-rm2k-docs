@@ -20,8 +20,8 @@ go one level down, close to the code.
 
 ## Internals and research
 
-The difference that matters is between these pages and the
-[research](../research/README.md):
+The difference that matters is between these pages and the dated
+studies, the research:
 
 - **An internals page has to be up to date, or it lies.** That is why it is
   best kept short and pointing at the code instead of repeating it: what
