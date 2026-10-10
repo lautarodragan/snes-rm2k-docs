@@ -120,6 +120,7 @@
     - [The missing commands](research/2026-10-05-los-comandos-que-faltan.md)
     - [Panoramas](research/2026-10-05-los-panoramas.md)
     - [Other games: the survey](research/2026-10-05-otros-juegos.md)
+    - [Other games, measured again](research/2026-10-10-otros-juegos-de-nuevo.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)

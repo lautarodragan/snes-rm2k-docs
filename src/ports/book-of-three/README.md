@@ -1,5 +1,27 @@
 # The Book of Three
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds** with A Blurred Line's System; with its own,
+  "the window needs 267 tiles —27 of its frame and its arrow— and the bank
+  has 256", as on 2026-10-06.
+- **It only needs map 46 out** (its tile animation is 10,432 bytes of the
+  8,192 reserved in WRAM); the committed project still leaves out 44, 69 and
+  74 too, which build now.
+- **Each map**, next to the start map: 88 of 89 (85 on 2026-10-05).
+- **The pages that compile**: 1,271 of 1,282 on the maps, 19 of 25 common
+  events, 359 of 746 troop pages, unchanged since 2026-10-06. In the troops,
+  `ChangeMonsterCondition`, `ControlVars`, `ChangeItems` and
+  `TerminateBattle`.
+- Boot: 35 of the 44 frames.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

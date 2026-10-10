@@ -1,5 +1,24 @@
 # El Dorado
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds with every map and no crutch**: its own System,
+  no exclusions. As committed it is the same.
+- **Each map**, next to the start map: 13 of 13 (9 of 13 on 2026-10-05).
+- **The pages that compile**: 966 of 972 on the maps, 10 of 10 common
+  events, 0 of 80 troop pages (all with a condition the ROM doesn't check).
+  What is left on the maps is six pages, one command each.
+- **What degrades**: the route graphics table of 8 is full in all 13 maps,
+  and 13 maps don't draw some of their pictures.
+- Boot: 19 of the 44 frames.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

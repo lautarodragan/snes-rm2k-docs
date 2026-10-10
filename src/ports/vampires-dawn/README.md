@@ -1,5 +1,27 @@
 # Vampires Dawn
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **It still builds no cartridge**, and two limits of the whole game
+  showed up: its `Music/` has 281 songs and the track number is a byte
+  (unused files count too); and, with a copy of the game that only has the
+  125 songs it names, its troops take 470 members where the table is one
+  byte. Its start map, 3, doesn't fit the boot either: 46 of the 44 frames.
+- With its own System, "the window needs 262 tiles of 256".
+- **Each map**, next to map 8 and with the 125 songs: 359 of 440. What
+  stops the rest: a song with more than 255 sounds (28), OAM (25), more
+  than 120 events (15), VRAM (5), the tile animation in WRAM (4),
+  panoramas (3).
+- **The pages that compile**: 21,272 of 22,977 on the maps, 14 of 52 common
+  events, 0 of 362 troop pages.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

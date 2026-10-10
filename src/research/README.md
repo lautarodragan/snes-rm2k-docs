@@ -39,3 +39,5 @@ By date:
   — 2026-10-05
 - [Panoramas](2026-10-05-los-panoramas.md) — 2026-10-05
 - [Other games: the survey](2026-10-05-otros-juegos.md) — 2026-10-05
+- [Other games, measured again](2026-10-10-otros-juegos-de-nuevo.md)
+  — 2026-10-10

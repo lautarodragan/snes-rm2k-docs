@@ -1,5 +1,27 @@
 # Dooms 2
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds** with A Blurred Line's System and starting on
+  map 2. With its own System, the actor choice's windows reach `$4840` and
+  their tilemap is at `$4800`.
+- **It only needs 1, 10, 14 and 63 out**: map 1 (choosing a character)
+  makes the slot screen and the menu gather 524 tiles of 448, and the other
+  three have a song with more than 255 sounds. The committed project still
+  leaves out 45, 58 and 59 too, which build now.
+- **Each map**, next to the start map: 89 of 93, the same four.
+- **The pages that compile**: 482 of 496 on the maps (341 on 2026-10-05),
+  10 of 10 common events, 1 of 82 troop pages. What is left:
+  `ChangeScreenTransitions`, a few routes, `EnterHeroName`, `PlayMovie`.
+- **What degrades**: "it doesn't rain here" in 82 maps, and the faces.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

@@ -1,5 +1,28 @@
 # Desert Nightmare
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds** with A Blurred Line's System and
+  `party = [1]`. With its own System, "the End Game screen uses 18 pairs of
+  colours and a 4bpp palette has 16"; with an empty party, "the party is
+  empty".
+- **It needs twelve maps out, not twenty-four**: the six panoramas without
+  a VRAM layout, the three with more than 104 NPCs, the two with more than
+  120 events and map 182's tile animation. The committed project still
+  leaves out the survey's twenty-four.
+- **Each map**, next to the start map: 177 of 189, the same twelve.
+- **The pages that compile**: 7,277 of 7,340 on the maps (7,150 on
+  2026-10-06), 28 of 30 common events, 0 of 100 troop pages. What is left
+  is mostly `ControlVars` reading an event's screen position.
+- **What degrades**: 136 maps don't draw some of their pictures.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

@@ -1,5 +1,26 @@
 # The Frozen World
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds** with A Blurred Line's System; with its own,
+  "the window needs 266 tiles of 256", as on 2026-10-06. It starts without
+  a title screen: the title doesn't fit in VRAM, and that only warns.
+- **It only needs maps 1 and 2 out**: map 2's code is 38,179 bytes and
+  19,968 fit in WRAM; map 1 asks for 1.8 MB of code alone, and with the
+  others, its hero flash shares a palette with an NPC. The committed
+  project still leaves out 69 and 84 too, which build now.
+- **Each map**, next to the start map: 153 of 155.
+- **The pages that compile**: 3,819 of 3,891 on the maps (3,554 on
+  2026-10-05), 88 of 100 common events, 0 of 80 troop pages. What is left:
+  messages, `ChangeMapTileset`, `ShowChoice`, and switches past 1,024.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it

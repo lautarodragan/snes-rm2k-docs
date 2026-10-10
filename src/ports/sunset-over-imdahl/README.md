@@ -1,5 +1,25 @@
 # Sunset Over Imdahl
 
+## As of 2026-10-10
+
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> without fixing anything. What follows the next heading is the snapshot
+> of 2026-10-06, kept as it was.
+
+- **The cartridge builds with every map**, its own System and the same
+  crutch: `party = [1]`; without it, "the party is empty".
+- **Each map**, next to the start map: 65 of 65.
+- **The pages that compile**: 1,266 of 1,369 on the maps (as on
+  2026-10-06), 6 of 8 common events, 0 of 1 troop page. What is left is
+  mostly routes —the hero's diagonal moves—, then `FlashSprite` and
+  `PanScreen`.
+- **It takes hours to build**: 138 big pictures in the background layer,
+  minutes each; about 2 h 40 min that day, with other runs on the machine.
+- **What degrades**: 43 maps don't draw some of their pictures.
+
+## As of 2026-10-06
+
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
 > measured on `24e0223e` of snes-rm2k) and what the tasks that followed it
