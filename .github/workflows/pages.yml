@@ -35,7 +35,7 @@ jobs:
             | tar -xz -C "$HOME/.local/bin"
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - uses: actions/configure-pages@v6
-      - run: mdbook build
+      - run: mdbook build --dest-dir book
       - uses: actions/upload-pages-artifact@v5
         with:
           path: book
