@@ -80,6 +80,7 @@
     - [Events and movement]()
         - [The phase of still events that animate](divergences/la-fase-de-los-quietos-que-animan.md)
         - [More than four still events that animate](divergences/mas-de-cuatro-quietos-que-animan.md)
+        - [Drawn events that do not fit in the table](divergences/los-eventos-que-no-entran-en-la-tabla.md)
         - [What turning toward the hero does not model](divergences/lo-que-el-giro-hacia-el-heroe-no-modela.md)
         - [What collision with events does not model](divergences/lo-que-la-colision-con-los-eventos-no-modela.md)
         - [A blocked step in a forced route](divergences/paso-bloqueado-de-una-ruta-forzada.md)
