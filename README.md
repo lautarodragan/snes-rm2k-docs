@@ -1,4 +1,4 @@
-# snes-rm2k-docs
+# The Advocate
 
 Documentation for the tools that port RPG Maker 2000 games to the Super
 Nintendo. It is an [mdBook](https://rust-lang.github.io/mdBook/): the

@@ -6,7 +6,7 @@ Since 2026-09-11 the event the hero triggers **turns toward him**, like the
 `SetFacing(GetDirectionToCharacter(GetPlayer()))` in
 `Game_Event::ScheduleForegroundExecution`. The rules are in GIRO, in
 `tools/port/eventos.py`, and in `turn_fire` in
-`tools/runtime/turn_toward_hero.s`, both in snes-rm2k. What is left out:
+`tools/runtime/turn_toward_hero.s`, both in the-advocate. What is left out:
 
 * **Events that walk on their own do not turn.** Their own route is always
   running, and with a route running it decides where they face. In RM2k the

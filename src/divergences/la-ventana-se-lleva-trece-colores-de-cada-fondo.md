@@ -25,7 +25,7 @@ The window is BG2 at 4 bits and the arrow and the bar go in its tiles, so
 their colors have to be in the window's palette. The other way to draw them
 without colors of their own —sprites— does not work: the object mask hides
 them on the window's lines, so that events "above" are not seen through it
-(see `build_hdma` in `messages.s` in snes-rm2k).
+(see `build_hdma` in `messages.s` in the-advocate).
 
 What was not tried: rewriting by HDMA, only on the window's lines, the
 palettes of the upper layer —which is not visible on those lines, because

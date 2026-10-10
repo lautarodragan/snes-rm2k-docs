@@ -3,7 +3,7 @@
 ## What
 
 Collision with events **is there** —see its row in the mechanics table of
-`docs/port/events.md` in snes-rm2k— and it leaves out four things RM2k does:
+`docs/port/events.md` in the-advocate— and it leaves out four things RM2k does:
 
 * **`overlap_forbidden`**, which is 17 pages of the game;
 * the **conflict of an event with a tile graphic against its own block**;
@@ -24,6 +24,6 @@ measured, but **the droid on map 2 depends on it**.
 
 It is not seen: no test fails because of this, and no page that compiles
 today exercises the first three. The first two points are also noted in the
-comment on `cell_blocked`, in `tools/runtime/event_pages.s` in snes-rm2k,
+comment on `cell_blocked`, in `tools/runtime/event_pages.s` in the-advocate,
 which is where the mechanic lives: the `overlap_forbidden` field is read and
 ignored, it is not that the page fails to compile.

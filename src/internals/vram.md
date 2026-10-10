@@ -135,7 +135,7 @@ the events start they add up to 33 on one screen, and `wally` warns about
 it. The console does know, because a row that isn't drawn asks for
 nothing: in the celebration they are 26. The measurement of the whole game,
 and which aids were tried, in the task `la-cache-de-ranuras.md` in
-snes-rm2k-work.
+the-advocate-work.
 
 ## A big picture doesn't use the layout
 

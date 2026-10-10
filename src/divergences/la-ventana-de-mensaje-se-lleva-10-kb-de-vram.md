@@ -13,7 +13,7 @@ was checked against its decompilation before ruling out alternatives.
 
 Until 2026-10-03 the glyph was 6 wide, RM2k's, and the line had 39
 characters. Since that day the font is variable width —the `low-variable`
-sheet in `tools/rm2k-snes/text/fonts/` in snes-rm2k, or whichever the game
+sheet in `tools/rm2k-snes/text/fonts/` in the-advocate, or whichever the game
 names in `[text] font`— and the line measures **240 pixels**: with that font
 about 49 letters fit, almost as many as RM2k's window, which at 320 wide and
 6 per letter takes about 50.

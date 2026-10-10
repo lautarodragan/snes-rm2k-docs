@@ -12,7 +12,7 @@ finished** —no commands left to give, no step, wait or jump, no route of its
 own: `route_busy`— **goes to the event that asks for it**. The cap is twelve
 moving at once, not twelve on the whole map. The converter warns about it
 instead of stopping. See `reclaim_slot` in `tools/runtime/event_pages.s` in
-snes-rm2k.
+the-advocate.
 
 What the event loses with its slot is what RM2k keeps for it after a route:
 **the speed, the frequency and the flags** the route changed —walking

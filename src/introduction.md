@@ -1,8 +1,8 @@
 # Introduction
 
-This project takes a game made with **RPG Maker 2000** and turns it into a
-**Super Nintendo** cartridge: a ROM that runs on the real console, not an
-emulator of RPG Maker inside one.
+**The Advocate** takes a game made with **RPG Maker 2000** and turns it
+into a **Super Nintendo** cartridge: a ROM that runs on the real console,
+not an emulator of RPG Maker inside one.
 
 It has two halves:
 
@@ -25,6 +25,9 @@ never breaks the ones that don't use it.
 The project was born porting one game, *A Blurred Line*, and grew into
 general tools. Today it is being measured against other RPG Maker 2000
 games as well, to find out what it takes for each of them to be playable.
+
+It is named after the Advocate, that game's A.I., which is fitting: nearly
+all of its code is written by an AI agent, on its author's behalf.
 
 ## When something doesn't fit
 

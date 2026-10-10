@@ -11,7 +11,7 @@ event that opened it stays stopped.
 **Here the window switches off at once.** What was copied is that **the A
 that closes it** is not seen by anyone else: `wait_button` consumes it, and
 the tests in `pruebas/abl/test_piedras.py` in the ABL port
-(snes-rm2k-ports/abl) enforce it. What is left out is that **a new A**
+(the-advocate-ports/abl) enforce it. What is left out is that **a new A**
 pressed within those eight frames does count here —it talks to whoever is in
 front, or pulls a stone— and in RM2k it does not.
 

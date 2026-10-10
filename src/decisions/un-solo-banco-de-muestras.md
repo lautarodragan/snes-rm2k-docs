@@ -15,7 +15,7 @@ inside play a copy and the ones outside stop paying for it.
 the directory. The SRCN the stream writes is the sample's number in the
 cartridge, so two tracks that play piano point at the same one, and SRCN is
 one byte. One copy per track (option B of step 6 of the task
-`tasks/testing/la-calidad-de-la-musica.md` in snes-rm2k-work) would be
+`tasks/testing/la-calidad-de-la-musica.md` in the-advocate-work) would be
 about 370 entries against 255. Until 2026-09-26 SRCN also numbered every
 sound effect in the cartridge; since that day the effects share the slots
 at the end of the directory, because the ARAM gets one package at a time:
@@ -39,7 +39,7 @@ for the tracks of the group that limits it; the worst ones are made first
 until the directory is filled as it was when each sound effect had its own
 entry, and with the entries the effects freed, only those that don't lower
 anyone's rate (see `copies` in
-`tools/rm2k-snes/rm2k-snes-audio/src/bank.rs` in snes-rm2k). And the tracks
+`tools/rm2k-snes/rm2k-snes-audio/src/bank.rs` in the-advocate). And the tracks
 a map turns on only to leave —`lufsorr` on map 3, which plays when there
 are no sound effects left— don't count in the map's package: see
 `Temas.de_salida` in `tools/port/eventos.py`.

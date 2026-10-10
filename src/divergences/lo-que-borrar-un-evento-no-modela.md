@@ -32,7 +32,7 @@ graphic.
 ## How it looks today
 
 It is not seen. `pruebas/rpgmaker/test_borrar_evento_de_verdad.py`, in the
-ABL port (snes-rm2k-ports/abl), enforces what the test event lets you look
+ABL port (the-advocate-ports/abl), enforces what the test event lets you look
 at —that a foreground page keeps going, that the others do not start, and
 that reloading the map brings it back—; what is drawn, what blocks and the
 parallel page that gets cut are covered by playing the cartridge of a game

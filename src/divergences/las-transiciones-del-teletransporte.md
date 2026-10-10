@@ -6,10 +6,10 @@
 erase the screen and which one to show it again. In RM2k they are the twenty
 of the `fades` table of `Game_System::GetTransition`; the ROM does three,
 and the converter decides —`CHANGE_SCREEN_TRANSITIONS` in
-`tools/port/eventos.py` in snes-rm2k—:
+`tools/port/eventos.py` in the-advocate—:
 
 * **the mosaic** (17), with the PPU's MOSAIC register, tied to the
-  brightness ramp. See `tools/runtime/teleport_transition.s` in snes-rm2k;
+  brightness ramp. See `tools/runtime/teleport_transition.s` in the-advocate;
 * **the fade**, which is also what is used for **the ones the console does
   not do**, like the zoom (16): bringing the map closer is mode 7, and the
   map is in mode 3. taro decided it on 2026-09-26, the same as for the
@@ -29,7 +29,7 @@ What is still different from the original:
   blocks.
 * **The zoom is the usual fade.**
 * **The transition does not travel in the save**, and in RM2k it does: see
-  `TRANSITION_ERASE` in `tools/runtime/far_ram.s` in snes-rm2k.
+  `TRANSITION_ERASE` in `tools/runtime/far_ram.s` in the-advocate.
 * **Erasing with "none" is the cut.** In RM2k it does not touch the screen,
   so the fade back goes from the old map to the new one (`screen1` and
   `screen2` of `Transition`); the console has nothing to blend two frames
@@ -53,7 +53,7 @@ the whole game 15 pages ask for it; the ones that use the cut for showing or
 7 (from the edges to the center) are on maps that do not fit.
 
 It is covered by `test_transicion` in `pruebas/rpgmaker/test_comandos_golden.py`
-in the ABL port (snes-rm2k-ports/abl) —goldens halfway through the mosaic
+in the ABL port (the-advocate-ports/abl) —goldens halfway through the mosaic
 and halfway through the zoom—, by `test_borrar_con_el_corte` in the same
 file —brightness at zero and the map loaded on the first tick of the fade,
 against the fade's whole ramp—, by the mosaic and the zoom in
@@ -71,4 +71,4 @@ hero sharp on top.
 
 A game that uses the block, blind or wipe transitions, or the zoom as an
 effect that has to be seen: see
-`tasks/wishlist/las-otras-transiciones-de-rm2k.md` in snes-rm2k-work.
+`tasks/wishlist/las-otras-transiciones-de-rm2k.md` in the-advocate-work.

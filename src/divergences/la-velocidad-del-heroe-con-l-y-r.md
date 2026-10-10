@@ -7,7 +7,7 @@ time, between RM2k's 1 and 6. RM2k has nothing like it: it is taro's, from
 2026-09-30 —"being able to increase or decrease the hero's speed with the R
 and L buttons"—. Like the X autofire, **it only adds**: in RM2k there is no
 button that corresponds to L or R. It is in
-`tools/runtime/hero_speed_keys.s` in snes-rm2k.
+`tools/runtime/hero_speed_keys.s` in the-advocate.
 
 What was decided, and is commented there:
 
@@ -39,7 +39,7 @@ What was decided, and is commented there:
 
 At each speed the hero crosses a cell in 64, 32, 16, 8, 4 and 2 frames.
 `pruebas/rpgmaker/test_velocidad_con_l_y_r.py` in the ABL port
-(snes-rm2k-ports/abl) measures it with the pad: touching nothing, 8; R once,
+(the-advocate-ports/abl) measures it with the pad: touching nothing, 8; R once,
 4; twice, 2; five times, still 2; L once, 16; three times, 64; five times,
 still 64. Also: the press from the cap, that it carries over after a
 teleport, that `ruta-vel` with an offset of +2 walks its steps at 4, 4, 4, 8

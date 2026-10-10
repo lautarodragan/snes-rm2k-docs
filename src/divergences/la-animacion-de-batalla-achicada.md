@@ -10,7 +10,7 @@ cell's alpha.
 Where the box comes from, and the full list of what is lost —the rounded
 alpha, the screen flash that does not reach it, the target without a row,
 the `global` ones—, is in the docstring of `tools/port/animacion.py` in
-snes-rm2k, which is where it is decided. taro accepted the price on
+the-advocate, which is where it is decided. taro accepted the price on
 2026-09-12.
 
 ## Measured

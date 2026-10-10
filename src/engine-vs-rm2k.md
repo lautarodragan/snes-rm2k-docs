@@ -23,7 +23,7 @@ from `rm2k-snes-events culprits`, run over the eight RM2k games the tools
 are measured against.
 
 It is **a snapshot**, taken on 2026-10-06 at commit `3d0c787c` of
-snes-rm2k, and says so at the top. It isn't kept up to date by hand: when
+the-advocate, and says so at the top. It isn't kept up to date by hand: when
 it gets old, it is redone from a newer commit, not edited. Its notes point
 to the divergences and decisions behind each
 item, and to the code and the tasks of that day.

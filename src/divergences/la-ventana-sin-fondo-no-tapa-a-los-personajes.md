@@ -12,7 +12,7 @@ same layer as the one above the map, and mode 3 does not have a third.
   70—. Here the text is BG2 with priority 1, and the hero and the events are
   objects with priority 2, which in mode 3 go in front. With a background it
   does not show because HDMA hides the objects on the window's lines
-  —`mask_*`, in `message_place.s` in snes-rm2k—; without a background they
+  —`mask_*`, in `message_place.s` in the-advocate—; without a background they
   cannot be hidden, because they have to be seen.
 * **The layer above the map is not visible on the window's 80 lines.** On
   those lines BG2 shows the window's tilemap —the plane without a frame,

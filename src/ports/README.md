@@ -1,7 +1,7 @@
 # Ports
 
 RPG Maker 2000 games taken to the Super Nintendo with the tools. They live
-in the snes-rm2k-ports repository, **one directory per game, and each one
+in the the-advocate-ports repository, **one directory per game, and each one
 is a whole project**:
 
 - **`rm2k-snes.toml`**: what the game decides —its name and title, which
@@ -54,7 +54,7 @@ comment in `rm2k-snes.toml`. What the survey sidestepped to get to a
 cartridge —a reduced System graphic, BMPs turned into PNGs, maps
 excluded, no title screen— is in the study, with the cause of each. Until
 2026-10-10 each one was a repository of its own; that day they joined
-snes-rm2k-ports, with their history.
+the-advocate-ports, with their history.
 
 **Their pages here are dated snapshots**: what the survey found on
 2026-10-05 and what the tasks that followed it changed up to 2026-10-06.

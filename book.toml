@@ -1,5 +1,5 @@
 [book]
-title = "RPG Maker 2000 on the Super Nintendo"
+title = "The Advocate"
 authors = ["taro"]
 language = "en"
 src = "src"
@@ -8,4 +8,4 @@ src = "src"
 create-missing = false
 
 [output.html]
-git-repository-url = "https://github.com/lautarodragan/snes-rm2k-docs"
+git-repository-url = "https://github.com/lautarodragan/the-advocate-docs"

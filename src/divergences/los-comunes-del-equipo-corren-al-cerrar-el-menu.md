@@ -12,7 +12,7 @@ its result can change**:
   `ControlSwitches` that turns it on, as if a `CallEvent` followed it;
 * when the pause menu closes, which is where equipment is changed:
   `equipment_commons`, in `tools/runtime/equipment_from_events.s` in
-  snes-rm2k, from `menu_screen`.
+  the-advocate, from `menu_screen`.
 
 It applies to any parallel common event, with a switch, that has nothing but
 `ChangeSkills` and "has such item equipped" branches:
@@ -49,7 +49,7 @@ events every frame, like the maps' parallel pages— was measured on
 
 It is enforced by the three AG7 cases in
 `pruebas/rpgmaker/test_ag7_y_la_planta.py` in the ABL port
-(snes-rm2k-ports/abl): on joining it knows its weapon's skill, changing it
+(the-advocate-ports/abl): on joining it knows its weapon's skill, changing it
 and closing the menu changes it —checked red without the call from the
 menu—, and with the switch off closing the menu touches nothing.
 

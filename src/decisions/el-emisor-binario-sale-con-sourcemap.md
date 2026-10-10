@@ -10,7 +10,7 @@ offset in the `.bin` to which field of what it is, for example "the
 ## Why
 
 From taro, when the binary emitter was proposed, in September 2026; until
-2026-10-10 it was written in `DITTO.md`, in snes-rm2k, which was deleted
+2026-10-10 it was written in `DITTO.md`, in the-advocate, which was deleted
 that day.
 
 Today the comments in the `.inc` are what lets you debug a piece of data,

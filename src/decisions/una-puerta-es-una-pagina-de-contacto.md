@@ -14,4 +14,4 @@ doors on map 10 whose destination switch 231 changes.
 
 The only survivor of that path is `FADE_DOOR`, which today only the test
 harness writes, to drop the game onto a map: it is explained on its line in
-`tools/runtime/low_ram.s` in snes-rm2k.
+`tools/runtime/low_ram.s` in the-advocate.

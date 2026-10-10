@@ -20,7 +20,7 @@ In `release`, on 2026-09-25, the character shares the black on maps 2 and
 23, 26, 28, 32). It changes with the palette distribution: the table and how
 it was obtained are in
 `tasks/testing/el-tinte-no-tine-al-que-comparte-paleta-con-el-cronometro.md`
-in snes-rm2k-work.
+in the-advocate-work.
 
 Which tint exposes it:
 

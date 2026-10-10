@@ -4,7 +4,7 @@
 
 Since 2026-10-04 `ChangeExp` and `ChangeLevel` compile: they are `OP_EXP`
 and, with the message, `OP_LEVEL_PAGE` after it —see `exp_change` and
-`level_page` in `tools/runtime/level.s` in snes-rm2k—. The level, the
+`level_page` in `tools/runtime/level.s` in the-advocate—. The level, the
 experience, the skills, the HP and SP clipped when going down and the text of
 each page are those of easyrpg's `Game_Actor::ChangeExp` and `ChangeLevel`.
 What is not the same:
@@ -29,7 +29,7 @@ What is not the same:
 
 Against the battle model —`rm2k-snes-battle experience`, which is easyrpg's
 in `rm2k-rules`— in `pruebas/rpgmaker/test_experiencia_de_eventos.py` in the
-ABL port (snes-rm2k-ports/abl). It was not measured against RPG_RT: the game
+ABL port (the-advocate-ports/abl). It was not measured against RPG_RT: the game
 does not use the commands, and the order of two skills at the same level
 does not come up for any actor in ABL.
 

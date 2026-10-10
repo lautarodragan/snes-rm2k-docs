@@ -11,7 +11,7 @@ Here the counter is **global**: the column comes from dividing the game tick
 by the speed's `ANIM_CONTINUA`. An event that appears in the middle of the
 game comes in with the cycle already started at any point. The reason —there
 is no per-event byte to keep it in— is in `animate_still` in
-`tools/runtime/animated_stills.s` in snes-rm2k.
+`tools/runtime/animated_stills.s` in the-advocate.
 
 ## Measured
 

@@ -25,7 +25,7 @@ of the one that flashes.
 ## How it looks today
 
 It is guarded by `pruebas/herramientas/test_destello_paleta.py` in the ABL
-port (snes-rm2k-ports/abl), which requires that nobody share the palette of
+port (the-advocate-ports/abl), which requires that nobody share the palette of
 a possible leader, because there the one that leaks is the hero, who is on
 screen all the time. **It protects the leader and not the one that
 flashes**: the target is decided at run time and the hero is the only one

@@ -5,7 +5,7 @@
 The console keeps one row per **drawn event** of the map —every event with a
 CharSet or a tile in some page, on screen or not— in a table in bank 0's
 RAM, and the table has `NPC_MAX` rows (`wally::sprites::npc::NPC_MAX` in
-snes-rm2k). OAM would take a few more; the RAM is what sets the cap, and it
+the-advocate). OAM would take a few more; the RAM is what sets the cap, and it
 is full. In RM2k there is no such cap.
 
 A map with more drawn events than that used to stop the build. Now Wally
@@ -50,7 +50,7 @@ its cartridge came out byte for byte the same.
 
 ## How to reproduce it
 
-`wally/tests/too_many_npcs.rs` in snes-rm2k builds a map over the cap and
+`wally/tests/too_many_npcs.rs` in the-advocate builds a map over the cap and
 checks which rows stay. In a game, converting Vampires Dawn's map 409 says
 in its WARNING which events are not drawn.
 

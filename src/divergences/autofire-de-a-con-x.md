@@ -7,7 +7,7 @@ Holding X presses and releases A by itself: `pad_a` spends
 edge —RM2k closes the message with `Input::IsTriggered`—, each return to on
 is a press. It is for going through text and repeating choices without
 mashing the button. It is all in `read_pad` (`tools/runtime/control.s` in
-snes-rm2k), which is the only place that reads the controller, so it works
+the-advocate), which is the only place that reads the controller, so it works
 on the map, in messages, in menus, in the shop, in battle and on the title
 screen.
 
@@ -38,7 +38,7 @@ constant to be tuned while playing; it has to be a power of two, and an
 `.assert` guards that.
 
 It is covered by `pruebas/rpgmaker/test_autofire.py` in the ABL port
-(snes-rm2k-ports/abl): the rhythm frame by frame, that the real A wins,
+(the-advocate-ports/abl): the rhythm frame by frame, that the real A wins,
 releasing X in each of the eight phases, and the `autofire` case —five
 messages in a row— closed entirely with X held and only one with A held.
 `test_cores.py` runs the same case on both cores.

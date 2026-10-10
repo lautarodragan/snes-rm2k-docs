@@ -10,7 +10,7 @@ the count wraps around and the cycle skips a frame**. In RM2k the counter is
 thirty-two bits wide and that does not happen.
 
 The reason is in `anim_advance` in `tools/runtime/chipset_animation.s` and in
-`TICK_MASCARA` in `tools/rpgmaker/rm2k.py`, both in snes-rm2k: the animation
+`TICK_MASCARA` in `tools/rpgmaker/rm2k.py`, both in the-advocate: the animation
 does not spend a byte of RAM, which was needed because the BSS was full.
 
 ## Measured

@@ -3,7 +3,7 @@
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
-> with the tools of snes-rm2k `1afe6457` and the ports at `951471f`),
+> with the tools of the-advocate `1afe6457` and the ports at `951471f`),
 > without fixing anything. What follows the next heading is the snapshot
 > of 2026-10-06, kept as it was.
 
@@ -24,10 +24,10 @@
 
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
 > ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
-> measured on `24e0223e` of snes-rm2k) and what the tasks that followed it
+> measured on `24e0223e` of the-advocate) and what the tasks that followed it
 > changed up to 2026-10-06. It doesn't describe the port after that date.
 
-The project is `book-of-three/` in snes-rm2k-ports, without MSU-1 and
+The project is `book-of-three/` in the-advocate-ports, without MSU-1 and
 without tests (see [Ports](../README.md)).
 
 ## The game
@@ -80,4 +80,4 @@ custom fonts, an RM2k database.
   ones (2 of 2,185). The map is back in the cartridge, which builds whole.
   (Task `las-animaciones-de-tiles-en-wram.md`.)
 
-The tasks named here are in `tasks/testing/` in snes-rm2k-work.
+The tasks named here are in `tasks/testing/` in the-advocate-work.

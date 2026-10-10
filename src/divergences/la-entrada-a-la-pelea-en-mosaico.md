@@ -5,7 +5,7 @@
 When a battle starts, the map goes to black **in mosaic**: after the two
 flashes, the blocks grow from 2 to 16 while the brightness goes down, with
 the same ramp, frame by frame, the battle uses to go away when it ends. See
-`battle_fade_in` in `tools/runtime/battle_fade.s` in snes-rm2k.
+`battle_fade_in` in `tools/runtime/battle_fade.s` in the-advocate.
 
 RM2k does what the database's `System` says, and *A Blurred Line* asks for
 something else to cover the map: `battle_start_fadeout = 16`, which in the
@@ -36,7 +36,7 @@ there is one, does: it is a background layer.
 
 `test_la_entrada_tapa_el_mapa_con_el_mosaico_de_la_salida`, in
 `pruebas/rpgmaker/test_fundido_de_pelea.py` in the ABL port
-(snes-rm2k-ports/abl), measures the size of the blocks on each frame
+(the-advocate-ports/abl), measures the size of the blocks on each frame
 **by looking at the screen** —in which columns each line's color changes—
 and requires the map's ramp down on the way in to be the same sequence as
 the battle's on the way out. With the fade it found the way in empty.

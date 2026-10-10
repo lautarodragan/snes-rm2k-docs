@@ -12,7 +12,7 @@ decision protects one specific line of code, its reason lives in that
 line's comment and isn't repeated here.
 
 What does **not** go here: what we would like to do and nobody is doing,
-which is the wishlist of tasks in snes-rm2k-work; where the ROM doesn't do
+which is the wishlist of tasks in the-advocate-work; where the ROM doesn't do
 what RM2k does, which is [the divergences](../divergences/README.md); and
 what is half done today, which is the tasks in progress. If a decision
 stops holding because a later one replaced it, **it isn't edited

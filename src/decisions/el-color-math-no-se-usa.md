@@ -4,12 +4,12 @@
 
 **Translucent events aren't drawn with the console's color math**, even
 though it is implemented and verified in the `color-math` tag (in
-snes-rm2k). They are baked: see
+the-advocate). They are baked: see
 [los-translucidos-van-horneados](los-translucidos-van-horneados.md).
 
 **Translucent pictures are**, since 2026-10-02: taro approved Gallareta's
 experiment (the task `testing/varias-imagenes-en-sprites.md` in
-snes-rm2k-work). The two objections below don't apply to a picture in
+the-advocate-work). The two objections below don't apply to a picture in
 sprites: blending is turned on only in object palettes 4 to 7, so the hero
 and the events in 0 to 3 stay opaque and animating, and the message window
 isn't blended. What it does cost, and is in
@@ -49,4 +49,4 @@ And two things that hold even if it doesn't go in:
   bsnes and mesen-s truncate, which is what the chip does, and snes9x
   rounds up when a channel's sum is odd. Since the goldens are snes9x
   captures, a case with color math goes into
-  `pruebas/rpgmaker/test_cores.py` in the ABL port (snes-rm2k-ports/abl).
+  `pruebas/rpgmaker/test_cores.py` in the ABL port (the-advocate-ports/abl).

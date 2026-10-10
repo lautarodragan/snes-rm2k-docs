@@ -13,7 +13,7 @@ works, the battle ends; if it fails, the commands given by the ones before
 are forgotten —a chosen item, which is spent when chosen, goes back to the
 inventory—, the failed escape message is shown and the turn belongs only to
 the enemies, which is `ProcessSceneActionEscape` with `eFailure`. See
-`ba_flee_failed` in `tools/runtime/battle_run.s` in snes-rm2k.
+`ba_flee_failed` in `tools/runtime/battle_run.s` in the-advocate.
 
 You can flee, as in easyrpg (`args.allow_escape`), from a random encounter
 and from an `EnemyEncounter` with `escape_mode` other than 0. Mode 0 is
@@ -39,7 +39,7 @@ in a battle without escape is grayed out. Each character has four commands.
 With the 2015 RPG_RT under Wine, on 2026-10-04, the battle test with troops
 82 and 87: the party menu at the start of each turn, with Escape in white
 —the battle test always allows fleeing—. Where the captures are is said by
-the task, `el-menu-de-la-pelea-como-rm2k.md` in `tasks/` in snes-rm2k-work.
+the task, `el-menu-de-la-pelea-como-rm2k.md` in `tasks/` in the-advocate-work.
 
 ABL's test run covers it in `test_huir_es_del_grupo` —the failed escape,
 with the HP checked against the model— and in

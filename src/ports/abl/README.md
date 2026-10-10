@@ -5,7 +5,7 @@ Nintendo. It is the game the project was born porting, and still the one
 that is ported for real: the others are measured against it (see
 [Ports](../README.md)).
 
-It lives in `abl/` in snes-rm2k-ports. That directory is **the game**: its
+It lives in `abl/` in the-advocate-ports. That directory is **the game**: its
 dump into a format that can be looked at (`data/`), what was decided about
 it while porting it (`parches/`), which cartridges are built and with which
 knobs (`rm2k-snes.toml`), its tests with their goldens (`pruebas/`) and the
@@ -31,19 +31,19 @@ What is **not** here:
 
 - **the tools and the runtime** —what converts the game and the engine
   that runs it on the console—, which live in their own repository,
-  snes-rm2k, and are consumed from the PATH. The architecture decisions
+  the-advocate, and are consumed from the PATH. The architecture decisions
   —mode 3 always, the ExHiROM cartridge, the tables in bank 0— are in
   [The cartridge](../../cartridge/README.md), how each part of the port
   works in [Internals](../../internals/README.md), the console in
   [Reference](../../reference/README.md), and where the ROM doesn't do what
   RM2k does in the [divergences](../../divergences/README.md);
 - **the history up to 2026-10-02**: ABL's repository was born that day
-  from scratch, with the files from snes-rm2k, and the earlier `git log`
+  from scratch, with the files from the-advocate, and the earlier `git log`
   stayed there. What lived at `rom/X` there is `X` here —and since
   2026-10-10, when ABL moved into `abl/` in the ports, `abl/X` in the
   repository—;
 - **where the work stands**: the tasks and the decisions, this game's too,
-  live in their own repository, snes-rm2k-work, since 2026-10-10, to have
+  live in their own repository, the-advocate-work, since 2026-10-10, to have
   a single board. A `workflow/…` in one of this game's files is the same
   path there, without the prefix. How things got here is told by the
   `git log`.
@@ -81,7 +81,7 @@ in `data/README.md`.
 ## How it is built
 
 **The tools have to be installed**, from their repository —`just -f
-tools/justfile install`, in snes-rm2k—, and with them a libretro core,
+tools/justfile install`, in the-advocate—, and with them a libretro core,
 `ca65` and `ld65`: what each one needs, in that repository's README.
 
 ```sh
@@ -117,7 +117,7 @@ nothing in this repository names the path of the other one —
 So **to run ABL with other tools** —those of a checkout where someone is
 changing them— it is enough to put them first on the PATH: the `justfile`
 builds its own from the one it receives. How, in the `AGENTS.md` of
-snes-rm2k-work, which since 2026-10-10 is a single one for all the
+the-advocate-work, which since 2026-10-10 is a single one for all the
 repositories: a "see AGENTS.md" in a file of this repository means that
 one.
 
@@ -125,7 +125,7 @@ one.
 
 It isn't written here, because here it went stale without anyone noticing:
 
-- what is decided and not started is in `tasks/todo/` in snes-rm2k-work,
+- what is decided and not started is in `tasks/todo/` in the-advocate-work,
   and what we would like and nobody is doing in `tasks/wishlist/`;
 - where the ROM doesn't do what RM2k does, in the
   [divergences](../../divergences/README.md);
@@ -165,5 +165,5 @@ research:
   written; the old one stays as it was.
 
 If a task ends in a document instead of code, the document goes to the
-research and the task —in snes-rm2k-work— moves to `tasks/done/` pointing
+research and the task —in the-advocate-work— moves to `tasks/done/` pointing
 at it.

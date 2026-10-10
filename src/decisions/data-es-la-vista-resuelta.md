@@ -30,6 +30,6 @@ format, with the defaults of liblcf's schema, and everything else reads
 what it dumps.
 
 Until 2026-10-10 this, with the story of how it was reached, was in
-`DITTO.md` in snes-rm2k; it was deleted that day, and what holds for an
+`DITTO.md` in the-advocate; it was deleted that day, and what holds for an
 outside reader went into the book, in
 [From a game to a ROM](../pipeline.md).

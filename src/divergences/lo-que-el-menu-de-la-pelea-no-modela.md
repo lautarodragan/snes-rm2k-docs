@@ -6,7 +6,7 @@ Since 2026-10-04 the battle is RM2k's: the scene on top with nothing written
 over it, and the System's windows —with their frame and their bar— in the
 strip below, the party on the left and the commands on the right, the way
 they end up in RM2k after sliding. See `ba_compose` in
-`tools/runtime/battle_skills.s` in snes-rm2k, `screen.rs` in
+`tools/runtime/battle_skills.s` in the-advocate, `screen.rs` in
 `rm2k-snes-battle` and `battle.rs` in `rm2k-snes-screens`. What is not the
 same yet:
 
@@ -41,7 +41,7 @@ same yet:
 With the 2015 RPG_RT under Wine, on 2026-10-04 —the battle test, troops 82
 and 87—, against the ROM with ABL's test run. The side-by-side captures,
 with the ROM, are listed in the task `el-menu-de-la-pelea-como-rm2k.md`, in
-`tasks/` in snes-rm2k-work.
+`tasks/` in the-advocate-work.
 
 ## When it stops being enough
 

@@ -68,7 +68,7 @@ Mednafen state (F5) in the droid fight and reading the WRAM out of the
 
 Since 2026-10-01 the cartridge is ExHiROM, and not every emulator maps it
 like the cartridge does. Measured with the test ROM in A Blurred Line's
-`experimentos/exhirom/` (in snes-rm2k-ports), which sums stretches of the whole map:
+`experimentos/exhirom/` (in the-advocate-ports), which sums stretches of the whole map:
 
 - **snes9x** and **bsnes**: like the cartridge.
 - **mesen-s**, **Mesen2** —unless "strict board mappings" is on— and
@@ -115,7 +115,7 @@ commit `b9fa69d`) and running it against every cartridge. taro confirmed
 the names in the Mesen2 UI on 2026-09-25 —disassembly, RAM variables and
 call stack, stopped on a breakpoint in `wait_button`—, and the source
 view with the ROM opened from `rom/build/release/`, when the game lived in
-the tools' repository, snes-rm2k. From a `just entregar`
+the tools' repository, the-advocate. From a `just entregar`
 build the lookup finds every `.s` and misses only the two generated `.inc`
 files; that was checked with the same reimplementation, not yet in the UI.
 

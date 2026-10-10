@@ -3,7 +3,7 @@
 ## What
 
 The `ShowPicture` pictures that go in sprites —see
-`tools/runtime/picture_far.s` and `tools/port/picture.py` in snes-rm2k— do
+`tools/runtime/picture_far.s` and `tools/port/picture.py` in the-advocate— do
 not do everything they do in RM2k:
 
 * **Transparency comes in three steps**: at 76 % or more it is not visible,

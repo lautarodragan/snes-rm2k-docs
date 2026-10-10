@@ -94,4 +94,4 @@ writes            --dsp_music-->        the SPC700 driver
 Which test covers what: `pruebas/rpgmaker/test_musica_*.py` in the ABL port
 run the ROM —the writes, the voice assignment, the package, the ceilings—
 and the tests of `rm2k-snes-audio` (`just -f tools/justfile crate-test
-rm2k-snes-audio`, in snes-rm2k) look at the stream without a ROM.
+rm2k-snes-audio`, in the-advocate) look at the stream without a ROM.

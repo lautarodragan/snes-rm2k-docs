@@ -5,7 +5,7 @@
 Troop event pages run with the RM2k conditions and commands that the
 battles in `release` ask for —see the task `eventos-de-tropa-de-release.md`—
 and the ones the characters' systems use —the task
-`eventos-de-tropa-en-la-pelea.md`, both in `tasks/` in snes-rm2k-work—, with
+`eventos-de-tropa-en-la-pelea.md`, both in `tasks/` in the-advocate-work—, with
 these differences.
 
 **An actor's HP, only if they are fighting.** A page's `actor_hp` condition
@@ -39,7 +39,7 @@ the battle theme does not degrade. What degrades is what they share with
 other themes: with three more themes, the sample bank has fewer entries left
 for copies, and several samples of other themes stay at the rate of the
 worst package. It was measured by the task `el-comun-35-y-la-radio.md`, in
-`tasks/` in snes-rm2k-work. With MSU-1 the three have their own track and
+`tasks/` in the-advocate-work. With MSU-1 the three have their own track and
 play whole.
 
 **Whoever joins the party in battle takes the place of whoever left.** In
@@ -74,6 +74,6 @@ because losing belongs to the battle.
 ## How to reproduce it
 
 `pruebas/rpgmaker/test_eventos_de_tropa.py` in the ABL port
-(snes-rm2k-ports/abl), with the `pelea-86` and `pelea-102` cases; and
+(the-advocate-ports/abl), with the `pelea-86` and `pelea-102` cases; and
 `pruebas/rpgmaker/test_sistemas_de_tropa.py` in the ABL port, with
 `pelea-invocacion` and `pelea-radio`.

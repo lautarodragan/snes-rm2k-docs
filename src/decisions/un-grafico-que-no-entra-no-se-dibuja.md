@@ -1,7 +1,7 @@
 # A graphic that doesn't fit isn't drawn
 
 > **Partly superseded**, noted on 2026-09-29 (Guayabo, while sorting the
-> decisions by repo): since 2026-09-08 (`ac8f356b` in snes-rm2k) `fits`, in
+> decisions by repo): since 2026-09-08 (`ac8f356b` in the-advocate) `fits`, in
 > `tools/port/sprites.py`, **lends** a palette to these graphics, just as it
 > does to events ([se-dibujan-todos-los-eventos](se-dibujan-todos-los-eventos.md)).
 > A graphic is only left undrawn if every palette belongs to a leader, which

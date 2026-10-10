@@ -19,6 +19,6 @@ just parches            copies release's decisions to parches/auto/
 ```
 
 The tools of each arrow and the runtime belong to the tools' repository,
-snes-rm2k, and [Internals](../../internals/README.md) says how each one
+the-advocate, and [Internals](../../internals/README.md) says how each one
 works; the same road with generic names is [the
 pipeline](../../internals/pipeline.md).

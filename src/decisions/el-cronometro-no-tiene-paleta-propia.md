@@ -12,7 +12,7 @@ door Core breaks—, and an event that isn't drawn still takes up room in
 `npcs_dibujables`.
 
 What this costs today, and the idea of reserving it only while the timer
-runs, is in `tasks/wishlist/timer-paleta-dinamica.md` in snes-rm2k-work.
+runs, is in `tasks/wishlist/timer-paleta-dinamica.md` in the-advocate-work.
 
 ## When it stops being enough
 
@@ -21,7 +21,7 @@ made for it by lowering a character to fourteen —the one that moves the
 fewest pixels, and never a leader—, and if not even that is enough the
 converter stops and says so. See "the timer **before the events drawn with
 a chipset tile**" in `drawable_npcs`, in `tools/port/sprites.py` in
-snes-rm2k.
+the-advocate.
 
 ## What it requires of the ROM
 

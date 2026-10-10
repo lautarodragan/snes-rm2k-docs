@@ -27,4 +27,4 @@ Since 2026-10-03, one that a `MovePicture` scales up or down **does the
 zoom in mode 7**, with a texture of 255 similar tiles, and when still it
 stays here, in mode 1 at full resolution: it is the hybrid vq variant taro
 chose in the pilot. See the task `las-fotos-en-modo-7.md` in
-snes-rm2k-work.
+the-advocate-work.

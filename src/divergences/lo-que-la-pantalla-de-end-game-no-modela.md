@@ -8,7 +8,7 @@ over black. "Yes" fades the theme and the screen and goes to the title; "No"
 or cancel go back to the menu.
 
 Since 2026-09-28 the ROM does it —see `tools/runtime/end_game.s` in
-snes-rm2k and the `end_game.rs` of `rm2k-snes-screens`—, with the System's
+the-advocate and the `end_game.rs` of `rm2k-snes-screens`—, with the System's
 windows, text and bar on the same pixels as the original, shifted to the
 center of 256x224. Until that day the command was grayed out and did
 nothing.
@@ -42,7 +42,7 @@ The drawing from `fin_del_juego.dibujar` at 320x240 lands in those same
 boxes.
 
 It is covered by `pruebas/rpgmaker/test_fin_del_juego.py` in the ABL port
-(snes-rm2k-ports/abl) —the screen against `fin_del_juego.render` with the
+(the-advocate-ports/abl) —the screen against `fin_del_juego.render` with the
 cursor on each command, "No", B, and "Yes" all the way to the `titulo`
 golden— and by the `fin` and `fin-no` goldens of `test_menu_golden.py`.
 

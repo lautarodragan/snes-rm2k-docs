@@ -29,13 +29,13 @@ at `ControlVars` and at the original's own menus.
 Since 2026-09-28 an autostart or parallel page that **compiles to nothing**
 —everything in it was calls that got skipped— is not carried, the same as an
 empty one: running it was an endless loop that left the hero unable to
-move. See `paginas_del_mapa` in `tools/port/eventos.py` in snes-rm2k.
+move. See `paginas_del_mapa` in `tools/port/eventos.py` in the-advocate.
 
 It is the `AfterBattleMint` of the maps with encounters —from 20 to 255—:
 with switch 498 it calls common event 35, `ResetAfterBattles`, and the common
 event is the one that turns 498 off. It is turned on by the turn-0 page each
 troop carries, which runs since the battle learned to look at the turn (the
-task `eventos-de-tropa-de-release.md`, in `tasks/` in snes-rm2k-work).
+task `eventos-de-tropa-de-release.md`, in `tasks/` in the-advocate-work).
 
 **Since 2026-09-30 common event 35 runs**: what blocked it were the
 variables only it names —the 53 for the summons and for Talan's HP—, which
@@ -44,7 +44,7 @@ events. Now it does (`variables`, in the indices of `rm2k-snes-events`), and
 the common event compiles in place of its `CallEvent`. It is guarded by
 `test_despues_de_la_pelea_lerle_vuelve_al_grupo`, in
 `pruebas/rpgmaker/test_sistemas_de_tropa.py` in the ABL port
-(snes-rm2k-ports/abl).
+(the-advocate-ports/abl).
 
 Until 2026-10-02 that cost space: the whole common event was copied into
 every map with encounters, because `CallEvent` compiled in place. Since that

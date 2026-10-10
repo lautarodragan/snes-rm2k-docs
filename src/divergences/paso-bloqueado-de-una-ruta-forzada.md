@@ -6,7 +6,7 @@
 forever —`UpdateMoveRoute` with `skippable` off—.
 
 It is an old, declared modeling decision, in `tools/port/eventos.py` in
-snes-rm2k: a test that hangs says nothing.
+the-advocate: a test that hangs says nothing.
 
 ## Measured
 

@@ -5,7 +5,7 @@
 **The map's grid is decompressed whole into WRAM when the map loads, and
 lives at `$7E8000-$7EFFFF`**, continuing at `$7F8000` if it goes past
 32 KB: the upper half of both banks (`GRID` in `tools/runtime/far_ram.s`
-in snes-rm2k). The cartridge carries it in LZ2, in two streams, one per
+in the-advocate). The cartridge carries it in LZ2, in two streams, one per
 half (`lz2_grid` in `tools/runtime/decompress.s`).
 
 Decided with taro on 2026-09-26, **as a trial, knowing it may have to be
@@ -51,7 +51,7 @@ there— will too.
 ## How you would know it needs reverting
 
 * **`pruebas/herramientas/test_reservas_de_la_wram.py` in the ABL port
-  (snes-rm2k-ports/abl) fails** if any cartridge symbol falls in
+  (the-advocate-ports/abl) fails** if any cartridge symbol falls in
   `$7E8000-$7FFFFF` and isn't the grid, the loading buffer or the battle
   scene. It is the alarm for whoever needs far RAM: if it fails, it isn't
   to add the symbol to its list, it is to read this. It doesn't see an
@@ -88,7 +88,7 @@ used.
 **Since 2026-10-01 the block table, its passability and the events'
 bytecode depend on this**: they live in WRAM right behind the grid, and
 `lz2_grid` decompresses them along with it (see `docs/port/maps.md` in
-snes-rm2k). Reverting the grid also requires returning them to the
+the-advocate). Reverting the grid also requires returning them to the
 cartridge, uncompressed: in `rm2k-snes-mapdata`, take `map_ram` and
 `map_code` out of `COMPRESSED_KINDS` and store them again as standalone
 blocks with their labels in the register and in the page table; and in the

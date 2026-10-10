@@ -28,7 +28,7 @@ thunder at lower quality and found it quite acceptable.
 
 With a single voice, the rain cut the thunder off, because it retriggers
 every few seconds: see "the sound effects" in
-`tools/runtime/sound_effects.s` in snes-rm2k.
+`tools/runtime/sound_effects.s` in the-advocate.
 
 ## How it ended up
 
@@ -39,4 +39,4 @@ only on map 1 (`per_map` in `[sound_effects]` of the project file): maps 3,
 package pays for them if needed. If the thunder or the rain change rate,
 map 1's package becomes limiting again: the converter prints which samples
 each package limits. See the task `efectos-de-sonido-sin-recortes.md` in
-snes-rm2k-work.
+the-advocate-work.

@@ -4,13 +4,13 @@
 
 The `ShowPicture` pictures that cover the screen go in BG1, with the console
 in mode 1 while they are shown —see `tools/runtime/big_picture.s` and
-`tools/port/picture.py` in snes-rm2k, and
+`tools/port/picture.py` in the-advocate, and
 [Large pictures in mode 1](../decisions/las-imagenes-grandes-en-modo-1.md)—,
 and they do not do everything they do in RM2k:
 
 * **Zoom is done in mode 7, with a 255-tile texture**, since 2026-10-03
-  —see `tools/runtime/big_picture_zoom.s` in snes-rm2k and the task
-  `las-fotos-en-modo-7.md` in `tasks/` in snes-rm2k-work—. Still, the
+  —see `tools/runtime/big_picture_zoom.s` in the-advocate and the task
+  `las-fotos-en-modo-7.md` in `tasks/` in the-advocate-work—. Still, the
   picture is at full resolution in mode 1, like any large one; when the zoom
   starts it switches to mode 7, and there each place in the picture shows
   the closest tile out of the 255 that fit —in noisy photos, sometimes a
@@ -81,4 +81,4 @@ and they do not do everything they do in RM2k:
 On the `release` cartridge, on 2026-10-02, with the test pages of
 `test_imagenes_grandes_golden.py`, against captures of the six scenes from
 the 2015 RPG_RT under Wine: see the task `las-imagenes-grandes-en-modo-1.md`,
-in `tasks/` in snes-rm2k-work.
+in `tasks/` in the-advocate-work.
