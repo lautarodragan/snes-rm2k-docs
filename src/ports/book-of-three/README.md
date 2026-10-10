@@ -52,5 +52,10 @@ custom fonts, an RM2k database.
   `cuatro-atajos-para-los-otros-juegos.md`.)
 - **Decorative events as background**: 87 candidates, measured without
   looking at the drawing. (Task `los-eventos-decorativos-como-fondo.md`.)
+- **A ChipSet animation that doesn't fit in WRAM** (2026-10-10) keeps the
+  tiles that cover the most cells moving and leaves the rest still: in map
+  46, 9 of its 25 water tiles (25 of 115 cells) and 2 of its 22 animated
+  ones (2 of 2,185). The map is back in the cartridge, which builds whole.
+  (Task `las-animaciones-de-tiles-en-wram.md`.)
 
 The tasks named here are in `tasks/testing/` in snes-rm2k-work.
