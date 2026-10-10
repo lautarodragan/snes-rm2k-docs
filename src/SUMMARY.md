@@ -67,6 +67,7 @@
         - [The map takes to VRAM only what it draws](divergences/el-mapa-lleva-a-vram-solo-lo-que-dibuja.md)
         - [A cell with both ChipSet animations](divergences/una-celda-con-las-dos-animaciones-del-chipset.md)
         - [The ChipSet skips a frame every 18 minutes](divergences/el-chipset-se-saltea-un-dibujo-cada-18-minutos.md)
+        - [A ChipSet animation that does not fit in WRAM](divergences/la-animacion-del-chipset-que-no-entra-en-la-wram.md)
         - [Baked decorative events](divergences/los-eventos-decorativos-horneados.md)
         - [Translucent events end up opaque](divergences/los-translucidos-quedan-opacos.md)
         - [Seven palettes on a map with animations](divergences/siete-paletas-en-un-mapa-con-animaciones.md)
