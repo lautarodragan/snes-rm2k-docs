@@ -91,5 +91,12 @@ fonts, an RM2k database.
   pages. (Task `cuatro-atajos-para-los-otros-juegos.md`.)
 - **Parallel common events** don't run in the engine: Vampires Dawn has 35.
   (Task `el-tablero-contra-rm2k.md`.)
+- **A ChipSet animation that doesn't fit in WRAM** (2026-10-10) keeps the
+  tiles that cover the most cells moving and leaves the rest still: in
+  maps 236 and 351, 9 of 51 and 5 of 37 water tiles stand still; in map
+  1, the world, 100 of its 142, which cover only 4,275 of its 262,866
+  water cells. Each in a cartridge with the starting map, map 1 then stops
+  at its grid —180,000 bytes, against the 64 KB of WRAM it has—, and 236
+  and 351 at the music: 281 songs, and the track goes in a byte. (Task `las-animaciones-de-tiles-en-wram.md`.)
 
 The tasks named here are in `tasks/testing/` in snes-rm2k-work.
