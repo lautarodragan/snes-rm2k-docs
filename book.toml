@@ -5,7 +5,6 @@ language = "en"
 src = "src"
 
 [build]
-build-dir = "docs"
 create-missing = false
 
 [output.html]
