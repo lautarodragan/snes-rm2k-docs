@@ -9,7 +9,7 @@ backgrounds, the battle animations—, never a requirement to reach the end.
 ## Why
 
 From taro, on 2026-10-01, on reading
-[the study of maps over MSU-1](../research/2026-10-01-los-mapas-por-el-msu-1.md),
+[the study of maps over MSU-1](../ports/abl/research/2026-10-01-los-mapas-por-el-msu-1.md),
 which recommended a `completo` cartridge that required MSU-1: "I want to
 avoid depending on the msu completely. I'd like the game to be playable
 without msu". It replaces that recommendation.

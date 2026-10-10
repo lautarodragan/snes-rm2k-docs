@@ -13,6 +13,6 @@ needed to understand it.
   - [Emulators](snes/emulators.md): which ones to test the ROM with by
     hand, what each implements of the MSU-1 and of ExHiROM, debugging with
     Mesen2, and how to report a bug.
-  - ["SNES translucency FAQ"](snes/snes-translucency-by-bregalad.txt), by
-    Bregalad (2009, revised 2015): color math explained. It is a
-    third-party document, kept as it was written.
+  - "SNES translucency FAQ", by Bregalad (2009, revised 2015): color
+    math explained. It is a third-party document and is not reproduced
+    here; look it up by its title.
