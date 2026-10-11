@@ -1,5 +1,21 @@
 # Sunset Over Imdahl
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft in the tasks repository, named here as text.
+
+* **On a painted map, an event "above the hero" is drawn over the roofs.**
+  The guard at (13,23) on the square, map 2, shows over the roof that
+  should hide him. Draft: `los-eventos-encima-del-heroe-sobre-los-techos-pintados`.
+* **On the square, some roof edges cover too much or too little.** The
+  square has more roof edges than the cartridge keeps, and the rest are
+  left out. A guard at (36,13) has his legs over a roof's edge, likely
+  one of those; not checked.
+* **Characters are not shaded or lit** by the painted shadows, lights and
+  fogs, which only touch the painting.
+
 ## The painted maps, in mode 1 (2026-10-11)
 
 taro, after the captures of the pictures: "it really isn't playable",
