@@ -17,6 +17,14 @@ and the converter decides —`CHANGE_SCREEN_TRANSITIONS` in
 * **the cut** (19) for erasing: black in one frame, like RM2k's
   `TransitionCutOut`, and the map is loaded there. Since 2026-09-27, because
   of Eisen's story. "None" (20) for erasing also compiles to the cut.
+* **the cut** (19) for showing: the new map at full brightness on the tick
+  of the load, with no ramp back up, like RM2k's `TransitionCutIn`, which
+  lasts one frame. Since 2026-10-11, because Sunset Over Imdahl asks for it
+  in the page that opens the game (event 1 on its map 22): while it did not
+  compile, the whole page was left out and the scene stayed in the black
+  tint of map 11. "None" (20) for showing also compiles to the cut: in
+  RM2k it lasts zero frames instead of one, and nothing on the console
+  tells the two apart.
 
 What is still different from the original:
 
@@ -36,9 +44,8 @@ What is still different from the original:
   with, and the map load writes VRAM with the screen off. Map 93 asks for it
   when jumping to 95: there you see the control room dissolve into the
   corridor, here a black frame and the usual fade.
-* **The cut and "none" for showing, and the battle ones, do not compile**:
-  the page that asks for them does not run. None is on a map in the ROM
-  today.
+* **The battle ones do not compile**: the page that asks for them does not
+  run. The ROM always uses the database's.
 
 ## Measured
 
@@ -50,13 +57,17 @@ going down to the minigame (page 1 of event 4 on 93), the cut when leaving
 it (event 55 on 95), the mosaic to enter the throne simulation (event 1 on
 101) and everything back to the fade in Sorbe (page 5 of event 6 on 81). In
 the whole game 15 pages ask for it; the ones that use the cut for showing or
-7 (from the edges to the center) are on maps that do not fit.
+7 (from the edges to the center) are on maps that do not fit. Of the other
+ports, Sunset Over Imdahl, Dooms 2 and The Frozen World show with the cut
+(1, 8 and 2 commands).
 
 It is covered by `test_transicion` in `pruebas/rpgmaker/test_comandos_golden.py`
 in the ABL port (the-advocate-ports/abl) —goldens halfway through the mosaic
 and halfway through the zoom—, by `test_borrar_con_el_corte` in the same
 file —brightness at zero and the map loaded on the first tick of the fade,
-against the fade's whole ramp—, by the mosaic and the zoom in
+against the fade's whole ramp—, by `test_mostrar_con_el_corte`, also
+there —the fade over and full brightness on the tick of the load, with a
+golden of the next one—, by the mosaic and the zoom in
 `test_cores.py` too, and by `test_recorrido_lashe_wick_golden.py` and
 `test_recorrido_capitulo_golden.py`, which check through RAM what each page
 leaves chosen.
