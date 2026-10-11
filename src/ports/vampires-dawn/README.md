@@ -1,5 +1,22 @@
 # Vampires Dawn
 
+## As of 2026-10-11, later still: troops past a byte, 21 maps out
+
+> Measured on 2026-10-11 with the tools of the-advocate's branch
+> `huron-tropas-dos-bytes` (`5d7d5601`) and the ports' (`29d4c24`). The
+> sections after this one are the earlier snapshots of the same day, kept
+> as they were.
+
+- **A troop's place in the ROM is a word now**, so a cartridge can carry
+  up to 32,768 troops instead of 255. Of the four maps that were out only
+  for the troops, **98 and 182 come back**; with 327 or 339 on top of
+  them, the build stops on the ROM's 127 banks, the same limit as the
+  poses, and they stay out with them. 419 of the 440 maps go in, and the
+  cartridge carries 266 troops.
+- A battle with a troop past place 255 —troop 332, at place 260— was run
+  in snes9x and in bsnes: the right enemy, its HP and, on winning, its
+  experience. **Playing it is still to be done.**
+
 ## As of 2026-10-11, later: it builds from its project, with 23 maps out
 
 > Measured on 2026-10-11 with the tools of the-advocate `0bb1120a` and the
