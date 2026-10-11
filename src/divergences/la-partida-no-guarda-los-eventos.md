@@ -5,7 +5,7 @@
 RM2k saves, in each slot, the state of every map you visited: where each
 event was left, which page it had active. The ROM's save **does not carry
 where the events were left**; what it does save is listed by `save_table` in
-`tools/runtime/bank1.s` in the-advocate, and nothing more.
+`runtime/bank1.s` in the-advocate, and nothing more.
 
 On loading, each map puts its events back where the cartridge says, the same
 as when entering through a door. Switches do come back, so the active pages

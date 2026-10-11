@@ -5,12 +5,12 @@ the machine where the IDE runs.
 
 ## Making annotate see through the split of `main.s`
 
-On 2026-09-25 `tools/runtime/main.s` was split into one file per subsystem.
+On 2026-09-25 `runtime/main.s` was split into one file per subsystem.
 `git blame` only follows each line to its real commit with
 `-C --diff-algorithm=histogram` —the reason is in the `AGENTS.md` of
 the-advocate-work, in the section "`git blame` y los cambios mecánicos"
 (`git blame` and mechanical changes)—; without that,
-every line of `tools/runtime/` says "it was the split". JetBrains' annotate
+every line of `runtime/` says "it was the split". JetBrains' annotate
 doesn't let you pass options to `blame`, so:
 
 ```sh

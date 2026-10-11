@@ -24,6 +24,6 @@ measured, but **the droid on map 2 depends on it**.
 
 It is not seen: no test fails because of this, and no page that compiles
 today exercises the first three. The first two points are also noted in the
-comment on `cell_blocked`, in `tools/runtime/event_pages.s` in the-advocate,
+comment on `cell_blocked`, in `runtime/event_pages.s` in the-advocate,
 which is where the mechanic lives: the `overlap_forbidden` field is read and
 ignored, it is not that the page fails to compile.

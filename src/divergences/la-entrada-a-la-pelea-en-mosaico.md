@@ -5,7 +5,7 @@
 When a battle starts, the map goes to black **in mosaic**: after the two
 flashes, the blocks grow from 2 to 16 while the brightness goes down, with
 the same ramp, frame by frame, the battle uses to go away when it ends. See
-`battle_fade_in` in `tools/runtime/battle_fade.s` in the-advocate.
+`battle_fade_in` in `runtime/battle_fade.s` in the-advocate.
 
 RM2k does what the database's `System` says, and *A Blurred Line* asks for
 something else to cover the map: `battle_start_fadeout = 16`, which in the

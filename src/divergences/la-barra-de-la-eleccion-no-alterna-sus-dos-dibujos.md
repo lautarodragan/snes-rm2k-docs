@@ -6,7 +6,7 @@ The System carries **two drawings of the cursor**, at (64,0) and at (96,0),
 and RM2k alternates them every ten frames: easyrpg's `Window::Draw` draws
 `cursor1` with `cursor_frame <= 10` and `cursor2` for the rest of a cycle of
 21. The ROM draws **only the first one**, in the choice bar of the message
-window (`msg_bar_source` in `tools/runtime/message_arrow.s` in the-advocate) and
+window (`msg_bar_source` in `runtime/message_arrow.s` in the-advocate) and
 in all the screens that already had the bar —items, equipment, shop,
 battle—, which come from `Skin::cursor` in `rm2k-snes-screens`.
 

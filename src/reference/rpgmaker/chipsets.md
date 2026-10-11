@@ -4,7 +4,7 @@
 autotiles: border blocks the engine combines according to the neighbors.
 The editor stores in the map the ID of the already computed combination, so
 to render it you have to pre-generate the 1419 possible combinations in a
-32x45 atlas and index it by ID. `tools/rm2k/rm2k-render/src/chipset.rs`, in
+32x45 atlas and index it by ID. `rm2k/rm2k-render/src/chipset.rs`, in
 the-advocate, is a port of `lmu2png/src/chipset.cpp` from EasyRPG Tools, which
 is where all the magic offsets are.
 

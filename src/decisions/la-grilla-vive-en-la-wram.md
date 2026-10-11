@@ -4,9 +4,9 @@
 
 **The map's grid is decompressed whole into WRAM when the map loads, and
 lives at `$7E8000-$7EFFFF`**, continuing at `$7F8000` if it goes past
-32 KB: the upper half of both banks (`GRID` in `tools/runtime/far_ram.s`
+32 KB: the upper half of both banks (`GRID` in `runtime/far_ram.s`
 in the-advocate). The cartridge carries it in LZ2, in two streams, one per
-half (`lz2_grid` in `tools/runtime/decompress.s`).
+half (`lz2_grid` in `runtime/decompress.s`).
 
 Decided with taro on 2026-09-26, **as a trial, knowing it may have to be
 reverted**.

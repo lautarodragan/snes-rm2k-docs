@@ -51,18 +51,18 @@ options.
     loose runtimes.
   - Whatever a game wants to deviate from RM2k still goes through flags,
     which move to the project file.
-- **The engine is called the runtime and moves to `tools/runtime/`; `rom/`
+- **The engine is called the runtime and moves to `runtime/`; `rom/`
   becomes the root of A Blurred Line**, with `data/`, `parches/`,
   `pruebas/` and `build/`. taro decided it on 2026-09-29: the generic
   runtime is told apart from the project. ABL doesn't need the `.s` files,
   and the runtime doesn't need the graphics or audio `.inc` files. The root
   is left with `rom/`, `tools/`, `docs/` and `workflow/`. **The order:**
-  first a `tools/justfile` with the tools' recipes, then step 2 of the plan
+  first a `justfile` with the tools' recipes, then step 2 of the plan
   (a single place that knows where everything is), and only then the move,
   in a mechanical commit with the ROMs byte for byte identical.
 - **Installing belongs to the tools; verifying belongs to ABL.** Talked
   over with taro on 2026-09-29. `herramientas` and `herramientas-locales`
-  go in `tools/justfile`: installing from source requires knowing where
+  go in `justfile`: installing from source requires knowing where
   everything is in `tools/`, which is what ABL can't know. It is a
   project's `make install`, or `npm link`. What ABL needs is **to know it
   has what it needs, at the version it declares**: a recipe of its own, for
@@ -84,7 +84,7 @@ options.
 - **The allocator is called Adeleine.** From taro, on 2026-09-29, while
   discussing whether it made sense to separate it from Voodoo (it does: it
   is the rule in `AGENTS.md` that Voodoo doesn't decide colors). It is a
-  crate of its own, `tools/snes/adeleine/`, next to Voodoo and not inside
+  crate of its own, `snes/adeleine/`, next to Voodoo and not inside
   it, since 2026-09-29; the converter calls it through
   `tools/port/adeleine.py` and leaves what it decided in
   `rom/build/<cartridge>/adeleine/`.

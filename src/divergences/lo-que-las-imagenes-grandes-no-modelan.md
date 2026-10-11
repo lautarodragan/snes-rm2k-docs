@@ -3,13 +3,13 @@
 ## What
 
 The `ShowPicture` pictures that cover the screen go in BG1, with the console
-in mode 1 while they are shown —see `tools/runtime/big_picture.s` and
+in mode 1 while they are shown —see `runtime/big_picture.s` and
 `tools/port/picture.py` in the-advocate, and
 [Large pictures in mode 1](../decisions/las-imagenes-grandes-en-modo-1.md)—,
 and they do not do everything they do in RM2k:
 
 * **Zoom is done in mode 7, with a 255-tile texture**, since 2026-10-03
-  —see `tools/runtime/big_picture_zoom.s` in the-advocate and the task
+  —see `runtime/big_picture_zoom.s` in the-advocate and the task
   `las-fotos-en-modo-7.md` in `tasks/` in the-advocate-work—. Still, the
   picture is at full resolution in mode 1, like any large one; when the zoom
   starts it switches to mode 7, and there each place in the picture shows

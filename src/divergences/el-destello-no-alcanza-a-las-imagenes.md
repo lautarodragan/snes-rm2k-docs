@@ -4,7 +4,7 @@
 
 `FlashScreen` **does not reach a picture** from `ShowPicture`. On the console
 the flash is a CGRAM transformation: `flash_tick`, in
-`tools/runtime/screen_flash.s` in the-advocate, walks the map's palettes —the
+`runtime/screen_flash.s` in the-advocate, walks the map's palettes —the
 background, the upper layer and the characters' colors, `M_SPRITE_CGRAM` from
 128 on— and the picture lives in sprite palette `7 - s` of its slot
 (`pic_palette`, in `picture.s`), which is outside that range. In RM2k it does

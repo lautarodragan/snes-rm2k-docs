@@ -7,7 +7,7 @@ the question —the `exit_game_message` term— and "Yes"/"No" in two windows
 over black. "Yes" fades the theme and the screen and goes to the title; "No"
 or cancel go back to the menu.
 
-Since 2026-09-28 the ROM does it —see `tools/runtime/end_game.s` in
+Since 2026-09-28 the ROM does it —see `runtime/end_game.s` in
 the-advocate and the `end_game.rs` of `rm2k-snes-screens`—, with the System's
 windows, text and bar on the same pixels as the original, shifted to the
 center of 256x224. Until that day the command was grayed out and did

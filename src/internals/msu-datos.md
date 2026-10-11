@@ -1,7 +1,7 @@
 # The `.msu` file: data the MSU-1 serves to the ROM
 
 The MSU-1 has two parts: the audio tracks (`<rom>-N.pcm`, see
-`rm2k-snes-msu`, in `tools/rm2k-snes/rm2k-snes-audio/src/tracks.rs`) and a
+`rm2k-snes-msu`, in `rm2k-snes/rm2k-snes-audio/src/tracks.rs`) and a
 **data port** that reads `<rom>.msu` as a stream. Until 2026-09-25 the
 `.msu` was empty and only served to turn the MSU-1 on. Since that day it
 carries **the battle backdrops**, which started as a pilot, and since
@@ -82,9 +82,9 @@ The converter emits in the `.inc` the signature it wrote
 (`msu_data_signature`) and where each backdrop ended up
 (`msu_backdrop_pos`, by backdrop number: it is the arithmetic above, in a
 table so the ROM doesn't multiply). When a battle with a backdrop starts,
-`msu_data_valid` —in `tools/runtime/msu1.s`— seeks position 0 and compares
+`msu_data_valid` —in `runtime/msu1.s`— seeks position 0 and compares
 the 8 bytes; if they match, `scn_fill` and the colors of `scene_upload`
-—in `tools/runtime/battle_scene.s`— read from the `.msu`, and `SCN_MSU` is
+—in `runtime/battle_scene.s`— read from the `.msu`, and `SCN_MSU` is
 left at 1.
 
 **The signature is of the content, not of the commit**: a `.msu` from
@@ -117,7 +117,7 @@ names; or, if it is a random encounter or the command asks for "the one of
 the place", the map's, going up the tree; and if the map names none, **the
 one of the terrain of the cell the hero stands on**. The ROM resolves that
 one when the battle starts (`scn_terrain`, in
-`tools/runtime/battle_scene.s`), with `backdrop_terrain`. That is how the
+`runtime/battle_scene.s`), with `backdrop_terrain`. That is how the
 battles in the world come out.
 
 **The ROM carries all the ones the cartridge's battles can ask for**: the
@@ -165,7 +165,7 @@ the `.mc0` in `~/.mednafen/mcs/` is a gzip, and the WRAM goes whole in its
 On the FX Pak seeking inside its 16 KB buffer is immediate, and outside it
 means reading the SD card —`prepare_data` in `src/msu1.c` of sd2snes, its
 firmware—. That is **not measured**. The cap on the wait —`MSU_WAIT`, in
-`tools/runtime/msu1.s`— is about ten times what Mednafen takes.
+`runtime/msu1.s`— is about ten times what Mednafen takes.
 
 If a seek doesn't arrive in time, what was already read from the `.msu` is
 the quality backdrop and what follows would come from the light one, and
@@ -190,7 +190,7 @@ same list share it—, and next to it a readable `efectos.json`.
 
 The signature is the same as the backdrops' and is checked once per
 power-on, at the first package load (`se_msu_prepare`, in
-`tools/runtime/msu_effects.s`). Without the signature, the effects come
+`runtime/msu_effects.s`). Without the signature, the effects come
 from the ROM as always. A seek that doesn't arrive in time leaves that
 effect not uploaded: it doesn't sound, because the ROM's version has a
 different pitch. `pruebas/abl/test_msu_efectos.py` in the ABL port covers

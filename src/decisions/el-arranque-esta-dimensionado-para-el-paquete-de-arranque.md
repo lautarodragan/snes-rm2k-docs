@@ -3,11 +3,11 @@
 ## What
 
 **Boot is sized for the audio package of the boot map**, not for a full
-ARAM: `BOOT_FRAMES` (in `tools/runtime/far_ram.s` in the-advocate) covers
+ARAM: `BOOT_FRAMES` (in `runtime/far_ram.s` in the-advocate) covers
 loading the map, the driver and the directory through the IPL, and that
 package, with a margin. **And the converter stops if it doesn't fit**: the
 calculation is `boot_frames` in
-`tools/rm2k-snes/rm2k-snes-audio/src/emit.rs`, and the converter does the
+`rm2k-snes/rm2k-snes-audio/src/emit.rs`, and the converter does the
 comparison.
 
 It replaces "boot is sized for the ARAM ceiling", which left it at 112

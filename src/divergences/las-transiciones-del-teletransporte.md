@@ -9,7 +9,7 @@ and the converter decides —`CHANGE_SCREEN_TRANSITIONS` in
 `tools/port/eventos.py` in the-advocate—:
 
 * **the mosaic** (17), with the PPU's MOSAIC register, tied to the
-  brightness ramp. See `tools/runtime/teleport_transition.s` in the-advocate;
+  brightness ramp. See `runtime/teleport_transition.s` in the-advocate;
 * **the fade**, which is also what is used for **the ones the console does
   not do**, like the zoom (16): bringing the map closer is mode 7, and the
   map is in mode 3. taro decided it on 2026-09-26, the same as for the
@@ -29,7 +29,7 @@ What is still different from the original:
   blocks.
 * **The zoom is the usual fade.**
 * **The transition does not travel in the save**, and in RM2k it does: see
-  `TRANSITION_ERASE` in `tools/runtime/far_ram.s` in the-advocate.
+  `TRANSITION_ERASE` in `runtime/far_ram.s` in the-advocate.
 * **Erasing with "none" is the cut.** In RM2k it does not touch the screen,
   so the fade back goes from the old map to the new one (`screen1` and
   `screen2` of `Transition`); the console has nothing to blend two frames

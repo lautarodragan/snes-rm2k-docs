@@ -28,7 +28,7 @@ thunder at lower quality and found it quite acceptable.
 
 With a single voice, the rain cut the thunder off, because it retriggers
 every few seconds: see "the sound effects" in
-`tools/runtime/sound_effects.s` in the-advocate.
+`runtime/sound_effects.s` in the-advocate.
 
 ## How it ended up
 

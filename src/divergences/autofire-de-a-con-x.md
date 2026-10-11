@@ -6,7 +6,7 @@ Holding X presses and releases A by itself: `pad_a` spends
 `AUTOFIRE_FRAMES` rounds on and as many off, and since the game looks at A's
 edge —RM2k closes the message with `Input::IsTriggered`—, each return to on
 is a press. It is for going through text and repeating choices without
-mashing the button. It is all in `read_pad` (`tools/runtime/control.s` in
+mashing the button. It is all in `read_pad` (`runtime/control.s` in
 the-advocate), which is the only place that reads the controller, so it works
 on the map, in messages, in menus, in the shop, in battle and on the title
 screen.

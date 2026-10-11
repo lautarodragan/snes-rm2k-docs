@@ -11,7 +11,7 @@ after.
 ## Measured
 
 It was left out when the frame was ordered like `Game_Map::Update`, on
-2026-09-20 —see the comment on the loop in `tools/runtime/boot.s` in
+2026-09-20 —see the comment on the loop in `runtime/boot.s` in
 the-advocate—. None of those ticks decides whether something moves or when, so
 **the difference is one frame in what is shown** and nothing more.
 

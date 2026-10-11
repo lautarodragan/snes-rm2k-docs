@@ -5,11 +5,11 @@ Every event page that can be compiled travels in the cartridge as
 other:
 
 ```text
-tools/rm2k-snes/bytecode/       declares it: each opcode, its number and the bytes it
+rm2k-snes/bytecode/       declares it: each opcode, its number and the bytes it
                                 carries, in `src/events.rs`
-tools/rm2k-snes/events/         emits it: `rm2k-snes-events`, in Rust;
+rm2k-snes/events/         emits it: `rm2k-snes-events`, in Rust;
                                 `compile_command`, one case per RM2k command
-tools/runtime/interpreter*.s    runs it: `run_code` and one `.proc op_*` per opcode
+runtime/interpreter*.s    runs it: `run_code` and one `.proc op_*` per opcode
 ```
 
 **The interpreter reads it from WRAM, not from the cartridge**, since
@@ -18,15 +18,15 @@ tools/runtime/interpreter*.s    runs it: `run_code` and one `.proc op_*` per opc
 keeps running after a `Teleport` to another map —a cutscene that jumps and
 keeps talking, and every case in the test suite— takes its bytecode along
 to `CODE_CARRY`, and the hero's forced route is copied whole: see
-`code_carry_before` in `tools/runtime/decompress.s`. Jumps inside a page
+`code_carry_before` in `runtime/decompress.s`. Jumps inside a page
 are relative to where it starts, so moving it is moving a pointer.
 
 The declaration is a `macro_rules!`, `bytecode!`: it gives one constant per
 opcode, which the compiler takes with a `use`, and the table from which
 `rm2k-snes-assemble` writes `event_opcodes.inc` into the cartridge's
 directory, on every build. Until 2026-10-02 the declaration was a TOML file
-in `tools/snes/protocol/`, and from it came, generated and committed, the
-Rust module, the `.inc` in `tools/runtime/` and a Python module the ABL
+in `snes/protocol/`, and from it came, generated and committed, the
+Rust module, the `.inc` in `runtime/` and a Python module the ABL
 tests read the bytecode with; since that day none of them reads it, and
 `test_lado_de_abl.py` makes sure of it. It is in English because nothing in
 there knows about this game. The compiler is in English for the same
@@ -93,7 +93,7 @@ shaped like code, it doesn't run, no test touches it, and it goes stale
 without anyone noticing. The reason for each mechanic goes in the comment
 of its routine.
 
-| Mechanic | in `tools/runtime/` | who compiles it, or who measures it |
+| Mechanic | in `runtime/` | who compiles it, or who measures it |
 | --- | --- | --- |
 | Stepping on an event, and stepping on it at the end of a forced route —a door is that: a touch page with a `Teleport` inside— | `try_touch`, `action_in_cell` | — |
 | Talking to an event with the action key | `try_action`, `queue_by_action` | — |

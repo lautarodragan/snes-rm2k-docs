@@ -4,7 +4,7 @@
 
 RM2k keeps a `press_time` per button —easyrpg, `src/input.cpp`—, so each
 arrow has its own repeat delay. The ROM keeps **a single one for all four**,
-`arrows_frames` in `arrows_repeat` (`tools/runtime/control.s` in
+`arrows_frames` in `arrows_repeat` (`runtime/control.s` in
 the-advocate): pressing a new arrow resets it to zero even if another one is
 still held.
 

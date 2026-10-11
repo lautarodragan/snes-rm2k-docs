@@ -32,7 +32,7 @@ because the grid crosses banks and the banks are not contiguous: going past
 
 Since 2026-09-26 the grid travels in the cartridge as LZ2 and is
 decompressed whole when the map loads, at `$7E8000`, continuing at
-`$7F8000` if it is over 32 KB (`GRID` in `tools/runtime/far_ram.s`,
+`$7F8000` if it is over 32 KB (`GRID` in `runtime/far_ram.s`,
 `lz2_grid` in `decompress.s`). The upper halves of two consecutive WRAM
 banks have the shape of two LoROM banks, so the readers didn't change:
 the pointer used to point into the cartridge, now it points into WRAM. A
@@ -46,8 +46,8 @@ LZ2, are decompressed to `$7F0000` and uploaded with the same DMA as
 before. The animation drawings stay at `$7F6000` for as long as the map
 lasts, because they are uploaded every time the clock changes. How each
 block is split into streams and with which WRAM limits: `materials.rs` in
-`tools/rm2k-snes/mapdata/`; the format and the compressor:
-`tools/snes/lz2/`, which the emission uses as a library.
+`rm2k-snes/mapdata/`; the format and the compressor:
+`snes/lz2/`, which the emission uses as a library.
 
 And since 2026-10-01, **the block table, its passability and the event
 bytecode**: the CPU reads them while the game is played, so they are not

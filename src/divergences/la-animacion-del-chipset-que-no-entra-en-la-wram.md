@@ -23,7 +23,7 @@ that keeps the most cells of the map moving within the 8 KB. The tiles that
 stay are the first ones Voodoo numbered, which are the first met row by
 row, and those turn out to be the ones the map uses most.
 
-See `tools/rm2k-snes/mapdata/src/animation.rs` in the-advocate.
+See `rm2k-snes/mapdata/src/animation.rs` in the-advocate.
 
 ## Measured
 

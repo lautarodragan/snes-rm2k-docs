@@ -3,7 +3,7 @@
 The project lives in four repositories:
 
 - **the-advocate**: the tools and the runtime. The converter and its stages,
-  the 65816 engine in `tools/runtime/`, their tests, and the libraries that
+  the 65816 engine in `runtime/`, their tests, and the libraries that
   know only one side —the console's formats, or RPG Maker's—. The tools are
   installed on the PATH and know nothing about any particular game.
 - **the-advocate-ports**: the ported games, one directory per game. Each one

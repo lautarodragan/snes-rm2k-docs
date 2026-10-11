@@ -7,7 +7,7 @@ action list, each action's `rating` and easyrpg's
 `SelectEnemyAiActionRpgRtCompat` —each candidate weighs
 `max(0, rating - maximum + 10)`— and they use skills. It is decided by
 `batalla.accion_del_enemigo` and copied by `ba_enemy_action`
-(`tools/runtime/battle.s` in the-advocate). What is still different:
+(`runtime/battle.s` in the-advocate). What is still different:
 
 * **With a single weighted action the die is not rolled.** RM2k rolls
   `rand(0, sum - 1)` anyway. It is the same distribution, and it leaves the

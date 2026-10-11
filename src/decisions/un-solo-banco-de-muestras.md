@@ -39,7 +39,7 @@ for the tracks of the group that limits it; the worst ones are made first
 until the directory is filled as it was when each sound effect had its own
 entry, and with the entries the effects freed, only those that don't lower
 anyone's rate (see `copies` in
-`tools/rm2k-snes/rm2k-snes-audio/src/bank.rs` in the-advocate). And the tracks
+`rm2k-snes/rm2k-snes-audio/src/bank.rs` in the-advocate). And the tracks
 a map turns on only to leave —`lufsorr` on map 3, which plays when there
 are no sound effects left— don't count in the map's package: see
 `Temas.de_salida` in `tools/port/eventos.py`.
@@ -54,5 +54,5 @@ near 16. An exit track that doesn't fit next to its package freezes, when
 turned on, for as long as it alone takes to upload.
 
 How it is allocated, in `allocate`, `copies` and `Bank` of
-`tools/rm2k-snes/rm2k-snes-audio/src/bank.rs`; which group limits each
+`rm2k-snes/rm2k-snes-audio/src/bank.rs`; which group limits each
 sample and which tracks use each copy, in the converter's report.

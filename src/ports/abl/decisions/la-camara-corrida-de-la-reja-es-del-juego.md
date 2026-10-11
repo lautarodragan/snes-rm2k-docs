@@ -18,7 +18,7 @@ And the pan stays stuck because that is how RM2k works: the camera **keeps
 carrying it while the hero walks** —`Game_Player::UpdateScroll` subtracts
 the pan from the target, and only skips it if the pan is locked— and the
 only thing that clears it is changing maps, in `PerformTeleport` with
-`map_changed`. Both things are what `tools/runtime/camera.s` in the-advocate
+`map_changed`. Both things are what `runtime/camera.s` in the-advocate
 does, so the port copies it correctly.
 
 taro played it in the original RPG_RT on 2026-09-23 —the 2000 one, the one

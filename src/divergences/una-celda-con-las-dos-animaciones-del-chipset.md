@@ -8,7 +8,7 @@ water and another for the animated tiles. A cell that changed with both
 every combination of frames and not two runs, so **Voodoo rejects it** and
 the converter does not build the ROM. RM2k draws it without trouble.
 
-See "Animations" in `tools/snes/voodoo/README.md` in the-advocate.
+See "Animations" in `snes/voodoo/README.md` in the-advocate.
 
 ## Measured
 

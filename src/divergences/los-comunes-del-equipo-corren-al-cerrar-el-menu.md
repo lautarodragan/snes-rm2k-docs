@@ -11,7 +11,7 @@ its result can change**:
 * when the switch turns on: the converter pastes the body after the
   `ControlSwitches` that turns it on, as if a `CallEvent` followed it;
 * when the pause menu closes, which is where equipment is changed:
-  `equipment_commons`, in `tools/runtime/equipment_from_events.s` in
+  `equipment_commons`, in `runtime/equipment_from_events.s` in
   the-advocate, from `menu_screen`.
 
 It applies to any parallel common event, with a switch, that has nothing but

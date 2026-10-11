@@ -22,8 +22,8 @@ people. taro chose uploading on the fly.
 What it costs: one DMA per pose that changes, with a cap per vblank
 —whatever is left over waits for the next one—, and the queue has to upload
 the pose in the same vblank as the OAM that already counts on it. How, in
-`vram_queue` (`tools/runtime/load_graphics.s` in the-advocate) and its queue
-in `tools/runtime/low_ram.s`.
+`vram_queue` (`runtime/load_graphics.s` in the-advocate) and its queue
+in `runtime/low_ram.s`.
 
 ## And distant still characters take turns on one slot
 
@@ -34,7 +34,7 @@ poses, and the pose is uploaded when the one that needs it comes on screen,
 through the same queue. Only those nobody moves and that show a single
 graphic. It was Puma's option A in the task `mundo-7-camino-a-paradise.md`
 in the-advocate-work; option B —all of a character's still copies facing the
-same way— changed what is seen. How, in `tools/runtime/shared_poses.s` and
+same way— changed what is seen. How, in `runtime/shared_poses.s` and
 in the task `el-108-con-poses-compartidas.md`.
 
 ## And if not even that fits, nobody owns a slot
@@ -47,6 +47,6 @@ drew in two frames is taken by the next one. Still characters showing the
 same pose share theirs. If the cache fills up, the one asking **waits
 without being drawn** until someone leaves the screen: it doesn't hang, and
 the one waiting is the last one `build_oam` reaches. How, in
-`tools/runtime/cache_slots.s`; what was measured and what was ruled out
+`runtime/cache_slots.s`; what was measured and what was ruled out
 —the mirrors, the margin in cells—, in the task `la-cache-de-ranuras.md`
 in the-advocate-work.

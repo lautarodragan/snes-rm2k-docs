@@ -13,7 +13,7 @@ works, the battle ends; if it fails, the commands given by the ones before
 are forgotten —a chosen item, which is spent when chosen, goes back to the
 inventory—, the failed escape message is shown and the turn belongs only to
 the enemies, which is `ProcessSceneActionEscape` with `eFailure`. See
-`ba_flee_failed` in `tools/runtime/battle_run.s` in the-advocate.
+`ba_flee_failed` in `runtime/battle_run.s` in the-advocate.
 
 You can flee, as in easyrpg (`args.allow_escape`), from a random encounter
 and from an `EnemyEncounter` with `escape_mode` other than 0. Mode 0 is

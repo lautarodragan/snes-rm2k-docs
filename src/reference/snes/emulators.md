@@ -98,12 +98,12 @@ that `ld65` leaves next to each ROM, in the game's `build/<cartridge>/`.
   many `ready` labels show up as `ready`, `ready_2`, `ready_3`… The
   macro-local `LOCAL-MACRO_SYMBOL-*` names are skipped, since Mesen2
   rejects the dash.
-- **The source shows when Mesen2 finds `tools/runtime/` above the `.dbg`.** The
+- **The source shows when Mesen2 finds `runtime/` above the `.dbg`.** The
   `.dbg` names each runtime file relative to the root of the tools' checkout
-  (`tools/runtime/main.s`) and Mesen2 looks for that path next to the
+  (`runtime/main.s`) and Mesen2 looks for that path next to the
   `.dbg`, then one folder up, and so on until it finds it. That works from a
   build handed over with `just entregar`, which puts the commit's
-  `tools/runtime/` next to the ROM. The generated `mapdata.inc` and
+  `runtime/` next to the ROM. The generated `mapdata.inc` and
   `musicdata.inc` live in the cartridge's directory; since 2026-10-02 the
   game is outside the tools' checkout, and the `.dbg` names them with an
   absolute path. They are not copied either (~15 MB), so code that lands in

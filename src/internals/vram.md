@@ -32,7 +32,7 @@ In the code they are `LAYOUT_WINDOW`, `LAYOUT_WINDOW_BG`,
 `LAYOUT_WINDOW_ABOVE`.
 
 The details, with the addresses, are in `LAYOUT_WINDOW*` in `vram.rs` of
-`tools/rm2k-snes/mapdata/`, and `check_splits` checks that each one
+`rm2k-snes/mapdata/`, and `check_splits` checks that each one
 respects the hardware's alignments and what the ROM assumes. The long
 reasoning behind each layout stayed in the history of
 `tools/port/vram.py`, where they lived until 2026-10-01.
@@ -78,7 +78,7 @@ sprite tiles. Instead of raising "+bg", "+ceiling" was added at the end,
 which is "+bg" with the 544: the maps that were already there stay where
 they were. And 544 tiles of 8bpp are 34 KB, more than the LZ2 load buffer,
 so that background travels in two streams: see `lz2_backdrop` in
-`tools/runtime/decompress.s`.
+`runtime/decompress.s`.
 
 The sixth, "+above", was asked for by **Sorbe Village**, map 69: 157 tiles
 in the layer above, and the other five give it 128. It raises no
@@ -104,7 +104,7 @@ poses, and the ROM uploads the pose of the one that comes on screen. Who
 takes turns with whom is decided by `wally` —`plan_sharing` in its
 `map.rs`, with the coloring of `share` in its `sprites` module—, the table
 is emitted by `share_table` in `rm2k-snes-mapdata`, and what the ROM does
-is in `tools/runtime/shared_poses.s`. Map 108 ends up with 22 slots, 376
+is in `runtime/shared_poses.s`. Map 108 ends up with 22 slots, 376
 tiles, and fits in "+both". The other maps convert as always: `wally`
 first tries without turns and only if that doesn't fit converts again with
 them.
@@ -125,7 +125,7 @@ always; the one that walks has its own while it is seen. `wally` decides it
 —`Mode::Cache` in its `map.rs`, with the count in `sprites::cache`—, and
 gives the cache all the blocks that fit in the best layout for its
 background; the table is emitted by `cache_table` in `rm2k-snes-mapdata`,
-and what the ROM does is in `tools/runtime/cache_slots.s`. Map 127 ends up
+and what the ROM does is in `runtime/cache_slots.s`. Map 127 ends up
 with the hero, the spin slot and 30 in the cache: 32 blocks, 512 tiles, in
 "+sprite".
 
@@ -149,7 +149,7 @@ tilemap at $4000. The window tilemap falls in that range in "window"
 them belongs to anything used meanwhile —in some they are map tiles, which
 are reloaded—; the tiles of BG2 and of the window are from $5000 upwards in
 all of them. What it overwrites is restored, when it is erased, by the same
-load as returning from a battle: see `tools/runtime/big_picture.s`.
+load as returning from a battle: see `runtime/big_picture.s`.
 
 ## A big picture with zoom uses the other half
 
@@ -164,7 +164,7 @@ and BG2's tiles, which were up there in all six layouts: with mode 7 on
 screen the upper half is left free and the window goes back there, also in
 pieces. Erasing it restores everything with the same load as returning
 from a battle, which overwrites the same words. See
-`tools/runtime/big_picture_zoom.s`.
+`runtime/big_picture_zoom.s`.
 
 ## A map that shows its panorama uses one of its own
 
@@ -223,7 +223,7 @@ rows that are left, with tiles numbered from the scene's base, which wrap
 around to `$2000` (768 onwards). Their colors are the last battler palette,
 entry 240 onwards, and that is why a troop shows seven distinct battlers at
 most. See `battle.rs` in `rm2k-snes-screens` and `ba_win_tick` in
-`tools/runtime/battle_scene.s`.
+`runtime/battle_scene.s`.
 
 **Mode 1 in the bottom strip was ruled out, without writing it.** It asks
 for a BG1 palette between 0 and 7, and in battle they are all taken: 0 and
@@ -242,4 +242,4 @@ below, used up the 191 that `SLOT_VRAM` left, and later the 255 with
 less —the description and five lines— and the converter warns against the
 255. Word 0 is the transparent tile of the scene and the blank pair of the
 text at the same time: see `battle_bank_upload` in
-`tools/runtime/screen_bank.s`.
+`runtime/screen_bank.s`.

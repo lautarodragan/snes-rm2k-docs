@@ -3,7 +3,7 @@
 ## What
 
 The `ShowPicture` pictures that go in sprites —see
-`tools/runtime/picture_far.s` and `tools/port/picture.py` in the-advocate— do
+`runtime/picture_far.s` and `tools/port/picture.py` in the-advocate— do
 not do everything they do in RM2k:
 
 * **Transparency comes in three steps**: at 76 % or more it is not visible,
@@ -15,7 +15,7 @@ not do everything they do in RM2k:
   characters the map has in sprite palettes 4 and 5 are blended too, and so
   is the battle animation's box if it lands there: the hardware blends
   palettes 4 to 7 entirely. It is the `pic_blend` experiment, in
-  `tools/runtime/picture.s`, and it comes out with its commit.
+  `runtime/picture.s`, and it comes out with its commit.
 * **`MovePicture` neither moves nor enlarges**: it changes tone and
   transparency. One that asks for another place or another zoom does not
   compile and is accepted without being done.

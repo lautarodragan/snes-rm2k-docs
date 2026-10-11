@@ -11,7 +11,7 @@ through everything until the end of the game.
 
 Here the flag counts **only while the step is given by the forced route**.
 The reason, with the symptom that gave it away, is in `cell_blocked`
-(`tools/runtime/event_pages.s` in the-advocate), which is where `crossing` is
+(`runtime/event_pages.s` in the-advocate), which is where `crossing` is
 read and not the sticky `route_crosses`.
 
 For the reverse question —an event walking into the hero— the sticky one,

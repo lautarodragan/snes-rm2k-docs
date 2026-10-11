@@ -81,7 +81,7 @@ in `data/README.md`.
 ## How it is built
 
 **The tools have to be installed**, from their repository —`just -f
-tools/justfile install`, in the-advocate—, and with them a libretro core,
+justfile install`, in the-advocate—, and with them a libretro core,
 `ca65` and `ld65`: what each one needs, in that repository's README.
 
 ```sh

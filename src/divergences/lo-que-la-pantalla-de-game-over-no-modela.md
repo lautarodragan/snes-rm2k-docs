@@ -6,7 +6,7 @@ An `EnemyEncounter` with `defeat_mode` 0 that is lost, a lost random
 encounter, or a `GameOver`, send RM2k to `Scene_Gameover`: the project's
 Game Over picture, its theme, and on pressing a key the title screen.
 
-Since 2026-09-28 the ROM does it —see `tools/runtime/game_over.s` in
+Since 2026-09-28 the ROM does it —see `runtime/game_over.s` in
 the-advocate—: the picture named by the LDB's `System`, looked up in the game's
 `GameOver/` and then in the RTP's (`ABL_RTP_DIR`), the system's Game Over
 theme, 80 frames of fade-in and 80 of fade-out, and the title screen. Until
@@ -39,7 +39,7 @@ looks the same as the `game-over` golden, except for the scaling—.
 The theme, `GameOver3`, is also from the RTP: since that day music is looked
 up in the game and then in the RTP, as in RM2k, and the MSU-1 tracks for the
 RTP themes the `System` names are numbered after the game's: see
-`track_numbers` in `tools/rm2k-snes/rm2k-snes-audio/src/game.rs` in
+`track_numbers` in `rm2k-snes/rm2k-snes-audio/src/game.rs` in
 the-advocate.
 
 It is covered by `pruebas/rpgmaker/test_game_over.py` in the ABL port

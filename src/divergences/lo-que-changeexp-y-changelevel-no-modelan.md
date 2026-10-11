@@ -4,7 +4,7 @@
 
 Since 2026-10-04 `ChangeExp` and `ChangeLevel` compile: they are `OP_EXP`
 and, with the message, `OP_LEVEL_PAGE` after it —see `exp_change` and
-`level_page` in `tools/runtime/level.s` in the-advocate—. The level, the
+`level_page` in `runtime/level.s` in the-advocate—. The level, the
 experience, the skills, the HP and SP clipped when going down and the text of
 each page are those of easyrpg's `Game_Actor::ChangeExp` and `ChangeLevel`.
 What is not the same:

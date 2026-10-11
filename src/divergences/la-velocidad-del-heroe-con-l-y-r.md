@@ -7,7 +7,7 @@ time, between RM2k's 1 and 6. RM2k has nothing like it: it is taro's, from
 2026-09-30 —"being able to increase or decrease the hero's speed with the R
 and L buttons"—. Like the X autofire, **it only adds**: in RM2k there is no
 button that corresponds to L or R. It is in
-`tools/runtime/hero_speed_keys.s` in the-advocate.
+`runtime/hero_speed_keys.s` in the-advocate.
 
 What was decided, and is commented there:
 
