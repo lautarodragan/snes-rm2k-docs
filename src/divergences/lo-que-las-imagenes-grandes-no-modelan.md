@@ -46,7 +46,10 @@ and they do not do everything they do in RM2k:
   transparency—. Each is a big picture here: the map goes, what RM2k shows
   through it is the black backdrop, and a mist at 95 % transparency is a
   black screen. Measured on its map 22 on 2026-10-11: see
-  [Sunset Over Imdahl](../ports/sunset-over-imdahl/README.md).
+  [Sunset Over Imdahl](../ports/sunset-over-imdahl/README.md). Since the
+  same day a project can have the ones that stay put on a map drawn into
+  the map instead —[Pictures drawn into the map](las-imagenes-dentro-del-mapa.md)—;
+  Sunset does, and the rest of its pictures are still big ones.
 * **Showing it and erasing it turn the screen off**: measured, two frames
   when showing one and fourteen when erasing it, which reloads the map like
   the return from battle. The game's appear and go away over the black
