@@ -8,7 +8,9 @@ carries **the battle backdrops**, which started as a pilot, and since
 2026-09-27 **all of the game's**, whether or not they are in the
 cartridge's maps: see "The backdrops" below. And since 2026-09-26, behind
 them, **the quality sound effects** of each audio package: see "The
-effects" below.
+effects" below. And since 2026-10-11, only in a game whose ROM does not
+reach, behind everything, **what does not fit in the ROM**: see "What does
+not fit in the ROM" below.
 
 The ROM carries the backdrops the cartridge's battles ask for, and **light
 ones**: 128x64 at 4bpp and 16 colors, which the ROM doubles in size,
@@ -26,6 +28,11 @@ emulators](../reference/snes/emulators.md)). So what comes from the `.msu`
 **replaces** something the ROM already has, never adds it: without MSU-1,
 with a `.msu` from another build, empty or truncated, or if the MSU-1
 doesn't finish seeking in time, the ROM uses its own.
+
+**The one exception is a game whose ROM does not reach**, and it is the
+project's decision, not the converter's: see [the MSU-1 is required only
+when the ROM does not reach](../decisions/el-msu-1-obligatorio-si-la-rom-no-alcanza.md)
+and "What does not fit in the ROM" below.
 
 ## The port, from the console's side
 
@@ -195,6 +202,99 @@ from the ROM as always. A seek that doesn't arrive in time leaves that
 effect not uploaded: it doesn't sound, because the ROM's version has a
 different pitch. `pruebas/abl/test_msu_efectos.py` in the ABL port covers
 it, except for that wait, for the same reason as the backdrops'.
+
+## What does not fit in the ROM
+
+A game whose ROM does not reach —Vampires Dawn, on 2026-10-11: 12.6 MB of
+data for the 7.94 the cartridge has, and not enough even compressing the
+poses— says so in its project file, `[rom] msu = "required"`, and then
+what does not fit travels in the `.msu`. **The mechanism is the same for
+every game**; what is particular to one is only that its ROM does not
+reach. Without the setting nothing of this exists: the `.inc` and the ROM
+are byte for byte the ones from before it existed.
+
+**What may go** is marked by its emitter, with a `.msu` in front of its
+`.block`, and only what the ROM reads through something that knows how to
+read the port, and **when a map or a battle loads, never on every frame**:
+a seek costs Mednafen one or two frames (see "How long it takes" above).
+
+```text
+the map's LZ2 streams      tiles, upper layer, sprites, the ChipSet
+                           animation, the grid and the bytecode
+the battle's LZ2 streams   the battlers and the light backdrops
+a big picture's tilemap    LZ2
+                                  all three through `lz2_decompress`,
+                                  which sends them to `lz2_msu`
+a panorama's tiles         one DMA each, with the screen off, through
+a big picture's tiles      `msu_dma0`
+the samples                `upload_sample`, which uploads them to ARAM
+                           like the `.msu`'s effects: `msu_sample_l`
+```
+
+**The poses stay in the ROM**, and they are the biggest thing there is
+(4.3 MB in Vampires Dawn): they are uploaded on the fly, in the vblank —see
+[poses are uploaded on the fly](../decisions/las-poses-se-suben-en-caliente.md)—,
+and a seek per pose is not affordable. Nor what the CPU reads while the map
+is played: the event pages, the panorama's tilemap, the music streams, the
+texts.
+
+**Which ones go is decided by the bank packing**, `pack_with_msu` in
+`rm2k-snes-cartridge`, which is the one that knows what fits: the fewest
+possible, from the largest to the smallest, until the rest fits. In
+Vampires Dawn that is almost everything that may go —1,533 pieces, 5.3 MB—,
+because what stays is 7.10 MB for the 7.94. If even with all of them out
+it does not fit, it says so, and how many there were.
+
+**The region** goes behind the entries the index describes, from the next
+512-byte sector, and the packing writes it after the converter wrote the
+rest:
+
+```text
+start          8 bytes: the region's signature, from the sha256 of
+               everything from start + 256 on
+start + 256    the pieces, each from a multiple of 256 —its "unit"—
+               and padded with zeros to the next one
+```
+
+It is not in the index, and **the `.msu`'s signature covers up to where
+the entries end, not the region**: that is how the region is appended
+without the other signature changing —for a `.msu` without a region it is
+the same signature as always—. Each piece that went leaves its label as a
+constant: bank `$3D` —in `$00-$3F`, where the cartridge has no data— and
+its unit. The ROM seeks `MSU_SPILL_AT + unit`, times 256, and a stream
+asked for at unit `$FFFF` goes on from where the port was left: that is how
+`lz2_grid` and `lz2_backdrop` chain the streams of one piece.
+
+**The boot asks first**, before loading anything: whether there is an
+MSU-1, whether the `.msu` is this cartridge's —its signature— and whether
+the region is this build's —its own, against `msu_spill_signature`—. If
+any of the three fails, it shows a screen that says so, drawn by the
+converter with the game's font (`msu_missing.rs` in `rm2k-snes-convert`),
+and stays there. Once it passed, the readers do not look again; and the
+seek has no cap, because what is read there has no other source.
+
+**What it costs**, in snes9x, where seeking is instant —measured on
+2026-10-11 against a twin cartridge with everything in the ROM—: one to
+eight frames more per map load, because the LZ2 literals come from the port
+one byte at a time through the CPU instead of with `mvn` (map 66 of A
+Blurred Line, with the biggest background: 94 frames against 86). In
+Mednafen, besides, each seek: a map of Vampires Dawn does zero to five for
+its streams —most, three or four—, one for its panorama, and one per sample
+of its package that is in the `.msu`. That was not measured frame by frame.
+
+**How it is tested**: A Blurred Line fits, so the suite runs this path on
+two cartridges of its own, `test-msu` —everything that may go, in the
+`.msu`, with the converter's `--msu-everything`— and `test-msu-rom`, its
+twin with everything in the ROM. `test_lo_que_viaja_en_el_msu_llega_igual_que_de_la_rom`
+checks VRAM and WRAM after each map load against the converter, like for
+the ROM; `pruebas/rpgmaker/test_msu_gemelos.py` compares the boot —with
+map 6's panorama— frame by frame, a battle with its battlers, and the
+music's envelope, with the samples zeroed as the control; and
+`pruebas/rpgmaker/test_msu_obligatorio.py` the screen, without the `.msu`
+and with a region from another build. **Not run by the suite**: a big
+picture from the `.msu` —no map of `test-msu` shows one—, a light backdrop
+from it —with the MSU-1 the battle uses the quality one—, the seeks'
+wait, and the console.
 
 ## How it is tested
 
