@@ -1,5 +1,13 @@
 # Desert Nightmare
 
+## The empty party (2026-10-10)
+
+The `party = [1]` crutch is gone: the game starts with the party its
+database gives, which is nobody, as in RM2k. The hero isn't drawn until
+someone joins, and still walks, collides and touches events; the pause
+menu grays Items and Equipment while the party is empty. Built without
+the crutch: the whole release, in about five minutes.
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
