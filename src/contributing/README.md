@@ -13,9 +13,11 @@ The project lives in four repositories:
   the engine; the root has the few that run the other games (see
   [How it is tested](../testing.md#the-other-games)).
 - **the-advocate-docs**: this book.
-- **the-advocate-work**: where the work stands —the tasks, the decisions and
-  the divergences from RM2k— for all the repositories, and the
-  instructions for working on them.
+- **the-advocate-work**: where the work stands —the tasks— for all the
+  repositories, and the instructions for working on them. Every task is
+  one file, `tasks/<name>.md`, with its state in its front matter, and
+  **its name never changes**: this book cites a task with a link to it
+  there, and the link does not go stale when the task moves on.
 
 The commit messages are long on purpose: in all four, `git log` is the
 record of why things are the way they are.

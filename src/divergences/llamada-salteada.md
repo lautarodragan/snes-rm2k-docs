@@ -35,7 +35,7 @@ It is the `AfterBattleMint` of the maps with encounters —from 20 to 255—:
 with switch 498 it calls common event 35, `ResetAfterBattles`, and the common
 event is the one that turns 498 off. It is turned on by the turn-0 page each
 troop carries, which runs since the battle learned to look at the turn (the
-task `eventos-de-tropa-de-release.md`, in `tasks/` in the-advocate-work).
+task [`eventos-de-tropa-de-release`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eventos-de-tropa-de-release.md), in `tasks/` in the-advocate-work).
 
 **Since 2026-09-30 common event 35 runs**: what blocked it were the
 variables only it names —the 53 for the summons and for Talan's HP—, which

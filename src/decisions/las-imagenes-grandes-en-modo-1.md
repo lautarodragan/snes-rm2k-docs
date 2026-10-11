@@ -26,5 +26,5 @@ are erased it goes back to mode 3, reloading whatever it needs of the map.
 Since 2026-10-03, one that a `MovePicture` scales up or down **does the
 zoom in mode 7**, with a texture of 255 similar tiles, and when still it
 stays here, in mode 1 at full resolution: it is the hybrid vq variant taro
-chose in the pilot. See the task `las-fotos-en-modo-7.md` in
+chose in the pilot. See the task [`las-fotos-en-modo-7`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-fotos-en-modo-7.md) in
 the-advocate-work.

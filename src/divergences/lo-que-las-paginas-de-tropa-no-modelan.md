@@ -3,9 +3,9 @@
 ## What
 
 Troop event pages run with the RM2k conditions and commands that the
-battles in `release` ask for —see the task `eventos-de-tropa-de-release.md`—
+battles in `release` ask for —see the task [`eventos-de-tropa-de-release`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eventos-de-tropa-de-release.md)—
 and the ones the characters' systems use —the task
-`eventos-de-tropa-en-la-pelea.md`, both in `tasks/` in the-advocate-work—, with
+[`eventos-de-tropa-en-la-pelea`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eventos-de-tropa-en-la-pelea.md), both in `tasks/` in the-advocate-work—, with
 these differences.
 
 **An actor's HP, only if they are fighting.** A page's `actor_hp` condition
@@ -38,7 +38,7 @@ battle's package: they are not uploaded with the battle theme, their
 the battle theme does not degrade. What degrades is what they share with
 other themes: with three more themes, the sample bank has fewer entries left
 for copies, and several samples of other themes stay at the rate of the
-worst package. It was measured by the task `el-comun-35-y-la-radio.md`, in
+worst package. It was measured by the task [`el-comun-35-y-la-radio`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-comun-35-y-la-radio.md), in
 `tasks/` in the-advocate-work. With MSU-1 the three have their own track and
 play whole.
 

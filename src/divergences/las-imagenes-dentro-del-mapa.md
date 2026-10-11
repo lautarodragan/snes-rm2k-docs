@@ -49,7 +49,7 @@ What the ROM does not do that RM2k does:
 
 On 2026-10-11, on Sunset Over Imdahl, with captures of snes9x of maps 28,
 2, 13, 33, 7 and 22 against the 2015 RPG_RT under Wine: see the task
-`sunset-las-imagenes-sobre-el-mapa.md` in the-advocate-work, and the
+[`sunset-las-imagenes-sobre-el-mapa`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sunset-las-imagenes-sobre-el-mapa.md) in the-advocate-work, and the
 study, [The pictures over the map](../ports/sunset-over-imdahl/research/2026-10-11-las-imagenes.md).
 No test of the ROM runs it: A Blurred Line has it off.
 

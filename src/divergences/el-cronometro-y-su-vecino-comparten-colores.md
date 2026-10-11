@@ -19,7 +19,7 @@ In `release`, on 2026-09-25, the character shares the black on maps 2 and
 10, and both colors on 11, 17, 21 and the six with the save point (8, 20,
 23, 26, 28, 32). It changes with the palette distribution: the table and how
 it was obtained are in
-`tasks/testing/el-tinte-no-tine-al-que-comparte-paleta-con-el-cronometro.md`
+[`el-tinte-no-tine-al-que-comparte-paleta-con-el-cronometro`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-tinte-no-tine-al-que-comparte-paleta-con-el-cronometro.md)
 in the-advocate-work.
 
 Which tint exposes it:

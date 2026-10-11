@@ -13,7 +13,7 @@ the-advocate). They are baked: see
 [los-translucidos-van-horneados](los-translucidos-van-horneados.md).
 
 **Translucent pictures are**, since 2026-10-02: taro approved Gallareta's
-experiment (the task `testing/varias-imagenes-en-sprites.md` in
+experiment (the task [`varias-imagenes-en-sprites`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/varias-imagenes-en-sprites.md) in
 the-advocate-work). The two objections below don't apply to a picture in
 sprites: blending is turned on only in object palettes 4 to 7, so the hero
 and the events in 0 to 3 stay opaque and animating, and the message window

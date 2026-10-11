@@ -255,7 +255,7 @@ do not happen. It is a decision for taro.
 
 **`FlashScreen`** in battle, six per `Inscribe` page. It exists on the map;
 in battle it "tints the map's palette and not the scene's"
-(`workflow/tasks/done/eventos-de-tropa-en-la-pelea.md`). **Medium**, and
+([`eventos-de-tropa-en-la-pelea`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eventos-de-tropa-en-la-pelea.md)). **Medium**, and
 **`TintScreen`** in battle goes the same way. **`TerminateBattle`** is
 ending the battle without a result: small, a single page.
 
@@ -333,7 +333,7 @@ its `commands`; section 2 groups `pages`' culprits by variant by hand.
 It was checked against what was already known: without `--every-map` and
 with `scan`'s request, **2,913** map pages of `release` compile, the same
 ones `scan`'s `compiled` lists; and the troop pages that get in, **4,285**,
-are the ones `eventos-de-tropa-en-la-pelea.md` gave on 2026-09-30.
+are the ones [`eventos-de-tropa-en-la-pelea`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eventos-de-tropa-en-la-pelea.md) gave on 2026-09-30.
 
 What the count does **not** look at: whether a page that compiles does what
 it should —the test suite and taro take care of that—, nor what the

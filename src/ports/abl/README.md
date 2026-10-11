@@ -10,7 +10,7 @@ in the [divergences](../../divergences/README.md), not here.
 
 * **Four parallel common events never run**: `TalanLateForWork`,
   `DisableSaving`, `Raining` and `ManageQuarryTimer`. What that loses in
-  play was not looked at. Draft: `los-comunes-paralelos-no-corren`.
+  play was not looked at. Draft: [`los-comunes-paralelos-no-corren`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-comunes-paralelos-no-corren.md).
 
 ## The port
 

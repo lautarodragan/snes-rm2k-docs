@@ -119,8 +119,8 @@ aesthetic matter: one change can affect graphics allocation,
 serialization, audio, events and memory layout from the same module.
 
 The backlog already contains the tasks
-`las-responsabilidades-de-snes-convert.md` and
-`las-variables-globales-chocan.md`. They are the right direction. The split
+[`las-responsabilidades-de-snes-convert`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-responsabilidades-de-snes-convert.md) and
+[`las-variables-globales-chocan`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-variables-globales-chocan.md). They are the right direction. The split
 should be done in two commits per stage: first a mechanical extraction with
 an identical ROM, then changes of interfaces or criteria. The boundaries
 with the best likely return are:

@@ -141,7 +141,7 @@ celebration and the dance that follows are never together, but by where
 the events start they add up to 33 on one screen, and `wally` warns about
 it. The console does know, because a row that isn't drawn asks for
 nothing: in the celebration they are 26. The measurement of the whole game,
-and which aids were tried, in the task `la-cache-de-ranuras.md` in
+and which aids were tried, in the task [`la-cache-de-ranuras`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-cache-de-ranuras.md) in
 the-advocate-work.
 
 ## A big picture doesn't use the layout

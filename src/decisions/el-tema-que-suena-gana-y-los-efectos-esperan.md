@@ -10,7 +10,7 @@ completes the package.
 It is from 2026-09-26, with the per-package budget (see
 [un-solo-banco-de-muestras](un-solo-banco-de-muestras.md)), and taro
 decided it by choosing option A of step 6 of the task
-`tasks/todo/la-calidad-de-la-musica.md` in the-advocate-work.
+[`la-calidad-de-la-musica`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-calidad-de-la-musica.md) in the-advocate-work.
 
 ## Why
 

@@ -82,4 +82,4 @@ hero sharp on top.
 
 A game that uses the block, blind or wipe transitions, or the zoom as an
 effect that has to be seen: see
-`tasks/wishlist/las-otras-transiciones-de-rm2k.md` in the-advocate-work.
+[`las-otras-transiciones-de-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-otras-transiciones-de-rm2k.md) in the-advocate-work.

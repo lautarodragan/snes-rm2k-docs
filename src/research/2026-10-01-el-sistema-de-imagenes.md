@@ -411,7 +411,7 @@ port like the battle backgrounds (`docs/port/msu-datos.md` in snes-rm2k):
 the ROM still carries its 4 bpp version and uses the other only if it
 finds it. For the text pages **the `.msu` improves nothing**: they are 2
 colors. What would improve them is mode 5 —text without rescaling, at 512
-pixels wide—, which is the idea of `wishlist/un-menu-custom-propio.md`
+pixels wide—, which is the idea of [`un-menu-custom-propio`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/un-menu-custom-propio.md)
 and doesn't need MSU-1. Starting with the `.msu` is not recommended: 4 bpp
 with 105 colors is enough for taro to judge by eye.
 
@@ -464,7 +464,7 @@ The generic goes in `tools/` —it knows nothing of ABL—; ABL's, in `rom/`:
    A test that opens item 81 from the menu and walks through Talan, his
    auras and a tutorial.
 
-After that, `wishlist/un-menu-custom-propio.md`: the same menu, described
+After that, [`un-menu-custom-propio`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/un-menu-custom-propio.md): the same menu, described
 as data and drawn in mode 5 with a font, which is what really fixes the
 text pages.
 

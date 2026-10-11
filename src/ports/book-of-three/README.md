@@ -10,7 +10,7 @@ as text.
 * **Parallel common events never run**: four in this game —`DisableSaving`,
   `Reraise KO'd chars`, `Eilonwy's Upgrades` and `LegendariesActivated`—.
   What that loses in play was not looked at. Draft:
-  `los-comunes-paralelos-no-corren`.
+  [`los-comunes-paralelos-no-corren`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-comunes-paralelos-no-corren.md).
 
 ## What it leaves out (2026-10-11)
 
@@ -88,19 +88,19 @@ custom fonts, an RM2k database.
 - **The window with more than 15 colors**: Adeleine reduces it instead of
   stopping, 23 colors down to 15, but the stretched frame still doesn't fit
   the tile bank (267 of 256): it doesn't start with its original System
-  yet. (Task `la-ventana-con-mas-colores.md`.)
+  yet. (Task [`la-ventana-con-mas-colores`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-ventana-con-mas-colores.md).)
 - **Choosing another System from the project**: the `[graphics] system`
   knob. Built with the original game and `system = "ablskin.png"` (A
-  Blurred Line's System), it starts. (Task `elegir-otro-system.md`.)
+  Blurred Line's System), it starts. (Task [`elegir-otro-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/elegir-otro-system.md).)
 - **Four shortcuts**: `Comment` in troop pages is ignored as on the maps;
   troop pages that compile went from 206 to 359 of 746. (Task
-  `cuatro-atajos-para-los-otros-juegos.md`.)
+  [`cuatro-atajos-para-los-otros-juegos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/cuatro-atajos-para-los-otros-juegos.md).)
 - **Decorative events as background**: 87 candidates, measured without
-  looking at the drawing. (Task `los-eventos-decorativos-como-fondo.md`.)
+  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
 - **A ChipSet animation that doesn't fit in WRAM** (2026-10-10) keeps the
   tiles that cover the most cells moving and leaves the rest still: in map
   46, 9 of its 25 water tiles (25 of 115 cells) and 2 of its 22 animated
   ones (2 of 2,185). The map is back in the cartridge, which builds whole.
-  (Task `las-animaciones-de-tiles-en-wram.md`.)
+  (Task [`las-animaciones-de-tiles-en-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-animaciones-de-tiles-en-wram.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

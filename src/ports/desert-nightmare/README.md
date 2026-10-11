@@ -8,26 +8,26 @@ behind each one is a draft or a task in the tasks repository, named here
 as text.
 
 * **It starts without its title screen**: the title image doesn't fit in
-  VRAM. Draft: `el-titulo-que-no-entra-en-la-vram`.
+  VRAM. Draft: [`el-titulo-que-no-entra-en-la-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-titulo-que-no-entra-en-la-vram.md).
 * **The start menu ("With Intro / No Intro / Quit") shows over a pattern of
   garbage**, and in general the screen is not blanked where the original
   goes black: `EraseScreen` and `ShowScreen` are accepted without doing
   anything. Task: `todo/eraseScreen-y-showscreen`.
 * **The hero walks through some walls.** On eight maps —2, 4, 5, 14, 61,
   62, 66 and 172— more events than the console holds are left out, and
-  among them are invisible walls. Draft: `las-paredes-invisibles-que-se-pierden`.
+  among them are invisible walls. Draft: [`las-paredes-invisibles-que-se-pierden`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-paredes-invisibles-que-se-pierden.md).
 * **In the gas station's toilet (map 7) the room goes dark for about eight
   seconds**: a light mask that the original lays over the room at 35 %
   replaces the map. Seen on 2026-10-06, not checked since. Draft:
-  `las-imagenes-sobre-el-mapa-fuera-de-sunset`.
+  [`las-imagenes-sobre-el-mapa-fuera-de-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-imagenes-sobre-el-mapa-fuera-de-sunset.md).
 * **The windows keep the intro's System** for the whole game: the original
   switches to `Systemset_Spiel` in its common event `Init`. Task:
-  `todo/changesystemgraphics`.
+  [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
 * **Messages show no faces, and coloured words come out in the plain
-  colour.** Task: `todo/las-caras-y-las-esperas`.
+  colour.** Task: [`las-caras-y-las-esperas`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-las-esperas.md).
 * **Parallel common events never run**: two in this game, `Hauptmenü` and
   `Vergiftet`. What that loses in play was not looked at. Draft:
-  `los-comunes-paralelos-no-corren`.
+  [`los-comunes-paralelos-no-corren`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-comunes-paralelos-no-corren.md).
 
 ## What it leaves out (2026-10-11)
 
@@ -120,13 +120,13 @@ no custom fonts, an RM2k database.
 ## What changed after it (to 2026-10-06)
 
 - **The window**: its System's 15 colors fit; what stopped it was End
-  Game, another limit. (Task `la-ventana-con-mas-colores.md`.)
+  Game, another limit. (Task [`la-ventana-con-mas-colores`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-ventana-con-mas-colores.md).)
 - **Choosing another System from the project**: built with the original
   game and `system = "ablskin.png"` (A Blurred Line's System), it starts.
-  (Task `elegir-otro-system.md`.)
+  (Task [`elegir-otro-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/elegir-otro-system.md).)
 - **Color codes ignored**, as a debt (`\c[1]Sandra: \c[0]` in almost every
   message, 1,345 pages out): map pages that compile went from 5,738 to
-  7,034 of 7,340. (Task `ignorar-los-codigos-de-color.md`.)
+  7,034 of 7,340. (Task [`ignorar-los-codigos-de-color`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignorar-los-codigos-de-color.md).)
 - **`EraseEvent` for real**: it was what kept the most pages out alone, and
   it no longer does; the 157 are parallel pages without a graphic. It was
   suspected of freezing the intro, and it wasn't that: the intro ends in
@@ -135,22 +135,22 @@ no custom fonts, an RM2k database.
   picture that RM2k shows as a dark mask at 35 % comes out opaque and
   covers the room for ~480 frames —it looks frozen, but it goes on—. That
   is the pictures' translucency, not the erasing. (Task
-  `eraseevent-de-verdad.md`.)
+  [`eraseevent-de-verdad`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eraseevent-de-verdad.md).)
 - **`EraseScreen`/`ShowScreen` accepted without doing anything**, as a
   debt: the map stays visible where the original goes black, and the start
   menu comes out over VRAM garbage. The title that doesn't fit now
   degrades: it builds without `--no-title`. The survey's exclusions stay:
   it wasn't tested which depended on `EraseScreen`. (Task
-  `degradar-en-vez-de-fallar.md`.)
+  [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
 - **Four shortcuts**: the condition on direction (21 pages) and the random
   step (order 8, 39 pages). Map pages went from 7,034 to 7,150 of 7,340.
-  (Task `cuatro-atajos-para-los-otros-juegos.md`.)
+  (Task [`cuatro-atajos-para-los-otros-juegos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/cuatro-atajos-para-los-otros-juegos.md).)
 - **Decorative events as background**: 2,887 candidates, measured without
-  looking at the drawing. (Task `los-eventos-decorativos-como-fondo.md`.)
+  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
 - **A ChipSet animation that doesn't fit in WRAM** (2026-10-10) keeps the
   tiles that cover the most cells moving and leaves the rest still: in map
   182, 9 of its 51 water tiles (44 of 1,469 cells). The map is back in the
   cartridge, which builds whole. (Task
-  `las-animaciones-de-tiles-en-wram.md`.)
+  [`las-animaciones-de-tiles-en-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-animaciones-de-tiles-en-wram.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

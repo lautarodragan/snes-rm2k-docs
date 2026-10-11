@@ -38,5 +38,5 @@ only on map 1 (`per_map` in `[sound_effects]` of the project file): maps 3,
 6 kHz. Both, and the rain, are in `SE_ENTEROS_PAGADOS`: the music of their
 package pays for them if needed. If the thunder or the rain change rate,
 map 1's package becomes limiting again: the converter prints which samples
-each package limits. See the task `efectos-de-sonido-sin-recortes.md` in
+each package limits. See the task [`efectos-de-sonido-sin-recortes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/efectos-de-sonido-sin-recortes.md) in
 the-advocate-work.

@@ -26,7 +26,7 @@ action list, each action's `rating` and easyrpg's
   does nothing, and the AI discards it the way easyrpg discards one that has
   nobody to affect.
 * **No animation.** `ShortCircuit` carries number 62 and it is not drawn,
-  same as the party's skills: see `tasks/wishlist/animaciones-en-la-pelea.md`
+  same as the party's skills: see [`animaciones-en-la-pelea`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/animaciones-en-la-pelea.md)
   in the-advocate-work.
 
 If an enemy has no action left, it attacks, which is what they all did until

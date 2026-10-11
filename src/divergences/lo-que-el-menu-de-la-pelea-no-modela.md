@@ -40,7 +40,7 @@ same yet:
 
 With the 2015 RPG_RT under Wine, on 2026-10-04 —the battle test, troops 82
 and 87—, against the ROM with ABL's test run. The side-by-side captures,
-with the ROM, are listed in the task `el-menu-de-la-pelea-como-rm2k.md`, in
+with the ROM, are listed in the task [`el-menu-de-la-pelea-como-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-menu-de-la-pelea-como-rm2k.md), in
 `tasks/` in the-advocate-work.
 
 ## When it stops being enough

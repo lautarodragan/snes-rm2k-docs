@@ -12,7 +12,7 @@ door Core breaks—, and an event that isn't drawn still takes up room in
 `npcs_dibujables`.
 
 What this costs today, and the idea of reserving it only while the timer
-runs, is in `tasks/wishlist/timer-paleta-dinamica.md` in the-advocate-work.
+runs, is in [`timer-paleta-dinamica`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/timer-paleta-dinamica.md) in the-advocate-work.
 
 ## When it stops being enough
 
