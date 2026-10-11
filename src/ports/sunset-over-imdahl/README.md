@@ -1,5 +1,23 @@
 # Sunset Over Imdahl
 
+## The pictures, drawn into the map (2026-10-11)
+
+taro decided its pictures are not left out: "it is a very artistic game;
+without those pictures it probably loses all its charm". How the game uses
+them, group by group, is [the study](research/2026-10-11-las-imagenes.md).
+The first version, `[graphics] map_pictures = true` in its project: the
+pictures that stay put on a map —roofs and ceilings, lights, shadows and
+mists, 183 of them on 64 maps— are drawn into the panorama, and the roofs
+go in front of the hero by the priority of the panorama's cells. What it
+does not do is in [Pictures drawn into the map](../../divergences/las-imagenes-dentro-del-mapa.md).
+The opening scene on 22 runs over the painting, with its mist.
+
+What it shows next to it: **the large maps were already grainy**. The
+squares (40x30) and the streets (20x30) carry a painting of 2,000 to 4,800
+distinct cells in the panorama's 576 tiles, and the grouping shows —on
+the squares the water channel and the pavilion come out broken— with or
+without the pictures. That is the panorama's tile budget, not this.
+
 ## The opening scene in black (2026-10-11)
 
 After the title, map 11 tints the screen black and jumps to map 22, where
@@ -16,7 +34,8 @@ without the `party = [1]` crutch. Two causes, one behind the other:
   `WinterMist`, a 320x240 mist at 100 % transparency that a `MovePicture`
   takes to 95 %, over the panorama. The console carries it as a big
   picture, which goes in place of the map, and its transparency darkens
-  towards black: the scene is still black. **Not fixed**: the game draws
+  towards black: the scene is still black. **Not fixed** that day —it is
+  since, see "The pictures, drawn into the map"—: the game draws
   its roofs, ceilings, lights, shadows and mists this way on nearly every
   map —about 140 screen-sized pictures—, and putting them over the map is
   a feature of its own. See

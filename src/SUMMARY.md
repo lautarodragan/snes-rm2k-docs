@@ -78,6 +78,7 @@
         - [The teleport transitions](divergences/las-transiciones-del-teletransporte.md)
         - [What pictures as sprites do not model](divergences/lo-que-las-imagenes-en-sprites-no-modelan.md)
         - [What large pictures do not model](divergences/lo-que-las-imagenes-grandes-no-modelan.md)
+        - [Pictures drawn into the map](divergences/las-imagenes-dentro-del-mapa.md)
     - [Events and movement]()
         - [The phase of still events that animate](divergences/la-fase-de-los-quietos-que-animan.md)
         - [More than four still events that animate](divergences/mas-de-cuatro-quietos-que-animan.md)
@@ -142,6 +143,8 @@
     - [El Dorado](ports/el-dorado/README.md)
     - [The Frozen World](ports/frozen-world/README.md)
     - [Sunset Over Imdahl](ports/sunset-over-imdahl/README.md)
+        - [Research]()
+            - [The pictures over the map (2026-10-11)](ports/sunset-over-imdahl/research/2026-10-11-las-imagenes.md)
     - [Vampires Dawn](ports/vampires-dawn/README.md)
 
 - [Contributing](contributing/README.md)
