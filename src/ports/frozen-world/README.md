@@ -10,9 +10,10 @@ Two maps, and the project now takes every map of the game:
 - **2**: "a stream of map_code is 38179 bytes and 19968 fit in WRAM".
 
 The cap on the maps (`below`), which the survey set because the sample
-directory went past 255, is gone: that limit degrades now. It still needs
-A Blurred Line's System: with its own, "the window needs 266 tiles —26 of
-its frame and its arrow— and the bank has 256".
+directory went past 255, is gone: that limit degrades now. Since later
+on 2026-10-11 it builds with its own System, `thunter`: its gradient is
+fused where the banks don't hold it —[A window with a gradient is fused
+until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
 
 ## As of 2026-10-10
 

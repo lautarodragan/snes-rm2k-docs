@@ -55,6 +55,7 @@
     - [The possible leaders are an approximation](decisions/los-lideres-posibles-son-una-aproximacion.md)
     - [The possible leaders share one CGRAM slot](decisions/los-lideres-comparten-una-ranura-de-cgram.md)
     - [The graphics only the hero shows go in the leaders' slot](decisions/los-graficos-que-solo-muestra-el-heroe.md)
+    - [A window with a gradient is fused until it fits](decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)
     - [The timer has no palette of its own](decisions/el-cronometro-no-tiene-paleta-propia.md)
     - [Poses are uploaded on the fly](decisions/las-poses-se-suben-en-caliente.md)
     - [Translucent events are baked](decisions/los-translucidos-van-horneados.md)

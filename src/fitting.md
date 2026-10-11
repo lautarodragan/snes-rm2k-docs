@@ -18,6 +18,12 @@ game that doesn't build can only be guessed about.
   their closest neighbors. Adeleine chooses which ones, by how many pixels
   each color covers, and those merges are saved with the game as patches,
   so a change in what is lost shows up in its history.
+- **Window tiles.** A System whose stretched background is a gradient is
+  a different cell on every row of its windows, more than their banks of
+  tiles hold. The message window has the background seen through its frame
+  fused into bands; the screens that cut their windows into a bank have
+  their least visible cells merged, one at a time, until it holds them —see
+  [A window with a gradient is fused until it fits](decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
 - **Background tiles.** A map with more distinct tiles than any layout of
   video memory can hold has its most similar tiles fused until it fits.
   It is the last resort, tried only after everything else that could make
@@ -40,8 +46,9 @@ game that doesn't build can only be guessed about.
 Some of those choices belong to the game, not the tools, and are knobs in
 its `rm2k-snes.toml`:
 
-- **Another System graphic**, when the game's own doesn't fit the message
-  window: one from the game, from the RTP, or one made for the port.
+- **Another System graphic**, when the game's own is not the one the port
+  should show, or costs what the cartridge doesn't have: one from the
+  game, from the RTP, or one made for the port.
 - **Decorative events as background.** Events that only exist to be
   looked at —one page, no commands, never moved— can be painted into the
   background instead of using sprites. It is off by default, because it

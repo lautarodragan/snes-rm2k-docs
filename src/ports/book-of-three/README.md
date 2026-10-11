@@ -6,8 +6,10 @@ No map: the whole release builds. Maps 44, 69 and 74, which the survey left
 out, build now, and map 46 came back on 2026-10-10 with part of its tile
 animation standing still.
 
-The one crutch left is A Blurred Line's System: with its own, "the window
-needs 267 tiles —27 of its frame and its arrow— and the bank has 256".
+Since later on 2026-10-11 it builds with its own System, Royal: its
+gradient is fused where the banks don't hold it —[A window with a gradient
+is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—, with a warning for the message window,
+the actor choice, the item and equipment screens and the shop.
 
 ## As of 2026-10-10
 

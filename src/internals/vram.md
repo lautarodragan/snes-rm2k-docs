@@ -10,7 +10,14 @@ and which one is seen and on which lines is said by HDMA: see
 With that there is no layout that serves every map: which one applies is
 decided by the converter —along with the ready-made values of `OBSEL` and
 `BG12NBA`, and since 2026-09-25 the address of the background tilemap— and
-travels in the `.inc`. The ROM chooses nothing. Why the background is
+travels in the `.inc`. The ROM chooses nothing.
+
+The window's 256 tiles are 240 for its text area, one per cell, which the
+cartridge writes the letters into, and 16 for its frame and its arrow. A
+System whose frame needs more —a gradient behind a frame that lets it
+through— is fused until it fits, and the bank stays the same: see [A
+window with a gradient is fused until it
+fits](../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md). Why the background is
 8-bit to begin with: [Mode 3 by default](../cartridge/mode-3.md).
 
 There are six, and `vram_layout` returns **the first one that fits**, so

@@ -1,5 +1,24 @@
 # Vampires Dawn
 
+## Its own System (2026-10-11)
+
+> Measured on 2026-10-11 with the tools of the-advocate's branch
+> `tijereta-ventana-tiles` and the ports' of the same name.
+
+- **Its screens fit with its own System, `VDBlutsys`**: the message
+  window's frame took 28 tiles of 16, the actor choice's windows 158 of
+  64, the shop's 166 of 96, and the item and equipment windows had to
+  leave 160 pairs to their text; all of them are fused —[A window with a
+  gradient is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
+- **The ROM doesn't**: "a piece of 65536 bytes needs a new bank, and the
+  127 banks the cartridge has for data are taken". It keeps A Blurred
+  Line's System, which builds.
+- **Maps 15 and 150 are not the window's**: "this map can't carry a
+  message window" says that no VRAM layout leaves the window's 8 KB next
+  to what the map spends —576 background tiles, 436 sprite tiles and 130
+  upper ones in map 15—. The window's bank is 256 tiles whatever the
+  System.
+
 ## As of 2026-10-11, later still: troops past a byte, 21 maps out
 
 > Measured on 2026-10-11 with the tools of the-advocate's branch

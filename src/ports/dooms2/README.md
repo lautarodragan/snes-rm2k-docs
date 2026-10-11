@@ -15,9 +15,11 @@ the stream says which 256 the notes name, with `OP_SOUND_PAGE` (see
 emulator; what was checked is that the ROM writes to the DSP what the
 stream of both songs says, start to end.
 
-It still needs A Blurred Line's System: with its own, even without map 1,
-"the actor choice's windows are 66 8bpp tiles and reach $4840, and their
-tilemap is at $4800".
+Since later on 2026-10-11 it builds with its own System: the actor
+choice's windows, 69 tiles for a bank of 64, have their least visible
+cells merged —[A window with a gradient is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
+Map 1 is not the windows' business: with its own System its slot screen
+and menu gather 482 tiles of 448, and those are faces.
 
 ## As of 2026-10-10
 
