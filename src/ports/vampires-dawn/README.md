@@ -1,5 +1,31 @@
 # Vampires Dawn
 
+## As of 2026-10-11: it requires the MSU-1, and it builds
+
+> Measured on 2026-10-11 with the tools of the-advocate's branch
+> `tijereta-vd-msu` (e9a9488f) and the ports' (3a6ca29), with the 82 maps
+> that don't convert excluded and starting on map 8, as the earlier
+> measurements did. The older snapshots follow, as they were.
+
+- **Its ROM does not reach.** Its data is 12.6 MB for the 7.94 the
+  cartridge has —4.3 of them poses, 2.2 the maps' backgrounds—, and
+  compressing what is reasonable leaves it about 1 MB short: the poses in
+  LZ2 were the only thing that paid off, and they cost A Blurred Line
+  frames. taro chose the MSU-1 rather than two cartridges: [the MSU-1 is
+  required only when the ROM does not
+  reach](../../decisions/el-msu-1-obligatorio-si-la-rom-no-alcanza.md).
+- **So its project says `[rom] msu = "required"`, and it builds**: 1,533
+  pieces, 5.3 MB, travel in the `.msu` —the maps' streams, the samples,
+  the battlers, the panoramas' and big pictures' tiles—, and the rest fits
+  in the 127 banks. How, in [the `.msu` file](../../internals/msu-datos.md),
+  "What does not fit in the ROM".
+- It starts on map 8 in snes9x and in Mednafen with its `.msu`, and without
+  it shows the screen that says the MSU-1 is missing. **Playing it is still
+  to be done.**
+- **The 82 excluded maps will ask for more ROM** when they convert, and
+  what is left to send to the `.msu` is little: what stays in the ROM is
+  mostly poses, which are uploaded on the fly.
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),

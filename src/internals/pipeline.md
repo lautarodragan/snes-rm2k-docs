@@ -14,7 +14,8 @@ data/ + parches/manual/
                                                                   <rom>.msu (battle backdrops),
                                                                   parches/ (decisions)
 runtime/*.s + those .inc    --rm2k-snes-assemble----------> <rom>.sfc + <rom>.sfc.sym
-                                    (bank packing, ca65 + ld65)
+                                    (bank packing, ca65 + ld65)   and, with [rom] msu = "required",
+                                                                  what does not fit, behind <rom>.msu
 <rom>.sfc + MIDI or replacements  --rm2k-snes-msu---------------> <rom>-N.pcm
                                     (fluidsynth, ffmpeg)
 ```

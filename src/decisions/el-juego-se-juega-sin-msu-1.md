@@ -28,3 +28,8 @@ without msu". It replaces that recommendation.
 - **The battle animations go only in the `.msu`**: without MSU-1 there are
   none. The ones events show in cutscenes stay in the ROM, unless they need
   to be taken out.
+- **The exception is a game whose ROM does not reach**, decided by its
+  project and not by the converter: since 2026-10-11, [the MSU-1 is
+  required only when the ROM does not
+  reach](el-msu-1-obligatorio-si-la-rom-no-alcanza.md). A Blurred Line is
+  not one.

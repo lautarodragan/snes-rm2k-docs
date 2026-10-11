@@ -36,6 +36,7 @@ find them by name.
 - [RPG Maker 2000 PLUS](rm2k-plus.md)
 - [First the whole game, then the quality](primero-el-juego-entero-despues-la-calidad.md)
 - [The game is playable without MSU-1](el-juego-se-juega-sin-msu-1.md)
+- [The MSU-1 is required only when the ROM does not reach](el-msu-1-obligatorio-si-la-rom-no-alcanza.md)
 - [The cartridge goes to 8 MB](el-cartucho-pasa-a-8-mb.md)
 - [The tools split from ABL, into two repos](las-herramientas-se-separan-de-abl.md)
 - [data/ is the resolved view](data-es-la-vista-resuelta.md)
