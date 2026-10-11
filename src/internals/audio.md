@@ -22,8 +22,10 @@ writes            --dsp_music-->        the SPC700 driver
   IPL the driver and the sample directory, nothing else. What the driver
   serves —(register, value) pairs for the DSP, triples for ARAM, going back
   to the IPL— is in `DRIVER`, in `spc700.rs`. How long the ROM waits at
-  power-on is `BOOT_FRAMES` (`runtime/far_ram.s`), and the converter
-  stops if that isn't enough: see [boot is sized for the boot
+  power-on is `BOOT_FRAMES`, which each cartridge carries in its
+  `musicdata.inc`: `BOOT_FRAMES_FLOOR` (`runtime/far_ram.s`) or the
+  estimate for the boot map's package, whichever is larger. See [boot is
+  sized for the boot
   package](../decisions/el-arranque-esta-dimensionado-para-el-paquete-de-arranque.md).
 - **The stream is per note**: notes, releases, changes of volume or pitch,
   and waits, which the 65816 expands into the same writes that used to go
