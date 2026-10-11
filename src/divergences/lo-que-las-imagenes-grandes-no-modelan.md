@@ -39,6 +39,14 @@ and they do not do everything they do in RM2k:
   characters, not the timer, not the small pictures. The instructions on
   285, which in RM2k go over the map with the map around them, here go over
   black. And the menu does not open.
+* **A picture that goes over the map hides it.** Sunset Over Imdahl draws
+  its roofs, ceilings, lights, shadows and mists as screen-sized pictures
+  over the map —about 140 of them, most with the transparent colour
+  covering half or more of the image, or shown at 45 to 95 %
+  transparency—. Each is a big picture here: the map goes, what RM2k shows
+  through it is the black backdrop, and a mist at 95 % transparency is a
+  black screen. Measured on its map 22 on 2026-10-11: see
+  [Sunset Over Imdahl](../ports/sunset-over-imdahl/README.md).
 * **Showing it and erasing it turn the screen off**: measured, two frames
   when showing one and fourteen when erasing it, which reloads the map like
   the return from battle. The game's appear and go away over the black

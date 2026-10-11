@@ -1,5 +1,33 @@
 # Sunset Over Imdahl
 
+## The opening scene in black (2026-10-11)
+
+After the title, map 11 tints the screen black and jumps to map 22, where
+the first scene —the captain and the general looking at the city— runs
+from an autorun page (event 1). On the console it stayed black, with or
+without the `party = [1]` crutch. Two causes, one behind the other:
+
+- **The page did not compile.** It asks `ChangeScreenTransitions` for the
+  cut (19) when showing, which the converter did not take, so the whole
+  page was left out and the black tint of map 11 stayed. Fixed: the cut
+  for showing compiles and the ROM does it —see
+  [The teleport transitions](../../divergences/las-transiciones-del-teletransporte.md)—.
+- **Its mist hides the map.** With the page running, it shows
+  `WinterMist`, a 320x240 mist at 100 % transparency that a `MovePicture`
+  takes to 95 %, over the panorama. The console carries it as a big
+  picture, which goes in place of the map, and its transparency darkens
+  towards black: the scene is still black. **Not fixed**: the game draws
+  its roofs, ceilings, lights, shadows and mists this way on nearly every
+  map —about 140 screen-sized pictures—, and putting them over the map is
+  a feature of its own. See
+  [What large pictures do not model](../../divergences/lo-que-las-imagenes-grandes-no-modelan.md).
+
+Measured on a cartridge of maps 11, 22, 21, 23 and 10, with snes9x: taking
+the page's `ShowPicture` and `MovePicture` out of the dump by hand, the
+scene runs whole —panorama, tint, messages, and the jump to the command
+tent on 21—, so nothing else is behind it. The original, under Wine,
+shows the panorama in the rain and the mist coming in.
+
 ## The empty party (2026-10-10)
 
 The `party = [1]` crutch is gone: the game starts with the party its
