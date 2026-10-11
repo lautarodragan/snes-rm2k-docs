@@ -4,7 +4,8 @@
 
 What playing the port shows today that the original does not. It is kept
 current: whoever fixes one removes its line in the same change. The work
-behind each one is a draft in the tasks repository, named here as text.
+behind each one is a draft or a task in the tasks repository, named here
+as text.
 
 * **On a painted map, an event "above the hero" is drawn over the roofs.**
   The guard at (13,23) on the square, map 2, shows over the roof that
@@ -12,9 +13,20 @@ behind each one is a draft in the tasks repository, named here as text.
 * **On the square, some roof edges cover too much or too little.** The
   square has more roof edges than the cartridge keeps, and the rest are
   left out. A guard at (36,13) has his legs over a roof's edge, likely
-  one of those; not checked.
+  one of those; not checked. Draft: `los-bordes-de-techo-que-no-entran`.
 * **Characters are not shaded or lit** by the painted shadows, lights and
   fogs, which only touch the painting.
+* **Turning back while walking on a square can drop a frame**, when the
+  camera reverses while a row of the painting is still being uploaded.
+  Measured, not noticed in play. Draft:
+  `la-camara-que-vuelve-sobre-una-fila-a-medio-subir`.
+* **The windows keep the game's first System.** The opening scene (map 11)
+  switches to `SaveMeny`, and the cartridge ignores the switch. Task:
+  `todo/changesystemgraphics`.
+* **Coloured words in messages come out in the plain colour.** Task:
+  `todo/las-caras-y-las-esperas`.
+* **Its parallel common event `MenuCaller` never runs.** What that loses
+  in play was not looked at. Draft: `los-comunes-paralelos-no-corren`.
 
 ## The painted maps, in mode 1 (2026-10-11)
 

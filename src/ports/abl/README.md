@@ -1,5 +1,19 @@
 # A Blurred Line
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text. Where the ROM does what RM2k does in another way, on purpose, is
+in the [divergences](../../divergences/README.md), not here.
+
+* **Four parallel common events never run**: `TalanLateForWork`,
+  `DisableSaving`, `Raining` and `ManageQuarryTimer`. What that loses in
+  play was not looked at. Draft: `los-comunes-paralelos-no-corren`.
+
+## The port
+
 A port of *A Blurred Line*, a game made in RPG Maker 2000, to the Super
 Nintendo. It is the game the project was born porting, and still the one
 that is ported for real: the others are measured against it (see

@@ -1,5 +1,19 @@
 # Dooms 2
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **There is no character choice**: the game starts on map 2. Map 1, where
+  the original lets you choose, is not in the cartridge —with it, the slot
+  screen and the menu don't fit in their bank— and an event page that would
+  take the hero there is left out whole. Draft:
+  `las-ranuras-y-el-menu-de-dooms2-no-entran`.
+* **Messages show no faces.** Task: `todo/las-caras-y-las-esperas`.
+
 ## What it leaves out (2026-10-11)
 
 One map, and its error doesn't name it —it was checked by putting it

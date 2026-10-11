@@ -1,5 +1,17 @@
 # The Book of Three
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **Parallel common events never run**: four in this game —`DisableSaving`,
+  `Reraise KO'd chars`, `Eilonwy's Upgrades` and `LegendariesActivated`—.
+  What that loses in play was not looked at. Draft:
+  `los-comunes-paralelos-no-corren`.
+
 ## What it leaves out (2026-10-11)
 
 No map: the whole release builds. Maps 44, 69 and 74, which the survey left

@@ -1,5 +1,34 @@
 # Desert Nightmare
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **It starts without its title screen**: the title image doesn't fit in
+  VRAM. Draft: `el-titulo-que-no-entra-en-la-vram`.
+* **The start menu ("With Intro / No Intro / Quit") shows over a pattern of
+  garbage**, and in general the screen is not blanked where the original
+  goes black: `EraseScreen` and `ShowScreen` are accepted without doing
+  anything. Task: `todo/eraseScreen-y-showscreen`.
+* **The hero walks through some walls.** On eight maps —2, 4, 5, 14, 61,
+  62, 66 and 172— more events than the console holds are left out, and
+  among them are invisible walls. Draft: `las-paredes-invisibles-que-se-pierden`.
+* **In the gas station's toilet (map 7) the room goes dark for about eight
+  seconds**: a light mask that the original lays over the room at 35 %
+  replaces the map. Seen on 2026-10-06, not checked since. Draft:
+  `las-imagenes-sobre-el-mapa-fuera-de-sunset`.
+* **The windows keep the intro's System** for the whole game: the original
+  switches to `Systemset_Spiel` in its common event `Init`. Task:
+  `todo/changesystemgraphics`.
+* **Messages show no faces, and coloured words come out in the plain
+  colour.** Task: `todo/las-caras-y-las-esperas`.
+* **Parallel common events never run**: two in this game, `Hauptmenü` and
+  `Vergiftet`. What that loses in play was not looked at. Draft:
+  `los-comunes-paralelos-no-corren`.
+
 ## What it leaves out (2026-10-11)
 
 No map: the whole release builds. What stopped twelve maps on 2026-10-10

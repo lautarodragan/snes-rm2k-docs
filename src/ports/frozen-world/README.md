@@ -1,5 +1,20 @@
 # The Frozen World
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **It starts without its title screen**: the title image doesn't fit in
+  VRAM. Draft: `el-titulo-que-no-entra-en-la-vram`.
+* **Maps 1 ("Battle Screen") and 2 ("Plate Placement") are not in the
+  cartridge**, and an event page that would take the hero to one of them
+  is left out whole. What of the game that loses was not looked at.
+  Drafts: `el-heroe-que-destella-comparte-paleta` (map 1) and
+  `los-flujos-de-un-mapa-que-no-entran-en-la-wram` (map 2).
+
 ## What it leaves out (2026-10-11)
 
 Two maps, and the project now takes every map of the game:

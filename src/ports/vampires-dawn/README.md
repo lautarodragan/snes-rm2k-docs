@@ -1,5 +1,32 @@
 # Vampires Dawn
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **It starts without its title screen**: the title image doesn't fit in
+  VRAM. Draft: `el-titulo-que-no-entra-en-la-vram`.
+* **Ten maps are not in the cartridge**, the world map (1) among them, and
+  an event page that would take the hero to one of them is left out
+  whole. Drafts: `los-flujos-de-un-mapa-que-no-entran-en-la-wram` (map 1)
+  and `los-mapas-de-vampires-dawn-que-no-entran-en-la-vram` (15, 57, 99,
+  150, 165, 225, 399, 402 and 403).
+* **The windows, the menu and the battle use A Blurred Line's System**, not
+  `VDBlutsys`; and the game's own switches between its Systems are
+  ignored. Draft: `vampires-dawn-con-su-system`; task:
+  `todo/changesystemgraphics`.
+* **An event page that uses any variable past the 256th does nothing**:
+  the game names 600, and those pages are left out. Which scenes that
+  touches was not looked at. Draft: `las-variables-que-pasan-de-256`.
+* **Parallel common events never run**: 35 in this game, among them the
+  summons and the wolf and bat transformations. What that loses in play
+  was not looked at. Draft: `los-comunes-paralelos-no-corren`.
+* **Messages show no faces, and coloured words come out in the plain
+  colour.** Task: `todo/las-caras-y-las-esperas`.
+
 ## Its own System (2026-10-11)
 
 > Measured on 2026-10-11 with the tools of the-advocate's branch

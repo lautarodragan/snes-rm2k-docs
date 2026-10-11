@@ -1,5 +1,16 @@
 # El Dorado
 
+## Known issues
+
+What playing the port shows today that the original does not. It is kept
+current: whoever fixes one removes its line in the same change. The work
+behind each one is a draft or a task in the tasks repository, named here
+as text.
+
+* **The screen is not blanked where the original goes black**: on eleven
+  maps a page erases and shows the screen, and the cartridge leaves the
+  map in sight. Task: `todo/eraseScreen-y-showscreen`.
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
