@@ -18,7 +18,11 @@ same layer as the one above the map, and mode 3 does not have a third.
   those lines BG2 shows the window's tilemap —the plane without a frame,
   with the cells that are not text left blank—, so roofs, treetops and
   everything the chipset puts on top disappear from that strip while the
-  message lasts. The lower layer and the characters are visible.
+  message lasts. The lower layer and the characters are visible. In a map
+  whose panorama goes in mode 3 the panorama is that BG2, so it is the
+  panorama that disappears from the strip: Vampires Dawn's intro, which is
+  all panorama, asks "Skip Intro ?" without a background, and the ROM shows
+  it over a black band where RM2k shows the picture.
 
 And one that is not about the layer: the red "continue" arrow RM2k draws at
 the foot of the window is not there, with or without a background. It
