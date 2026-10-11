@@ -64,5 +64,6 @@ rule but fewer rows: baking the decoration into the background
 takes those events out of the table before this cut.
 
 And this is not the last limit of those maps: most of them also have more
-events than the console's event table holds (`EV_MAX`, also bank 0's RAM),
-which still stops the build.
+events than the console's event table holds (`EV_MAX`, also bank 0's RAM).
+Since 2026-10-10 that cut comes first: see
+[Events that do not fit in the RAM](los-eventos-que-no-entran-en-la-ram.md).
