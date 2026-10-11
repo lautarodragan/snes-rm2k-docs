@@ -1,5 +1,19 @@
 # The Frozen World
 
+## What it leaves out (2026-10-11)
+
+Two maps, and the project now takes every map of the game:
+
+- **1**: "a page makes the hero flash, and actor 11 is drawn with
+  rangedmelee[0], which an NPC of the map also uses. On the console they
+  share a palette and both would flash".
+- **2**: "a stream of map_code is 38179 bytes and 19968 fit in WRAM".
+
+The cap on the maps (`below`), which the survey set because the sample
+directory went past 255, is gone: that limit degrades now. It still needs
+A Blurred Line's System: with its own, "the window needs 266 tiles —26 of
+its frame and its arrow— and the bank has 256".
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),

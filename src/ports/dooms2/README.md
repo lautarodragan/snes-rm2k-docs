@@ -1,5 +1,19 @@
 # Dooms 2
 
+## What it leaves out (2026-10-11)
+
+Four maps, and none of the errors names the map —each was checked by
+putting it back alone—:
+
+- **1**, choosing a character: "the slot screen and the menu gather 524
+  tiles and their bank fits 448". So the cartridge still starts on map 2.
+- **10, 14 and 63**: "the song uses 291 sounds and the index is one byte"
+  (411 in map 14).
+
+It still needs A Blurred Line's System: with its own, even without map 1,
+"the actor choice's windows are 66 8bpp tiles and reach $4840, and their
+tilemap is at $4800".
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
