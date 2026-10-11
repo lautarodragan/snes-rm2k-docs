@@ -25,4 +25,7 @@ The exception is the **panorama** (a map's parallax background). For
 each map, the tools choose how to show it: not at all if it is never seen,
 baked into the background if it doesn't move against the map, in the
 second layer if the map draws little above the hero, or with the map in
-mode 1 at 4 bits and the panorama on a third layer.
+mode 1 at 4 bits and the panorama on a third layer. And a map whose
+panorama *is* the map —a painting, as in Sunset Over Imdahl— can go in mode
+1 with the painting in BG1, a tile per cell, uploaded as the camera moves:
+see [the VRAM split](../internals/vram.md#a-painted-map-keeps-only-what-the-screen-shows).

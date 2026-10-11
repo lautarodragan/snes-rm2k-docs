@@ -145,6 +145,7 @@
     - [Sunset Over Imdahl](ports/sunset-over-imdahl/README.md)
         - [Research]()
             - [The pictures over the map (2026-10-11)](ports/sunset-over-imdahl/research/2026-10-11-las-imagenes.md)
+            - [Mode 1 for the painted maps (2026-10-11)](ports/sunset-over-imdahl/research/2026-10-11-el-modo-1.md)
     - [Vampires Dawn](ports/vampires-dawn/README.md)
 
 - [Contributing](contributing/README.md)
