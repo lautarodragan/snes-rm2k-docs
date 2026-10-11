@@ -1,5 +1,21 @@
 # Sunset Over Imdahl
 
+## The painted maps, in mode 1 (2026-10-11)
+
+taro, after the captures of the pictures: "it really isn't playable",
+and to try mode 1 and colour math. What was measured is in
+[Mode 1 for the painted maps](research/2026-10-11-el-modo-1.md): the
+mosaic of the squares was the tile budget, and twice the tiles did not fix
+it —the error per pixel went from 10.5 to 9.4— while one tile per cell
+took it to 2.3. So `[graphics] painted_maps = true` in its project: the 60
+maps whose panorama is the map go painted —mode 1, the painting in BG1 a
+tile per cell, uploaded as the camera moves; see [the VRAM
+split](../../internals/vram.md#a-painted-map-keeps-only-what-the-screen-shows)—,
+and the roofs' edges go exact in BG2. Colour math did not go in: it does
+not reach the characters drawn with object palettes 0 to 3, and there is no
+VRAM left for its mask. What stays lost: seven palettes of fifteen colours
+per map, and the characters are not shaded.
+
 ## The pictures, drawn into the map (2026-10-11)
 
 taro decided its pictures are not left out: "it is a very artistic game;

@@ -204,6 +204,51 @@ In both, the panorama tiles that fall after BG1's come back with
 `load_above` —`pano_load`— just as BG1 does with `load_map`, so the screens
 can overwrite them. The details, in `LAYOUT_PANORAMA_MODE*` in `vram.rs`.
 
+## A painted map keeps only what the screen shows
+
+Since 2026-10-11, a map whose panorama *is* the map —fixed to it, with
+nothing of the ChipSet over it, as almost every map of Sunset Over Imdahl—
+can go **painted**, if its project asks for it with `[graphics]
+painted_maps`: `Way::Painted` in Wally. The whole map is one picture, and it
+goes in BG1, in mode 1, at 4 bits, **one tile per 8x8 cell, with no
+grouping**. A square of 640x480 has 4,800 cells and almost all are
+different, more than any layout holds, so VRAM holds only the ones the
+screen can show:
+
+```text
+VENTANA_PINTADA  sprites 256 | slots 990 + blank, BG1 | map $5000 | window_map $5800 | (free) | above 128 | window 256
+```
+
+The screen is 256x224, so with the scroll halfway through a cell it shows
+33 columns and 29 rows. Cell (x, y) lives in slot `(y mod 30) + 30 * (x mod
+33)`: no two cells on screen share one, and a column of the map is one run
+of slots. The cartridge carries every cell once, column by column, so a
+column goes up in one DMA, or two if it laps; a row is 33 DMAs of 32 bytes.
+The tilemap is the map's moving window, as in any map: `build_column` and
+`build_row` build it, and `paint_column` and `paint_row` write over what
+goes to BG1 with the painting's palette and priority and the slot by where
+the cell is.
+
+The row more —30 and not 29— is what keeps the vblank short. A column that
+comes into view goes over the one that just left, in the same vblank; a
+row is uploaded **ahead**, eleven tiles a frame, into the spare row on the
+side the camera last went, before it is seen. With 29 rows, a row and a
+column in the same vblank ended it at line 262; with the spare one, at 251.
+If the camera gets there first, or turns back while the row that left is
+half overwritten, what is missing goes in that frame. See
+`runtime/painted.s`, and `paint_table` in `panorama.rs` of
+`rm2k-snes-mapdata`.
+
+What goes in front of the hero is the painting itself: the cells the
+pictures cover whole go to BG1's priority 1; the ones they cover in part go
+in BG2 at priority 1, the painting's own cell with only the covered pixels,
+in the layer above's 128 tiles; the edges that do not fit, by whole cells.
+BG1 is hidden under the message window, as in a flattened map.
+
+**Only a cartridge with a painted map assembles any of this**: without
+`paint_table` in its `.inc`, `painted.s` and its calls are empty, and the
+ROM comes out byte for byte as before.
+
 ## Battle doesn't use the layout
 
 A battle overwrites the whole VRAM and `back_from_battle` restores it:
