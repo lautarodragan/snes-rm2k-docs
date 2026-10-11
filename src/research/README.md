@@ -42,3 +42,4 @@ By date:
 - [Other games, measured again](2026-10-10-otros-juegos-de-nuevo.md)
   — 2026-10-10
 - [The S-DD1, for the poses](2026-10-11-el-s-dd1.md) — 2026-10-11
+- [The windows, made cheaper](2026-10-11-las-ventanas.md) — 2026-10-11
