@@ -7,7 +7,7 @@
 - [When a game doesn't fit](fitting.md)
 - [The engine against RPG Maker 2000](engine-vs-rm2k.md)
 - [The cartridge](cartridge/README.md)
-    - [Mode 3, always](cartridge/mode-3.md)
+    - [Mode 3 by default](cartridge/mode-3.md)
     - [ExHiROM, 8 MB](cartridge/exhirom.md)
 - [How it is tested](testing.md)
 
@@ -56,7 +56,7 @@
     - [The timer has no palette of its own](decisions/el-cronometro-no-tiene-paleta-propia.md)
     - [Poses are uploaded on the fly](decisions/las-poses-se-suben-en-caliente.md)
     - [Translucent events are baked](decisions/los-translucidos-van-horneados.md)
-    - [Color math isn't used](decisions/el-color-math-no-se-usa.md)
+    - [Translucent events don't use color math](decisions/el-color-math-no-se-usa.md)
     - [Large pictures in mode 1](decisions/las-imagenes-grandes-en-modo-1.md)
     - [The grid lives in WRAM](decisions/la-grilla-vive-en-la-wram.md)
     - [A single sample bank](decisions/un-solo-banco-de-muestras.md)

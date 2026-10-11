@@ -1,4 +1,9 @@
-# Color math isn't used
+# Translucent events don't use color math
+
+**This is a decision about one thing —A Blurred Line's translucent
+events—, not a ban on color math.** It was rejected for what it costs
+there, below; anything else that needs it can use it, and translucent
+pictures already do.
 
 ## What
 

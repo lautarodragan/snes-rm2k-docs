@@ -73,7 +73,7 @@ find them by name.
 - [The timer has no palette of its own](el-cronometro-no-tiene-paleta-propia.md)
 - [Poses are uploaded on the fly](las-poses-se-suben-en-caliente.md)
 - [Translucent events are baked](los-translucidos-van-horneados.md)
-- [Color math isn't used](el-color-math-no-se-usa.md)
+- [Translucent events don't use color math](el-color-math-no-se-usa.md)
 - [Large pictures in mode 1](las-imagenes-grandes-en-modo-1.md)
 - [The grid lives in WRAM](la-grilla-vive-en-la-wram.md)
 

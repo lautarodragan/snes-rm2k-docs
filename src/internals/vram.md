@@ -11,7 +11,7 @@ With that there is no layout that serves every map: which one applies is
 decided by the converter —along with the ready-made values of `OBSEL` and
 `BG12NBA`, and since 2026-09-25 the address of the background tilemap— and
 travels in the `.inc`. The ROM chooses nothing. Why the background is
-8-bit to begin with: [Mode 3, always](../cartridge/mode-3.md).
+8-bit to begin with: [Mode 3 by default](../cartridge/mode-3.md).
 
 There are six, and `vram_layout` returns **the first one that fits**, so
 adding one at the end doesn't change the layout of any map that already

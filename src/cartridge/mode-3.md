@@ -1,4 +1,9 @@
-# Mode 3, always
+# Mode 3 by default
+
+**This is the choice that fit A Blurred Line, not a rule of the engine.** It
+was made for that game's maps, and the engine already uses mode 1 where a
+map needs it (see below). A game whose maps ask for another mode, or for
+color math, can have it: what matters is what that game needs.
 
 Maps are drawn in **mode 3, with 8 bits per pixel**. Every pixel of the
 background is a direct index into the color memory (CGRAM), so there are
