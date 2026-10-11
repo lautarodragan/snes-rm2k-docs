@@ -2,13 +2,18 @@
 
 ## What it leaves out (2026-10-11)
 
-Four maps, and none of the errors names the map —each was checked by
-putting it back alone—:
+One map, and its error doesn't name it —it was checked by putting it
+back alone—:
 
 - **1**, choosing a character: "the slot screen and the menu gather 524
   tiles and their bank fits 448". So the cartridge still starts on map 2.
-- **10, 14 and 63**: "the song uses 291 sounds and the index is one byte"
-  (411 in map 14).
+
+Maps 10, 14 and 63 are back: two of the game's songs, Graig and Demons,
+have more than 256 sounds, and a note named its sound in one byte. Now
+the stream says which 256 the notes name, with `OP_SOUND_PAGE` (see
+[Audio](../../internals/audio.md)). Nobody has played those maps in an
+emulator; what was checked is that the ROM writes to the DSP what the
+stream of both songs says, start to end.
 
 It still needs A Blurred Line's System: with its own, even without map 1,
 "the actor choice's windows are 66 8bpp tiles and reach $4840, and their
