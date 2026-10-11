@@ -1,5 +1,41 @@
 # Vampires Dawn
 
+## As of 2026-10-11, later: it builds from its project, with 23 maps out
+
+> Measured on 2026-10-11 with the tools of the-advocate `0bb1120a` and the
+> ports' branch `aguara-vd-toml`, the game read whole from its `.zip`
+> —all 281 songs—. The section after this one is the earlier snapshot of
+> the same day, kept as it was.
+
+- **The project builds the release as committed**: `excluded` in
+  `vampires-dawn/rm2k-snes.toml` lists 23 maps, each with what stops it,
+  and `start_map` is 3, the game's own: its boot fits now. 417 of the 440
+  maps go in; 2,227 pieces, 6.5 MB, travel in the `.msu`.
+- It boots in snes9x with its `.msu` on map 3's "Skip Intro ?", and
+  "Yes" takes it to the first house. **Playing it is still to be done.**
+- **Each map alone**, next to map 8: 433 of 440. What stops the seven:
+  the message window (15), VRAM (57, 99, 399), the mode 1 panorama (402,
+  403) and map 1's grid, 147,232 bytes against 32 KB of WRAM. Since
+  2026-10-10 maps 28, 95, 165, 195, 225, 236 and 351 stopped failing
+  alone.
+- **The whole cartridge asks for more than the maps alone**: with every
+  map present, pages that teleport to them compile, more events come in
+  and more of them are baked into the background. Map 150 then can't
+  carry the window (609 background tiles; alone, 384), and 165 (Uruya)
+  and 225 don't fit VRAM.
+- **Two limits of the whole game decide the rest.** Its troops: 277,
+  where a troop's place in the ROM is a byte (255); four maps whose
+  troops nobody else uses are out for that. And what can't go to the
+  `.msu`: the characters' poses, 4.3 MB of the ROM's 8, are uploaded on
+  the fly and stay; nine maps with poses of their own are out so the
+  rest fits the 127 banks. Each of those thirteen was tried back in: none
+  returns without breaking the build.
+- **Where the poses go**: the converter keeps one bank of twelve poses
+  per character *and* per quantization, so a character whose colors come
+  out differently in another map takes a bank of its own. 420 of the
+  1,239 banks are such repeats. Sharing one quantization per character
+  is what would bring back those nine maps, and make room for the others.
+
 ## As of 2026-10-11: it requires the MSU-1, and it builds
 
 > Measured on 2026-10-11 with the tools of the-advocate's branch
