@@ -36,6 +36,12 @@ writes            --dsp_music-->        the SPC700 driver
   reads as many events as the stream already had and continues after the
   jump, one level only. They are the same bytes, so they write the same.
   See "repeats" in `stream.rs`.
+- **A note names its sound in one byte**, out of the theme's table of
+  sounds (pitch, sample, envelope and release). A theme with more than 256
+  says `OP_SOUND_PAGE` before the notes that name the next 256, and the
+  65816 moves `MUS_BASE` there; one with 256 or fewer never says it. The
+  page is the decoder's state, like its register cache, so a repeat reads
+  its bytes in the page the stream it stands for was in.
 - **The eight voices belong to every channel** and are handed out note by
   note: a note takes a free voice or steals one by priority. See `assign`,
   `victim` and `frame_order` in `voices.rs`.
