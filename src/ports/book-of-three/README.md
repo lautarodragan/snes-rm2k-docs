@@ -1,5 +1,14 @@
 # The Book of Three
 
+## What it leaves out (2026-10-11)
+
+No map: the whole release builds. Maps 44, 69 and 74, which the survey left
+out, build now, and map 46 came back on 2026-10-10 with part of its tile
+animation standing still.
+
+The one crutch left is A Blurred Line's System: with its own, "the window
+needs 267 tiles —27 of its frame and its arrow— and the bank has 256".
+
 ## As of 2026-10-10
 
 > Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),

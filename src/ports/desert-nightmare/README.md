@@ -1,5 +1,16 @@
 # Desert Nightmare
 
+## What it leaves out (2026-10-11)
+
+No map: the whole release builds. What stopped twelve maps on 2026-10-10
+degrades now, with a warning: past 120 events the ones left out lose only
+their looks or an invisible wall, past 104 drawn events the rest aren't
+drawn and still run, and the panoramas are drawn flattened or in mode 1. None of those
+maps was looked at in an emulator.
+
+The one crutch left is A Blurred Line's System: with its own, "the End Game
+screen uses 18 pairs of colours and a 4bpp palette has 16".
+
 ## The empty party (2026-10-10)
 
 The `party = [1]` crutch is gone: the game starts with the party its
