@@ -72,17 +72,17 @@ doesn't use it. No DynRPG, no custom fonts, an RM2k database.
 
 - **`ROUTE_GFX_MAX` degrades instead of failing**: the order 34 graphics
   that don't fit are ignored with a warning. El Dorado builds without
-  exclusions. (Task [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
+  exclusions. (Task [`degrade-instead-of-failing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degrade-instead-of-failing.md).)
 - **`EraseEvent` for real**: its three pages that were out only for that
-  now compile. (Task [`eraseevent-de-verdad`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eraseevent-de-verdad.md).)
+  now compile. (Task [`eraseevent-for-real`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/eraseevent-for-real.md).)
 - **Four shortcuts**: the condition on direction (23 pages), moving away
   from the hero (order 10, 9 pages) and `PlayerVisibility` (170 pages).
   Map pages that compile went from 710 to 963 of 972, and common events
   from 9 to 10 of 10. With all that El Dorado stopped building: map 7
   asked for nine substituted blocks and the table held eight, so
   `SUB_MAX` went from 8 to 16. (Task
-  [`cuatro-atajos-para-los-otros-juegos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/cuatro-atajos-para-los-otros-juegos.md).)
+  [`four-shortcuts-for-the-other-games`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/four-shortcuts-for-the-other-games.md).)
 - **Decorative events as background**: 26 candidates, measured without
-  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
+  looking at the drawing. (Task [`decorative-events-into-the-background`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decorative-events-into-the-background.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

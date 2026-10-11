@@ -138,11 +138,11 @@ don't go, it is 92 KB less.
   **~430 KB with LZ2**. It is an upper bound: some are already in the ROM
   and in Lechuza's count, and drawing the full-screen ones asks for a
   design that doesn't exist (the wishlist task
-  [`sistema-de-imagenes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sistema-de-imagenes.md) in snes-rm2k-work). The count adds them whole.
+  [`picture-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/picture-system.md) in snes-rm2k-work). The count adds them whole.
 - **The panoramas**: 19 distinct ones in 44 maps, **~770 KB with LZ2** at
   4 bpp. **They are left out**: in mode 3 both background layers belong to
   the map, and the converter drops them (the comment of `ChangePBG` in the
-  event compiler, and the wishlist task [`panorama-del-mapa-2`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/panorama-del-mapa-2.md)). It
+  event compiler, and the wishlist task [`panorama-of-map-2`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/panorama-of-map-2.md)). It
   doesn't add them.
 - **Movies**: none.
 - **The five maps that don't fit in VRAM** (108, 127, 148, 250 and 285, see
@@ -175,13 +175,13 @@ any pair                                111,054 B                  -36 %
 The first is the one that can be done without splitting a control code
 from its parameters. Over the ~255 KB of messages of the whole game it is
 **about 85 KB**, without losing anything and without losing direct access
-to each box. It is idea 3 of the task [`los-textos-sin-comprimir`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-textos-sin-comprimir.md) (in
+to each box. It is idea 3 of the task [`uncompressed-texts`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/uncompressed-texts.md) (in
 snes-rm2k-work), which was unmeasured; the repeated messages (its idea 1)
 would give something more and aren't measured.
 
 ### The music sequences
 
-Ideas 2 and 3 of the task [`la-musica-pesa-789-kb`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-musica-pesa-789-kb.md) were measured on the
+Ideas 2 and 3 of the task [`music-weighs-789-kb`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/music-weighs-789-kb.md) were measured on the
 prototype's format, and today's is already per note. Measured again, over
 86 of the 103 themes (1,184 KB; the other 17 carry references in the
 `.inc` and couldn't be read as bytes):
@@ -440,7 +440,7 @@ only if 4 KB of WRAM that can keep playing during a load appear.
 five maps that don't fit in VRAM, the picture system and, if taro wants
 the battle with sound without MSU-1, the effects of the animations. And
 the battle animations from the `.msu`, which with MSU-1 cost zero bytes of
-ROM (the wishlist task [`animaciones-en-la-pelea`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/animaciones-en-la-pelea.md)).
+ROM (the wishlist task [`animations-in-battle`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/animations-in-battle.md)).
 
 **Phase 5 — only if 8 MB gets tight: quality, in this order.**
 

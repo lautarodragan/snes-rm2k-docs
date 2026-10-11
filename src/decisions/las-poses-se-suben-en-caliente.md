@@ -32,10 +32,10 @@ that doesn't fit in any VRAM split, and only there, still characters that
 no camera position shows together share a slot even if they show different
 poses, and the pose is uploaded when the one that needs it comes on screen,
 through the same queue. Only those nobody moves and that show a single
-graphic. It was Puma's option A in the task [`mundo-7-camino-a-paradise`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/mundo-7-camino-a-paradise.md)
+graphic. It was Puma's option A in the task [`world-7-the-road-to-paradise`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/world-7-the-road-to-paradise.md)
 in the-advocate-work; option B —all of a character's still copies facing the
 same way— changed what is seen. How, in `runtime/shared_poses.s` and
-in the task [`el-108-con-poses-compartidas`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-108-con-poses-compartidas.md).
+in the task [`108-with-shared-poses`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/108-with-shared-poses.md).
 
 ## And if not even that fits, nobody owns a slot
 
@@ -48,5 +48,5 @@ same pose share theirs. If the cache fills up, the one asking **waits
 without being drawn** until someone leaves the screen: it doesn't hang, and
 the one waiting is the last one `build_oam` reaches. How, in
 `runtime/cache_slots.s`; what was measured and what was ruled out
-—the mirrors, the margin in cells—, in the task [`la-cache-de-ranuras`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-cache-de-ranuras.md)
+—the mirrors, the margin in cells—, in the task [`sprite-slot-cache`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sprite-slot-cache.md)
 in the-advocate-work.

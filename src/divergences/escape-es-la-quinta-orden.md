@@ -39,7 +39,7 @@ in a battle without escape is grayed out. Each character has four commands.
 With the 2015 RPG_RT under Wine, on 2026-10-04, the battle test with troops
 82 and 87: the party menu at the start of each turn, with Escape in white
 —the battle test always allows fleeing—. Where the captures are is said by
-the task, [`el-menu-de-la-pelea-como-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-menu-de-la-pelea-como-rm2k.md) in `tasks/` in the-advocate-work.
+the task, [`battle-menu-like-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/battle-menu-like-rm2k.md) in `tasks/` in the-advocate-work.
 
 ABL's test run covers it in `test_huir_es_del_grupo` —the failed escape,
 with the HP checked against the model— and in

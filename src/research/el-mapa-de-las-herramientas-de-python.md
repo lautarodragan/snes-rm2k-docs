@@ -355,7 +355,7 @@ Who uses `snes_convert` from outside:
   (`cuadro_de_animacion`) and `abl/test_msu_datos.py` (`fondo_bytes`,
   `pack_tile`).
 
-For [`las-responsabilidades-de-snes-convert`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-responsabilidades-de-snes-convert.md), the cheapest thing is to
+For [`responsibilities-of-snes-convert-py`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/responsibilities-of-snes-convert-py.md), the cheapest thing is to
 pull three things out into their own modules:
 
 * **the SNES format** (92-406 and `entry`): breaks the cycle with
@@ -549,7 +549,7 @@ Each item goes in its own commit. The order is by what it unblocks:
    With that done, `eventos` remains as a leaf on the engine side.
 6. **`pack_tile`, `cgram_word` and `entry` leave `snes_convert`** for a
    module of the SNES format. It breaks the cycle with `pantalla_completa`,
-   and it is the first cut of [`las-responsabilidades-de-snes-convert`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-responsabilidades-de-snes-convert.md).
+   and it is the first cut of [`responsibilities-of-snes-convert-py`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/responsibilities-of-snes-convert-py.md).
 7. **`titulo.py` is split into title, menus and save slots, and menu font.**
    It is moving, but it is a lot of moving: better to leave it after the other
    six.

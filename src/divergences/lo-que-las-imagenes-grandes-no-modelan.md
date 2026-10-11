@@ -10,7 +10,7 @@ and they do not do everything they do in RM2k:
 
 * **Zoom is done in mode 7, with a 255-tile texture**, since 2026-10-03
   —see `runtime/big_picture_zoom.s` in the-advocate and the task
-  [`las-fotos-en-modo-7`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-fotos-en-modo-7.md) in `tasks/` in the-advocate-work—. Still, the
+  [`picture-zoom-in-mode-7`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/picture-zoom-in-mode-7.md) in `tasks/` in the-advocate-work—. Still, the
   picture is at full resolution in mode 1, like any large one; when the zoom
   starts it switches to mode 7, and there each place in the picture shows
   the closest tile out of the 255 that fit —in noisy photos, sometimes a
@@ -91,5 +91,5 @@ and they do not do everything they do in RM2k:
 
 On the `release` cartridge, on 2026-10-02, with the test pages of
 `test_imagenes_grandes_golden.py`, against captures of the six scenes from
-the 2015 RPG_RT under Wine: see the task [`las-imagenes-grandes-en-modo-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-imagenes-grandes-en-modo-1.md),
+the 2015 RPG_RT under Wine: see the task [`large-pictures-on-bg1-in-mode-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/large-pictures-on-bg1-in-mode-1.md),
 in `tasks/` in the-advocate-work.

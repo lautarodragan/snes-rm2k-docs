@@ -15,11 +15,11 @@ inside play a copy and the ones outside stop paying for it.
 the directory. The SRCN the stream writes is the sample's number in the
 cartridge, so two tracks that play piano point at the same one, and SRCN is
 one byte. One copy per track (option B of step 6 of the task
-[`la-calidad-de-la-musica`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-calidad-de-la-musica.md) in the-advocate-work) would be
+[`quality-of-the-music`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/quality-of-the-music.md) in the-advocate-work) would be
 about 370 entries against 255. Until 2026-09-26 SRCN also numbered every
 sound effect in the cartridge; since that day the effects share the slots
 at the end of the directory, because the ARAM gets one package at a time:
-see the task [`el-directorio-de-los-efectos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-directorio-de-los-efectos.md).
+see the task [`effects-directory`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/effects-directory.md).
 
 **The budget is per package and not per bank** since 2026-09-26 (option A
 of the same step, chosen by taro). What goes to the ARAM is never the bank

@@ -8,12 +8,12 @@ behind each one is a draft or a task in the tasks repository, named here
 as text.
 
 * **It starts without its title screen**: the title image doesn't fit in
-  VRAM. Draft: [`el-titulo-que-no-entra-en-la-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-titulo-que-no-entra-en-la-vram.md).
+  VRAM. Draft: [`title-that-doesnt-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/title-that-doesnt-fit-in-vram.md).
 * **Maps 1 ("Battle Screen") and 2 ("Plate Placement") are not in the
   cartridge**, and an event page that would take the hero to one of them
   is left out whole. What of the game that loses was not looked at.
-  Drafts: [`el-heroe-que-destella-comparte-paleta`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-heroe-que-destella-comparte-paleta.md) (map 1) and
-  [`los-flujos-de-un-mapa-que-no-entran-en-la-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-flujos-de-un-mapa-que-no-entran-en-la-wram.md) (map 2).
+  Drafts: [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md) (map 1) and
+  [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 2).
 
 ## What it leaves out (2026-10-11)
 
@@ -94,18 +94,18 @@ database.
 - **`\N[n]` in the messages**: the actor's name from the database is baked
   into the text when no `ChangeHeroName` can change it. Rebuilt, Frozen
   World gets past the black screen and shows the DARK WIZARD. (Task
-  [`el-nombre-del-heroe-en-los-mensajes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-nombre-del-heroe-en-los-mensajes.md).)
+  [`n-n-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/n-n-in-messages.md).)
 - **The window with more than 15 colors**: Adeleine reduces it, 16 colors
   down to 15, but then the message window asks for 266 tiles of 256, and
   its System has 17 colors in the 8bpp windows of the text screens. (Task
-  [`la-ventana-con-mas-colores`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-ventana-con-mas-colores.md).)
+  [`window-with-more-than-15-colors`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/window-with-more-than-15-colors.md).)
 - **Choosing another System from the project**: built with the original
   game and `system = "ablskin.png"` (A Blurred Line's System), it starts.
-  (Task [`elegir-otro-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/elegir-otro-system.md).)
+  (Task [`choose-another-system-from-the-project`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/choose-another-system-from-the-project.md).)
 - **The title that doesn't fit**: the converter starts without a title
   screen, with a warning, instead of stopping; it builds without
-  `--no-title`. (Task [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
+  `--no-title`. (Task [`degrade-instead-of-failing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degrade-instead-of-failing.md).)
 - **Decorative events as background**: 117 candidates, measured without
-  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
+  looking at the drawing. (Task [`decorative-events-into-the-background`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decorative-events-into-the-background.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

@@ -270,7 +270,7 @@ need to have, or why it stays.
 
 ### What changes with Cotorra
 
-When [`las-pruebas-sin-opcodes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-pruebas-sin-opcodes.md) is done, no Python test uses the bytecode:
+When [`abl-tests-without-opcodes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-tests-without-opcodes.md) is done, no Python test uses the bytecode:
 `herramientas/test_paginas.py` moves to the tests of `rm2k-snes-events`,
 `herramientas/test_protocolo_contra_el_juego.py` changes with the bytecodes
 in Rust, and `arnes/events.py` (1,391 lines) and `arnes/event_opcodes.py`
@@ -297,7 +297,7 @@ in `pruebas/casos/` is classified like any other.
 * `tools/assembly/entregar.py` (`abl-entregar`): it is ABL's, as
   `tools/README.md` says. It uses `common`.
 * `docs/` and `workflow/`: the classification already exists, in
-  [`decisiones-y-divergencias-por-repo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decisiones-y-divergencias-por-repo.md). Of
+  [`decisions-and-divergences-by-repo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decisions-and-divergences-by-repo.md). Of
   `decisiones/` and `divergencias/`, 59 go with the tools, 1 with ABL and 6
   are mixed; of `docs/`, ABL's are `inspeccion-integral-del-repo.md` and
   halves of `rtp.md` and `pipeline.md`. `workflow/tasks/` and `ESTADO.md` are

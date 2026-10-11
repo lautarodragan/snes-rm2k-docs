@@ -93,7 +93,7 @@ any "do N more maps fit?".
 **The text block barely makes it**: the messages of the whole game take
 about **255 KB** of the 262,144-byte block that `OP_MESSAGE`'s operand
 allows in steps of 4 bytes. It fits, but with whatever any padding or any
-test text adds it stops fitting; see the task [`los-textos-sin-comprimir`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-textos-sin-comprimir.md)
+test text adds it stops fitting; see the task [`uncompressed-texts`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/uncompressed-texts.md)
 in snes-rm2k-work.
 
 ### What it doesn't convert
@@ -223,7 +223,7 @@ from the `.msu`**: the raw data goes straight to VRAM.
 from ROM —8 master cycles per byte against 6 with FastROM—. It affects only
 the reading of the bytecode, not the whole interpreter, but the race and
 map 11 are already tight on CPU (see the wishlist task
-[`chips-sa-1-y-s-dd1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/chips-sa-1-y-s-dd1.md)).
+[`expansion-chips-sa-1-and-s-dd1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/expansion-chips-sa-1-and-s-dd1.md)).
 
 ## 3. How long it takes
 
@@ -368,7 +368,7 @@ BRR samples                 sample    923,292   917,527 (99 %)  (94 %)
 - **Not the sequences**: `irq_music` reads them from the ROM while they
   play, and the longest measures 68 KB, more than any gap in WRAM.
 - **The texts, not with LZ2**: it breaks direct access to each box. Their
-  study proposes DTE (the task [`los-textos-sin-comprimir`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-textos-sin-comprimir.md)).
+  study proposes DTE (the task [`uncompressed-texts`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/uncompressed-texts.md)).
 - **BRR samples don't compress**: they are already a compressed format.
 - **The rest, yes**: the blocks and the bytecode decompressed to WRAM on
   entering the map —behind the grid, see section 2—; the battlers, the
@@ -386,7 +386,7 @@ without MSU-1.
 
 A decompressor in the cartridge that delivers the bytes **during DMA**,
 without CPU: Star Ocean and Street Fighter Alpha 2. It is studied entirely
-in the wishlist task [`chips-sa-1-y-s-dd1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/chips-sa-1-y-s-dd1.md) —support, memory map, our own
+in the wishlist task [`expansion-chips-sa-1-and-s-dd1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/expansion-chips-sa-1-and-s-dd1.md) —support, memory map, our own
 compressor verified against snes9x's decoder—; here goes what was missing,
 **against LZ2 and with today's data**:
 
@@ -496,7 +496,7 @@ only the quality effects. It is what weighs the most (3.4 MB) and it is
 almost all removal. With this **the whole game fits**: 3.0 MB of ROM.
 
 *Risks*: a theme without an MSU-1 track doesn't play (the done task
-[`todos-los-temas-tienen-pista-de-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/todos-los-temas-tienen-pista-de-msu-1.md)); and the ARAM split, which
+[`every-theme-has-an-msu-1-track`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/every-theme-has-an-msu-1-track.md)); and the ARAM split, which
 today counts on the ROM's samples.
 
 **Phase 3 — whatever is needed after, in this order.** The converter

@@ -11,8 +11,8 @@ as text.
   the original lets you choose, is not in the cartridge —with it, the slot
   screen and the menu don't fit in their bank— and an event page that would
   take the hero there is left out whole. Draft:
-  [`las-ranuras-y-el-menu-de-dooms2-no-entran`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-ranuras-y-el-menu-de-dooms2-no-entran.md).
-* **Messages show no faces.** Task: [`las-caras-y-las-esperas`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-las-esperas.md).
+  [`dooms-2-slots-and-menu-dont-fit-in-their-bank`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/dooms-2-slots-and-menu-dont-fit-in-their-bank.md).
+* **Messages show no faces.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
 
 ## What it leaves out (2026-10-11)
 
@@ -102,26 +102,26 @@ database.
 - **The window with more than 15 colors**: Adeleine reduces it, 18 colors
   down to 15, but the actor choice goes past `$4800`, and its System has 26
   colors in the 8bpp windows of the text screens. (Task
-  [`la-ventana-con-mas-colores`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-ventana-con-mas-colores.md).)
+  [`window-with-more-than-15-colors`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/window-with-more-than-15-colors.md).)
 - **Faces and wait escapes**: `ChangeFaceGraphic` is accepted as a debt,
   without drawing the face, and the escapes in the middle of a box are
   dropped. The opening scene of map 2 now runs (Jack's dialogue), **but**
   with more pages compiling the sample directory went over 255 entries
   (263) and the cartridge didn't build: maps 40 to 93 were excluded in the
-  project to build it. (Task [`las-caras-y-los-escapes-de-espera`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-los-escapes-de-espera.md).)
+  project to build it. (Task [`faces-and-wait-escapes-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/faces-and-wait-escapes-in-messages.md).)
 - **The samples left over don't sound**: past 255 samples the least used
   are left out with a warning. The real cause in Dooms 2 wasn't that —it
   had 247 keys or fewer— but the copies filling the directory; with that
   fixed it builds with maps 40 to 93, starts and shows the dialogue. (Task
-  [`las-muestras-que-sobran`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-muestras-que-sobran.md).)
+  [`surplus-samples-dont-play`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/surplus-samples-dont-play.md).)
 - **Color codes ignored**, as a debt, `\S[n]` among them. (Task
-  [`ignorar-los-codigos-de-color`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignorar-los-codigos-de-color.md).)
+  [`ignore-the-color-codes-in-messages-for-now`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignore-the-color-codes-in-messages-for-now.md).)
 - **The names that don't fit in the menu's bank**: not done; degrading
   them is deciding what is cut or left out. (Task
-  [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
+  [`degrade-instead-of-failing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degrade-instead-of-failing.md).)
 - **BMP images**: the task to read them is open. (Task
-  [`las-imagenes-en-bmp`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-imagenes-en-bmp.md).)
+  [`images-in-bmp`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/images-in-bmp.md).)
 - **Decorative events as background**: 39 candidates, measured without
-  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
+  looking at the drawing. (Task [`decorative-events-into-the-background`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decorative-events-into-the-background.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

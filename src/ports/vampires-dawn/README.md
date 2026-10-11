@@ -8,24 +8,24 @@ behind each one is a draft or a task in the tasks repository, named here
 as text.
 
 * **It starts without its title screen**: the title image doesn't fit in
-  VRAM. Draft: [`el-titulo-que-no-entra-en-la-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-titulo-que-no-entra-en-la-vram.md).
+  VRAM. Draft: [`title-that-doesnt-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/title-that-doesnt-fit-in-vram.md).
 * **Ten maps are not in the cartridge**, the world map (1) among them, and
   an event page that would take the hero to one of them is left out
-  whole. Drafts: [`los-flujos-de-un-mapa-que-no-entran-en-la-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-flujos-de-un-mapa-que-no-entran-en-la-wram.md) (map 1)
-  and [`los-mapas-de-vampires-dawn-que-no-entran-en-la-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-mapas-de-vampires-dawn-que-no-entran-en-la-vram.md) (15, 57, 99,
+  whole. Drafts: [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 1)
+  and [`vampires-dawn-maps-that-dont-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-maps-that-dont-fit-in-vram.md) (15, 57, 99,
   150, 165, 225, 399, 402 and 403).
 * **The windows, the menu and the battle use A Blurred Line's System**, not
   `VDBlutsys`; and the game's own switches between its Systems are
-  ignored. Draft: [`vampires-dawn-con-su-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-con-su-system.md); task:
+  ignored. Draft: [`vampires-dawn-now-builds-with-its-own-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-now-builds-with-its-own-system.md); task:
   [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
 * **An event page that uses any variable past the 256th does nothing**:
   the game names 600, and those pages are left out. Which scenes that
-  touches was not looked at. Draft: [`las-variables-que-pasan-de-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-variables-que-pasan-de-256.md).
+  touches was not looked at. Draft: [`variables-past-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-past-256.md).
 * **Parallel common events never run**: 35 in this game, among them the
   summons and the wolf and bat transformations. What that loses in play
-  was not looked at. Draft: [`los-comunes-paralelos-no-corren`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-comunes-paralelos-no-corren.md).
+  was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 * **Messages show no faces, and coloured words come out in the plain
-  colour.** Task: [`las-caras-y-las-esperas`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-las-esperas.md).
+  colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
 
 ## Its own System (2026-10-11)
 
@@ -183,45 +183,45 @@ fonts, an RM2k database.
   build, for other limits: maps with a panorama that doesn't fit, battle
   animations without room in the sprite bank (twenty-five excluded and
   more keep appearing) and the message window, which asks for 262 tiles
-  against 256. (Task [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
+  against 256. (Task [`degrade-instead-of-failing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degrade-instead-of-failing.md).)
 - **Map 1 without its animation box**: a map whose battle animation box
   doesn't fit in any VRAM layout is converted without it, with a warning.
   But that wasn't what stopped map 1: it is 300x300 and its background has
   597 unique 8x8 tiles, against the 544 of the biggest layout. (Task
-  [`el-mapa-1-de-vampires-dawn`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-mapa-1-de-vampires-dawn.md).)
+  [`have-vampires-dawn-map-1-build-without-its-animation-box`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/have-vampires-dawn-map-1-build-without-its-animation-box.md).)
 - **Fusing similar tiles**: 18 maps go over the ~544 background tiles (the
   biggest, Uruya, 817; the world, 597). With the fusion the background no
   longer blocks any of them, but what cuts is the sprite bank and the
   layer above —maps 15, 57, 95, 99, 150, 165 (Uruya), 225 and 399—, the
   mode 1 panels of maps 28, 402 and 403, and then the encounters. (Task
-  [`fusionar-tiles-parecidos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/fusionar-tiles-parecidos.md).)
+  [`merge-similar-tiles-when-the-background-doesnt-fit`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/merge-similar-tiles-when-the-background-doesnt-fit.md).)
 - **Encounters with two-byte indices**: it has 779 troops and 136 zones,
   which didn't fit one-byte tables. With that the battle conversion passes
   (with maps excluded); next come the maps with more than 104 NPCs in OAM,
   and then map 1: "a stream of anim_tiles is 27264 bytes and 8192 fit in
-  WRAM". (Task [`los-encuentros-en-dos-bytes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-encuentros-en-dos-bytes.md).)
+  WRAM". (Task [`encounters-with-two-byte-indices`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/encounters-with-two-byte-indices.md).)
 - **Uruya in 4bpp**, a throwaway experiment: map 165 alone, in mode 1 with
   both layers at 4bpp, fits in VRAM with room to spare (878 tiles); with
   Adeleine's palettes it keeps 19 distinct colors, with clustering by
-  tile 73. (Task [`uruya-en-4bpp`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/uruya-en-4bpp.md).)
+  tile 73. (Task [`experiment-uruya-in-4bpp`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/experiment-uruya-in-4bpp.md).)
 - **Decorative events as background**: in map 95 (Weg), 209 translucent
   `water1` events paint a river and took the whole sprite bank; baked into
   the background, with a knob. 5,483 candidates in the game, measured
   without looking at the drawing. (Task
-  [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
+  [`decorative-events-into-the-background`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decorative-events-into-the-background.md).)
 - **Four shortcuts**: the condition on direction (37 pages) and the random
   step and moving away from the hero (16 and 48). Map pages that compile,
   from a scan and not a cartridge, went from 21,214 to 21,272 of 22,977;
   what is left in `MoveEvent` is the hero's diagonal moves, about 45
-  pages. (Task [`cuatro-atajos-para-los-otros-juegos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/cuatro-atajos-para-los-otros-juegos.md).)
+  pages. (Task [`four-shortcuts-for-the-other-games`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/four-shortcuts-for-the-other-games.md).)
 - **Parallel common events** don't run in the engine: Vampires Dawn has 35.
-  (Task [`el-tablero-contra-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/el-tablero-contra-rm2k.md).)
+  (Task [`dashboard-against-the-whole-of-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/dashboard-against-the-whole-of-rm2k.md).)
 - **A ChipSet animation that doesn't fit in WRAM** (2026-10-10) keeps the
   tiles that cover the most cells moving and leaves the rest still: in
   maps 236 and 351, 9 of 51 and 5 of 37 water tiles stand still; in map
   1, the world, 100 of its 142, which cover only 4,275 of its 262,866
   water cells. Each in a cartridge with the starting map, map 1 then stops
   at its grid —180,000 bytes, against the 64 KB of WRAM it has—, and 236
-  and 351 at the music: 281 songs, and the track goes in a byte. (Task [`las-animaciones-de-tiles-en-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-animaciones-de-tiles-en-wram.md).)
+  and 351 at the music: 281 songs, and the track goes in a byte. (Task [`tile-animations-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/tile-animations-that-dont-fit-in-wram.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.

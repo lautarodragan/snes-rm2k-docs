@@ -94,7 +94,7 @@ Outside this table:
 4. **The audio**: large but isolated, with its own real test (the ceilings,
    `techos`, measure the ROM's audio).
 5. **The converter**, last and in parts, after splitting `snes_convert.py`
-   as [`las-responsabilidades-de-snes-convert`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-responsabilidades-de-snes-convert.md) asks.
+   as [`responsibilities-of-snes-convert-py`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/responsibilities-of-snes-convert-py.md) asks.
    `eventos.py` is the most expensive piece: it is best migrated with the
    bytecode declared in `protocol`, which already generates the constants
    for both sides.

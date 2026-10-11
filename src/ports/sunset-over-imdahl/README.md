@@ -9,24 +9,24 @@ as text.
 
 * **On a painted map, an event "above the hero" is drawn over the roofs.**
   The guard at (13,23) on the square, map 2, shows over the roof that
-  should hide him. Draft: [`los-eventos-encima-del-heroe-sobre-los-techos-pintados`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-encima-del-heroe-sobre-los-techos-pintados.md).
+  should hide him. Draft: [`events-above-the-hero-over-the-painted-roofs`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/events-above-the-hero-over-the-painted-roofs.md).
 * **On the square, some roof edges cover too much or too little.** The
   square has more roof edges than the cartridge keeps, and the rest are
   left out. A guard at (36,13) has his legs over a roof's edge, likely
-  one of those; not checked. Draft: [`los-bordes-de-techo-que-no-entran`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-bordes-de-techo-que-no-entran.md).
+  one of those; not checked. Draft: [`roof-edges-that-dont-fit-in-the-127`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/roof-edges-that-dont-fit-in-the-127.md).
 * **Characters are not shaded or lit** by the painted shadows, lights and
   fogs, which only touch the painting.
 * **Turning back while walking on a square can drop a frame**, when the
   camera reverses while a row of the painting is still being uploaded.
   Measured, not noticed in play. Draft:
-  [`la-camara-que-vuelve-sobre-una-fila-a-medio-subir`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/la-camara-que-vuelve-sobre-una-fila-a-medio-subir.md).
+  [`camera-turning-back-over-a-half-uploaded-row-loses-a-frame`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/camera-turning-back-over-a-half-uploaded-row-loses-a-frame.md).
 * **The windows keep the game's first System.** The opening scene (map 11)
   switches to `SaveMeny`, and the cartridge ignores the switch. Task:
   [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
 * **Coloured words in messages come out in the plain colour.** Task:
-  [`las-caras-y-las-esperas`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-las-esperas.md).
+  [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
 * **Its parallel common event `MenuCaller` never runs.** What that loses
-  in play was not looked at. Draft: [`los-comunes-paralelos-no-corren`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-comunes-paralelos-no-corren.md).
+  in play was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 
 ## The painted maps, in mode 1 (2026-10-11)
 
@@ -166,22 +166,22 @@ with an empty party. No DynRPG, no custom fonts, an RM2k database.
   the boot event of map 11 now runs (the title fade, and a black screen at
   15 s like the original); at 30 s the original shows a picture and the
   cartridge stays black, which wasn't investigated. (Task
-  [`ignorar-changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignorar-changesystemgraphics.md).)
+  [`ignore-changesystemgraphics-for-now`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignore-changesystemgraphics-for-now.md).)
 - **Faces and wait escapes**: `\.`, `\!` and `\|` in the middle of a box
-  are dropped, as a debt. (Task [`las-caras-y-los-escapes-de-espera`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/las-caras-y-los-escapes-de-espera.md).)
+  are dropped, as a debt. (Task [`faces-and-wait-escapes-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/faces-and-wait-escapes-in-messages.md).)
 - **Color codes ignored**, as a debt (`\c[n]`, `\C[n]`, `\s[n]`): map pages
   that compile went from 898 to 1,151 of 1,369. (Task
-  [`ignorar-los-codigos-de-color`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignorar-los-codigos-de-color.md).)
+  [`ignore-the-color-codes-in-messages-for-now`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/ignore-the-color-codes-in-messages-for-now.md).)
 - **`ROUTE_GFX_MAX` degrades instead of failing**: Sunset builds without
-  exclusions. (Task [`degradar-en-vez-de-fallar`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degradar-en-vez-de-fallar.md).)
+  exclusions. (Task [`degrade-instead-of-failing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/degrade-instead-of-failing.md).)
 - **Four shortcuts**: the condition on direction (111 pages). Map pages
   went from 1,151 to 1,266 of 1,369. What kept the routes with orders
   36/37 out wasn't those orders but **the hero's diagonal moves** (orders
   4 to 7), which the compiler rejects on purpose: about 51 pages, the most
   left out after this; and the hero's relative turns (16 to 20) and
   stepping forward (11), about 8. (Task
-  [`cuatro-atajos-para-los-otros-juegos`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/cuatro-atajos-para-los-otros-juegos.md).)
+  [`four-shortcuts-for-the-other-games`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/four-shortcuts-for-the-other-games.md).)
 - **Decorative events as background**: 209 candidates, measured without
-  looking at the drawing. (Task [`los-eventos-decorativos-como-fondo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/los-eventos-decorativos-como-fondo.md).)
+  looking at the drawing. (Task [`decorative-events-into-the-background`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decorative-events-into-the-background.md).)
 
 The tasks named here are in `tasks/testing/` in the-advocate-work.
