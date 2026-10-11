@@ -125,6 +125,7 @@
     - [Panoramas](research/2026-10-05-los-panoramas.md)
     - [Other games: the survey](research/2026-10-05-otros-juegos.md)
     - [Other games, measured again](research/2026-10-10-otros-juegos-de-nuevo.md)
+    - [The S-DD1, for the poses](research/2026-10-11-el-s-dd1.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)
