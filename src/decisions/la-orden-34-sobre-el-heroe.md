@@ -24,6 +24,9 @@ the hero's graphic to board it.
   the leader's own slot. `hero_cgram` is switched off on the change: leaving
   it on would write Talan's fifteen colors over the graphic's palette,
   because `apply_tint` uploads them **into the row `hero_pal` says**.
+  Since 2026-10-11 that holds only for a graphic some event also gets: one
+  only the hero shows goes in the leaders' slot with colours of its own —see
+  [The graphics only the hero shows go in the leaders' slot](los-graficos-que-solo-muestra-el-heroe.md)—.
 * **It doesn't survive a map change.** The poses live in the map's sprite
   bank, so the graphic from over there doesn't exist here; the ROM restores
   it in `pick_hero_graphic`. In RM2k `Game_Player` carries it along. It
