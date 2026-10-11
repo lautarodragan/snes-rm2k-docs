@@ -50,8 +50,9 @@ What is **not** here:
 
 ## The original game
 
-**It is not in the repository**: it is read from the folder `GAME_DIR`
-says —which the `justfile` passes to the tools as `--game-dir`—, and from
+**It is not in the repository**: it is read from the folder or the `.zip`
+`GAME_DIR` says —which the `justfile` passes to the tools as
+`--game-dir`—, and from
 there come the maps (`.lmu`), the database (`RPG_RT.ldb`), the map tree
 (`RPG_RT.lmt`), the pictures, the MIDIs and the WAVs. What the game
 doesn't bring is supplied by Don Miguel's RTP, which isn't ours to

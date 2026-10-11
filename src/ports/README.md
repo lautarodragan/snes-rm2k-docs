@@ -15,7 +15,9 @@ is a whole project**:
   variables that say where the original game, the RTP and the SoundFont
   are (`GAME_DIR`, `RTP_DIR`, `SOUNDFONT`) into the tools' flags
   (`--game-dir`, `--rtp-dir`, `--soundfont`); the tools themselves come
-  from the PATH.
+  from the PATH. The game and the RTP can be a directory or a `.zip` of
+  one: see [A game or an RTP as a
+  `.zip`](../internals/pipeline.md#a-game-or-an-rtp-as-a-zip).
 - **`data/`**: the game dumped to JSON with Ditto (`just datos`), which is
   where the port reads the game from (see [From a game to a
   ROM](../pipeline.md)). The original game isn't in the repository: it
