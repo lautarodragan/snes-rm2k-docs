@@ -12,10 +12,13 @@ as text.
   whole. Drafts: [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 1)
   and [`vampires-dawn-maps-that-dont-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-maps-that-dont-fit-in-vram.md) (15, 57, 99,
   150, 165, 225, 399, 402 and 403).
-* **The game's own switches between its Systems are ignored**: everything
-  is drawn with `VDBlutsys`, the one it starts with, and its windows over
-  the average colour of its gradient. Task:
-  [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
+* **Only the message window follows the game's switches between its
+  Systems**: the menu, the slot screen and the battle keep `VDBlutsys`, the
+  one it starts with. The old man's three styles, the signs in `Wood` and
+  the graves in `Stone` show, each over one colour of
+  `[windows.background]` —the wood's grain and the stone's joints are
+  lost—, and `Stone`'s frame loses most of its 57 colours to fit in the
+  starting System's fifteen. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **An event page that uses any variable past the 256th does nothing**:
   the game names 600, and those pages are left out. Which scenes that
   touches was not looked at. Draft: [`variables-past-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-past-256.md).
