@@ -19,6 +19,13 @@ is four reds for the arrow and one for the bar.
 
 RM2k does not have this: the window and the map do not share colors.
 
+Since 2026-10-12 a game can fill its windows with one colour of its own
+instead of the System's background —[The windows' background is the
+project's, by System](../decisions/the-windows-background-is-the-projects-by-system.md)—,
+and the colours the background brought go with it. *A Blurred Line* gives
+`ablskin` its black, and loses the near-black of the stroke along two edges
+of the System's background: one entry less, and every map gets it back.
+
 ## Why
 
 The window is BG2 at 4 bits and the arrow and the bar go in its tiles, so

@@ -71,3 +71,8 @@ that change pixels are Adeleine's.
 
 What still stops the four games after this is not the windows: see each
 one's page under Ports.
+
+Since 2026-10-12 a game can skip all of this for a System by giving it
+a background of its own: see [The windows' background is the project's, by
+System](the-windows-background-is-the-projects-by-system.md). The fusing
+stays for the Systems that keep theirs.
