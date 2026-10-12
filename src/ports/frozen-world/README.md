@@ -7,8 +7,9 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Tech Skill in the pause menu is always grey**: the original opens each
-  actor's skills there, and uses the ones the map allows. Task:
+* **No skill can be used from the pause menu**: Tech Skill opens each
+  actor's list, but A on a skill does nothing, where the original
+  uses the ones the map allows. Task:
   [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
 * **Maps 1 ("Battle Screen") and 2 ("Plate Placement") are not in the
   cartridge**, and an event page that would take the hero to one of them

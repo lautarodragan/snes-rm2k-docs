@@ -7,8 +7,9 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Special in the pause menu is always grey**: the original opens each
-  actor's skills there, and uses the ones the map allows. Task:
+* **No skill can be used from the pause menu**: Special opens each
+  actor's list, but A on a skill does nothing, where the original
+  uses the ones the map allows. Task:
   [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
 * **Two of its parallel common events never run**: `Reraise KO'd chars`
   and `Eilonwy's Upgrades` do not compile. What that loses in play was not

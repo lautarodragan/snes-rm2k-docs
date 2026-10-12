@@ -8,11 +8,12 @@ behind each one is a draft or a task in the tasks repository, named here
 as text. Where the ROM does what RM2k does in another way, on purpose, is
 in the [divergences](../../divergences/README.md), not here.
 
-* **Tech Skill in the pause menu is always grey**: the original opens
-  each actor's skills, and heals and uses its map skills from there. Four
-  of the game's systems are reached only that way —Radin's Mix Formula
-  and Field/Battery Repair, Sern's Weapon Forging and Emily's Change
-  Tape—, so today they cannot be entered. Task: [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
+* **No skill can be used from the pause menu**: Tech Skill opens each
+  actor's list, but A on a skill does nothing, where the original heals
+  and uses its map skills from there. Four of the game's systems are
+  reached only that way —Radin's Mix Formula and Field/Battery Repair,
+  Sern's Weapon Forging and Emily's Change Tape—, so today they cannot
+  be entered. Task: [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
 * **In the Lashe City rain the rain sound that repeats every three
   seconds is missing**: common event `Raining` runs, but its `Rain1` is not
   in the map's sound package. Draft:
