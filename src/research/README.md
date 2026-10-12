@@ -43,3 +43,4 @@ By date:
   — 2026-10-10
 - [The S-DD1, for the poses](2026-10-11-el-s-dd1.md) — 2026-10-11
 - [The windows, made cheaper](2026-10-11-las-ventanas.md) — 2026-10-11
+- [The skills menu](2026-10-12-the-skills-menu.md) — 2026-10-12
