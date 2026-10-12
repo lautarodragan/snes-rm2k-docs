@@ -11,6 +11,10 @@ in the [divergences](../../divergences/README.md), not here.
 * **Four parallel common events never run**: `TalanLateForWork`,
   `DisableSaving`, `Raining` and `ManageQuarryTimer`. What that loses in
   play was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
+* **Without MSU-1 the opening rain dips almost to silence every four
+  seconds**: each new rain cuts the one still sounding instead of
+  overlapping it. With MSU-1 it overlaps as in RM2k. Draft:
+  [`abl-rain-cuts-itself-without-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-rain-cuts-itself-without-msu-1.md).
 
 ## The port
 
