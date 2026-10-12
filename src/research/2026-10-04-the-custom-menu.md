@@ -191,7 +191,7 @@ pause menu's keys:
 
     [menus]
     # Each custom menu, by the file that describes it. See
-    # docs/research/2026-10-04-the-custom-menu.md.
+    # docs/research/2026-10-04-el-menu-custom.md.
     console = "menus/consola.toml"
 
 And the file, abridged:

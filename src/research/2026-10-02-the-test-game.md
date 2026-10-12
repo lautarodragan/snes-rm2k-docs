@@ -299,7 +299,7 @@ in `pruebas/casos/` is classified like any other.
 * `docs/` and `workflow/`: the classification already exists, in
   [`decisions-and-divergences-by-repo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/decisions-and-divergences-by-repo.md). Of
   `decisiones/` and `divergencias/`, 59 go with the tools, 1 with ABL and 6
-  are mixed; of `docs/`, ABL's are `a-full-inspection-of-the-repository.md` and
+  are mixed; of `docs/`, ABL's are `inspeccion-integral-del-repo.md` and
   halves of `rtp.md` and `pipeline.md`. `workflow/tasks/` and `ESTADO.md` are
   almost all ABL's.
 * `README.md` and `AGENTS.md`: mixed; each repo needs its own. `DITTO.md`

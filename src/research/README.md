@@ -16,9 +16,10 @@ That is the difference with the pages that describe how the port works
 today: those have to be up to date, or they lie, and whoever changes what
 they describe changes them in the same commit. A study is never touched.
 
-The studies were written in Spanish and translated later, as they were. The
-file names keep their Spanish slugs, so that the code and the task history
-that cite `docs/research/<name>.md` still find them by name. The commit
+The studies were written in Spanish and translated later, as they were. On
+2026-10-12 their file names were translated too, from their titles: a
+study that cites an old name, or one in Spanish, is found in the redirect
+table of `book.toml` (see [Contributing](../contributing/README.md)). The commit
 hashes are from snes-rm2k unless a study says otherwise; "ABL at …" is a
 commit of the A Blurred Line port. The research about A Blurred Line itself
 lives with the port.

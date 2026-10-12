@@ -407,7 +407,7 @@ same, and is confirmed as an order of magnitude.
 **With the `.msu`, the better version** would be the 8 bpp, 255-color one
 for the seven photos (the four *Diff*, GTest4, ShipFlash, AdvoInstr:
 about 400 KB raw in the `.msu`, which take no ROM), read through the data
-port like the battle backgrounds (`docs/port/the-msu-file.md` in snes-rm2k):
+port like the battle backgrounds (`docs/port/msu-datos.md` in snes-rm2k):
 the ROM still carries its 4 bpp version and uses the other only if it
 finds it. For the text pages **the `.msu` improves nothing**: they are 2
 colors. What would improve them is mode 5 —text without rescaling, at 512

@@ -27,9 +27,10 @@ the mixed ones in both; that day they came back together with the rest, and
 in the book they are separated again. Mixed ones —an engine rule measured
 on ABL— are here.
 
-The file names are kept in Spanish, as they were written, so that the
-references to `decisiones/<name>.md` in the code and in the tasks still
-find them by name.
+The file names were in Spanish, as they were written, until 2026-10-12,
+when they got English ones made from their titles. An old citation
+—`decisiones/<name>.md`, in a commit or an old task— is looked up in the
+redirect table of `book.toml` (see [Contributing](../contributing/README.md)).
 
 ## The project
 
