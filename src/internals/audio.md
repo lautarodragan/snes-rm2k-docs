@@ -26,7 +26,7 @@ writes            --dsp_music-->        the SPC700 driver
   `musicdata.inc`: `BOOT_FRAMES_FLOOR` (`runtime/far_ram.s`) or the
   estimate for the boot map's package, whichever is larger. See [boot is
   sized for the boot
-  package](../decisions/el-arranque-esta-dimensionado-para-el-paquete-de-arranque.md).
+  package](../decisions/boot-is-sized-for-the-boot-package.md).
 - **The stream is per note**: notes, releases, changes of volume or pitch,
   and waits, which the 65816 expands into the same writes that used to go
   in the stream. The format is in "the per-note format" in `stream.rs`, and
@@ -54,11 +54,11 @@ writes            --dsp_music-->        the SPC700 driver
 - **A single sample bank for the whole cartridge, uploaded in packages, one
   per map**, and each sample with the budget of its worst package: `Bank`
   and `allocate` in `bank.rs`, and the reason in [a single sample
-  bank](../decisions/un-solo-banco-de-muestras.md). `package_load`
+  bank](../decisions/a-single-sample-bank.md). `package_load`
   (`runtime/audio_package.s`) uploads it while the music plays; if
   the theme that is playing and the new package don't fit together, the
   theme wins: [the playing theme wins and the effects
-  wait](../decisions/el-tema-que-suena-gana-y-los-efectos-esperan.md).
+  wait](../decisions/the-playing-track-wins-and-the-sound-effects-wait.md).
 - **The SPC700 directory** has one entry per music sample —its number in
   the cartridge, which is the stream's SRCN— and behind them some **places
   the effects share**: two effects that never go in the same package go to
@@ -76,7 +76,7 @@ writes            --dsp_music-->        the SPC700 driver
   `paid_by_music` —the thunder of the opening and the ones taro chose whole
   even if they cost— are paid for by the music of their package: [the
   thunder goes whole and the rain pays for
-  it](../ports/abl/decisions/el-trueno-va-entero-y-paga-la-lluvia.md). One that
+  it](../ports/abl/decisions/the-thunder-plays-whole-and-pays-for-the-rain.md). One that
   sounds with another sample in one map is an alias: `per_map`. All three
   belong to the game, and each entry carries its reason in the file.
 - **`FadeOutBGM` lowers the theme and nothing else**: the volume of each
@@ -102,7 +102,7 @@ writes            --dsp_music-->        the SPC700 driver
   fit, the one that loses the least of what is heard goes down first
   (`rates_per_package`, in `effects.rs`). Without MSU-1, or with another
   `.msu`, the usual. The split is in `msu.rs`; the ROM side, in
-  `runtime/msu_effects.s`. See also [the `.msu` file](msu-datos.md).
+  `runtime/msu_effects.s`. See also [the `.msu` file](the-msu-file.md).
 
 Which test covers what: `pruebas/rpgmaker/test_musica_*.py` in the ABL port
 run the ROM —the writes, the voice assignment, the package, the ceilings—

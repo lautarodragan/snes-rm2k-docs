@@ -23,7 +23,7 @@ game that doesn't build can only be guessed about.
   tiles hold. The message window has the background seen through its frame
   fused into bands; the screens that cut their windows into a bank have
   their least visible cells merged, one at a time, until it holds them —see
-  [A window with a gradient is fused until it fits](decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
+  [A window with a gradient is fused until it fits](decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—.
 - **Background tiles.** A map with more distinct tiles than any layout of
   video memory can hold has its most similar tiles fused until it fits.
   It is the last resort, tried only after everything else that could make

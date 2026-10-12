@@ -44,7 +44,7 @@ Until then the engine had ported a single game. On 2026-10-05 taro left
 seven more RPG Maker 2000 games to see how general it had turned out, with
 one request: find what they share before fixing anything. The answer is
 the study [Other games: the
-survey](../research/2026-10-05-otros-juegos.md).
+survey](../research/2026-10-05-other-games.md).
 
 Each of the seven is a project built that day for the survey, **without
 MSU-1 and without tests**, with the minimal recipes: `datos` and

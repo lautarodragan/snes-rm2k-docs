@@ -27,60 +27,61 @@ the mixed ones in both; that day they came back together with the rest, and
 in the book they are separated again. Mixed ones —an engine rule measured
 on ABL— are here.
 
-The file names are kept in Spanish, as they were written, so that the
-references to `decisiones/<name>.md` in the code and in the tasks still
-find them by name.
+The file names were in Spanish, as they were written, until 2026-10-12,
+when they got English ones made from their titles. An old citation
+—`decisiones/<name>.md`, in a commit or an old task— is looked up in the
+redirect table of `book.toml` (see [Contributing](../contributing/README.md)).
 
 ## The project
 
 - [RPG Maker 2000 PLUS](rm2k-plus.md)
-- [First the whole game, then the quality](primero-el-juego-entero-despues-la-calidad.md)
-- [The game is playable without MSU-1](el-juego-se-juega-sin-msu-1.md)
-- [The MSU-1 is required only when the ROM does not reach](el-msu-1-obligatorio-si-la-rom-no-alcanza.md)
-- [The cartridge goes to 8 MB](el-cartucho-pasa-a-8-mb.md)
-- [The tools split from ABL, into two repos](las-herramientas-se-separan-de-abl.md)
-- [data/ is the resolved view](data-es-la-vista-resuelta.md)
-- [The binary emitter ships with a sourcemap](el-emisor-binario-sale-con-sourcemap.md)
-- [A long case at zero proves nothing](un-caso-largo-en-cero-no-prueba-nada.md)
+- [First the whole game, then the quality](first-the-whole-game-then-the-quality.md)
+- [The game is playable without MSU-1](the-game-is-playable-without-msu-1.md)
+- [The MSU-1 is required only when the ROM does not reach](the-msu-1-is-required-only-when-the-rom-does-not-reach.md)
+- [The cartridge goes to 8 MB](the-cartridge-goes-to-8-mb.md)
+- [The tools split from ABL, into two repos](the-tools-split-from-abl.md)
+- [data/ is the resolved view](data-is-the-resolved-view.md)
+- [The binary emitter ships with a sourcemap](the-binary-emitter-ships-with-a-sourcemap.md)
+- [A long case at zero proves nothing](a-long-case-at-zero-proves-nothing.md)
 - [RAM is placed by the linker](ram-is-placed-by-the-linker.md)
 
 ## Events and the interpreter
 
-- [Events trigger with two bits](los-eventos-disparan-con-dos-bits.md)
-- [The active page is frozen until the refresh](la-pagina-activa-se-congela-hasta-el-refresco.md)
-- [The refresh runs at three moments](el-refresco-corre-en-tres-momentos.md)
-- [The action key looks at both cells](la-tecla-de-accion-mira-las-dos-celdas.md)
-- [A door is a touch page](una-puerta-es-una-pagina-de-contacto.md)
-- [A door to the same map doesn't reload the map](una-puerta-al-mismo-mapa-no-recarga-el-mapa.md)
-- [Running out of the teleport budget is an error](agotar-el-presupuesto-de-teletransportes-es-un-error.md)
-- [ConditionalBranch: five of the twelve kinds](conditional-branch-cinco-de-doce-clases.md)
-- [CallEvent is compiled inline](call-event-se-compila-en-linea.md)
-- [CallEvent into a shared body](call-event-a-un-cuerpo-compartido.md)
-- [The test page switches itself off](la-pagina-de-prueba-se-apaga-sola.md)
+- [Events trigger with two bits](events-trigger-with-two-bits.md)
+- [The active page is frozen until the refresh](the-active-page-is-frozen-until-the-refresh.md)
+- [The refresh runs at three moments](the-refresh-runs-at-three-moments.md)
+- [The action key looks at both cells](the-action-key-looks-at-both-cells.md)
+- [A door is a touch page](a-door-is-a-touch-page.md)
+- [A door to the same map doesn't reload the map](a-door-to-the-same-map-doesnt-reload-the-map.md)
+- [Running out of the teleport budget is an error](running-out-of-the-teleport-budget-is-an-error.md)
+- [ConditionalBranch: five of the twelve kinds](conditional-branch-five-of-the-twelve-kinds.md)
+- [CallEvent is compiled inline](call-event-is-compiled-inline.md)
+- [CallEvent into a shared body](call-event-into-a-shared-body.md)
+- [The test page switches itself off](the-test-page-switches-itself-off.md)
 
 ## Move routes
 
-- [Move route command 9, towards the hero](orden-9-de-ruta-hacia-el-heroe.md)
-- [Move route commands 26 and 27 on the hero](ordenes-de-ruta-26-y-27-sobre-el-heroe.md)
-- [Move route command 34 on the hero](la-orden-34-sobre-el-heroe.md)
-- [Diagonals go on events](las-diagonales-van-sobre-eventos.md)
-- [Walking through walls also applies to jumps](atravesar-paredes-vale-para-el-salto.md)
+- [Move route command 9, towards the hero](move-route-command-9-towards-the-hero.md)
+- [Move route commands 26 and 27 on the hero](move-route-commands-26-and-27-on-the-hero.md)
+- [Move route command 34 on the hero](move-route-command-34-on-the-hero.md)
+- [Diagonals go on events](diagonals-go-on-events.md)
+- [Walking through walls also applies to jumps](walking-through-walls-also-applies-to-jumps.md)
 
 ## Graphics and memory
 
-- [Every event is drawn](se-dibujan-todos-los-eventos.md)
-- [A graphic that doesn't fit isn't drawn](un-grafico-que-no-entra-no-se-dibuja.md)
-- [The possible leaders are an approximation](los-lideres-posibles-son-una-aproximacion.md)
-- [The possible leaders share one CGRAM slot](los-lideres-comparten-una-ranura-de-cgram.md)
-- [The timer has no palette of its own](el-cronometro-no-tiene-paleta-propia.md)
-- [Poses are uploaded on the fly](las-poses-se-suben-en-caliente.md)
-- [Translucent events are baked](los-translucidos-van-horneados.md)
-- [Translucent events don't use color math](el-color-math-no-se-usa.md)
-- [Large pictures in mode 1](las-imagenes-grandes-en-modo-1.md)
-- [The grid lives in WRAM](la-grilla-vive-en-la-wram.md)
+- [Every event is drawn](every-event-is-drawn.md)
+- [A graphic that doesn't fit isn't drawn](a-graphic-that-doesnt-fit-isnt-drawn.md)
+- [The possible leaders are an approximation](the-possible-leaders-are-an-approximation.md)
+- [The possible leaders share one CGRAM slot](the-possible-leaders-share-one-cgram-slot.md)
+- [The timer has no palette of its own](the-timer-has-no-palette-of-its-own.md)
+- [Poses are uploaded on the fly](poses-are-uploaded-on-the-fly.md)
+- [Translucent events are baked](translucent-events-are-baked.md)
+- [Translucent events don't use color math](translucent-events-dont-use-color-math.md)
+- [Large pictures in mode 1](large-pictures-in-mode-1.md)
+- [The grid lives in WRAM](the-grid-lives-in-wram.md)
 
 ## Audio
 
-- [A single sample bank](un-solo-banco-de-muestras.md)
-- [The playing track wins, and the sound effects wait](el-tema-que-suena-gana-y-los-efectos-esperan.md)
-- [Boot is sized for the boot package](el-arranque-esta-dimensionado-para-el-paquete-de-arranque.md)
+- [A single sample bank](a-single-sample-bank.md)
+- [The playing track wins, and the sound effects wait](the-playing-track-wins-and-the-sound-effects-wait.md)
+- [Boot is sized for the boot package](boot-is-sized-for-the-boot-package.md)

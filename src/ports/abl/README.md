@@ -49,7 +49,7 @@ What sets it apart from the other ports:
   running this suite with the tools of the change.
 - **MSU-1.** The release cartridge carries MSU-1 tracks for every theme,
   and an `abl.msu` with the quality battle backdrops and sound effects
-  ([the `.msu` file](../../internals/msu-datos.md)). Without MSU-1 the game
+  ([the `.msu` file](../../internals/the-msu-file.md)). Without MSU-1 the game
   works the same: what comes from the `.msu` only replaces something the
   ROM already has.
 - **`just entregar`**, which hands over a build to be played.
@@ -103,7 +103,7 @@ back: `ditto pack` rebuilds the game's files byte for byte from the exact
 dump, which the same run leaves in `build/ditto-exacto/` and which isn't
 versioned; `just datos-vuelta` checks it on this game. The reason for the
 decision is in [data is the resolved
-view](../../decisions/data-es-la-vista-resuelta.md), and what is inside,
+view](../../decisions/data-is-the-resolved-view.md), and what is inside,
 in `data/README.md`.
 
 ## How it is built
@@ -166,11 +166,11 @@ It isn't written here, because here it went stale without anyone noticing:
 - **Research**, dated studies: "on such a day, with such a commit, we
   measured this".
   - [A full inspection of the
-    repository](research/inspeccion-integral-del-repo.md) (2026-09-28)
+    repository](research/a-full-inspection-of-the-repository.md) (2026-09-28)
   - [The maps through the MSU-1: how far the cartridge
-    reaches](research/2026-10-01-los-mapas-por-el-msu-1.md) (2026-10-01)
+    reaches](research/2026-10-01-the-maps-through-the-msu-1.md) (2026-10-01)
   - [The whole game without MSU-1: the
-    count](research/2026-10-01-el-juego-entero-sin-msu-1.md) (2026-10-01)
+    count](research/2026-10-01-the-whole-game-without-msu-1.md) (2026-10-01)
 - **Decisions** about its content and its cartridge, in
   [decisions](decisions/README.md).
 

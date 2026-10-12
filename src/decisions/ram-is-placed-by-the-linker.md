@@ -58,7 +58,7 @@ addresses chosen by hand.
   goes with `f:`. The header of `far_ram.s` says the same.
 * **The area is small**: far RAM is nearly full. `$7E2000-$7E7FFF` is the
   map written by hand, with only small gaps; the upper half of `$7E` is
-  [the grid](la-grilla-vive-en-la-wram.md), and `$7F` is shared in time by
+  [the grid](the-grid-lives-in-wram.md), and `$7F` is shared in time by
   the battle and the loads. `FARBSS` lives in the unused end of the battle
   scene's reservation. `just espacio` prints what it has left. **It grows
   by taking over a stretch of the map written by hand**, moving whatever

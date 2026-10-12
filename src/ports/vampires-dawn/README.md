@@ -58,7 +58,7 @@ gradient's average colour.
   window's frame took 28 tiles of 16, the actor choice's windows 158 of
   64, the shop's 166 of 96, and the item and equipment windows had to
   leave 160 pairs to their text; all of them are fused —[A window with a
-  gradient is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—.
+  gradient is fused until it fits](../../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—.
 - **The ROM doesn't**: "a piece of 65536 bytes needs a new bank, and the
   127 banks the cartridge has for data are taken". It keeps A Blurred
   Line's System, which builds.
@@ -134,11 +134,11 @@ gradient's average colour.
   LZ2 were the only thing that paid off, and they cost A Blurred Line
   frames. taro chose the MSU-1 rather than two cartridges: [the MSU-1 is
   required only when the ROM does not
-  reach](../../decisions/el-msu-1-obligatorio-si-la-rom-no-alcanza.md).
+  reach](../../decisions/the-msu-1-is-required-only-when-the-rom-does-not-reach.md).
 - **So its project says `[rom] msu = "required"`, and it builds**: 1,533
   pieces, 5.3 MB, travel in the `.msu` —the maps' streams, the samples,
   the battlers, the panoramas' and big pictures' tiles—, and the rest fits
-  in the 127 banks. How, in [the `.msu` file](../../internals/msu-datos.md),
+  in the 127 banks. How, in [the `.msu` file](../../internals/the-msu-file.md),
   "What does not fit in the ROM".
 - It starts on map 8 in snes9x and in Mednafen with its `.msu`, and without
   it shows the screen that says the MSU-1 is missing. **Playing it is still
@@ -149,7 +149,7 @@ gradient's average colour.
 
 ## As of 2026-10-10
 
-> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-other-games-measured-again.md),
 > with the tools of the-advocate `1afe6457` and the ports at `951471f`),
 > without fixing anything. What follows the next heading is the snapshot
 > of 2026-10-06, kept as it was.
@@ -170,7 +170,7 @@ gradient's average colour.
 ## As of 2026-10-06
 
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
-> ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
+> ([Other games: the survey](../../research/2026-10-05-other-games.md),
 > measured on `24e0223e` of the-advocate) and what the tasks that followed it
 > changed up to 2026-10-06. It doesn't describe the port after that date.
 

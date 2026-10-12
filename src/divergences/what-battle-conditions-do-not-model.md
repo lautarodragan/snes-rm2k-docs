@@ -21,7 +21,7 @@ the same order. What is not the same:
 * **Only enemies have conditions, and only a troop page gives them.** No
   skill, attack or item gives or takes one, on either side: a skill whose
   only effect is a condition does nothing, and the enemies' AI discards it
-  —see [What the enemies' AI does not model](lo-que-la-ia-de-los-enemigos-no-modela.md)—;
+  —see [What the enemies' AI does not model](what-the-enemies-ai-does-not-model.md)—;
   an item that only cures conditions is not in the battle's list. The actors
   never have one in battle: a troop page's `ChangeCondition` that adds one
   does not compile, and their status says `normal_status` or the dead one.
@@ -46,7 +46,7 @@ the same order. What is not the same:
   `failure_message` is 3. A normal attack does both.
 
 The randomness is the battle's own, as everywhere else in it: see
-[What the enemies' AI does not model](lo-que-la-ia-de-los-enemigos-no-modela.md).
+[What the enemies' AI does not model](what-the-enemies-ai-does-not-model.md).
 
 ## Measured
 

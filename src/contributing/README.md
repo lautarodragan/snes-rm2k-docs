@@ -22,5 +22,13 @@ The project lives in four repositories:
 The commit messages are long on purpose: in all four, `git log` is the
 record of why things are the way they are.
 
+**The pages had Spanish file names until 2026-10-12**, and the commits,
+the tasks and the comments written before that day cite them. The table
+`[output.html.redirect]` in `book.toml`, at the root of this repository,
+has one line per renamed page —its old path from the book's root, and its
+new name—: an old URL lands on the new page through it, and it is where an
+old citation is looked up. A page renamed again gets its line there, and
+the lines that pointed at its old name are updated to the new one.
+
 - [JetBrains](jetbrains.md): what to configure in the IDE so that annotate
   sees through the split of `main.s`.

@@ -16,7 +16,7 @@ go one level down, close to the code.
 - [Events](events.md): the bytecode, who declares, emits and runs it, and
   the mechanics around it.
 - [Audio](audio.md): which piece does what, and where its reason is.
-- [The `.msu` file](msu-datos.md): data the MSU-1 serves to the ROM.
+- [The `.msu` file](the-msu-file.md): data the MSU-1 serves to the ROM.
 
 ## Internals and research
 

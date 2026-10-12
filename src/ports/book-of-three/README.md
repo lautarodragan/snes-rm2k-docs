@@ -44,7 +44,7 @@ animation standing still.
 
 Since later on 2026-10-11 it builds with its own System, Royal: its
 gradient is fused where the banks don't hold it —[A window with a gradient
-is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—, with a warning for the message window,
+is fused until it fits](../../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—, with a warning for the message window,
 the actor choice, the item and equipment screens and the shop.
 Since 2026-10-12 Royal's windows are drawn over the average colour of its
 gradient —[The windows' background is the project's, by System](../../decisions/the-windows-background-is-the-projects-by-system.md)—, until the runtime draws the gradient: Royal's dither
@@ -53,7 +53,7 @@ tile, and End Game's colours.
 
 ## As of 2026-10-10
 
-> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-other-games-measured-again.md),
 > with the tools of the-advocate `1afe6457` and the ports at `951471f`),
 > without fixing anything. What follows the next heading is the snapshot
 > of 2026-10-06, kept as it was.
@@ -74,7 +74,7 @@ tile, and End Game's colours.
 ## As of 2026-10-06
 
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
-> ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
+> ([Other games: the survey](../../research/2026-10-05-other-games.md),
 > measured on `24e0223e` of the-advocate) and what the tasks that followed it
 > changed up to 2026-10-06. It doesn't describe the port after that date.
 

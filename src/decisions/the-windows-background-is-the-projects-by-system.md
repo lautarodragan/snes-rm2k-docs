@@ -33,11 +33,11 @@ The windows' background is what makes them expensive. RM2k stretches the
 System's 32x32 square over each window, so a gradient is a different cell
 on every row of every window, and the screens' banks of tiles overflow:
 that is what had to be fused in [A window with a gradient is fused until
-it fits](una-ventana-con-degrade-se-funde-hasta-que-entra.md). Over one
+it fits](a-window-with-a-gradient-is-fused-until-it-fits.md). Over one
 colour each window's inside is one cell and one entry of colour memory,
 and a gradient costs one more entry written line by line, not one cell per
 row. What it saves for each game was measured in [The windows, made
-cheaper](../research/2026-10-11-las-ventanas.md).
+cheaper](../research/2026-10-11-the-windows-made-cheaper.md).
 
 **By System and not one value per game**, because a game changes System
 while it plays: Desert Nightmare once, Sunset Over Imdahl a few times,

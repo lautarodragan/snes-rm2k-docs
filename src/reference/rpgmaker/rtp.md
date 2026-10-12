@@ -12,7 +12,7 @@ for example—. **EasyRPG's free replacement** has different art and other
 names (`Actor1-4` instead of `Chara1-4`): it is no good for a game made
 with Don Miguel's, but it is for one made for it, and its license, file by
 file, is CC0 or CC-BY 4.0 —see [the test
-game](../../research/2026-10-02-el-juego-de-pruebas.md)—.
+game](../../research/2026-10-02-the-test-game.md)—.
 
 Don Miguel's is extracted from `RTPE.EXE`, which is a RAR self-extractor:
 
