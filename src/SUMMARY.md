@@ -30,6 +30,7 @@
     - [The game is playable without MSU-1](decisions/el-juego-se-juega-sin-msu-1.md)
     - [The MSU-1 is required only when the ROM does not reach](decisions/el-msu-1-obligatorio-si-la-rom-no-alcanza.md)
     - [The cartridge goes to 8 MB](decisions/el-cartucho-pasa-a-8-mb.md)
+    - [No S-DD1, for now](decisions/no-s-dd1-for-now.md)
     - [The tools split from ABL, into two repos](decisions/las-herramientas-se-separan-de-abl.md)
     - [data/ is the resolved view](decisions/data-es-la-vista-resuelta.md)
     - [The binary emitter ships with a sourcemap](decisions/el-emisor-binario-sale-con-sourcemap.md)
