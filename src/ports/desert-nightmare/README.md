@@ -10,9 +10,8 @@ as text.
 * **It starts without its title screen**: the title image doesn't fit in
   VRAM. Draft: [`title-that-doesnt-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/title-that-doesnt-fit-in-vram.md).
 * **The start menu ("With Intro / No Intro / Quit") shows over a pattern of
-  garbage**, and in general the screen is not blanked where the original
-  goes black: `EraseScreen` and `ShowScreen` are accepted without doing
-  anything. Task: `todo/eraseScreen-y-showscreen`.
+  garbage** instead of the burning face behind it. Draft:
+  [`desert-nightmare-start-menu-over-garbage`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/desert-nightmare-start-menu-over-garbage.md).
 * **The hero walks through some walls.** On eight maps —2, 4, 5, 14, 61,
   62, 66 and 172— more events than the console holds are left out, and
   among them are invisible walls. Draft: [`invisible-walls-lost-when-trimming-events`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/invisible-walls-lost-when-trimming-events.md).

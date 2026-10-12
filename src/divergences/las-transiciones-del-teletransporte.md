@@ -83,3 +83,34 @@ hero sharp on top.
 A game that uses the block, blind or wipe transitions, or the zoom as an
 effect that has to be seen: see
 [`other-transitions`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/other-transitions.md) in the-advocate-work.
+
+## `EraseScreen` and `ShowScreen`
+
+Since 2026-10-11 the screen commands use the same three transitions, from
+the same table: the mosaic (17), the cut (19, and anything past it) and the
+fade for the rest; -1, "the teleport's", is read by the ROM when the
+command runs, because `ChangeScreenTransitions` changes it on the fly. They
+are the teleport's fade cut in half —its way down, and its way up—, so
+everything above about the mosaic holds for them too. See `screen_erase`
+in `runtime/teleport_transition.s` in the-advocate. What else is different:
+
+* **The ramps last the teleport's 24 ticks**, and RM2k's fade lasts 35
+  frames.
+* **Erasing with "none" is the cut**, without RPG_RT's half-second pause
+  before the black; showing with "none" is the cut too, which is what RM2k
+  does but one frame longer.
+* **Showing a screen that is not erased does nothing**: RM2k fades from the
+  screen to itself, which shows nothing but keeps the game frozen 35
+  frames.
+* **A battle started over an erased screen starts at once**: RPG_RT waits
+  40 frames over the black. Like RPG_RT, it does not flash, and the map
+  stays black when it comes back.
+* **The custom menu does not show the screen again** on the way back; the
+  main menu, the save screen and the shop do, as in RM2k.
+
+It is covered by `pruebas/rpgmaker/test_borrar_pantalla.py` in the ABL
+port: the black that stays with the page running, the teleport that loads
+in the black without showing it, and goldens halfway through the mosaic.
+What is between —the menus and the battle over an erased screen— is not
+covered: see `UNTESTED.md` there.
+
