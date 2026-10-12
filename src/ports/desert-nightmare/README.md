@@ -22,9 +22,6 @@ as text.
   `Init`, and only the message window follows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
-* **Parallel common events never run**: two in this game, `Hauptmenü` and
-  `Vergiftet`. What that loses in play was not looked at. Draft:
-  [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 
 ## What it leaves out (2026-10-11)
 

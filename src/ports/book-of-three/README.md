@@ -7,10 +7,10 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Parallel common events never run**: four in this game —`DisableSaving`,
-  `Reraise KO'd chars`, `Eilonwy's Upgrades` and `LegendariesActivated`—.
-  What that loses in play was not looked at. Draft:
-  [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
+* **Two of its parallel common events never run**: `Reraise KO'd chars`
+  and `Eilonwy's Upgrades` do not compile. What that loses in play was not
+  looked at. Draft:
+  [`book-of-three-reraise-and-eilonwy-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-reraise-and-eilonwy-dont-compile.md).
 
 ## What it leaves out (2026-10-11)
 

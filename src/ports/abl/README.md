@@ -8,9 +8,10 @@ behind each one is a draft or a task in the tasks repository, named here
 as text. Where the ROM does what RM2k does in another way, on purpose, is
 in the [divergences](../../divergences/README.md), not here.
 
-* **Four parallel common events never run**: `TalanLateForWork`,
-  `DisableSaving`, `Raining` and `ManageQuarryTimer`. What that loses in
-  play was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
+* **In the Lashe City rain the rain sound that repeats every three
+  seconds is missing**: common event `Raining` runs, but its `Rain1` is not
+  in the map's sound package. Draft:
+  [`parallel-common-events-sound-only-where-the-map-carries-it`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-sound-only-where-the-map-carries-it.md).
 * **Without MSU-1 the opening rain dips almost to silence every four
   seconds**: each new rain cuts the one still sounding instead of
   overlapping it. With MSU-1 it overlaps as in RM2k. Draft:

@@ -26,8 +26,6 @@ as text.
   `System`'s white windows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Coloured words in messages come out in the plain colour.** Task:
   [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
-* **Its parallel common event `MenuCaller` never runs.** What that loses
-  in play was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 
 ## The painted maps, in mode 1 (2026-10-11)
 
