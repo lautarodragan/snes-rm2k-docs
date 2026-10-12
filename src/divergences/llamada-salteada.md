@@ -21,8 +21,11 @@ investigated.
 
 The page that exposed it no longer goes through there —`CallEvent` is
 compiled inline since 2026-09-12— but **the path still exists** for the
-**216 calls that are still skipped**, almost all to common events that stop
-at `ControlVars` and at the original's own menus.
+calls that are still skipped: `rm2k-snes-events culprits` lists them. On
+2026-09-12 they were 216, almost all to common events that stopped at
+`ControlVars` and at the original's own menus; in A Blurred Line the last
+47, to common event 45, went away on 2026-10-11 with
+[Variables saturate at sixteen bits](variables-saturate-at-16-bits.md).
 
 ## The autostart page that only calls
 
