@@ -138,6 +138,7 @@
     - [Other games, measured again](research/2026-10-10-otros-juegos-de-nuevo.md)
     - [The S-DD1, for the poses](research/2026-10-11-el-s-dd1.md)
     - [The windows, made cheaper](research/2026-10-11-las-ventanas.md)
+    - [The skills menu](research/2026-10-12-the-skills-menu.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)

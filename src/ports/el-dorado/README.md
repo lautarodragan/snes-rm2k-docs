@@ -7,7 +7,9 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-None known today.
+* **Tech Skill in the pause menu is always grey**: the original opens each
+  actor's skills there, and uses the ones the map allows. Task:
+  [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
 
 ## As of 2026-10-10
 
