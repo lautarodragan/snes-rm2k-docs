@@ -7,9 +7,7 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **The screen is not blanked where the original goes black**: on eleven
-  maps a page erases and shows the screen, and the cartridge leaves the
-  map in sight. Task: `todo/eraseScreen-y-showscreen`.
+None known today.
 
 ## As of 2026-10-10
 
