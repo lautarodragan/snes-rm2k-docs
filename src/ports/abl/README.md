@@ -16,11 +16,6 @@ in the [divergences](../../divergences/README.md), not here.
   seconds**: each new rain cuts the one still sounding instead of
   overlapping it. With MSU-1 it overlaps as in RM2k. Draft:
   [`abl-rain-cuts-itself-without-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-rain-cuts-itself-without-msu-1.md).
-* **The wall of bark of `Inscribe` and `ControlMachines` do nothing in
-  battle**: their messages and flashes come out, and the enemy goes on as
-  if it had no condition —it attacks, and the wall shields nobody—. The
-  battle has no conditions yet. Task:
-  [`battle-conditions-for-real`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/battle-conditions-for-real.md).
 
 ## The port
 

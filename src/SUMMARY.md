@@ -117,6 +117,7 @@
         - [Escape is the fifth command](divergences/escape-es-la-quinta-orden.md)
         - [What the enemies' AI does not model](divergences/lo-que-la-ia-de-los-enemigos-no-modela.md)
         - [What troop pages do not model](divergences/lo-que-las-paginas-de-tropa-no-modelan.md)
+        - [What battle conditions do not model](divergences/what-battle-conditions-do-not-model.md)
     - [Other screens]()
         - [What the Game Over screen does not model](divergences/lo-que-la-pantalla-de-game-over-no-modela.md)
         - [What the End Game screen does not model](divergences/lo-que-la-pantalla-de-end-game-no-modela.md)

@@ -25,7 +25,7 @@ as text.
   window follows: the dialogue comes out in its white text, the menu in
   `System`'s white windows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Coloured words in messages come out in the plain colour.** Task:
-  [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
+  [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 
 ## The painted maps, in mode 1 (2026-10-11)
 

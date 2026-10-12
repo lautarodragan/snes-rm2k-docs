@@ -24,11 +24,12 @@ as text.
   touches was not looked at. Draft: [`variables-past-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-past-256.md).
 * **Summoning and turning into a wolf or a bat do nothing**: their
   parallel common events do not compile, nor do `Lebensstatus`, `Geschick`
-  and `Staerke`; the other 23 run. Drafts:
+  and `Staerke`. Drafts:
   [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
   and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
 * **Messages show no faces, and coloured words come out in the plain
-  colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
+  colour.** Tasks: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md)
+  and [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 * **An icon in a message shows as `$` and a letter**: a sign reads "$s
   Graveyard" where RM2k draws one of the ExFont's symbols. Draft:
   [`exfont-glyphs-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/exfont-glyphs-in-messages.md).

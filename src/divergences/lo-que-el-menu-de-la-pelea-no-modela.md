@@ -28,7 +28,8 @@ same yet:
   rest of the screens: see
   [The choice bar does not alternate its two drawings](la-barra-de-la-eleccion-no-alterna-sus-dos-dibujos.md).
 * **The status** is always `normal_status`, or the name of the dead status
-  for a fallen one: the battle has no other statuses.
+  for a fallen one: the actors have no other conditions in battle —see
+  [What battle conditions do not model](what-battle-conditions-do-not-model.md)—.
 * **The HP and SP** go in the text color, rather than the terms in the
   System color.
 * **The description of a skill or an item** goes in the same font as the
