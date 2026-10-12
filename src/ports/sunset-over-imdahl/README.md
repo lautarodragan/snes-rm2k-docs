@@ -20,9 +20,10 @@ as text.
   camera reverses while a row of the painting is still being uploaded.
   Measured, not noticed in play. Draft:
   [`camera-turning-back-over-a-half-uploaded-row-loses-a-frame`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/camera-turning-back-over-a-half-uploaded-row-loses-a-frame.md).
-* **The windows keep the game's first System.** The opening scene (map 11)
-  switches to `SaveMeny`, and the cartridge ignores the switch. Task:
-  [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
+* **The menu and the other screens keep the game's first System.** The
+  opening scene (map 11) switches to `SaveMeny`, and only the message
+  window follows: the dialogue comes out in its white text, the menu in
+  `System`'s white windows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Coloured words in messages come out in the plain colour.** Task:
   [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
 * **Its parallel common event `MenuCaller` never runs.** What that loses

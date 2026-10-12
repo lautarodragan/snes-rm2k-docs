@@ -58,9 +58,10 @@ stroke near two edges of A Blurred Line's.
   System gets it: the message window, the screens, the battle.
 * **Until the runtime draws gradients, a gradient is drawn as its average
   colour** —the mean of the line its stops draw—.
-* **Only the System a game starts with is drawn**: the engine still
-  ignores `ChangeSystemGraphics`. The entries of the other Systems are
-  read and checked, and wait for that command.
+* **Every screen is drawn with the System a game starts with, and the
+  message window also with each one `ChangeSystemGraphics` switches to**,
+  each over its own entry: see [`ChangeSystemGraphics` changes the
+  message window](change-system-graphics-changes-the-message-window.md).
 * The message window's text area, when all its lines come out the same,
   goes in the cartridge as one line that `prime_line` copies under each of
   them.

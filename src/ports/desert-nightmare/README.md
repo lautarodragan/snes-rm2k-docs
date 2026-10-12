@@ -19,9 +19,9 @@ as text.
   seconds**: a light mask that the original lays over the room at 35 %
   replaces the map. Seen on 2026-10-06, not checked since. Draft:
   [`pictures-that-go-over-the-map-outside-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/pictures-that-go-over-the-map-outside-sunset.md).
-* **The windows keep the intro's System** for the whole game: the original
-  switches to `Systemset_Spiel` in its common event `Init`. Task:
-  [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
+* **The menu and the other screens keep the intro's System** for the whole
+  game: the original switches to `Systemset_Spiel` in its common event
+  `Init`, and only the message window follows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
 * **Parallel common events never run**: two in this game, `Hauptmenü` and
