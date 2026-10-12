@@ -101,7 +101,7 @@ What was left open:
 
 - **`cartuchos.py`** (question 6): taro doesn't see a clear responsibility
   in that file. It mixes ABL data, which could go in a `.toml`, with the
-  cache key and test things. He thinks it shouldn't exist: it would be
+  cache key and test things. They think it shouldn't exist: it would be
   replaced by a couple of `justfile` recipes, the data in a `.toml`, and a
   cache key that doesn't depend on a binary's hash but on its version (for
   example, each binary printing it, or storing `gunter --version`). Along

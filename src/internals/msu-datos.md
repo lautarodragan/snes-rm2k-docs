@@ -135,7 +135,7 @@ doesn't carry uses **the fallback**, `[battle] fallback_backdrop` in the
 project file —why that one, in its comment—: `backdrop_fallback` says, by
 backdrop number, which of the ROM's is drawn. taro asked for it on
 2026-09-27, because the battles in the world came out black, and black is
-confusing; the same day he asked for the ROM to carry all of `release`'s,
+confusing; the same day they asked for the ROM to carry all of `release`'s,
 and since then the fallback is left for a troop that fights "of the place"
 in a map without encounters, where the converter can't know what terrain
 the hero will be standing on. With MSU-1 each battle reads its own from the

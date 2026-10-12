@@ -14,7 +14,7 @@ animations**, even though the animations themselves go only in the `.msu`:
 
 From taro, on 2026-10-01, with the numbers of
 [the study of the whole game without MSU-1](../ports/abl/research/2026-10-01-el-juego-entero-sin-msu-1.md)
-in front of him: the whole game, with everything that was missing, is about
+in front of them: the whole game, with everything that was missing, is about
 8,073 KB. It doesn't fit in 4 MB with any cut; in 8 MB it fits **without
 lowering the quality of anything** once the lossless cuts are applied (LZ2
 where data goes raw, DTE in the texts, skips in the sequences: 7,151 KB),

@@ -11,7 +11,7 @@ mode 3 it is already 4 bits.
 
 From taro, on 2026-10-01, with option E of
 [the picture system study](../research/2026-10-01-el-sistema-de-imagenes.md)
-in front of him: "I'm OK with using mode 1". It doesn't contradict the
+in front of them: "I'm OK with using mode 1". It doesn't contradict the
 decision of 2026-09-05 that ruled out mode 1 **for the map** (the 256-color
 background stays; see [Mode 3 by default](../cartridge/mode-3.md)): here the
 map isn't visible. It is the same thing that was evaluated for the menu in

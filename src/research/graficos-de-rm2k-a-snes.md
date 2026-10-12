@@ -257,7 +257,7 @@ it shows —Core's blood on the floor of map 2 was brown and now it is red—.
    every possible state, which is not practical, but the other way around:
    choosing candidate maps and tracing their references until reaching "to
    see this you need such an item or such a hero". taro's memory helps as a
-   heuristic. His own intuition says it may change nothing: the discardable
+   heuristic. Their own intuition says it may change nothing: the discardable
    maps are probably test maps and use tilesets that are already in use.
 
 4. **Compressing the grid**, which is the heaviest category. taro went

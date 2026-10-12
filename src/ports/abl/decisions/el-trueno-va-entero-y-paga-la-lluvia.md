@@ -17,7 +17,7 @@ stretch until it filled its duration and cut off dead: taro heard it
 stutter even though nothing stepped on it. That is what isn't negotiable:
 **whole**.
 
-The rate is. On 2026-09-24 he chose 22,050 Hz —that of its WAV— because it
+The rate is. On 2026-09-24 they chose 22,050 Hz —that of its WAV— because it
 had more treble than at 16 kHz. On 2026-09-26 the rain started playing
 whole (its five seconds, without the loop), and in map 1's package, which
 was already full, that lowered the rate of almost all of `escape_newyork`

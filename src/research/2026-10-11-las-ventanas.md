@@ -16,7 +16,7 @@ face out of BG1, *can all the windows of the engine be made cheaper the
 same way?* "If we can make the windows, in general, more efficient, it is a
 win everywhere."
 
-What he settled before measuring, and this study takes as given:
+What they settled before measuring, and this study takes as given:
 
 * **No detection of gradients.** A setting of the project replaces the
   System's background with one of the project's own —a colour, or a
@@ -29,7 +29,7 @@ What he settled before measuring, and this study takes as given:
   `MSU_REQUIRED` already do— is not ruled out, but it is more surface for
   bugs.
 
-The six ideas he asked to measure, in order: the setting; the message
+The six ideas they asked to measure, in order: the setting; the message
 window as a band of the screen switched by HDMA or IRQ; the cursor in
 sprites; the faces out of BG1; whether A Blurred Line fits one 16-colour
 palette; and code per game.

@@ -17,7 +17,7 @@ mosaic), `battle_end_fadeout = 17` (it goes away in mosaic) and
 
 The console does not do the zoom —bringing the map closer is mode 7, and the
 map is in mode 3—, and until 2026-09-30 it was a fade, as taro decided on
-2026-09-26 for all the ones that cannot be done. That day he asked for the
+2026-09-26 for all the ones that cannot be done. That day they asked for the
 mosaic: "let's make the transition into battle the same as the one out —the
 squares one—". So **the `System` is not read**: the way in is the mosaic for
 any game, and it is a design change, not a fix.

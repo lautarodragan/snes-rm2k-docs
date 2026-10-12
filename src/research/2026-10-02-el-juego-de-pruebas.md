@@ -18,8 +18,8 @@ That same day taro set the direction, and this study has it built in:
    repo of its own.
 2. **Then, 100% original tests in this repo**, without a single reference to
    ABL or a copyrighted asset.
-3. The assets: **EasyRPG's RTP replacement**, other free assets he has
-   saved, **made-up assets** for now, **sound effects** he can make, and
+3. The assets: **EasyRPG's RTP replacement**, other free assets they have
+   saved, **made-up assets** for now, **sound effects** they can make, and
    **music** from public-domain works with sequences under a declared
    license.
 
@@ -673,8 +673,8 @@ faster `just cartuchos` is without them I did not measure.
 * *The harness in tools*: splitting it, without the bytecode.
 * *The engine tests to the test game*, one per phase (2 to 5).
 * *Free music*: public-domain pieces from Mutopia, with the MIDI generated
-  from their LilyPond; and asking taro for the asset sites he has saved and
-  the sound effects he can make.
+  from their LilyPond; and asking taro for the asset sites they have saved and
+  the sound effects they can make.
 
 
 ## How it was measured
