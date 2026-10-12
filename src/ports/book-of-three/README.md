@@ -7,10 +7,13 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **No skill can be used from the pause menu**: Special opens each
-  actor's list, but A on a skill does nothing, where the original
-  uses the ones the map allows. Task:
+* **Healing skills cannot be used from the pause menu**: Special opens
+  each actor's list, but A on a heal does nothing, where the original
+  asks on whom and heals. Task:
   [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
+* **A skill that turns a switch on, used from the pause menu, is
+  silent**: the original plays its sound effect. Draft:
+  [`switch-skills-from-the-menu-play-no-sound`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switch-skills-from-the-menu-play-no-sound.md).
 * **Two of its parallel common events never run**: `Reraise KO'd chars`
   and `Eilonwy's Upgrades` do not compile. What that loses in play was not
   looked at. Draft:

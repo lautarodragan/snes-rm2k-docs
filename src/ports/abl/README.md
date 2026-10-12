@@ -8,12 +8,14 @@ behind each one is a draft or a task in the tasks repository, named here
 as text. Where the ROM does what RM2k does in another way, on purpose, is
 in the [divergences](../../divergences/README.md), not here.
 
-* **No skill can be used from the pause menu**: Tech Skill opens each
-  actor's list, but A on a skill does nothing, where the original heals
-  and uses its map skills from there. Four of the game's systems are
-  reached only that way —Radin's Mix Formula and Field/Battery Repair,
-  Sern's Weapon Forging and Emily's Change Tape—, so today they cannot
-  be entered. Task: [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
+* **Healing skills cannot be used from the pause menu**: Tech Skill opens
+  each actor's list, but A on a heal does nothing, where the original
+  asks on whom and heals. Task: [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
+* **Radin's Mix Formula and Sern's Weapon Forging do nothing**: chosen
+  from Tech Skill they close the menu and nothing happens, where the
+  original takes you to Radin's and Sern's menus. Emily's Change Tape
+  asks which tape, as in the original; Radin's Field/Battery Repair runs
+  its common event, which was not played through. Draft: [`radin-s-and-sern-s-menus-do-not-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/radin-s-and-sern-s-menus-do-not-compile.md).
 * **In the Lashe City rain the rain sound that repeats every three
   seconds is missing**: common event `Raining` runs, but its `Rain1` is not
   in the map's sound package. Draft:
