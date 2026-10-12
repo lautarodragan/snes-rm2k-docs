@@ -61,6 +61,47 @@ Giant hits the droid on the turn it joins, which in RM2k would have been
 Kersh. The model does the same as the console, so the test does not catch
 it.
 
+**`ChangeMonsterCondition` does nothing: `Control` and `BarkWall` do not
+happen.** The battle has no conditions —no duration, no restriction on what
+the enemy does, no effect on damage—, and the game only asks for two, 22
+(`Control`) and 23 (`BarkWall`), from Talan's `Inscribe` (switch 799) and
+`ControlMachines` (803). The command is accepted without doing it so that
+those pages run their messages, sound effects and flashes —before, the
+whole page was left out—, and the enemy fights on as if nothing had
+happened: a controlled machine still attacks, and the wall of bark shields
+nobody. It is a declared debt, taro's decision on 2026-10-12, and the
+converter warns about it in every cartridge, with the troops whose pages use
+it; the real conditions are the task
+[`battle-conditions-for-real`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/battle-conditions-for-real.md).
+
+**`FlashScreen` and `TintScreen` reach the scene and nothing else**, which is
+RM2k's own rule: `Spriteset_Battle` gives the screen's tone to the
+background and the battlers, and the flash is drawn under the windows. On
+the console both are the map's transform of the palette, run over the
+scene's —the background's colours and the battlers'—, so the windows and the
+text are left alone. Compared with the original under Wine on 2026-10-12,
+with `Inscribe`'s wall of bark: the scene goes the flash's colour and back,
+and the empty message window stays black. What is not the same:
+
+* **The plain background does not flash**: a battle with no background has
+  colour 0 behind the battlers, which is also the text's, and it stays black.
+* **`TintScreen` in battle is applied at once**, without its gradient, as on
+  the map: see `TINT_SCREEN` in the event compiler. The page's wait is
+  respected.
+* **A flash still going when the battle ends is cut**; in RM2k it would
+  finish over the map. The tint does carry on, both ways: the battle starts
+  with the map's —the agency captain's battle (troop 240) is fought after a
+  `TintScreen` to black, which its turn 0 page undoes— and the map comes
+  back with the one a page left.
+* **The message window empties two frames after the flash shows**: it is
+  the text layer's, which takes that long to clear a box. In RM2k both
+  happen in the same frame.
+
+**`TerminateBattle` ends the battle with no victory**, as RM2k's `Abort`: no
+experience, no gold, no end screen, and the map's page goes on past the
+`EnemyEncounter`'s handlers, whichever there are. The battle leaves with its
+usual mosaic, from the screen it was showing.
+
 **What the pages change in the party they change in the saved game, between
 stretches.** The console keeps the battle's HP in `BA_ONE`; before each
 stretch of a page it copies them to `FAR_HP` and afterwards brings them
@@ -76,4 +117,6 @@ because losing belongs to the battle.
 `pruebas/rpgmaker/test_eventos_de_tropa.py` in the ABL port
 (the-advocate-ports/abl), with the `pelea-86` and `pelea-102` cases; and
 `pruebas/rpgmaker/test_sistemas_de_tropa.py` in the ABL port, with
-`pelea-invocacion` and `pelea-radio`.
+`pelea-invocacion` and `pelea-radio`; and
+`pruebas/rpgmaker/test_destello_de_pelea_golden.py` in the ABL port, with
+`pelea-inscribir` and `pelea-capitan`.
