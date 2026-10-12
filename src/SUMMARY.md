@@ -95,6 +95,7 @@
         - [Finished routes give up their slot](divergences/las-rutas-terminadas-sueltan-su-lugar.md)
         - [What erasing an event does not model](divergences/lo-que-borrar-un-evento-no-modela.md)
         - [A skipped call](divergences/llamada-salteada.md)
+        - [Variables saturate at sixteen bits](divergences/variables-saturate-at-16-bits.md)
         - [The equipment's common events run when the menu closes](divergences/los-comunes-del-equipo-corren-al-cerrar-el-menu.md)
         - [What ChangeExp and ChangeLevel do not model](divergences/lo-que-changeexp-y-changelevel-no-modelan.md)
         - [The save does not keep the events](divergences/la-partida-no-guarda-los-eventos.md)
