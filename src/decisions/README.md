@@ -42,6 +42,7 @@ find them by name.
 - [data/ is the resolved view](data-es-la-vista-resuelta.md)
 - [The binary emitter ships with a sourcemap](el-emisor-binario-sale-con-sourcemap.md)
 - [A long case at zero proves nothing](un-caso-largo-en-cero-no-prueba-nada.md)
+- [RAM is placed by the linker](ram-is-placed-by-the-linker.md)
 
 ## Events and the interpreter
 

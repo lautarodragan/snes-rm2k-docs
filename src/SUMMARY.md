@@ -34,6 +34,7 @@
     - [data/ is the resolved view](decisions/data-es-la-vista-resuelta.md)
     - [The binary emitter ships with a sourcemap](decisions/el-emisor-binario-sale-con-sourcemap.md)
     - [A long case at zero proves nothing](decisions/un-caso-largo-en-cero-no-prueba-nada.md)
+    - [RAM is placed by the linker](decisions/ram-is-placed-by-the-linker.md)
     - [Events trigger with two bits](decisions/los-eventos-disparan-con-dos-bits.md)
     - [The active page is frozen until the refresh](decisions/la-pagina-activa-se-congela-hasta-el-refresco.md)
     - [The refresh runs at three moments](decisions/el-refresco-corre-en-tres-momentos.md)
