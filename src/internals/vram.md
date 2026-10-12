@@ -22,8 +22,8 @@ fits](../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md). Why the
 
 There are six, and `vram_layout` returns **the first one that fits**, so
 adding one at the end doesn't change the layout of any map that already
-had one. There are two more, the panorama ones —see below—, which
-`vram_layout` never returns:
+had one. There are six more —the five of a map that shows its panorama
+and the painted map's, see below—, which `vram_layout` never returns:
 
 ```text
 window         sprites 448 | window_map | bg 448 | map $5800 | above 128 | window 256
@@ -55,8 +55,9 @@ together.
 "+both" is asked for by **`Sector 34 With Car`**, map 38: 476 background
 tiles and 347 sprite tiles. In bytes it fit in the other three; what didn't
 allow it was the background tilemap nailed at $5800, which cuts BG1's bank
-at 448 tiles. It is the only layout that moves it: it brings it down to the
-2 KB left between the sprites and the background, and the ROM reads it
+at 448 tiles. It was the first layout to move it —"+above" and the
+panorama ones moved it later too—: it brings it down to the 2 KB left
+between the sprites and the background, and the ROM reads it
 from `FAR_VRAM_MAP` when building rows and columns.
 
 ## Where the ceiling is
@@ -149,13 +150,15 @@ the-advocate-work.
 A `ShowPicture` picture that covers the screen goes in BG1, in mode 1, with
 the map hidden —[big pictures in mode
 1](../decisions/las-imagenes-grandes-en-modo-1.md)—, and **takes the same
-place in all six layouts**: its 4bpp tiles from word 0 up to $3FFF —the
+place in every layout**: its 4bpp tiles from word 0 up to $3FFF —the
 1024 a tilemap entry can name—, over the sprites and the map tiles, and its
 tilemap at $4000. The window tilemap falls in that range in "window"
-($1C00), so while the picture lasts it moves to $4800, which in none of
-them belongs to anything used meanwhile —in some they are map tiles, which
-are reloaded—; the tiles of BG2 and of the window are from $5000 upwards in
-all of them. What it overwrites is restored, when it is erased, by the same
+($1C00) and in three of the panorama ones ($1800), so while the picture
+lasts it moves to $4800, which in none of them belongs to anything used
+meanwhile —in some they are map or panorama tiles, which are reloaded—;
+the window's tiles are from $5000 upwards in all of them, and so are
+BG2's but in "panorama", whose base is the panorama's first tile, at
+$4000. What it overwrites is restored, when it is erased, by the same
 load as returning from a battle: see `runtime/big_picture.s`.
 
 ## A big picture with zoom uses the other half
@@ -167,7 +170,7 @@ texture, is shown still **in the upper half**: its tiles from `$4000` —up
 to 960— and its tilemap, one 32x32 screen, at `$7C00`. While it is still,
 the texture is uploaded to the lower half one piece per vblank, over the
 sprites and the map tiles, which aren't visible. That overwrites the window
-and BG2's tiles, which were up there in all six layouts: with mode 7 on
+and BG2's tiles, which were up there in every layout: with mode 7 on
 screen the upper half is left free and the window goes back there, also in
 pieces. Erasing it restores everything with the same load as returning
 from a battle, which overwrites the same words. See
@@ -176,7 +179,7 @@ from a battle, which overwrites the same words. See
 ## A map that shows its panorama uses one of its own
 
 Since 2026-10-05, the maps whose panorama Wally gives a layer of its own
-—see `Way` in `background/panorama.rs`—. There are four, and a map takes
+—see `Way` in `background/panorama.rs`—. There are five, and a map takes
 the first one of its mode where its background, its sprites and its
 panorama fit: Wally converts the panorama with the tiles left by the first
 one that is enough for the background.
@@ -201,7 +204,8 @@ with the panorama in mode 3.
 
 **In mode 3 the panorama is BG2**, so it has to fit, together with the
 window, in what BG2's ten bits reach from its base: it goes before and
-after the window, and the window stays at index 256, from `$5000` upwards,
+after the window, and the window stays at index 256 —128 in the last
+one—, from `$5000` upwards,
 where a big picture doesn't overwrite it. Its tilemap is that of the layer
 above, which the map doesn't use. **In mode 1 it is BG3**, with its own
 base and tilemap, and the background goes at 4 bits: its `tiles` is
