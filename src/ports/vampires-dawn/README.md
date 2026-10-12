@@ -27,6 +27,9 @@ as text.
   was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
+* **An icon in a message shows as `$` and a letter**: a sign reads "$s
+  Graveyard" where RM2k draws one of the ExFont's symbols. Draft:
+  [`exfont-glyphs-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/exfont-glyphs-in-messages.md).
 
 ## Its own System again (2026-10-12)
 
