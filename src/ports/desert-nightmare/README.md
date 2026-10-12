@@ -23,9 +23,6 @@ as text.
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Tasks: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md)
   and [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
-* **Parallel common events never run**: two in this game, `Hauptmenü` and
-  `Vergiftet`. What that loses in play was not looked at. Draft:
-  [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 
 ## What it leaves out (2026-10-11)
 

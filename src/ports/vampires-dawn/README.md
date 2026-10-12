@@ -22,9 +22,11 @@ as text.
 * **An event page that uses any variable past the 256th does nothing**:
   the game names 600, and those pages are left out. Which scenes that
   touches was not looked at. Draft: [`variables-past-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-past-256.md).
-* **Parallel common events never run**: 35 in this game, among them the
-  summons and the wolf and bat transformations. What that loses in play
-  was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
+* **Summoning and turning into a wolf or a bat do nothing**: their
+  parallel common events do not compile, nor do `Lebensstatus`, `Geschick`
+  and `Staerke`. Drafts:
+  [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
+  and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Tasks: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md)
   and [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).

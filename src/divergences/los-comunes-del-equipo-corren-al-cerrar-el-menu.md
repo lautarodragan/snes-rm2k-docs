@@ -1,66 +1,61 @@
-# The equipment's common events run when the menu closes
+# The pure parallel common events run only when what they read changes
+
+Until 2026-10-12 this page was "The equipment's common events run when the
+menu closes": the ROM ran no parallel common event but ABL's 37, from the
+menu. Since then it runs them all, and what is left of that path is this.
 
 ## What
 
-Common event 37, `UpdateAG7 Skills`, is **parallel with switch 150**: in
-RM2k it runs every frame while AG7-17 is in the party, removes its seventeen
-skills and gives it the one for each piece it has equipped. The ROM does not
-run parallel common events, and this one it runs **at the two moments when
-its result can change**:
+In RM2k a parallel common event runs **every frame** while its switch is
+on, or always if it has none. The ROM does the same —`compar_tick`, in
+`runtime/common_events.s` in the-advocate—, except for the **pure** ones:
+those that only read switches and what an actor has equipped, and only
+write skills and the three permissions (save, menu, escape) —`pure` in
+`rm2k-snes/events/src/commons.rs`—. A pure one runs:
 
-* when the switch turns on: the converter pastes the body after the
-  `ControlSwitches` that turns it on, as if a `CallEvent` followed it;
-* when the pause menu closes, which is where equipment is changed:
-  `equipment_commons`, in `runtime/equipment_from_events.s` in
-  the-advocate, from `menu_screen`.
+* on the frame its switch turns on —or the first frame, if it has none—;
+* on the frame after something it reads or writes changes: any switch
+  written (`set_switch`), the pause menu closing —where the equipment
+  changes—, `ChangeEquipment`, and a page's `ChangeSaveAccess`,
+  `ChangeMainMenuAccess` or `ChangeEscapeAccess`.
 
-It applies to any parallel common event, with a switch, that has nothing but
-`ChangeSkills` and "has such item equipped" branches:
-`eventos.COMUNES_DEL_EQUIPO`. In the game there is only one.
+Between those moments it would give the same result every frame, so not
+running it does not change what is seen. In ABL there are three:
+2 `DisableSaving`, 8 `EnableSaving` and 37 `UpdateAG7 Skills`.
 
-What is still different:
+## Why
 
-* **In RM2k it runs on the frame after the switch; here, on the same one.**
-  It does not show: nothing looks at the skills in between.
-* **A page's `ChangeEquipment` does not run it again.** In the game there is
-  none on actor 18.
-* **Turning the switch off takes nothing away**, same as in RM2k: the event
-  stops running and the skills stay as they were.
+The cost. 37's body every frame was measured on 2026-09-27 at about an
+eighth of the frame, and with 2 and 8 running every frame the race lap
+went 53 hardware frames over its 976 ticks, past the 5% the suite allows.
+As pure ones, a frame where none of them runs costs some two scan lines
+for the whole table.
+
+## What is still different
+
+* **An actor that learns, by levelling up, a skill a pure one takes
+  away keeps it until the next run.** In RM2k 37 would take it away on the
+  next frame. AG7-17 does not learn any of its seventeen by level.
+* **Something a pure one reads changed by a path other than those** would
+  not wake it until the next switch is written. None is known: a loaded
+  game wakes them on its first frame, as a reset does.
 
 ## Measured
 
-The general approach —one more interpreter running the parallel common
-events every frame, like the maps' parallel pages— was measured on
-2026-09-27 against this:
-
-* **The per-frame loop.** With throwaway cases that ran the body of 37 N
-  times in a row in one page, 0, 10, 20 and 30 times took 63, 64, 66 and 67
-  frames: **about 0.13 frames per pass**. As a parallel event, close to an
-  eighth of each frame's CPU, on every map, from the moment AG7 joins the
-  party.
-* **What else it would turn on.** Number 2 (`DisableSaving`) is parallel
-  **without a switch** and disables saving whenever 236 is off; 3
-  (`Raining`, switch 94) and 8 (`EnableSaving`, switch 236) also compile.
-  Doing the general thing changes `release` far beyond AG7.
-* **This**: 8 bytes of bank 0 (the call from the menu and the bridge to
-  `run_code`), 117 of bank 1, no bytes of RAM, and no cycles per frame. The
-  compiled body is 307 bytes in RODATA and as many again pasted into page 5
-  of event 2 on map 57.
-
-It is enforced by the three AG7 cases in
-`pruebas/rpgmaker/test_ag7_y_la_planta.py` in the ABL port
-(the-advocate-ports/abl): on joining it knows its weapon's skill, changing it
-and closing the menu changes it —checked red without the call from the
-menu—, and with the switch off closing the menu touches nothing.
+It is enforced by ABL's `pruebas/rpgmaker/test_comunes_paralelos.py` (2
+and 8: saving prohibited with 236 off, enabled with it on even after a
+page's `ChangeSaveAccess`, and prohibited again when 236 turns off) and
+`test_ag7_y_la_planta.py` (37: on joining, after changing the weapon and
+closing the menu, and nothing with the switch off), in the ABL port.
 
 ## How it looks today
 
 The same as in RM2k: you equip a piece, leave the menu, and in battle its
-skill is there.
+skill is there; and the menu's Save is grey until the game turns 236 on,
+as in the original.
 
 ## When it stops being enough
 
-A parallel common event that looks at something other than equipment —a
-variable, the map, time—, or that does something more than change skills:
-that one needs the real interpreter. Or a page that changes the equipment of
-the actor the event looks at.
+A pure common event whose result depends on something that changes
+without going through those paths; or one that is pure by its commands but
+expensive enough to matter on the frames it does run.
