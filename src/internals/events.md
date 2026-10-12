@@ -115,6 +115,7 @@ of its routine.
 | The screen turns on in vblank and nowhere else | `flush_video` | — |
 | The message window, placed by HDMA where `MessageOptions` asks —top, middle or bottom, with background or without— | `build_hdma`, `msg_place`, `msg_hdma_build`, `msg_start`, `msg_ptr_next`, `msg_letter` (the DTE pairs) | `rm2k-snes-screens`, which builds it with `rm2k-render` as a library, and `Messages` and `OP_MESSAGE_OPTIONS` in the compiler |
 | Text composed on the fly, with the glyphs already pre-rendered | `message_tick`, `compose_char`, `prime_line` | `font_prerender` in `rm2k-snes-screens` |
+| The waits in the middle of a box —`\.`, `\!` and the second-long one, backslash and bar—: the box is cut at the wait and shown, and composed again from the cut line when it is over | `msg_wait_mark`, `msg_hold_tick`, `msg_line_start`, in `message_waits.s` | `WAIT` and `Messages::add_waiting` in the compiler; `wait_mark` in `rm2k-snes-text` |
 | Boot always lasts the same | `BOOT_FRAMES` | run by `Partida` in `pruebas/arnes/consola.py` in the ABL port |
 | Lost frames are counted | `count_lost` | read from WRAM by `Partida.cuadros_perdidos` |
 | Music doesn't wait for the loop: it goes in a vertical IRQ | `irq_music`, `IRQ_LINE` | — |
