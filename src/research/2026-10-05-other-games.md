@@ -43,7 +43,7 @@ fixing anything.
   neutral keys need default values.
 * **Eight small, general things were fixed on the branch**, each with its
   test: four of the seven ABL assumptions that
-  [`2026-10-02-el-juego-de-pruebas.md`](2026-10-02-el-juego-de-pruebas.md)
+  [`2026-10-02-the-test-game.md`](2026-10-02-the-test-game.md)
   had listed, and four new ones. None of them moves ABL.
 * **Where to go next**: the window through Adeleine, `ROUTE_GFX_MAX`, the
   message escapes and `rm2k-snes-project new`, in that order. See section 6.
@@ -141,7 +141,7 @@ because theirs does not fit even reduced), the BMPs converted to PNG
 that build alone, more than 44 —if they were the start map— are needed by 7
 of 9 in El Dorado, 126 of 151 in Frozen World and 30 of 89 in Dooms 2, up to
 119 frames. It is sized for ABL's on purpose
-([`decisiones/el-arranque-esta-dimensionado-para-el-paquete-de-arranque.md`](../decisions/el-arranque-esta-dimensionado-para-el-paquete-de-arranque.md));
+([`decisiones/boot-is-sized-for-the-boot-package.md`](../decisions/boot-is-sized-for-the-boot-package.md));
 for another game it would have to come from the cartridge.
 
 ### Each one's cartridge
@@ -202,7 +202,7 @@ What blocks them, by family and not by code:
 * **`ConditionalBranch` on an event's direction** (class 6): 176 in El
   Dorado, 153 in Sunset, 354 in Desert. It is the same family as the 31 ABL
   pages that ask which way the hero is facing
-  ([`2026-10-05-los-comandos-que-faltan.md`](2026-10-05-los-comandos-que-faltan.md)).
+  ([`2026-10-05-the-missing-commands.md`](2026-10-05-the-missing-commands.md)).
 * **`EraseScreen` and `ShowScreen`**, with the default transition or a fade:
   270 in El Dorado —always with `PlayerVisibility`— and 698 in Desert.
 * **`EraseEvent`**: 157 pages in Desert, 127 on their own; 3 in El Dorado.

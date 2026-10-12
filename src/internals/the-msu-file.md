@@ -31,7 +31,7 @@ doesn't finish seeking in time, the ROM uses its own.
 
 **The one exception is a game whose ROM does not reach**, and it is the
 project's decision, not the converter's: see [the MSU-1 is required only
-when the ROM does not reach](../decisions/el-msu-1-obligatorio-si-la-rom-no-alcanza.md)
+when the ROM does not reach](../decisions/the-msu-1-is-required-only-when-the-rom-does-not-reach.md)
 and "What does not fit in the ROM" below.
 
 ## The port, from the console's side
@@ -233,7 +233,7 @@ the samples                `upload_sample`, which uploads them to ARAM
 
 **The poses stay in the ROM**, and they are the biggest thing there is
 (4.3 MB in Vampires Dawn): they are uploaded on the fly, in the vblank —see
-[poses are uploaded on the fly](../decisions/las-poses-se-suben-en-caliente.md)—,
+[poses are uploaded on the fly](../decisions/poses-are-uploaded-on-the-fly.md)—,
 and a seek per pose is not affordable. Nor what the CPU reads while the map
 is played: the event pages, the panorama's tilemap, the music streams, the
 texts.

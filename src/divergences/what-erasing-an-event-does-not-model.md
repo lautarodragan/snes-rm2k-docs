@@ -11,7 +11,7 @@ take care of:
 * **It does not travel in the save.** The erasure lives in `ev_flags`, which
   `clear_waits` clears on every map load, and loading a save loads the map:
   an erased event comes back. It is the same gap as
-  [The save does not keep the events](la-partida-no-guarda-los-eventos.md).
+  [The save does not keep the events](the-save-does-not-keep-the-events.md).
 * **A forced route that is already moving it is not cut.** The route of its
   page is taken away and its row is hidden, but a forced `MoveEvent` that
   was walking stays in its slot and draws it again.

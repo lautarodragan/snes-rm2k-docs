@@ -6,7 +6,7 @@ RM2k's "Trans" draws the event at 160 out of 255 over whatever is behind it.
 Here that blend is computed at conversion time and is **baked** into the
 graphic, which is exact in a still picture and opaque in motion. Why it can
 be done is in
-[Translucent events are baked](../decisions/los-translucidos-van-horneados.md).
+[Translucent events are baked](../decisions/translucent-events-are-baked.md).
 
 What is lost:
 

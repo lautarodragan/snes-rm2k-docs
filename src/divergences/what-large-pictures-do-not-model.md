@@ -5,7 +5,7 @@
 The `ShowPicture` pictures that cover the screen go in BG1, with the console
 in mode 1 while they are shown —see `runtime/big_picture.s` and
 `tools/port/picture.py` in the-advocate, and
-[Large pictures in mode 1](../decisions/las-imagenes-grandes-en-modo-1.md)—,
+[Large pictures in mode 1](../decisions/large-pictures-in-mode-1.md)—,
 and they do not do everything they do in RM2k:
 
 * **Zoom is done in mode 7, with a 255-tile texture**, since 2026-10-03
@@ -48,7 +48,7 @@ and they do not do everything they do in RM2k:
   black screen. Measured on its map 22 on 2026-10-11: see
   [Sunset Over Imdahl](../ports/sunset-over-imdahl/README.md). Since the
   same day a project can have the ones that stay put on a map drawn into
-  the map instead —[Pictures drawn into the map](las-imagenes-dentro-del-mapa.md)—;
+  the map instead —[Pictures drawn into the map](pictures-drawn-into-the-map.md)—;
   Sunset does, and the rest of its pictures are still big ones.
 * **Showing it and erasing it turn the screen off**: measured, two frames
   when showing one and fourteen when erasing it, which reloads the map like

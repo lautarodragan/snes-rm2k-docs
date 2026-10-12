@@ -38,7 +38,7 @@
   **zero or 48 KB of art**, depending on whether the faces the cartridge
   already carries are used or the ten portraits at 4bpp. The console's
   pictures were **128 to 208 KB**
-  ([`2026-10-01-el-sistema-de-imagenes.md`](2026-10-01-el-sistema-de-imagenes.md)).
+  ([`2026-10-01-the-picture-system.md`](2026-10-01-the-picture-system.md)).
 
 ## 1. The inventory
 
@@ -191,7 +191,7 @@ pause menu's keys:
 
     [menus]
     # Each custom menu, by the file that describes it. See
-    # docs/research/2026-10-04-el-menu-custom.md.
+    # docs/research/2026-10-04-the-custom-menu.md.
     console = "menus/consola.toml"
 
 And the file, abridged:

@@ -17,7 +17,7 @@ The other two paths aren't enough in this game:
   sprite in palettes 4 to 7 at once, so a map with translucent events would
   have to leave those four palettes to them alone. And once tried, it has
   two costs taro didn't accept: see
-  [el-color-math-no-se-usa](el-color-math-no-se-usa.md).
+  [translucent-events-dont-use-color-math](translucent-events-dont-use-color-math.md).
 * **Dithering** —dropping some of the pixels, which is what games of the
   era did— doesn't simulate transparency when the background is dark:
   **the fires on map 9 sit on almost pure black**, and dithering punches
@@ -30,4 +30,4 @@ the same result and can be computed once, exactly.
 
 What is lost —nobody is seen through them, an animated tile underneath
 counts for a single frame— and when it stops being enough, in
-[los-translucidos-quedan-opacos](../divergences/los-translucidos-quedan-opacos.md).
+[translucent-events-end-up-opaque](../divergences/translucent-events-end-up-opaque.md).

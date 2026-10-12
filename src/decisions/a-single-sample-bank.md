@@ -26,7 +26,7 @@ of the same step, chosen by taro). What goes to the ARAM is never the bank
 but a package, so what has to fit in the 64 KB is each package with its
 sound effects, and the track that may come playing from the previous map
 (see
-[el-tema-que-suena-gana-y-los-efectos-esperan](el-tema-que-suena-gana-y-los-efectos-esperan.md)).
+[the-playing-track-wins-and-the-sound-effects-wait](the-playing-track-wins-and-the-sound-effects-wait.md)).
 Until that day the **whole** bank had to fit, and nineteen of `release`'s
 thirty-two tracks didn't bring any programs of their own.
 

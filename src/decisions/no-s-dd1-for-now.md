@@ -6,16 +6,16 @@
 Ocean and Street Fighter Alpha 2, even though it would compress the poses
 better than LZ2 and decompress them on the DMA path without CPU. The
 mapper stays the one without chips —see [the cartridge goes to 8
-MB](el-cartucho-pasa-a-8-mb.md)—, and what does not fit in a game's ROM
+MB](the-cartridge-goes-to-8-mb.md)—, and what does not fit in a game's ROM
 goes to its `.msu`, as [the MSU-1 required only when the ROM does not
-reach](el-msu-1-obligatorio-si-la-rom-no-alcanza.md) says.
+reach](the-msu-1-is-required-only-when-the-rom-does-not-reach.md) says.
 
 **The door stays open**: it is "not now", not "never".
 
 ## Why
 
 From taro, on 2026-10-12, after [the
-measurement](../research/2026-10-11-el-s-dd1.md): we already have the
+measurement](../research/2026-10-11-the-s-dd1.md): we already have the
 MSU-1 for what does not fit, and the extra complexity is not worth it, for
 now.
 

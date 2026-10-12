@@ -1,7 +1,7 @@
 # CallEvent is compiled inline
 
 > **Partly superseded on 2026-10-02** by
-> [call-event-a-un-cuerpo-compartido](call-event-a-un-cuerpo-compartido.md):
+> [call-event-into-a-shared-body](call-event-into-a-shared-body.md):
 > a common event is called with `OP_CALL` into a shared body when the page
 > runs in the foreground and the body doesn't depend on the map. What
 > follows still holds for what gets inlined: parallel pages, bodies that
@@ -34,7 +34,7 @@ compile and call.
 **10 calls** are made for real, on four maps —9, 11, 114 and one more— and
 216 are still skipped, almost all to common events that stop at
 `ControlVars` and at the original's own menus: that has its own page in
-[llamada-salteada](../divergences/llamada-salteada.md).
+[a-skipped-call](../divergences/a-skipped-call.md).
 
 The price in cartridge is **+608 bytes of bytecode in the whole game,
 +0.9%**, and three maps take it: 11 (+344), 9 (+195) and 114 (+69).

@@ -5,7 +5,7 @@
 > and the branch that followed. It is a snapshot: the numbers are from that
 > day and this file is not updated.
 
-After [the pictures went into the map](2026-10-11-las-imagenes.md), taro
+After [the pictures went into the map](2026-10-11-the-pictures-over-the-map.md), taro
 looked at the captures: "it really isn't playable. It isn't a good game to
 port to the SNES, but I would try mode 1 and colour math before anything
 else". This is what each of the two buys, measured.
@@ -71,7 +71,7 @@ they reach the characters. Measured against what the hardware does:
   blended into the painting before it is converted, and now that every
   cell is its own they come out as they are.
 
-What is lost is what [Pictures drawn into the map](../../../divergences/las-imagenes-dentro-del-mapa.md)
+What is lost is what [Pictures drawn into the map](../../../divergences/pictures-drawn-into-the-map.md)
 says: the characters are neither shaded nor lit, and nothing changes over
 time. To shade them, the converter would have to give the characters
 palettes 4 to 7 on these maps, and the roofs' edges would have to give up

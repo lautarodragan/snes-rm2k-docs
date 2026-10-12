@@ -25,22 +25,22 @@ lives with the port.
 
 By date:
 
-- [Graphics and sound, from RM2k to the SNES](graficos-de-rm2k-a-snes.md)
+- [Graphics and sound, from RM2k to the SNES](graphics-and-sound-from-rm2k-to-the-snes.md)
   — 2026-09-07
-- [The map of the Python tools](el-mapa-de-las-herramientas-de-python.md)
+- [The map of the Python tools](the-map-of-the-python-tools.md)
   — 2026-09-28
-- [The tools today, and their road to Rust](las-herramientas-hoy.md)
+- [The tools today, and their road to Rust](the-tools-today.md)
   — 2026-09-29
-- [The picture system and the portable console](2026-10-01-el-sistema-de-imagenes.md)
+- [The picture system and the portable console](2026-10-01-the-picture-system.md)
   — 2026-10-01
-- [The test game](2026-10-02-el-juego-de-pruebas.md) — 2026-10-02
-- [The custom menu](2026-10-04-el-menu-custom.md) — 2026-10-04
-- [The missing commands](2026-10-05-los-comandos-que-faltan.md)
+- [The test game](2026-10-02-the-test-game.md) — 2026-10-02
+- [The custom menu](2026-10-04-the-custom-menu.md) — 2026-10-04
+- [The missing commands](2026-10-05-the-missing-commands.md)
   — 2026-10-05
-- [Panoramas](2026-10-05-los-panoramas.md) — 2026-10-05
-- [Other games: the survey](2026-10-05-otros-juegos.md) — 2026-10-05
-- [Other games, measured again](2026-10-10-otros-juegos-de-nuevo.md)
+- [Panoramas](2026-10-05-panoramas.md) — 2026-10-05
+- [Other games: the survey](2026-10-05-other-games.md) — 2026-10-05
+- [Other games, measured again](2026-10-10-other-games-measured-again.md)
   — 2026-10-10
-- [The S-DD1, for the poses](2026-10-11-el-s-dd1.md) — 2026-10-11
-- [The windows, made cheaper](2026-10-11-las-ventanas.md) — 2026-10-11
+- [The S-DD1, for the poses](2026-10-11-the-s-dd1.md) — 2026-10-11
+- [The windows, made cheaper](2026-10-11-the-windows-made-cheaper.md) — 2026-10-11
 - [The skills menu](2026-10-12-the-skills-menu.md) — 2026-10-12

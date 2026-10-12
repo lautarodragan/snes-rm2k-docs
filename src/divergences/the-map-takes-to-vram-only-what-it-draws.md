@@ -18,7 +18,7 @@ On 2026-09-07, counting only the ids some map of the game uses: `ChipSet3`
 gives 420 tiles and `BLchp1` 523. Map 1 draws 341 and map 2, 278, against the
 420 of the chipset they share; the shared pool of the two is 437 and did not
 fit in any VRAM layout of that day. The full count is in
-[the study on RM2k graphics on the SNES](../research/graficos-de-rm2k-a-snes.md),
+[the study on RM2k graphics on the SNES](../research/graphics-and-sound-from-rm2k-to-the-snes.md),
 "Sharing tiles between maps".
 
 ## How it looks today

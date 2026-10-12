@@ -22,7 +22,7 @@ both measured on Vampires Dawn on 2026-10-11:
 * **The cartridge carried one pose bank per map for each of them.** A pose
   bank is the twelve poses of a character as one map quantized them, and
   the cartridge keeps one per distinct quantization —see
-  [Poses are uploaded on the fly](las-poses-se-suben-en-caliente.md)—. The
+  [Poses are uploaded on the fly](poses-are-uploaded-on-the-fly.md)—. The
   compiler reserves the graphics of `ChangeSpriteAssociation` in the
   graphics table of **every** map, and in most maps they didn't fit: they
   were drawn with someone else's palette, quantized to its nearest
@@ -57,7 +57,7 @@ the maps with some graphic drawn with someone else's palette from 365 to
   CGRAM. `ChangeSpriteAssociation` already ran it.
 
 It changes the first cost of
-[Move route command 34 on the hero](la-orden-34-sobre-el-heroe.md): a
+[Move route command 34 on the hero](move-route-command-34-on-the-hero.md): a
 graphic only the hero shows is no longer drawn with one of the map's
 palettes.
 

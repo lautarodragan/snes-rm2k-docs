@@ -70,6 +70,6 @@ When what is left out is decoration that matters, or a wall. Both have an
 answer that loses nothing and is not done: the walls could go to the map's
 passability, and the decoration could be baked into the background, as
 `decorative_events` does (see
-[Baked decorative events](los-eventos-decorativos-horneados.md)); but the
+[Baked decorative events](baked-decorative-events.md)); but the
 cut happens before Wally sees the map, so an event left out is not baked
 either.

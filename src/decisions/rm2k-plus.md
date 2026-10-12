@@ -27,5 +27,5 @@ game can benefit from".
 - **Adding a feature is adding opcodes** to the event bytecode, not
   declaring a new bytecode: the bytecode is this runtime's format, not
   RM2k's.
-- See [las-herramientas-se-separan-de-abl](las-herramientas-se-separan-de-abl.md)
-  and [el-juego-se-juega-sin-msu-1](el-juego-se-juega-sin-msu-1.md).
+- See [the-tools-split-from-abl](the-tools-split-from-abl.md)
+  and [the-game-is-playable-without-msu-1](the-game-is-playable-without-msu-1.md).

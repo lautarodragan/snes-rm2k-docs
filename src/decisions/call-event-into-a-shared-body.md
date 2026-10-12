@@ -5,7 +5,7 @@
 **A common event has a shared body in the cartridge, and it is called with
 `OP_CALL`** since 2026-10-02: autorun ones, the ones called by pages that
 run in the foreground, and the ones those call. It partly replaces
-[call-event-se-compila-en-linea](call-event-se-compila-en-linea.md): **it
+[call-event-is-compiled-inline](call-event-is-compiled-inline.md): **it
 is still pasted in place** when the page is parallel, when the body
 compiled with the map isn't the same as without it, and in troop pages and
 equipment common events.

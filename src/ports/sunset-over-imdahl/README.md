@@ -31,7 +31,7 @@ as text.
 
 taro, after the captures of the pictures: "it really isn't playable",
 and to try mode 1 and colour math. What was measured is in
-[Mode 1 for the painted maps](research/2026-10-11-el-modo-1.md): the
+[Mode 1 for the painted maps](research/2026-10-11-mode-1-for-the-painted-maps.md): the
 mosaic of the squares was the tile budget, and twice the tiles did not fix
 it —the error per pixel went from 10.5 to 9.4— while one tile per cell
 took it to 2.3. So `[graphics] painted_maps = true` in its project: the 60
@@ -47,12 +47,12 @@ per map, and the characters are not shaded.
 
 taro decided its pictures are not left out: "it is a very artistic game;
 without those pictures it probably loses all its charm". How the game uses
-them, group by group, is [the study](research/2026-10-11-las-imagenes.md).
+them, group by group, is [the study](research/2026-10-11-the-pictures-over-the-map.md).
 The first version, `[graphics] map_pictures = true` in its project: the
 pictures that stay put on a map —roofs and ceilings, lights, shadows and
 mists, 183 of them on 64 maps— are drawn into the panorama, and the roofs
 go in front of the hero by the priority of the panorama's cells. What it
-does not do is in [Pictures drawn into the map](../../divergences/las-imagenes-dentro-del-mapa.md).
+does not do is in [Pictures drawn into the map](../../divergences/pictures-drawn-into-the-map.md).
 The opening scene on 22 runs over the painting, with its mist.
 
 What it shows next to it: **the large maps were already grainy**. The
@@ -72,7 +72,7 @@ without the `party = [1]` crutch. Two causes, one behind the other:
   cut (19) when showing, which the converter did not take, so the whole
   page was left out and the black tint of map 11 stayed. Fixed: the cut
   for showing compiles and the ROM does it —see
-  [The teleport transitions](../../divergences/las-transiciones-del-teletransporte.md)—.
+  [The teleport transitions](../../divergences/the-teleport-transitions.md)—.
 - **Its mist hides the map.** With the page running, it shows
   `WinterMist`, a 320x240 mist at 100 % transparency that a `MovePicture`
   takes to 95 %, over the panorama. The console carries it as a big
@@ -82,7 +82,7 @@ without the `party = [1]` crutch. Two causes, one behind the other:
   its roofs, ceilings, lights, shadows and mists this way on nearly every
   map —about 140 screen-sized pictures—, and putting them over the map is
   a feature of its own. See
-  [What large pictures do not model](../../divergences/lo-que-las-imagenes-grandes-no-modelan.md).
+  [What large pictures do not model](../../divergences/what-large-pictures-do-not-model.md).
 
 Measured on a cartridge of maps 11, 22, 21, 23 and 10, with snes9x: taking
 the page's `ShowPicture` and `MovePicture` out of the dump by hand, the
@@ -100,7 +100,7 @@ the crutch, the whole release builds.
 
 ## As of 2026-10-10
 
-> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-otros-juegos-de-nuevo.md),
+> Measured again on 2026-10-10 ([Other games, measured again](../../research/2026-10-10-other-games-measured-again.md),
 > with the tools of the-advocate `1afe6457` and the ports at `951471f`),
 > without fixing anything. What follows the next heading is the snapshot
 > of 2026-10-06, kept as it was.
@@ -119,7 +119,7 @@ the crutch, the whole release builds.
 ## As of 2026-10-06
 
 > **A snapshot as of 2026-10-06.** What the survey of 2026-10-05 found
-> ([Other games: the survey](../../research/2026-10-05-otros-juegos.md),
+> ([Other games: the survey](../../research/2026-10-05-other-games.md),
 > measured on `24e0223e` of the-advocate) and what the tasks that followed it
 > changed up to 2026-10-06. It doesn't describe the port after that date.
 

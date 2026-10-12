@@ -12,7 +12,7 @@ Collision with events **is there** —see its row in the mechanics table of
 * that a non-skippable forced route **retries** the blocked step instead of
   skipping it. That one has a page of its own, with what was measured and the
   golden that freezes it today:
-  [A blocked step in a forced route](paso-bloqueado-de-una-ruta-forzada.md).
+  [A blocked step in a forced route](a-blocked-step-in-a-forced-route.md).
 
 ## Measured
 

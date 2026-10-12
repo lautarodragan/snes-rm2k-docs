@@ -10,7 +10,7 @@ pictures already do.
 **Translucent events aren't drawn with the console's color math**, even
 though it is implemented and verified in the `color-math` tag (in
 the-advocate). They are baked: see
-[los-translucidos-van-horneados](los-translucidos-van-horneados.md).
+[translucent-events-are-baked](translucent-events-are-baked.md).
 
 **Translucent pictures are**, since 2026-10-02: taro approved Gallareta's
 experiment (the task [`several-pictures-in-sprites`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/several-pictures-in-sprites.md) in

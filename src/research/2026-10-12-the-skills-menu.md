@@ -81,7 +81,7 @@ acting— buzzes. ABL never disables the menu at the start: its
 ### ABL's Console is something else
 
 The Console —a custom menu since 2026-10-04, see
-[The custom menu](2026-10-04-el-menu-custom.md)— has a "Skills" tab too,
+[The custom menu](2026-10-04-the-custom-menu.md)— has a "Skills" tab too,
 and they must not be confused. The Console's tab is the **game's own
 bookkeeping**: Talan's aura tables are counters in variables 70 to 122
 ("how many times he absorbed it / how many are needed"), Sern's souls a

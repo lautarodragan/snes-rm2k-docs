@@ -13,13 +13,13 @@ animations**, even though the animations themselves go only in the `.msu`:
 ## Why
 
 From taro, on 2026-10-01, with the numbers of
-[the study of the whole game without MSU-1](../ports/abl/research/2026-10-01-el-juego-entero-sin-msu-1.md)
+[the study of the whole game without MSU-1](../ports/abl/research/2026-10-01-the-whole-game-without-msu-1.md)
 in front of them: the whole game, with everything that was missing, is about
 8,073 KB. It doesn't fit in 4 MB with any cut; in 8 MB it fits **without
 lowering the quality of anything** once the lossless cuts are applied (LZ2
 where data goes raw, DTE in the texts, skips in the sequences: 7,151 KB),
 with about 850 KB to spare. And
-[el-juego-se-juega-sin-msu-1](el-juego-se-juega-sin-msu-1.md) rules out the
+[the-game-is-playable-without-msu-1](the-game-is-playable-without-msu-1.md) rules out the
 other way out, reading the maps from the `.msu`.
 
 The 2026-09-13 decision said "revisit on reaching 85-90% of the

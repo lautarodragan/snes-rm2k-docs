@@ -14,7 +14,7 @@ wraps around instead of capping.
 The one command that asks for it is common event 45 of A Blurred Line,
 `SimClearTweenRooms`, which sets six variables to 999999 as "no cell"; the
 rooms of Eisen's simulation call it 47 times. While it did not compile, each
-of those calls was skipped ([A skipped call](llamada-salteada.md)) and the
+of those calls was skipped ([A skipped call](a-skipped-call.md)) and the
 variables stayed at whatever they had.
 
 Those six variables are only compared for equality against an event's or

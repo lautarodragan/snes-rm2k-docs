@@ -13,7 +13,7 @@ same yet:
 * **There is no sliding**: RM2k opens each turn with the party menu
   —Engage, Automatic, Escape— on the left, and on choosing Engage the
   windows move 76 pixels. Here there is no party menu (see
-  [Escape is the fifth command](escape-es-la-quinta-orden.md)) and the
+  [Escape is the fifth command](escape-is-the-fifth-command.md)) and the
   windows are always where RM2k leaves them. It was optional and was not
   done.
 * **The enemy list covers the whole party window**, and not only the names:
@@ -26,7 +26,7 @@ same yet:
   (`check_party_line`).
 * **The bar uses the first of the System's two cursor drawings**, like the
   rest of the screens: see
-  [The choice bar does not alternate its two drawings](la-barra-de-la-eleccion-no-alterna-sus-dos-dibujos.md).
+  [The choice bar does not alternate its two drawings](the-choice-bar-does-not-alternate-its-two-drawings.md).
 * **The status** is always `normal_status`, or the name of the dead status
   for a fallen one: the actors have no other conditions in battle —see
   [What battle conditions do not model](what-battle-conditions-do-not-model.md)—.

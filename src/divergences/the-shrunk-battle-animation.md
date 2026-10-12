@@ -29,4 +29,4 @@ it passes the halfway point instead of going away little by little.
 A map that fills all eight sprite palettes and also needs the timer: there
 the box is left without a palette, and the converter says so and does not
 draw it. See
-[Seven palettes on a map with animations](siete-paletas-en-un-mapa-con-animaciones.md).
+[Seven palettes on a map with animations](seven-palettes-on-a-map-with-animations.md).

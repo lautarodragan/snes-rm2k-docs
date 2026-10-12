@@ -3,7 +3,7 @@
 ## What
 
 The timer's digits share a palette with a character —see
-[The timer has no palette of its own](../decisions/el-cronometro-no-tiene-paleta-propia.md)—,
+[The timer has no palette of its own](../decisions/the-timer-has-no-palette-of-its-own.md)—,
 and if the character has one of their two colors, black or pure red, **both
 use the same CGRAM entry**. While the timer is visible, that entry goes
 untinted, because in RM2k the digits are not tinted; so that color of the

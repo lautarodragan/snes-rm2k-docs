@@ -6,7 +6,7 @@
 > day and this file is not updated. How to redo each count is at the end, in
 > "How it was measured".
 
-[The survey](2026-10-05-otros-juegos.md) measured the seven games on
+[The survey](2026-10-05-other-games.md) measured the seven games on
 2026-10-05, and the tasks of 2026-10-06 changed a lot of what it found:
 limits that stopped a whole game now degrade with a warning, the window goes
 through Adeleine, encounters take two bytes, decorative events can be

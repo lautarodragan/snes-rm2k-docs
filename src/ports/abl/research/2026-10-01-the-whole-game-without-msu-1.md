@@ -2,7 +2,7 @@
 
 > **Measured on 2026-10-01 on `6a83e2c5`** (snes-rm2k), by Tucu-tucu. It is
 > a snapshot, like Lechuza's that it continues
-> ([the maps through the MSU-1](2026-10-01-los-mapas-por-el-msu-1.md)): the
+> ([the maps through the MSU-1](2026-10-01-the-maps-through-the-msu-1.md)): the
 > numbers are from that day and this file is not updated. What says how
 > much each cartridge has left **today** is `just espacio`. The counts of
 > the whole game came from throwaway scripts; how to redo them is at the
@@ -10,7 +10,7 @@
 
 The question is taro's, after reading Lechuza's study and deciding that
 the whole game is played without MSU-1 ([the game is played without
-MSU-1](../../../decisions/el-juego-se-juega-sin-msu-1.md)): *"if we move to
+MSU-1](../../../decisions/the-game-is-playable-without-msu-1.md)): *"if we move to
 8 MB and optimize the resources a bit, compress everything we can
 compress, and maybe lower the quality of one thing or another in the ROM
 without MSU-1, could we make it?"*

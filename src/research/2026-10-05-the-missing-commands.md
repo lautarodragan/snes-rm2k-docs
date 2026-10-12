@@ -214,7 +214,7 @@ it needs state in the ROM: one bit per event that loading the map clears and
 that the page refresh looks at to leave it without a page; EasyRPG
 (`CommandEraseEvent`) also cuts a parallel one dead. It does not travel in
 the save, which today does not store events
-([`divergencias/la-partida-no-guarda-los-eventos.md`](../divergences/la-partida-no-guarda-los-eventos.md)).
+([`divergencias/the-save-does-not-keep-the-events.md`](../divergences/the-save-does-not-keep-the-events.md)).
 **Medium.**
 
 **`EraseEvent` in a common event**, 36 (`ManageQuarryTimer`, parallel with
@@ -286,7 +286,7 @@ And outside that list, accepted empty on purpose:
 * **`TileSubstitution` of a tile the map does not draw**: there is no cell
   to change.
 * **A call to an event that does not compile is skipped**
-  ([`divergencias/llamada-salteada.md`](../divergences/llamada-salteada.md),
+  ([`divergencias/a-skipped-call.md`](../divergences/a-skipped-call.md),
   which talks about 216; today they are the 47 above), and so is one that
   goes over the nesting limit.
 * **Without a song registry** —the `scan`— `PlayBGM`, `PlaySound`,

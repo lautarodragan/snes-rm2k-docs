@@ -17,7 +17,7 @@ cartridge writes the letters into, and 16 for its frame and its arrow. A
 System whose frame needs more —a gradient behind a frame that lets it
 through— is fused until it fits, and the bank stays the same: see [A
 window with a gradient is fused until it
-fits](../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md). Why the background is
+fits](../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md). Why the background is
 8-bit to begin with: [Mode 3 by default](../cartridge/mode-3.md).
 
 There are six, and `vram_layout` returns **the first one that fits**, so
@@ -149,7 +149,7 @@ the-advocate-work.
 
 A `ShowPicture` picture that covers the screen goes in BG1, in mode 1, with
 the map hidden —[big pictures in mode
-1](../decisions/las-imagenes-grandes-en-modo-1.md)—, and **takes the same
+1](../decisions/large-pictures-in-mode-1.md)—, and **takes the same
 place in every layout**: its 4bpp tiles from word 0 up to $3FFF —the
 1024 a tilemap entry can name—, over the sprites and the map tiles, and its
 tilemap at $4000. The window tilemap falls in that range in "window"

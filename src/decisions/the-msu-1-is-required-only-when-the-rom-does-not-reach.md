@@ -14,7 +14,7 @@ game that does not fit says so, as always, and someone decides.
 
 **The mechanism is the same for every game**: which data may travel in the
 `.msu`, how the packing chooses it and how the ROM reads it are in [the
-`.msu` file](../internals/msu-datos.md), "What does not fit in the ROM".
+`.msu` file](../internals/the-msu-file.md), "What does not fit in the ROM".
 What is particular to a game is only that its ROM does not reach.
 
 ## Why
@@ -31,7 +31,7 @@ The converter does not decide it because **requiring the MSU-1 changes what
 the player needs** —a console or an emulator that has it, and the `.msu`
 next to the ROM—, and one map more must not change that without anyone
 deciding it. Measured against [the game is playable without
-MSU-1](el-juego-se-juega-sin-msu-1.md), it is the exception, and an
+MSU-1](the-game-is-playable-without-msu-1.md), it is the exception, and an
 exception is written down.
 
 ## How it applies

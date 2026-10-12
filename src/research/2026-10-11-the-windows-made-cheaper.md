@@ -94,7 +94,7 @@ else (`checks.rs` in `rm2k-snes-screens`). And the background of a
 window is stretched as RM2k stretches it, so a gradient is a different
 cell on every row of every window: that is what made the four surveyed
 games fuse their windows ([A window with a gradient is fused until it
-fits](../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)).
+fits](../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)).
 
 The Systems of the eight games, as their windows use them:
 
@@ -155,7 +155,7 @@ next section.
 In colours, the message window and the battle windows —each colour the
 message window drops is one more entry for **every** map's background,
 because they share CGRAM in mode 3, see [The window takes thirteen colours
-from every background](../divergences/la-ventana-se-lleva-trece-colores-de-cada-fondo.md)—:
+from every background](../divergences/the-window-takes-thirteen-colors-from-every-background.md)—:
 
 ```text
                        message window (15)   battle windows (16)   End Game: colours merged
@@ -317,7 +317,7 @@ the vblank where the poses go up, or the wave and mask channels.
   BG2 at 4 bits on palette 0; the gradient's entry is in palette 0 in both
   modes, and channel 6 keeps masking BG1.
 * **Colour math** is unused ([Translucent events don't use colour
-  math](../decisions/el-color-math-no-se-usa.md)), and none of this
+  math](../decisions/translucent-events-dont-use-color-math.md)), and none of this
   needs it.
 
 
@@ -365,7 +365,7 @@ a palette per piece —not measured—. The limits:
 * **The message window**: blocked by the object mask. On the window's
   lines every object is hidden, so the characters do not show through the
   window ([The window without a background does not cover the
-  characters](../divergences/la-ventana-sin-fondo-no-tapa-a-los-personajes.md)).
+  characters](../divergences/the-window-without-a-background-does-not-cover-the-characters.md)).
   Window 2 could open a hole in the mask where the cursor is (mask = W1
   XOR W2), but then the map's characters show through the cursor's
   transparent pixels; with a flat background the cursor can be made opaque

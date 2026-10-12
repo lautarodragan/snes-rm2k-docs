@@ -1,7 +1,7 @@
 # The tools split from ABL, into two repos
 
 From taro, on 2026-09-28, on reading the study
-[the map of the Python tools](../research/el-mapa-de-las-herramientas-de-python.md)
+[the map of the Python tools](../research/the-map-of-the-python-tools.md)
 (Quebracho), which has the six-step plan and the questions with their
 options.
 

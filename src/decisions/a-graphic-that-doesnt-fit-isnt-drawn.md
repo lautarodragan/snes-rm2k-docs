@@ -3,9 +3,9 @@
 > **Partly superseded**, noted on 2026-09-29 (Guayabo, while sorting the
 > decisions by repo): since 2026-09-08 (`ac8f356b` in the-advocate) `fits`, in
 > `tools/port/sprites.py`, **lends** a palette to these graphics, just as it
-> does to events ([se-dibujan-todos-los-eventos](se-dibujan-todos-los-eventos.md)).
+> does to events ([every-event-is-drawn](every-event-is-drawn.md)).
 > A graphic is only left undrawn if every palette belongs to a leader, which
-> is what [la-orden-34-sobre-el-heroe](la-orden-34-sobre-el-heroe.md) says.
+> is what [move-route-command-34-on-the-hero](move-route-command-34-on-the-hero.md) says.
 > What still holds is the part below about the three maps: **they don't get
 > a new palette opened for them**.
 

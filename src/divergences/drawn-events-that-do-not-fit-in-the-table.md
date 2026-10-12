@@ -60,10 +60,10 @@ A map where something that matters is among the ones left out: a visible
 event with no commands that the player has to see —a sign, a door drawn
 as an event— in a map full of decoration. There the answer is not a better
 rule but fewer rows: baking the decoration into the background
-(`decorative_events`, see [Baked decorative events](los-eventos-decorativos-horneados.md))
+(`decorative_events`, see [Baked decorative events](baked-decorative-events.md))
 takes those events out of the table before this cut.
 
 And this is not the last limit of those maps: most of them also have more
 events than the console's event table holds (`EV_MAX`, also bank 0's RAM).
 Since 2026-10-10 that cut comes first: see
-[Events that do not fit in the RAM](los-eventos-que-no-entran-en-la-ram.md).
+[Events that do not fit in the RAM](events-that-do-not-fit-in-the-ram.md).

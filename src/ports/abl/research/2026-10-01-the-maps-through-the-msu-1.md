@@ -140,7 +140,7 @@ The MSU-1 serves `<rom>.msu` as a stream: a 32-bit position is written to
 `$2000-$2003`, one waits for bit 7 of `$2000` to clear, and `$2001` is
 read, which advances by itself. **It is read by DMA with a fixed source**
 —`scn_fill` already does it with the battle backdrops, see [the `.msu`
-file](../../../internals/msu-datos.md)—, and the destination can be
+file](../../../internals/the-msu-file.md)—, and the destination can be
 **anything on bus B**: VRAM through `$2118`, CGRAM through `$2122` or WRAM
 through `$2180`. That is, raw tiles go **from the `.msu` to VRAM without
 going through WRAM** or the CPU.
@@ -173,7 +173,7 @@ block table.
 
 **The poses can't come from the `.msu`.** They are uploaded when a
 character changes pose, in vblank ([the poses are uploaded on the
-fly](../../../decisions/las-poses-se-suben-en-caliente.md)), and having
+fly](../../../decisions/poses-are-uploaded-on-the-fly.md)), and having
 them at hand would require copying them to WRAM on entering: with 26 NPCs
 of twelve poses that is hundreds of KB. They are 941 KB of the whole game
 and they stay in the ROM.
@@ -291,7 +291,7 @@ frames, which is still half of what it takes today.
 
 Today the rule is that **without MSU-1 the game works the same**: what
 comes from the `.msu` replaces something the ROM already has ([the `.msu`
-file](../../../internals/msu-datos.md)). With the whole game that can no
+file](../../../internals/the-msu-file.md)). With the whole game that can no
 longer hold: the ROM without MSU-1 would have to carry the 8,514 KB.
 
 **What fits without MSU-1** is what there is today: `release` uses 120 of

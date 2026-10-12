@@ -23,7 +23,7 @@ squares one—". So **the `System` is not read**: the way in is the mosaic for
 any game, and it is a design change, not a fix.
 
 The rest of the mosaic is as always (see
-[The teleport transitions](las-transiciones-del-teletransporte.md)): **it
+[The teleport transitions](the-teleport-transitions.md)): **it
 darkens**, because the loading of the audio package has to land on black,
 and **sprites are not pixelated**: the hero and the events stay whole while
 the map turns into blocks. The message window that opened the battle, if

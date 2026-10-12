@@ -206,7 +206,7 @@ largest:
   known problem: 2, `DisableSaving`, is parallel with no switch (see
   `party_common_events` in `indices.rs`).
 * **A shared `CallEvent`**: the compiler pastes the call in place
-  ([decisiones/call-event-se-compila-en-linea.md](../decisions/call-event-se-compila-en-linea.md)),
+  ([decisiones/call-event-is-compiled-inline.md](../decisions/call-event-is-compiled-inline.md)),
   and the console calls in cascade: 21 calls 25 eighteen times, which
   calls eight of 23 to 31 per color. **Pasted, 39 is 140,193 commands**;
   25 alone, compiled today, is 14,947 bytes. What's needed is an
@@ -361,7 +361,7 @@ zoom with a fade**, and declare it.
   at 50% that change every six frames: 28 KB each, they can't be uploaded
   in six vblanks), the smoke on 207 at 40% and the shadow on 311. Color
   math is ruled out
-  ([decisiones/el-color-math-no-se-usa.md](../decisions/el-color-math-no-se-usa.md)).
+  ([decisiones/translucent-events-dont-use-color-math.md](../decisions/translucent-events-dont-use-color-math.md)).
   The smoke and the shadow opaque; the montage, as white flashes without
   a photo. All three are debt.
 * **The console's highlight** is a red rectangle at 50% over a label of
@@ -407,7 +407,7 @@ same, and is confirmed as an order of magnitude.
 **With the `.msu`, the better version** would be the 8 bpp, 255-color one
 for the seven photos (the four *Diff*, GTest4, ShipFlash, AdvoInstr:
 about 400 KB raw in the `.msu`, which take no ROM), read through the data
-port like the battle backgrounds (`docs/port/msu-datos.md` in snes-rm2k):
+port like the battle backgrounds (`docs/port/the-msu-file.md` in snes-rm2k):
 the ROM still carries its 4 bpp version and uses the other only if it
 finds it. For the text pages **the `.msu` improves nothing**: they are 2
 colors. What would improve them is mode 5 —text without rescaling, at 512

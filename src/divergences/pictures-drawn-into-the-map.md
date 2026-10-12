@@ -50,7 +50,7 @@ What the ROM does not do that RM2k does:
 On 2026-10-11, on Sunset Over Imdahl, with captures of snes9x of maps 28,
 2, 13, 33, 7 and 22 against the 2015 RPG_RT under Wine: see the task
 [`sunset-the-pictures-over-the-map`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sunset-the-pictures-over-the-map.md) in the-advocate-work, and the
-study, [The pictures over the map](../ports/sunset-over-imdahl/research/2026-10-11-las-imagenes.md).
+study, [The pictures over the map](../ports/sunset-over-imdahl/research/2026-10-11-the-pictures-over-the-map.md).
 No test of the ROM runs it: A Blurred Line has it off.
 
 ## When it stops being enough
@@ -59,4 +59,4 @@ When a game moves those pictures —clouds that drift, grass that scrolls,
 flags that wave— or shades its characters with them. Mode 1 gave the exact
 edges; colour math for the shadows does not reach the characters drawn with
 object palettes 0 to 3, and on a painted map there is no VRAM left for its
-mask: see [Mode 1 for the painted maps](../ports/sunset-over-imdahl/research/2026-10-11-el-modo-1.md).
+mask: see [Mode 1 for the painted maps](../ports/sunset-over-imdahl/research/2026-10-11-mode-1-for-the-painted-maps.md).

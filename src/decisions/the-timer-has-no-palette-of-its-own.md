@@ -32,4 +32,4 @@ visible. Until 2026-09-25 it uploaded the whole palette, which was right
 when the digits had it to themselves, and the character was left untinted.
 The colors the character shares with the digits are still untinted while
 the timer is visible: see
-[el-cronometro-y-su-vecino-comparten-colores](../divergences/el-cronometro-y-su-vecino-comparten-colores.md).
+[the-timer-and-its-neighbor-share-colors](../divergences/the-timer-and-its-neighbor-share-colors.md).
