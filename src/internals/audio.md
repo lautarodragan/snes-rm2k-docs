@@ -91,12 +91,17 @@ writes            --dsp_music-->        the SPC700 driver
   themes that have a track, unless the track was missing from the card:
   `song_per_msu`, in `runtime/audio_package.s`.
 - **Effects with MSU-1**: while the SPC700 plays no music, the effects also
-  get voices 0 to 5; and if the `.msu` is this cartridge's, each package's
-  effects are uploaded from there, whole and each at the rate the package
-  allows now that the music isn't in ARAM —one version per package—: if
-  they don't all fit, the one that loses the least of what is heard goes
-  down first (`rates_per_package`, in `effects.rs`). Without MSU-1, or with
-  another `.msu`, the usual. The split is in `msu.rs`; the ROM side, in
+  get voices 0 to 5, and each `PlaySound` takes a free voice of the eight
+  —a new copy of a sound still playing too, so copies overlap as in RM2k—
+  and only steals, from the one with the fewest frames left, when all eight
+  are busy (`se_msu_choose`). With the SPC700 playing music there are two
+  voices, and a new copy of the same sound restarts the old one's voice.
+  And if the `.msu` is this cartridge's, each package's effects are
+  uploaded from there, whole and each at the rate the package allows now
+  that the music isn't in ARAM —one version per package—: if they don't all
+  fit, the one that loses the least of what is heard goes down first
+  (`rates_per_package`, in `effects.rs`). Without MSU-1, or with another
+  `.msu`, the usual. The split is in `msu.rs`; the ROM side, in
   `runtime/msu_effects.s`. See also [the `.msu` file](msu-datos.md).
 
 Which test covers what: `pruebas/rpgmaker/test_musica_*.py` in the ABL port
