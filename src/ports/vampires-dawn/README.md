@@ -7,9 +7,13 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Skill in the pause menu is always grey**: the original opens each
-  actor's skills there, and uses the ones the map allows. Task:
+* **Healing skills cannot be used from the pause menu**: Skill opens
+  each actor's list, but A on a heal does nothing, where the original
+  asks on whom and heals. Task:
   [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
+* **A skill that turns a switch on, used from the pause menu, is
+  silent**: the original plays its sound effect. Draft:
+  [`switch-skills-from-the-menu-play-no-sound`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switch-skills-from-the-menu-play-no-sound.md).
 * **Ten maps are not in the cartridge**, the world map (1) among them, and
   an event page that would take the hero to one of them is left out
   whole. Drafts: [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 1)
