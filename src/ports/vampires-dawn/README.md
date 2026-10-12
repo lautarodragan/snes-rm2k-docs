@@ -7,8 +7,6 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **It starts without its title screen**: the title image doesn't fit in
-  VRAM. Draft: [`title-that-doesnt-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/title-that-doesnt-fit-in-vram.md).
 * **Ten maps are not in the cartridge**, the world map (1) among them, and
   an event page that would take the hero to one of them is left out
   whole. Drafts: [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 1)

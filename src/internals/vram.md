@@ -295,3 +295,30 @@ less —the description and five lines— and the converter warns against the
 255. Word 0 is the transparent tile of the scene and the blank pair of the
 text at the same time: see `battle_bank_upload` in
 `runtime/screen_bank.s`.
+
+## The title screen doesn't use the layout
+
+While the title is shown there is no map loaded, so its addresses are
+fixed, and leaving it goes through `enter_map`, which loads everything
+again:
+
+```text
+word 0 .. $43FF       the picture's tiles, in BG1
+$4400 .. $47FF        the menu's tilemap, in BG2
+$5000 ..              the menu's tiles, 4bpp
+$7C00 .. $7FFF        the picture's tilemap, SCREEN_MAP
+```
+
+**The picture goes at 8bpp in mode 3 when it fits**, with all of CGRAM
+but the menu's sixteen colours: 544 tiles below the menu's tilemap, and
+a picture with more distinct cells than that doesn't fit. **If it
+doesn't, it goes at 4bpp in mode 1**, with the same layout: a tile is
+sixteen words, so even a screen where every cell is distinct —896, plus
+the blank tile— ends at `$3810`, and this path always fits. Its colours
+are the layer of a big `ShowPicture`: Adeleine chooses seven palettes,
+1 to 7, because palette 0 is the menu's, which in mode 1 BG2 shares with
+BG1; what it loses is in the build's `adeleine/title.png`. The converter
+tells `title.s` with `TITLE_BPP`, and only a cartridge with a 4bpp title
+assembles the line that puts mode 1: see `title_upload` in
+`runtime/title.s` and `compressed_4bpp` in `fullscreen.rs` of
+`rm2k-snes-convert`.

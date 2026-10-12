@@ -7,8 +7,6 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **It starts without its title screen**: the title image doesn't fit in
-  VRAM. Draft: [`title-that-doesnt-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/title-that-doesnt-fit-in-vram.md).
 * **The start menu ("With Intro / No Intro / Quit") shows over a pattern of
   garbage** instead of the burning face behind it. Draft:
   [`desert-nightmare-start-menu-over-garbage`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/desert-nightmare-start-menu-over-garbage.md).

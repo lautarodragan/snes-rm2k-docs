@@ -34,7 +34,8 @@ game that doesn't build can only be guessed about.
   past that, the least used are dropped, and the notes that needed them
   are silent.
 - **The title screen.** If its picture doesn't fit in video memory next to
-  the menu, the game starts straight on its first map.
+  the menu at 256 colours, it goes at 16 colours a tile, in seven palettes
+  chosen for it, where it always fits.
 - **Graphics a move route switches to.** A map holds a fixed number of
   them; the rest are ignored.
 - **Variables.** The console keeps a fixed number of them. Event pages
