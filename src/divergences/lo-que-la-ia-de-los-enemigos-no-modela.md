@@ -22,9 +22,13 @@ action list, each action's `rating` and easyrpg's
   party level and party fatigue take the action out of the list.
 * **The switches an action turns on or off when chosen** (`switch_on`,
   `switch_off`) take the action out of the list.
-* **Statuses do not exist**, so a skill that only adds or removes statuses
-  does nothing, and the AI discards it the way easyrpg discards one that has
-  nobody to affect.
+* **No skill gives or takes conditions** —only a troop page does, see
+  [What battle conditions do not model](what-battle-conditions-do-not-model.md)—,
+  so a skill that only adds or removes them does nothing, and the AI
+  discards it the way easyrpg discards one that has nobody to affect. An
+  enemy a condition restricts does what the condition says, as
+  `SetStateRestrictedAction`: nothing, or attack a random one of either
+  side.
 * **No animation.** `ShortCircuit` carries number 62 and it is not drawn,
   same as the party's skills: see [`animations-in-battle`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/animations-in-battle.md)
   in the-advocate-work.

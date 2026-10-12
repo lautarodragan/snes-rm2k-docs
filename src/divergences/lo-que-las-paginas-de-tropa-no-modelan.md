@@ -61,18 +61,12 @@ Giant hits the droid on the turn it joins, which in RM2k would have been
 Kersh. The model does the same as the console, so the test does not catch
 it.
 
-**`ChangeMonsterCondition` does nothing: `Control` and `BarkWall` do not
-happen.** The battle has no conditions —no duration, no restriction on what
-the enemy does, no effect on damage—, and the game only asks for two, 22
-(`Control`) and 23 (`BarkWall`), from Talan's `Inscribe` (switch 799) and
-`ControlMachines` (803). The command is accepted without doing it so that
-those pages run their messages, sound effects and flashes —before, the
-whole page was left out—, and the enemy fights on as if nothing had
-happened: a controlled machine still attacks, and the wall of bark shields
-nobody. It is a declared debt, taro's decision on 2026-10-12, and the
-converter warns about it in every cartridge, with the troops whose pages use
-it; the real conditions are the task
-[`battle-conditions-for-real`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/battle-conditions-for-real.md).
+**`ChangeMonsterCondition` gives the enemy the condition** since
+2026-10-12 —before that it was a declared debt, for a day—, and what the
+battle does with it, and what it does not, is in
+[What battle conditions do not model](what-battle-conditions-do-not-model.md).
+The pages of Talan's `Inscribe` (switch 799) and `ControlMachines` (803)
+are the game's that use it.
 
 **`FlashScreen` and `TintScreen` reach the scene and nothing else**, which is
 RM2k's own rule: `Spriteset_Battle` gives the screen's tone to the
