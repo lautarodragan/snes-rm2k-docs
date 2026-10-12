@@ -22,6 +22,10 @@ Since later on 2026-10-11 it builds with its own System, Royal: its
 gradient is fused where the banks don't hold it —[A window with a gradient
 is fused until it fits](../../decisions/una-ventana-con-degrade-se-funde-hasta-que-entra.md)—, with a warning for the message window,
 the actor choice, the item and equipment screens and the shop.
+Since 2026-10-12 Royal's windows are drawn over the average colour of its
+gradient —[The windows' background is the project's, by System](../../decisions/the-windows-background-is-the-projects-by-system.md)—, until the runtime draws the gradient: Royal's dither
+is lost, and of the fused screens only the actor choice still is, by one
+tile, and End Game's colours.
 
 ## As of 2026-10-10
 

@@ -14,9 +14,9 @@ as text.
   whole. Drafts: [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 1)
   and [`vampires-dawn-maps-that-dont-fit-in-vram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-maps-that-dont-fit-in-vram.md) (15, 57, 99,
   150, 165, 225, 399, 402 and 403).
-* **The windows, the menu and the battle use A Blurred Line's System**, not
-  `VDBlutsys`; and the game's own switches between its Systems are
-  ignored. Draft: [`vampires-dawn-now-builds-with-its-own-system`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-now-builds-with-its-own-system.md); task:
+* **The game's own switches between its Systems are ignored**: everything
+  is drawn with `VDBlutsys`, the one it starts with, and its windows over
+  the average colour of its gradient. Task:
   [`changesystemgraphics`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changesystemgraphics.md).
 * **An event page that uses any variable past the 256th does nothing**:
   the game names 600, and those pages are left out. Which scenes that
@@ -26,6 +26,14 @@ as text.
   was not looked at. Draft: [`parallel-common-events-dont-run`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/parallel-common-events-dont-run.md).
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Task: [`draw-the-faces-and-really-wait-on-the-escapes`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces-and-really-wait-on-the-escapes.md).
+
+## Its own System again (2026-10-12)
+
+It builds with `VDBlutsys` and no longer with A Blurred Line's System:
+what does not fit in the ROM goes to the `.msu`, which the game requires,
+and with its gradient in `[windows.background]` —[The windows' background is the project's, by System](../../decisions/the-windows-background-is-the-projects-by-system.md)— none of its
+screens is fused. Until the runtime draws gradients, its windows are the
+gradient's average colour.
 
 ## Its own System (2026-10-11)
 
