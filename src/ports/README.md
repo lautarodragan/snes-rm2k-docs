@@ -62,3 +62,9 @@ the-advocate-ports, with their history.
 2026-10-05 and what the tasks that followed it changed up to 2026-10-06.
 They say nothing about the state of each port after that date; what is
 true today is what their recipes print.
+
+**They have tests since**: `just arrancan`, at the root of the ports, builds
+the seven and plays each one up to its first map, in snes9x and bsnes. Two
+of them go further, because taro asked: Sunset's painted maps, against
+goldens, and The Book of Three, played from the start to past the forge
+(see [its page](book-of-three/README.md)).

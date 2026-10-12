@@ -14,6 +14,23 @@ as text.
   and `Eilonwy's Upgrades` do not compile. What that loses in play was not
   looked at. Draft:
   [`book-of-three-reraise-and-eilonwy-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-reraise-and-eilonwy-dont-compile.md).
+* **Talking to Hen Wen a second time does nothing**, in Caer Dallben
+  East: the page turns the hero away with a move command the port does not
+  compile. Draft:
+  [`book-of-three-hen-wens-second-talk-does-nothing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-hen-wens-second-talk-does-nothing.md).
+
+## Its walkthrough
+
+`pruebas/test_book_of_three.py`, at the root of the-advocate-ports, plays
+the game from the start: Caer Dallben, Coll's forge and its fire —the
+sword, the practice battle, Coll and Dallben—, Dallben's cottage and the
+Book of Three, with a golden at each milestone, in snes9x and bsnes
+against the same one. It runs with `just arrancan`. It was born on
+2026-10-12, when taro played up to the forge and found the game stuck
+there: the fire's page puts a weapon on Taran, which did not compile
+([the task](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-forge-and-a-walkthrough.md)).
+The goldens up to the forge are what taro played; the ones after it were
+not compared against RM2k.
 
 ## What it leaves out (2026-10-11)
 
