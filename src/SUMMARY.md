@@ -121,6 +121,7 @@
     - [Other screens]()
         - [What the Game Over screen does not model](divergences/lo-que-la-pantalla-de-game-over-no-modela.md)
         - [What the End Game screen does not model](divergences/lo-que-la-pantalla-de-end-game-no-modela.md)
+        - [The skills screen: eight rows and two lines of description](divergences/the-skills-screen.md)
     - [Controls]()
         - [Autofire of A with X](divergences/autofire-de-a-con-x.md)
         - [The hero's speed with L and R](divergences/la-velocidad-del-heroe-con-l-y-r.md)
