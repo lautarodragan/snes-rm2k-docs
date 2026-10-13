@@ -25,6 +25,15 @@ the pose in the same vblank as the OAM that already counts on it. How, in
 `vram_queue` (`runtime/load_graphics.s` in the-advocate) and its queue
 in `runtime/low_ram.s`.
 
+**When the queue does not fit, it is an NPC who waits, never the hero**
+(2026-10-13). The hero is always on screen and always moving, and he is
+the last to queue in a frame: in The Book of Three's Caer Dallben East
+the walkers filled the queue every frame and Taran walked with a single
+pose. So the last entry is kept for him and his pose goes at the front
+—`vram_queue_hero`—, uploaded in the next vblank whatever the NPCs asked
+for. The task:
+[`book-of-three-the-hero-freezes-in-caer-dallben-east`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-hero-freezes-in-caer-dallben-east.md).
+
 ## And distant still characters take turns on one slot
 
 From taro, on 2026-10-01, so that Distant Paradise (108) fits: on a map
