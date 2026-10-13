@@ -7,10 +7,6 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Healing skills cannot be used from the pause menu**: Skill opens
-  each actor's list, but A on a heal does nothing, where the original
-  asks on whom and heals. Task:
-  [`the-skills-menu`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/the-skills-menu.md).
 * **A skill that turns a switch on, used from the pause menu, is
   silent**: the original plays its sound effect. Draft:
   [`switch-skills-from-the-menu-play-no-sound`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switch-skills-from-the-menu-play-no-sound.md).
