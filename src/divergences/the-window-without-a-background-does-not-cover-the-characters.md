@@ -31,7 +31,7 @@ predates this.
 ## Measured
 
 Against the original under Wine, on 2026-10-04, with the page from
-`ventana-medio-sin-fondo` placed in a copy of the game: the text lands in
+`window-middle-no-background` placed in a copy of the game: the text lands in
 the same place and with the same shadow, and the only difference on screen
 is that the hero covers "Ready". The captures from that comparison were
 kept outside the repositories, for review.

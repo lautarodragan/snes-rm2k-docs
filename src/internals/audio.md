@@ -46,7 +46,7 @@ writes            --dsp_music-->        the SPC700 driver
   note: a note takes a free voice or steals one by priority. See `assign`,
   `victim` and `frame_order` in `voices.rs`.
 - **Volume has a ceiling per theme**, measured and versioned in
-  `parches/auto/musica/techos.toml` in the ABL port (`just techos`): see
+  `patches/auto/music/ceilings.toml` in the ABL port (`just ceilings`): see
   `ceilings` in `game.rs`.
 - **The samples come from the SoundFont** the game was composed with
   (`samples.rs`; `SOUNDFONT` points to another), and Gunter, which the
@@ -104,7 +104,7 @@ writes            --dsp_music-->        the SPC700 driver
   `.msu`, the usual. The split is in `msu.rs`; the ROM side, in
   `runtime/msu_effects.s`. See also [the `.msu` file](the-msu-file.md).
 
-Which test covers what: `pruebas/rpgmaker/test_musica_*.py` in the ABL port
+Which test covers what: `tests/rpgmaker/test_musica_*.py` in the ABL port
 run the ROM —the writes, the voice assignment, the package, the ceilings—
 and the tests of `rm2k-snes-audio` (`just crate-test
 rm2k-snes-audio`, in the-advocate) look at the stream without a ROM.

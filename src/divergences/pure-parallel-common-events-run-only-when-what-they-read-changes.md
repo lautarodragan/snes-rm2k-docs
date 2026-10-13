@@ -42,10 +42,10 @@ for the whole table.
 
 ## Measured
 
-It is enforced by ABL's `pruebas/rpgmaker/test_comunes_paralelos.py` (2
+It is enforced by ABL's `tests/rpgmaker/test_parallel_commons.py` (2
 and 8: saving prohibited with 236 off, enabled with it on even after a
 page's `ChangeSaveAccess`, and prohibited again when 236 turns off) and
-`test_ag7_y_la_planta.py` (37: on joining, after changing the weapon and
+`test_ag7_and_the_plant.py` (37: on joining, after changing the weapon and
 closing the menu, and nothing with the switch off), in the ABL port.
 
 ## How it looks today

@@ -41,7 +41,7 @@ the hero's graphic to board it.
   without command 34 gives the same warning, so that map filled the eight
   palettes on its own.
 
-It is covered by `grafico-heroe` and `heroe-invisible`, one per branch: the
+It is covered by `graphic-hero` and `hero-invisible`, one per branch: the
 graphic that is seen, and `nobodyhere`, which hides the hero the way it
 hides an event.
 

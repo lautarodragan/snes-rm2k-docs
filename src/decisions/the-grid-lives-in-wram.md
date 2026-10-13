@@ -50,14 +50,14 @@ there— will too.
 
 ## How you would know it needs reverting
 
-* **`pruebas/herramientas/test_reservas_de_la_wram.py` in the ABL port
+* **`tests/tooling/test_wram_reservations.py` in the ABL port
   (the-advocate-ports/abl) fails** if any cartridge symbol falls in
   `$7E8000-$7FFFFF` and isn't the grid, the loading buffer or the battle
   scene. It is the alarm for whoever needs far RAM: if it fails, it isn't
   to add the symbol to its list, it is to read this. It doesn't see an
   address written as sixteen bits and used with the data bank at `$7E`,
   like `FAR_BATTLE`.
-* **`pruebas/rpgmaker/test_carga_descomprimida.py` in the ABL port compares
+* **`tests/rpgmaker/test_decompressed_load.py` in the ABL port compares
   the whole grid in WRAM** against the one the converter left, on each of
   the forty maps, in snes9x and in bsnes, and **on returning from a battle**
   on map 52. An intruder writing there on those paths makes it fail.
@@ -78,8 +78,8 @@ chunks.
    `map_table + M_PTR_MAP_CELLS`, and the two calls to `lz2_grid` —in
    `enter_map_no_events` and in `back_from_battle`— are removed.
 3. `GRID` and its reservation in `far_ram.s`, `lz2_grid`, and the grid
-   parts of `test_carga_descomprimida.py` and
-   `test_reservas_de_la_wram.py` are deleted.
+   parts of `test_decompressed_load.py` and
+   `test_wram_reservations.py` are deleted.
 
 That is 246 KB of cartridge back. The rest of the compression —the tiles—
 doesn't depend on this: its buffer is in bank $7F, which the battle already

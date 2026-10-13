@@ -22,8 +22,8 @@ A Blurred Line's suite runs only A Blurred Line, so a change to the tools
 could break another port without anyone noticing. The root of
 the-advocate-ports has a `justfile` of its own for that:
 
-    just arrancan            # every port but A Blurred Line
-    just arrancan -k sunset  # one of them
+    just boot            # every port but A Blurred Line
+    just boot -k sunset  # one of them
 
 For each game it builds the cartridge from its `rm2k-snes.toml` —only if
 it is stale— and plays it in snes9x and in bsnes until the player has

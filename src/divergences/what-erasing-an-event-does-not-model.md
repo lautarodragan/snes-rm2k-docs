@@ -31,7 +31,7 @@ graphic.
 
 ## How it looks today
 
-It is not seen. `pruebas/rpgmaker/test_borrar_evento_de_verdad.py`, in the
+It is not seen. `tests/rpgmaker/test_erase_event_for_real.py`, in the
 ABL port (the-advocate-ports/abl), enforces what the test event lets you look
 at —that a foreground page keeps going, that the others do not start, and
 that reloading the map brings it back—; what is drawn, what blocks and the

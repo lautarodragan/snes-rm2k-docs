@@ -17,6 +17,6 @@ Measured over the whole game: **+33 pages** —from 2802 to 2835—, and it is
 the only one that paid off. **The other nine add up to +1 among all of
 them**, and that is why they are still out.
 
-The `npc-hacia-heroe` case covers it. It is left out of **a page's own
+The `npc-toward-hero` case covers it. It is left out of **a page's own
 routes**, of which there are two on map 105 and no test gets there; see
 `ruta_propia`.

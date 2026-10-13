@@ -18,7 +18,7 @@ is a whole project**:
   from the PATH. The game and the RTP can be a directory or a `.zip` of
   one: see [A game or an RTP as a
   `.zip`](../internals/pipeline.md#a-game-or-an-rtp-as-a-zip).
-- **`data/`**: the game dumped to JSON with Ditto (`just datos`), which is
+- **`data/`**: the game dumped to JSON with Ditto (`just dump`), which is
   where the port reads the game from (see [From a game to a
   ROM](../pipeline.md)). The original game isn't in the repository: it
   isn't ours to redistribute.
@@ -29,7 +29,7 @@ The ports:
 
 | directory | game | |
 |---|---|---|
-| [`abl/`](abl/README.md) | A Blurred Line | the real port: the only one with the test suite and its goldens, MSU-1 and `just entregar` |
+| [`abl/`](abl/README.md) | A Blurred Line | the real port: the only one with the test suite and its goldens, MSU-1 and `just deliver` |
 | [`book-of-three/`](book-of-three/README.md) | The Book of Three | from the survey |
 | [`desert-nightmare/`](desert-nightmare/README.md) | Desert Nightmare | from the survey |
 | [`dooms2/`](dooms2/README.md) | Dooms 2 | from the survey |
@@ -50,7 +50,7 @@ Each of the seven is a project built that day for the survey, **without
 MSU-1 and without tests**, with the minimal recipes: `datos` and
 `datos-vuelta` (dump the game, and check that Ditto brings it back byte
 for byte), `cartuchos`, `espacio` and `culpables` (which commands keep
-which pages out). Each has `casos/`, with the empty case for page 0, and
+which pages out). Each has `cases/`, with the empty case for page 0, and
 the values the survey had to choose say "relevamiento" (survey) in their
 comment in `rm2k-snes.toml`. What the survey sidestepped to get to a
 cartridge —a reduced System graphic, BMPs turned into PNGs, maps
@@ -63,7 +63,7 @@ the-advocate-ports, with their history.
 They say nothing about the state of each port after that date; what is
 true today is what their recipes print.
 
-**They have tests since**: `just arrancan`, at the root of the ports, builds
+**They have tests since**: `just boot`, at the root of the ports, builds
 the seven and plays each one up to its first map, in snes9x and bsnes. Two
 of them go further, because taro asked: Sunset's painted maps, against
 goldens, and The Book of Three, played from the start to past the forge

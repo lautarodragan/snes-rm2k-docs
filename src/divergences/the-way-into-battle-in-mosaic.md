@@ -34,8 +34,8 @@ there is one, does: it is a background layer.
 
 ## Measured
 
-`test_la_entrada_tapa_el_mapa_con_el_mosaico_de_la_salida`, in
-`pruebas/rpgmaker/test_fundido_de_pelea.py` in the ABL port
+`test_the_entrance_covers_the_map_with_the_exits_mosaic`, in
+`tests/rpgmaker/test_battle_fade.py` in the ABL port
 (the-advocate-ports/abl), measures the size of the blocks on each frame
 **by looking at the screen** —in which columns each line's color changes—
 and requires the map's ramp down on the way in to be the same sequence as

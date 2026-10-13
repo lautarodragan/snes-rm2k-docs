@@ -108,9 +108,9 @@ because losing belongs to the battle.
 
 ## How to reproduce it
 
-`pruebas/rpgmaker/test_eventos_de_tropa.py` in the ABL port
-(the-advocate-ports/abl), with the `pelea-86` and `pelea-102` cases; and
-`pruebas/rpgmaker/test_sistemas_de_tropa.py` in the ABL port, with
-`pelea-invocacion` and `pelea-radio`; and
-`pruebas/rpgmaker/test_destello_de_pelea_golden.py` in the ABL port, with
-`pelea-inscribir` and `pelea-capitan`.
+`tests/rpgmaker/test_troop_events.py` in the ABL port
+(the-advocate-ports/abl), with the `battle-86` and `battle-102` cases; and
+`tests/rpgmaker/test_troop_systems.py` in the ABL port, with
+`battle-summon` and `battle-radio`; and
+`tests/rpgmaker/test_battle_flash_golden.py` in the ABL port, with
+`battle-inscribe` and `battle-captain`.

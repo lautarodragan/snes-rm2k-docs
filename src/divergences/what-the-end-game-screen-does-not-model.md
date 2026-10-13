@@ -41,10 +41,10 @@ on the way in, B and "No" back to the menu with the cursor on End Game.
 The drawing from `fin_del_juego.dibujar` at 320x240 lands in those same
 boxes.
 
-It is covered by `pruebas/rpgmaker/test_fin_del_juego.py` in the ABL port
+It is covered by `tests/rpgmaker/test_end_game.py` in the ABL port
 (the-advocate-ports/abl) —the screen against `fin_del_juego.render` with the
-cursor on each command, "No", B, and "Yes" all the way to the `titulo`
-golden— and by the `fin` and `fin-no` goldens of `test_menu_golden.py`.
+cursor on each command, "No", B, and "Yes" all the way to the `title`
+golden— and by the `end` and `end-no` goldens of `test_menu_golden.py`.
 
 ## When it stops being enough
 

@@ -58,7 +58,7 @@ of them, invisible walls. A Blurred Line has no map over the cap.
 
 `trim.rs` has the rule's tests; `events/tests/command_line.rs` and
 `wally/tests/too_many_npcs.rs` check that a stage reads the map without
-the events left out. A Blurred Line's suite has `test_gemelos.py`, on a
+the events left out. A Blurred Line's suite has `test_twins.py`, on a
 cartridge that tells the converter the RAM holds 16 events
 (`--test-events-max`): the bridge of map 255 keeps two rows for its 61
 creaking boards —one of them is named by a common event—, and stepping on

@@ -8,7 +8,7 @@ the window takes —`window_colors`, which `rm2k-snes-screens window` counts
 from the game's System and the converter hands to `wally` and to the
 emission— comes out of the budget of **every** map, and a map that needed
 those entries merges colors of its background: Adeleine decides which ones,
-and what it decided stays in the game's `parches/auto/mapas/` as
+and what it decided stays in the game's `patches/auto/maps/` as
 `presupuesto`.
 
 Since 2026-10-04 they are **thirteen and not eight**: besides its

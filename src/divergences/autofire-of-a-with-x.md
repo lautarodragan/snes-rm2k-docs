@@ -37,7 +37,7 @@ per second. taro asked for between 3 and 4 to start with, and it is a named
 constant to be tuned while playing; it has to be a power of two, and an
 `.assert` guards that.
 
-It is covered by `pruebas/rpgmaker/test_autofire.py` in the ABL port
+It is covered by `tests/rpgmaker/test_autofire.py` in the ABL port
 (the-advocate-ports/abl): the rhythm frame by frame, that the real A wins,
 releasing X in each of the eight phases, and the `autofire` case —five
 messages in a row— closed entirely with X held and only one with A held.
