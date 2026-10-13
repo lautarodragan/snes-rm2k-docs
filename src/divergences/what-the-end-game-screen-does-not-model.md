@@ -21,9 +21,7 @@ What is still different:
 * **The system sound effects do not play**: not the cursor's, not decide's,
   not cancel's. They do not play in the rest of the menu either.
 * **It opens with the cursor on "Yes"**, which is what the 2015 RPG_RT does.
-  easyrpg-player opens on "No" (`SetIndex(1)` in `Scene_End`). The 2000
-  RPG_RT, the one the author used, could not be looked at: under Wine it
-  crashes when changing the video mode.
+  easyrpg-player opens on "No" (`SetIndex(1)` in `Scene_End`).
 * **The screen fades in 20 frames** along a brightness ramp; the theme in
   400 ms, which is easyrpg's `BgmFade(400)`. The 2015 RPG_RT takes about
   330 ms to reach black, measured with captures every 18 ms.
