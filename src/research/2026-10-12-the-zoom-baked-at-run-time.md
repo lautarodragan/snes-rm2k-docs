@@ -422,3 +422,73 @@ the black band, if it stays, looks on the console.
   geometry and nearest neighbour.
 * **The chunky copy's size**: the raw map tiles the converter leaves in
   the build for every map of `release`.
+
+
+## An outside design, compared (2026-10-13)
+
+> Added on 2026-10-13 by Carpintero; what is above is untouched. taro
+> brought a design for the same idea written without access to the
+> source —an SA-1 worker, a persistent cache of composed tiles, hashing
+> and fallbacks— and asked what could be rescued from it.
+
+**It does not change the recommendation.** Most of it is what the page
+above already measured: there is no frame buffer, so the screen is rebuilt
+from the renderer's state; the 256-tile limit applies to the composed
+image, after sprites and text, not to the map's tileset; a hash finds
+candidates and a compare confirms them; mode 7 has no flips or palettes per
+entry; the layers are composed on the map's grid with one more row and
+column; the cells with sprites are recomposed from the layers, with the
+engine's priorities; half resolution is the predictable fallback, better
+than merging by similarity; and the VRAM swap collides with the screen on
+display, and the map has to come back afterwards. Its first stage,
+"representability offline with real scenes", is what this page did.
+
+What does not hold for this engine:
+
+* **The persistent cache, kept warm by a worker while the game runs.** The
+  trigger is a random encounter or a page, so it cannot be anticipated, and
+  the screen changes every frame —scroll, characters, ChipSet animations,
+  which rewrite tiles in VRAM: every one is a cache invalidation—. On the
+  main CPU there is no spare time to keep it warm (the 2026-09-26 study
+  measured the parallel pages of map 11 at 47% of the frame), and filling
+  it at map load is 384 to 544 conversions of 31,245 cycles, 33 to 47
+  frames of black on every map change. What it buys is exactly what the
+  20 frames of flashes already give: a cold composition fits there on four
+  screens in five. Keeping the battle start's composition for the way back
+  would save the 15 frames of black out of battle, but the battle uses all
+  of bank `$7F` (`far_ram.s`), and its 17 KB have nowhere to wait.
+* **The SA-1 as the place for that cache**: its memory is the save's, as
+  above, and the cache is what would churn it.
+* **"The whole tilemap, 16 KB, or whatever the transformation can
+  reveal"**: RM2k's zoom never reveals anything. Running
+  `Transition::Draw`'s arithmetic for every centre across and down and
+  every one of the 41 frames, the source rectangle never leaves the
+  256x224 screen —0 cases out of 19,762, each axis on its own—, because the
+  correction near the edges slides it in. So the map entries to write are
+  the 896 the screen has, or 957 on the map's grid, as the page says.
+* **Rotation**: none of RM2k's twenty transitions rotates.
+
+What is worth keeping, for the first phase:
+
+* **Revealed area, if a transition ever goes past the screen** —a zoom
+  out below 1x, a rotation, an RM2k PLUS effect—: with `M7SEL` at `$80`,
+  past the 1024-pixel plane is transparent, but inside it whatever the low
+  bytes hold shows, and there they are the map's tiles. Putting the
+  snapshot in the plane's top-left corner makes two of the four sides free;
+  the other two need the blank tile written, at most the 16 KB it warns
+  about.
+* **Count from the renderer's data, not only from captures.** The counts
+  above are from the emulator's pixels; a compositor that dedups by key
+  first composes one tile per distinct key, which can be more than the
+  distinct pixels, and the 256 are counted after the pixel compare. The
+  first phase has to count both on the ROM.
+* **The camera's position.** The captures are almost all with the camera
+  on the 8-pixel grid; a battle started by a page while the camera pans,
+  or a panorama that scrolls on its own, breaks the alignment between
+  layers and lowers the reuse. The first phase should measure a few
+  misaligned screens.
+* **Latency measured in two numbers**: from the request to the first
+  valid mode 7 frame, and separately the black that is seen.
+* **Another transition as a fallback**, which the runtime already has: the
+  mosaic or the fade where the zoom does not fit, such as the maps in
+  mode 1 and the big pictures.
