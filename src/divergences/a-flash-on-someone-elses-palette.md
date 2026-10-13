@@ -17,14 +17,14 @@ which the player shows up invisible in Rat Tracks B2 and the game cannot go
 on. There the one that flashes is `BumGuardingEntrance` and the one tinted
 with it is `InnBum`: both are `Future3:1`.
 
-It is covered by the `destello-compartido` case of the test run, on map 6,
+It is covered by the `flash-shared` case of the test run, on map 6,
 where the target is the Kersh NPC and the one tinted with him is the hero.
 Apart from that one, no case has a second visible sprite sharing the palette
 of the one that flashes.
 
 ## How it looks today
 
-It is guarded by `pruebas/herramientas/test_destello_paleta.py` in the ABL
+It is guarded by `tests/tooling/test_flash_palette.py` in the ABL
 port (the-advocate-ports/abl), which requires that nobody share the palette of
 a possible leader, because there the one that leaks is the hero, who is on
 screen all the time. **It protects the leader and not the one that

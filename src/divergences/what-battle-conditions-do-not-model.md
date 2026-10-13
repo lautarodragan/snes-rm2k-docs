@@ -58,9 +58,9 @@ with `BarkWall` (troop 128).
 
 ## How to reproduce it
 
-`pruebas/rpgmaker/test_condiciones_de_pelea_golden.py` in the ABL port
-(the-advocate-ports/abl), with the cases `pelea-controlar` and
-`pelea-inscribir`.
+`tests/rpgmaker/test_battle_conditions_golden.py` in the ABL port
+(the-advocate-ports/abl), with the cases `battle-control` and
+`battle-inscribe`.
 
 ## When it stops being enough
 

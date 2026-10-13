@@ -63,5 +63,5 @@ up. The converter stops if a map doesn't fit: what the grid takes of `$7F`
 plus what goes behind it can't exceed its 32 KB.
 
 What is left in VRAM and WRAM after loading is compared by
-`pruebas/rpgmaker/test_carga_descomprimida.py` in the ABL port against what
+`tests/rpgmaker/test_decompressed_load.py` in the ABL port against what
 the converter leaves uncompressed in ABL's `build/<cartridge>/crudos/`.

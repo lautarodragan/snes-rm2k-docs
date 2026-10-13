@@ -28,7 +28,7 @@ and the dance that follows has six more with a route of their own. That is
 eighteen different events with a route on the map, and never more than nine
 moving at once. Without this the converter refused to build 127; with the
 usual twelve and without giving slots up, two of the ones strolling in the
-dance never move (enforced by `test_recorrido_granja_golden.py` in the ABL
+dance never move (enforced by `test_playthrough_farm_golden.py` in the ABL
 port, which was seen red that way).
 
 No map that already fit changes: they all send twelve or fewer walking, so

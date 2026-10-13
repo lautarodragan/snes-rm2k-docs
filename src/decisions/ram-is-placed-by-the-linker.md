@@ -60,7 +60,7 @@ addresses chosen by hand.
   map written by hand, with only small gaps; the upper half of `$7E` is
   [the grid](the-grid-lives-in-wram.md), and `$7F` is shared in time by
   the battle and the loads. `FARBSS` lives in the unused end of the battle
-  scene's reservation. `just espacio` prints what it has left. **It grows
+  scene's reservation. `just space` prints what it has left. **It grows
   by taking over a stretch of the map written by hand**, moving whatever
   lived there into the segment: the area is moved in `banks.rs`, and what
   limited it gets an `.assert` against `__FARRAM_START__`, like the scene's
@@ -68,7 +68,7 @@ addresses chosen by hand.
 * **The map written by hand does not move**, because moving it moves the
   ROM and some of it is saved or cleared as a block. The same holds for
   what is already in `low_ram.s` and `zero_page.s`.
-* **What guards it**: ABL's `pruebas/herramientas/test_reservas_de_la_wram.py`,
+* **What guards it**: ABL's `tests/tooling/test_wram_reservations.py`,
   in the-advocate-ports, fails if a symbol that is not a `FARBSS` label
   lands inside the area, with its bank or without it, which is what an
   address chosen by hand there would be. What it does **not** see is the

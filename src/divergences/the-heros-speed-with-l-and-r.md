@@ -38,11 +38,11 @@ What was decided, and is commented there:
 ## Measured
 
 At each speed the hero crosses a cell in 64, 32, 16, 8, 4 and 2 frames.
-`pruebas/rpgmaker/test_velocidad_con_l_y_r.py` in the ABL port
+`tests/rpgmaker/test_speed_with_l_and_r.py` in the ABL port
 (the-advocate-ports/abl) measures it with the pad: touching nothing, 8; R once,
 4; twice, 2; five times, still 2; L once, 16; three times, 64; five times,
 still 64. Also: the press from the cap, that it carries over after a
-teleport, that `ruta-vel` with an offset of +2 walks its steps at 4, 4, 4, 8
+teleport, that `route-speed` with an offset of +2 walks its steps at 4, 4, 4, 8
 and 8 frames —those of speeds 5 and 4, as without it— and the pad afterwards
 at 2, that R with a message open does nothing, and that `test-special`,
 built without L and R, does not read them.

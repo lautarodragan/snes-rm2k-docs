@@ -54,5 +54,5 @@ the map's bytecode in WRAM: `code_carry_before` moves the stack frames to
 On 2026-10-02, in `release`: 25 bodies and 8,176 bytes in the cartridge;
 autorun common events 7, 11, 39, 43 and 50 run, and 16, 42 and 44 don't
 compile. The goldens didn't move. How much is left today is what
-`just espacio` (in the ABL port) says, and which bodies there are, the
+`just space` (in the ABL port) says, and which bodies there are, the
 converter's report.

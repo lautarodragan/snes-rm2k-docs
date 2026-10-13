@@ -6,13 +6,13 @@ binaries and what each one leaves behind:
 
 ```text
 --game-dir (.lmu .ldb .lmt)       --ditto unpack---------------->  data/ (JSON)
-data/ + parches/manual/
+data/ + patches/manual/
 + images, MIDI and WAV            --rm2k-snes-convert-----------> build/<rom>/
   (--game-dir, --rtp-dir)           (and its stages: wally, events,   mapdata.inc, musicdata.inc,
                                      screens, images, battle,
                                      mapdata, patches, audio)
                                                                   <rom>.msu (battle backdrops),
-                                                                  parches/ (decisions)
+                                                                  patches/ (decisions)
 runtime/*.s + those .inc    --rm2k-snes-assemble----------> <rom>.sfc + <rom>.sfc.sym
                                     (bank packing, ca65 + ld65)   and, with [rom] msu = "required",
                                                                   what does not fit, behind <rom>.msu
@@ -29,7 +29,7 @@ which flags: [its pipeline](../ports/abl/pipeline.md).
 ## When a cartridge is rebuilt
 
 `rm2k-snes-cartridges` rebuilds a cartridge only when its stamp
-—`sello.txt`, next to the ROM— no longer matches: the cartridge's converter
+—`stamp.txt`, next to the ROM— no longer matches: the cartridge's converter
 flags, its test cases, and a **fingerprint** of everything else that goes
 into the ROM. The fingerprint looks at contents, never at dates:
 

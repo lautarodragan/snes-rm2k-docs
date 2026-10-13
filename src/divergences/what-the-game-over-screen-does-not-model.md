@@ -42,7 +42,7 @@ RTP themes the `System` names are numbered after the game's: see
 `track_numbers` in `rm2k-snes/rm2k-snes-audio/src/game.rs` in
 the-advocate.
 
-It is covered by `pruebas/rpgmaker/test_game_over.py` in the ABL port
+It is covered by `tests/rpgmaker/test_game_over.py` in the ABL port
 (the-advocate-ports/abl) —the three paths, the golden, the key and the title—
 and by `test_game_over` in `test_cores.py`.
 

@@ -25,11 +25,11 @@ as text.
 
 ## Its walkthrough
 
-`pruebas/test_book_of_three.py`, at the root of the-advocate-ports, plays
+`tests/test_book_of_three.py`, at the root of the-advocate-ports, plays
 the game from the start: Caer Dallben, Coll's forge and its fire —the
 sword, the practice battle, Coll and Dallben—, Dallben's cottage and the
 Book of Three, with a golden at each milestone, in snes9x and bsnes
-against the same one. It runs with `just arrancan`. It was born on
+against the same one. It runs with `just boot`. It was born on
 2026-10-12, when taro played up to the forge and found the game stuck
 there: the fire's page puts a weapon on Taran, which did not compile
 ([the task](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-forge-and-a-walkthrough.md)).

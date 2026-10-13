@@ -54,4 +54,4 @@ And two things that hold even if it doesn't go in:
   bsnes and mesen-s truncate, which is what the chip does, and snes9x
   rounds up when a channel's sum is odd. Since the goldens are snes9x
   captures, a case with color math goes into
-  `pruebas/rpgmaker/test_cores.py` in the ABL port (the-advocate-ports/abl).
+  `tests/rpgmaker/test_cores.py` in the ABL port (the-advocate-ports/abl).

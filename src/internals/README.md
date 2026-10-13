@@ -34,5 +34,5 @@ studies, the research:
   the old one stays as it was.
 
 The paths these pages name —`runtime/…`, `rm2k-snes/…`— are in
-the the-advocate repository; the ones in A Blurred Line —`pruebas/…`,
-`parches/…`— are in its port, `abl/` in the-advocate-ports.
+the the-advocate repository; the ones in A Blurred Line —`tests/…`,
+`patches/…`— are in its port, `abl/` in the-advocate-ports.

@@ -45,8 +45,8 @@ variables only it names —the 53 for the summons and for Talan's HP—, which
 had no slot in the save because the variable sweep did not look at common
 events. Now it does (`variables`, in the indices of `rm2k-snes-events`), and
 the common event compiles in place of its `CallEvent`. It is guarded by
-`test_despues_de_la_pelea_lerle_vuelve_al_grupo`, in
-`pruebas/rpgmaker/test_sistemas_de_tropa.py` in the ABL port
+`test_after_the_battle_lerle_rejoins_the_party`, in
+`tests/rpgmaker/test_troop_systems.py` in the ABL port
 (the-advocate-ports/abl).
 
 Until 2026-10-02 that cost space: the whole common event was copied into

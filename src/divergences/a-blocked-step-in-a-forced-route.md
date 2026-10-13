@@ -11,7 +11,7 @@ the-advocate: a test that hangs says nothing.
 ## Measured
 
 Until 2026-09-20 no golden exercised it. With the frame reordered, the hero's
-route in `droide-tapado` starts one frame later, the step up lands exactly
+route in `droid-covered` starts one frame later, the step up lands exactly
 when the droid occupies the cell, and the step is lost: **the hero ends up one
 cell lower than before**, and no tick makes the capture match —tried from -12
 to +12—.

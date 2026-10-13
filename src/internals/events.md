@@ -28,12 +28,12 @@ directory, on every build. Until 2026-10-02 the declaration was a TOML file
 in `snes/protocol/`, and from it came, generated and committed, the
 Rust module, the `.inc` in `runtime/` and a Python module the ABL
 tests read the bytecode with; since that day none of them reads it, and
-`test_lado_de_abl.py` makes sure of it. It is in English because nothing in
+`test_abl_side.py` makes sure of it. It is in English because nothing in
 there knows about this game. The compiler is in English for the same
 reason, and its README says what it receives and what it answers; the
 converter, `rm2k-snes-convert`, calls it twice. Until 2026-09-29 it was
 `tools/port/events.py`, whose constants and models stayed for the tests, in
-`pruebas/arnes/events.py` in the ABL port. **A new opcode is declared there
+`tests/harness/events.py` in the ABL port. **A new opcode is declared there
 and nowhere else**: the number used to be chosen by the compiler and reach
 the interpreter inside `mapdata.inc`, and that is how two branches chose
 the same one without git seeing anything.
@@ -111,13 +111,13 @@ of its routine.
 | Events drawn with a chipset tile | `load_npcs` | `drawable_npcs`, in `wally`; the sheet is drawn by `rm2k-render`, as a library of `wally` |
 | The ones that are also opaque and fixed: baked into the map, with no row to draw | `build_oam` skips the hidden row | `baking::bakeable`, in `wally` |
 | The teleport fade, with the map loading inside the black | `start_fade`, `fade_tick` | `fade_ramp`, and the `FADE_*` constants, in `rm2k-snes-mapdata` |
-| The cap on chained teleports | `JUMPS_MAX` and its uses | enforced by `pruebas/rpgmaker/test_saltos.py` in the ABL port |
+| The cap on chained teleports | `JUMPS_MAX` and its uses | enforced by `tests/rpgmaker/test_jumps.py` in the ABL port |
 | The screen turns on in vblank and nowhere else | `flush_video` | — |
 | The message window, placed by HDMA where `MessageOptions` asks —top, middle or bottom, with background or without— | `build_hdma`, `msg_place`, `msg_hdma_build`, `msg_start`, `msg_ptr_next`, `msg_letter` (the DTE pairs) | `rm2k-snes-screens`, which builds it with `rm2k-render` as a library, and `Messages` and `OP_MESSAGE_OPTIONS` in the compiler |
 | Text composed on the fly, with the glyphs already pre-rendered | `message_tick`, `compose_char`, `prime_line` | `font_prerender` in `rm2k-snes-screens` |
 | The waits in the middle of a box —`\.`, `\!` and the second-long one, backslash and bar—: the box is cut at the wait and shown, and composed again from the cut line when it is over | `msg_wait_mark`, `msg_hold_tick`, `msg_line_start`, in `message_waits.s` | `WAIT` and `Messages::add_waiting` in the compiler; `wait_mark` in `rm2k-snes-text` |
-| Boot always lasts the same | `BOOT_FRAMES` | run by `Partida` in `pruebas/arnes/consola.py` in the ABL port |
-| Lost frames are counted | `count_lost` | read from WRAM by `Partida.cuadros_perdidos` |
+| Boot always lasts the same | `BOOT_FRAMES` | run by `Session` in `tests/harness/console.py` in the ABL port |
+| Lost frames are counted | `count_lost` | read from WRAM by `Session.lost_frames` |
 | Music doesn't wait for the loop: it goes in a vertical IRQ | `irq_music`, `IRQ_LINE` | — |
 
 What makes the loop fit in one frame —FastROM, the precomposed glyphs, the

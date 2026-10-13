@@ -39,7 +39,7 @@ On 2026-10-10, each map in a cartridge with its game's starting map:
 
 *A Blurred Line* has no such map: its cartridge comes out byte for byte the
 same. To see it, build *The Book of Three* or *Desert Nightmare*: the
-warning is in the release's `conversor.log`, one line per map.
+warning is in the release's `converter.log`, one line per map.
 
 ## How it looks today
 

@@ -34,16 +34,16 @@ that is ported for real: the others are measured against it (see
 
 It lives in `abl/` in the-advocate-ports. That directory is **the game**: its
 dump into a format that can be looked at (`data/`), what was decided about
-it while porting it (`parches/`), which cartridges are built and with which
-knobs (`rm2k-snes.toml`), its tests with their goldens (`pruebas/`) and the
-test ROMs that were built to decide something (`experimentos/`).
+it while porting it (`patches/`), which cartridges are built and with which
+knobs (`rm2k-snes.toml`), its tests with their goldens (`tests/`) and the
+test ROMs that were built to decide something (`experiments/`).
 
 What sets it apart from the other ports:
 
-- **The test suite and its goldens.** `pruebas/` runs the cartridges in
+- **The test suite and its goldens.** `tests/` runs the cartridges in
   snes9x and bsnes through libretro and compares the screen, pixel by
   pixel at 15 bits, against frozen captures (see [How it is
-  tested](../../testing.md)). Almost all of `pruebas/rpgmaker/` is what RM2k
+  tested](../../testing.md)). Almost all of `tests/rpgmaker/` is what RM2k
   does, using ABL as the stage: **until there is a test game, these are the
   only ROM tests of the engine**, and a change in the tools is verified by
   running this suite with the tools of the change.
@@ -52,7 +52,7 @@ What sets it apart from the other ports:
   ([the `.msu` file](../../internals/the-msu-file.md)). Without MSU-1 the game
   works the same: what comes from the `.msu` only replaces something the
   ROM already has.
-- **`just entregar`**, which hands over a build to be played.
+- **`just deliver`**, which hands over a build to be played.
 
 What is **not** here:
 
@@ -91,7 +91,7 @@ real map is 1.
 ## The data in a versionable format
 
 ```sh
-just datos         # the game -> data/ and build/ditto-exacto/, with Ditto
+just dump         # the game -> data/ and build/ditto-exacto/, with Ditto
 ```
 
 `data/` has the same data as the `.lmu` files but in a format git can
@@ -101,7 +101,7 @@ stages and the tests look at these files and not at the binaries. The one
 that writes it is **Ditto**, one of the tools, which also knows how to go
 back: `ditto pack` rebuilds the game's files byte for byte from the exact
 dump, which the same run leaves in `build/ditto-exacto/` and which isn't
-versioned; `just datos-vuelta` checks it on this game. The reason for the
+versioned; `just dump-round-trip` checks it on this game. The reason for the
 decision is in [data is the resolved
 view](../../decisions/data-is-the-resolved-view.md), and what is inside,
 in `data/README.md`.
@@ -113,13 +113,13 @@ justfile install`, in the-advocate—, and with them a libretro core,
 `ca65` and `ld65`: what each one needs, in that repository's README.
 
 ```sh
-just cartuchos     # builds the ROMs: release and the test ones
-just pruebas       # the whole suite; builds first whatever is needed
+just cartridges     # builds the ROMs: release and the test ones
+just tests       # the whole suite; builds first whatever is needed
 ```
 
 The ROM that is played comes out at `build/release/abl.sfc`, with its
 `abl.msu` and the MSU-1 tracks next to it. Which ROMs there are and which
-test covers what, in `pruebas/README.md`; what else can be run, in the
+test covers what, in `tests/README.md`; what else can be run, in the
 `justfile`, with its reasons. The road from the game to those files, with
 each recipe: [the pipeline](pipeline.md).
 
@@ -127,7 +127,7 @@ each recipe: [the pipeline](pipeline.md).
 
 ABL doesn't know where they live: it knows executables on the PATH, and
 nothing in this repository names the path of the other one —
-`pruebas/herramientas/test_lado_de_abl.py` makes sure of it—.
+`tests/tooling/test_abl_side.py` makes sure of it—.
 
 - **The executables**, by name: `rm2k-snes-cartridges`, `ditto`,
   `rm2k-snes-patches`… They find this project by looking for
@@ -138,8 +138,8 @@ nothing in this repository names the path of the other one —
 - **What the tools know about the project** —where each folder is, where
   the runtime is, what `rm2k-snes.toml` says— the harness asks
   `rm2k-snes-project`, another executable of the suite: see
-  `pruebas/arnes/proyecto.py`. The harness imports nothing from the tools:
-  the emulator, `pruebas/arnes/emulator/`, has been its own since
+  `tests/harness/project.py`. The harness imports nothing from the tools:
+  the emulator, `tests/harness/emulator/`, has been its own since
   2026-10-02.
 
 So **to run ABL with other tools** —those of a checkout where someone is
@@ -157,7 +157,7 @@ It isn't written here, because here it went stale without anyone noticing:
   and what we would like and nobody is doing in `tasks/wishlist/`;
 - where the ROM doesn't do what RM2k does, in the
   [divergences](../../divergences/README.md);
-- and what no test looks at, in `pruebas/UNTESTED.md`.
+- and what no test looks at, in `tests/UNTESTED.md`.
 
 ## The pages of this port
 

@@ -75,7 +75,7 @@ and not from the maps that are carried (see "The backdrops"). In version 1
 they went right behind the index, and the index grows with each
 cartridge's effects: a backdrop's place moved with any audio change. How
 many backdrops there are and how much the `.msu` weighs is printed by the
-converter, in `conversor.log` ("`.msu:` N fondo(s) y M efecto(s) en B
+converter, in `converter.log` ("`.msu:` N fondo(s) y M efecto(s) en B
 bytes", that is, N backdrop(s) and M effect(s) in B bytes).
 
 The converter writes it —it is the one that has the bytes and decides the
@@ -149,7 +149,7 @@ colors, which is a property of the format, plus 4 of pointer.
 ## How long it takes
 
 It is measured with `SCN_FRAMES`, which `scene_upload` leaves in RAM when
-opening the battle: `pruebas/abl/test_msu_datos.py` in the ABL port builds
+opening the battle: `tests/abl/test_msu_data.py` in the ABL port builds
 both paths, and reading it there is one line. In snes9x and in bsnes the
 `.msu` takes **less** than the ROM —measured in the droid battle—: both are
 DMA at the same speed and seeking is instant there, but the fallback takes
@@ -193,14 +193,14 @@ what the ROM needs: `se_msu_pkg` and `se_msu_rows` —where each effect of
 each package is and how long it is— and `se_msu_pitch_pkg` and
 `se_msu_pitch` —the pitch of each sound with each package's version, only
 for the sounds whose effect comes from there, and two packages with the
-same list share it—, and next to it a readable `efectos.json`.
+same list share it—, and next to it a readable `effects.json`.
 
 The signature is the same as the backdrops' and is checked once per
 power-on, at the first package load (`se_msu_prepare`, in
 `runtime/msu_effects.s`). Without the signature, the effects come
 from the ROM as always. A seek that doesn't arrive in time leaves that
 effect not uploaded: it doesn't sound, because the ROM's version has a
-different pitch. `pruebas/abl/test_msu_efectos.py` in the ABL port covers
+different pitch. `tests/abl/test_msu_effects.py` in the ABL port covers
 it, except for that wait, for the same reason as the backdrops'.
 
 ## What does not fit in the ROM
@@ -285,12 +285,12 @@ of its package that is in the `.msu`. That was not measured frame by frame.
 **How it is tested**: A Blurred Line fits, so the suite runs this path on
 two cartridges of its own, `test-msu` —everything that may go, in the
 `.msu`, with the converter's `--msu-everything`— and `test-msu-rom`, its
-twin with everything in the ROM. `test_lo_que_viaja_en_el_msu_llega_igual_que_de_la_rom`
+twin with everything in the ROM. `test_what_travels_in_the_msu_arrives_the_same_as_from_the_rom`
 checks VRAM and WRAM after each map load against the converter, like for
-the ROM; `pruebas/rpgmaker/test_msu_gemelos.py` compares the boot —with
+the ROM; `tests/rpgmaker/test_msu_twins.py` compares the boot —with
 map 6's panorama— frame by frame, a battle with its battlers, and the
 music's envelope, with the samples zeroed as the control; and
-`pruebas/rpgmaker/test_msu_obligatorio.py` the screen, without the `.msu`
+`tests/rpgmaker/test_msu_required.py` the screen, without the `.msu`
 and with a region from another build. **Not run by the suite**: a big
 picture from the `.msu` —no map of `test-msu` shows one—, a light backdrop
 from it —with the MSU-1 the battle uses the quality one—, the seeks'
@@ -299,24 +299,24 @@ wait, and the console.
 ## How it is tested
 
 The test suite runs without MSU-1, so its battle goldens are the light
-fallback. `pruebas/abl/test_msu_datos.py` in the ABL port runs both paths
+fallback. `tests/abl/test_msu_data.py` in the ABL port runs both paths
 in snes9x and bsnes and compares **each one against its golden**
-—`msu-datos-rom` and `msu-datos-msu`— and the clean backdrop in WRAM
+—`msu-data-rom` and `msu-data-msu`— and the clean backdrop in WRAM
 against the bytes the converter builds: the quality one as is and the
 light one expanded to 8bpp and doubled. The same with a battle in the
 world, whose backdrop is that of the terrain the hero stands on
-—`msu-mundo-rom`, its fallback, and `msu-mundo-msu`, the quality one—, and
+—`msu-world-rom`, its fallback, and `msu-world-msu`, the quality one—, and
 that each backdrop is in its fixed place with the same bytes in the `.msu`
 of every cartridge. The fallback is covered by
-`test_escena_una_pelea_cuyo_fondo_no_esta_usa_el_reemplazo`, in
-`pruebas/rpgmaker/test_batalla_escena_dibujo.py` in the ABL port.
+`test_scene_a_battle_whose_backdrop_is_missing_uses_the_fallback`, in
+`tests/rpgmaker/test_battle_scene_drawing.py` in the ABL port.
 
 **The wait is not covered by the test suite**, because the three libretro
 cores the suite uses seek instantly, and the harness can't simulate the
 delay: it sees memory, not the bus, so it has no way to answer anything
 else when the ROM reads `$2000`. What exercises it is Mednafen, by hand: a
 cartridge that opens the battle when the game starts —the flags of
-`release` with `batalla-droide` as page 0—, Xvfb and `xdotool` to get past
+`release` with `battle-droid` as page 0—, Xvfb and `xdotool` to get past
 the title screen, F5 in the battle, and reading `SCN_MSU` from the `.mc0`.
 That is how it was verified on 2026-09-26, and also by playing up to the
 droid with the test suite's save loaded into Mednafen's SRAM. Putting it in

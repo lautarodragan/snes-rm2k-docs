@@ -28,7 +28,7 @@ What is not the same:
 ## Measured
 
 Against the battle model —`rm2k-snes-battle experience`, which is easyrpg's
-in `rm2k-rules`— in `pruebas/rpgmaker/test_experiencia_de_eventos.py` in the
+in `rm2k-rules`— in `tests/rpgmaker/test_event_experience.py` in the
 ABL port (the-advocate-ports/abl). It was not measured against RPG_RT: the game
 does not use the commands, and the order of two skills at the same level
 does not come up for any actor in ABL.
