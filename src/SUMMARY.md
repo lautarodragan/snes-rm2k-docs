@@ -20,6 +20,7 @@
     - [Audio](internals/audio.md)
     - [The .msu file](internals/the-msu-file.md)
 - [Reference](reference/README.md)
+    - [Sources](reference/sources.md)
     - [ChipSets](reference/rpgmaker/chipsets.md)
     - [The RTP](reference/rpgmaker/rtp.md)
     - [Emulators](reference/snes/emulators.md)
