@@ -33,5 +33,5 @@ cost of every operation for one sentinel.
   reason: Sern's forge, which keeps the party's gold in a variable while
   it lends forge points, loses whatever is above that.
 * The compiler is `ControlVars` in `compile.rs` of `rm2k-snes/events/` in
-  the-advocate; the test is `test_poner_mas_que_la_palabra_satura` in A
+  the-advocate; the test is `test_putting_more_than_the_word_saturates` in A
   Blurred Line's suite.

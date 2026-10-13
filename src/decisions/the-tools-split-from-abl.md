@@ -52,8 +52,8 @@ options.
   - Whatever a game wants to deviate from RM2k still goes through flags,
     which move to the project file.
 - **The engine is called the runtime and moves to `runtime/`; `rom/`
-  becomes the root of A Blurred Line**, with `data/`, `parches/`,
-  `pruebas/` and `build/`. taro decided it on 2026-09-29: the generic
+  becomes the root of A Blurred Line**, with `data/`, `patches/`,
+  `tests/` and `build/`. taro decided it on 2026-09-29: the generic
   runtime is told apart from the project. ABL doesn't need the `.s` files,
   and the runtime doesn't need the graphics or audio `.inc` files. The root
   is left with `rom/`, `tools/`, `docs/` and `workflow/`. **The order:**
@@ -99,7 +99,7 @@ options.
 
 What was left open:
 
-- **`cartuchos.py`** (question 6): taro doesn't see a clear responsibility
+- **`cartridges.py`** (question 6): taro doesn't see a clear responsibility
   in that file. It mixes ABL data, which could go in a `.toml`, with the
   cache key and test things. They think it shouldn't exist: it would be
   replaced by a couple of `justfile` recipes, the data in a `.toml`, and a

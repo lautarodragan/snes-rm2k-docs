@@ -41,6 +41,6 @@ With the 2015 RPG_RT under Wine, on 2026-10-04, the battle test with troops
 —the battle test always allows fleeing—. Where the captures are is said by
 the task, [`battle-menu-like-rm2k`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/battle-menu-like-rm2k.md) in `tasks/` in the-advocate-work.
 
-ABL's test run covers it in `test_huir_es_del_grupo` —the failed escape,
+ABL's test run covers it in `test_escape_is_the_partys` —the failed escape,
 with the HP checked against the model— and in
-`test_sin_huida_no_hay_escape`.
+`test_without_escape_there_is_no_escape`.

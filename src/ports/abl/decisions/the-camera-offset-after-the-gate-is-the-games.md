@@ -30,5 +30,5 @@ as offset.
 Nothing. If someone sees the camera off-center after the gate and wants to
 "fix" it, they are about to break fidelity. The symptom of a defect of
 **ours** would be different: the drawn map not matching the collision
-—walking on walls—, which is what `pruebas/rpgmaker/test_camara.py` in the
+—walking on walls—, which is what `tests/rpgmaker/test_camera.py` in the
 ABL port (the-advocate-ports/abl) guards.

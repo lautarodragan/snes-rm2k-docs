@@ -48,10 +48,10 @@ others carry one with ten or more points less than the attack, and would
 never use it: the Scrapped Droid, the Trash Hauler and the plant's Junkbot,
 among them.
 
-It is enforced by `test_la_tropa_es_la_que_se_espera` and
-`test_el_tangle_wire_usa_short_circuit_y_deja_el_hp_del_modelo`, in
-`pruebas/rpgmaker/test_ag7_y_la_planta.py` in the ABL port
-(the-advocate-ports/abl), and by `test_la_pelea_de_la_planta` in
+It is enforced by `test_the_troop_is_the_expected_one` and
+`test_the_tangle_wire_uses_short_circuit_and_leaves_the_models_hp`, in
+`tests/rpgmaker/test_ag7_and_the_plant.py` in the ABL port
+(the-advocate-ports/abl), and by `test_the_plant_battle` in
 `test_cores.py`.
 
 ## How it looks today

@@ -33,4 +33,4 @@ Where it lives: the converter budgets each package with the tracks that
 may be playing on arrival (`inherited_songs` in the `cartridge.rs` of
 `rm2k-snes-audio`), the ROM notes `PKG_PARTIAL`, and `song_ensure`
 completes the package. It is caught by
-`test_el_paquete_que_no_entro_con_otro_tema_sonando_se_completa`.
+`test_the_package_that_did_not_fit_with_another_song_playing_completes`.

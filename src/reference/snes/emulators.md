@@ -68,7 +68,7 @@ Mednafen state (F5) in the droid fight and reading the WRAM out of the
 
 Since 2026-10-01 the cartridge is ExHiROM, and not every emulator maps it
 like the cartridge does. Measured with the test ROM in A Blurred Line's
-`experimentos/exhirom/` (in the-advocate-ports), which sums stretches of the whole map:
+`experiments/exhirom/` (in the-advocate-ports), which sums stretches of the whole map:
 
 - **snes9x** and **bsnes**: like the cartridge.
 - **mesen-s**, **Mesen2** —unless "strict board mappings" is on— and
@@ -93,7 +93,7 @@ that `ld65` leaves next to each ROM, in the game's `build/<cartridge>/`.
   files* on (the default), opening `abl.sfc` loads `abl.sfc.dbg` from
   the same folder.
 - **Names work wherever the `.dbg` sits next to the ROM**, including a
-  build a game hands over —A Blurred Line's `just entregar`—. Labels inside a `.proc` lose their
+  build a game hands over —A Blurred Line's `just deliver`—. Labels inside a `.proc` lose their
   scope: Mesen2 uses the bare name and numbers the repeats, so the
   many `ready` labels show up as `ready`, `ready_2`, `ready_3`… The
   macro-local `LOCAL-MACRO_SYMBOL-*` names are skipped, since Mesen2
@@ -102,7 +102,7 @@ that `ld65` leaves next to each ROM, in the game's `build/<cartridge>/`.
   `.dbg` names each runtime file relative to the root of the tools' checkout
   (`runtime/main.s`) and Mesen2 looks for that path next to the
   `.dbg`, then one folder up, and so on until it finds it. That works from a
-  build handed over with `just entregar`, which puts the commit's
+  build handed over with `just deliver`, which puts the commit's
   `runtime/` next to the ROM. The generated `mapdata.inc` and
   `musicdata.inc` live in the cartridge's directory; since 2026-10-02 the
   game is outside the tools' checkout, and the `.dbg` names them with an
@@ -115,7 +115,7 @@ commit `b9fa69d`) and running it against every cartridge. taro confirmed
 the names in the Mesen2 UI on 2026-09-25 —disassembly, RAM variables and
 call stack, stopped on a breakpoint in `wait_button`—, and the source
 view with the ROM opened from `rom/build/release/`, when the game lived in
-the tools' repository, the-advocate. From a `just entregar`
+the tools' repository, the-advocate. From a `just deliver`
 build the lookup finds every `.s` and misses only the two generated `.inc`
 files; that was checked with the same reimplementation, not yet in the UI.
 

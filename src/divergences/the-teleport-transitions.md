@@ -61,15 +61,15 @@ the whole game 15 pages ask for it; the ones that use the cut for showing or
 ports, Sunset Over Imdahl, Dooms 2 and The Frozen World show with the cut
 (1, 8 and 2 commands).
 
-It is covered by `test_transicion` in `pruebas/rpgmaker/test_comandos_golden.py`
+It is covered by `test_transition` in `tests/rpgmaker/test_commands_golden.py`
 in the ABL port (the-advocate-ports/abl) —goldens halfway through the mosaic
-and halfway through the zoom—, by `test_borrar_con_el_corte` in the same
+and halfway through the zoom—, by `test_erase_with_the_cut` in the same
 file —brightness at zero and the map loaded on the first tick of the fade,
-against the fade's whole ramp—, by `test_mostrar_con_el_corte`, also
+against the fade's whole ramp—, by `test_show_with_the_cut`, also
 there —the fade over and full brightness on the tick of the load, with a
 golden of the next one—, by the mosaic and the zoom in
-`test_cores.py` too, and by `test_recorrido_lashe_wick_golden.py` and
-`test_recorrido_capitulo_golden.py`, which check through RAM what each page
+`test_cores.py` too, and by `test_playthrough_lashe_wick_golden.py` and
+`test_playthrough_chapter_golden.py`, which check through RAM what each page
 leaves chosen.
 
 ## How it looks today
@@ -108,7 +108,7 @@ in `runtime/teleport_transition.s` in the-advocate. What else is different:
 * **The custom menu does not show the screen again** on the way back; the
   main menu, the save screen and the shop do, as in RM2k.
 
-It is covered by `pruebas/rpgmaker/test_borrar_pantalla.py` in the ABL
+It is covered by `tests/rpgmaker/test_erase_screen.py` in the ABL
 port: the black that stays with the page running, the teleport that loads
 in the black without showing it, and goldens halfway through the mosaic.
 What is between —the menus and the battle over an erased screen— is not
