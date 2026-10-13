@@ -404,7 +404,8 @@ the black band, if it stays, looks on the console.
   conversions and the flip came out equal. Run in snes9x and bsnes through
   the ports' `retro.py`.
 * **The screens**: `release` with "Begin the Story", 600 frames, the
-  harness's `ir_al_mapa` to each map —a door's fade, done by the ROM— and
+  harness's `ir_al_mapa` —its name at `0bf10fd`, before the ports went
+  to English— to each map —a door's fade, done by the ROM— and
   150 frames more; one process per layer setting, with snes9x's
   `snes9x_layer_*` options, because the libretro core is one per process.
   A cell "has" a layer if any of its pixels differs from the capture with
