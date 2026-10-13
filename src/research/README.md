@@ -45,3 +45,5 @@ By date:
 - [The S-DD1, for the poses](2026-10-11-the-s-dd1.md) — 2026-10-11
 - [The windows, made cheaper](2026-10-11-the-windows-made-cheaper.md) — 2026-10-11
 - [The skills menu](2026-10-12-the-skills-menu.md) — 2026-10-12
+- [The zoom, baked at run time](2026-10-12-the-zoom-baked-at-run-time.md)
+  — 2026-10-12

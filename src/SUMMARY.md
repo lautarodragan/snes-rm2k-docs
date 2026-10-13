@@ -140,6 +140,7 @@
     - [The S-DD1, for the poses](research/2026-10-11-the-s-dd1.md)
     - [The windows, made cheaper](research/2026-10-11-the-windows-made-cheaper.md)
     - [The skills menu](research/2026-10-12-the-skills-menu.md)
+    - [The zoom, baked at run time](research/2026-10-12-the-zoom-baked-at-run-time.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)
