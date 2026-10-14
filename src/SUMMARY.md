@@ -156,6 +156,7 @@
             - [A full inspection of the repository (2026-09-28)](ports/abl/research/a-full-inspection-of-the-repository.md)
             - [The maps through the MSU-1 (2026-10-01)](ports/abl/research/2026-10-01-the-maps-through-the-msu-1.md)
             - [The whole game without MSU-1 (2026-10-01)](ports/abl/research/2026-10-01-the-whole-game-without-msu-1.md)
+            - [What still blocks the end (2026-10-14)](ports/abl/research/2026-10-14-what-still-blocks-the-end.md)
     - [The Book of Three](ports/book-of-three/README.md)
     - [Desert Nightmare](ports/desert-nightmare/README.md)
     - [Dooms 2](ports/dooms2/README.md)
