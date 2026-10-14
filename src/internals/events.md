@@ -99,6 +99,7 @@ of its routine.
 | --- | --- | --- |
 | Stepping on an event, and stepping on it at the end of a forced route —a door is that: a touch page with a `Teleport` inside— | `try_touch`, `action_in_cell` | — |
 | Talking to an event with the action key | `try_action`, `queue_by_action` | — |
+| An event's touch (trigger 2): touch from the hero's side, and an event on the hero's layer whose step the hero refuses | `queue_by_action`, `collide_with_hero` | `pages::triggerable`, in the compiler |
 | A page waiting its turn is one bit per event, not a queue | `mark_waiting` | — |
 | Which page is active, frozen until the refresh | `pick_pages`, `apply_pages` | — |
 | The page's own routes, and the speed they bring | `page_routes`, `animate_ev_route` | `route::own`, in the compiler |
