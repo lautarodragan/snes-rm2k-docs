@@ -26,6 +26,10 @@ in the [divergences](../../divergences/README.md), not here.
   Mayor's House. Only the ones that walk a route of their own move.
   Draft:
   [`events-that-walk-by-a-movement-type-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/events-that-walk-by-a-movement-type-stand-still.md).
+* **It does not rain in Paradise**: when Talan follows the crying girl
+  the original starts the rain, and the port does not draw it —the map's
+  sprite palettes have no room for the drops—. Draft:
+  [`abl-it-does-not-rain-in-paradise`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-it-does-not-rain-in-paradise.md).
 
 ## The port
 
