@@ -145,6 +145,7 @@
     - [The skills menu](research/2026-10-12-the-skills-menu.md)
     - [The zoom, baked at run time](research/2026-10-12-the-zoom-baked-at-run-time.md)
     - [What the compiler ignores silently](research/2026-10-14-what-the-compiler-ignores-silently.md)
+    - [The Book of Three and The Frozen World: what is left out](research/2026-10-14-book-of-three-and-frozen-world-left-out.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)

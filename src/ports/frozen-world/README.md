@@ -7,15 +7,32 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **Maps 1 ("Battle Screen") and 2 ("Plate Placement") are not in the
-  cartridge**, and an event page that would take the hero to one of them
-  is left out whole. What of the game that loses was not looked at.
+* **There is no combat**: maps 1 ("Battle Screen") and 2 ("Plate
+  Placement") are the game's fighting, run by events, and they are not in
+  the cartridge. The 324 pages on 72 maps that would take the hero to one
+  of them are left out whole, so the monsters on the maps do nothing, and
+  so are the level-ups, steal and study skills that only they call (read
+  in the data, not played; see [what is left
+  out](../../research/2026-10-14-book-of-three-and-frozen-world-left-out.md)).
   Drafts: [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md) (map 1) and
   [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 2).
 * **Events whose page asks for a switch past the 1024th may pick the
   wrong page**: 45 pages on 27 maps ask for one, and the console reads
   that switch from other RAM. Which ones show was not looked at. Draft:
   [`page-conditions-on-switches-past-1023-read-other-ram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/page-conditions-on-switches-past-1023-read-other-ram.md).
+
+* **A command that turns on a switch past the 1024th writes outside the
+  switch table**: 28 pages on 24 maps and three common events do it, up to
+  seven bytes past the end. What it breaks was not looked at. Draft:
+  [`branches-and-switch-commands-past-switch-1023`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/branches-and-switch-commands-past-switch-1023.md).
+* **Three merchants sell nothing**: the shops on maps 50, 51 and 128 have
+  `\V[n]` (the gold) in an option's text, and the page does not compile.
+  Draft:
+  [`variables-in-a-choice-option-and-before-an-input-number`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-in-a-choice-option-and-before-an-input-number.md).
+* **Eight event pages on maps 9, 47, 99, 129 and 149 never run**: they
+  change the map's tileset, which is not done, and the page is left out
+  whole. Draft:
+  [`changemaptileset-is-not-compiled`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-compiled.md).
 
 ## What it leaves out (2026-10-11)
 
