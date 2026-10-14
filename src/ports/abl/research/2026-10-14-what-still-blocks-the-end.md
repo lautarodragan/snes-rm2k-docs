@@ -115,11 +115,11 @@ limits the build stops at.
 4. **The slot screen has no room for the new leaders' names** — Royal Dalia
    (30), the Advocate (31) and "ABL 2.0 Save" (34), who lead the party in
    the last chapter and in the ending, ask for 48 tiles and the menu's bank
-   leaves 44: `rm2k-snes-screens` stops. It is the case of the existing
-   draft
-   [`dooms-2-slots-and-menu-dont-fit-in-their-bank`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/dooms-2-slots-and-menu-dont-fit-in-their-bank.md),
-   now in ABL. *Size*: four tiles short; the cheap way out is the one that
-   draft lists, degrading instead of stopping.
+   leaves 44: `rm2k-snes-screens` stops. It is point 4 of the task that
+   made the build degrade instead of stopping, the one left undone. *Size*:
+   four tiles short; small to degrade —cutting the names that do not fit—,
+   more to make room. Draft:
+   [`abl-the-slot-screen-has-no-room-for-the-last-leaders-names`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-the-slot-screen-has-no-room-for-the-last-leaders-names.md).
 5. **The materials' table runs into the panorama's state** — `FAR_GROWTH`
    is placed by hand in far RAM with room for 21 party actors, and with the
    whole game 23 can join (Drago, Royal Dalia, the Advocate, Kersh and "ABL
