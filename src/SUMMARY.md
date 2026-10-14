@@ -152,6 +152,7 @@
         - [Decisions](ports/abl/decisions/README.md)
             - [The camera offset after the gate is the game's](ports/abl/decisions/the-camera-offset-after-the-gate-is-the-games.md)
             - [The thunder plays whole, and pays for the rain](ports/abl/decisions/the-thunder-plays-whole-and-pays-for-the-rain.md)
+            - [The quarry's timer stays in Paradise](ports/abl/decisions/the-quarry-timer-stays-in-paradise.md)
         - [Research]()
             - [A full inspection of the repository (2026-09-28)](ports/abl/research/a-full-inspection-of-the-repository.md)
             - [The maps through the MSU-1 (2026-10-01)](ports/abl/research/2026-10-01-the-maps-through-the-msu-1.md)
