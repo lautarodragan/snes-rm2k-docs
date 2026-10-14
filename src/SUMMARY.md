@@ -160,6 +160,7 @@
             - [The whole game without MSU-1 (2026-10-01)](ports/abl/research/2026-10-01-the-whole-game-without-msu-1.md)
             - [What still blocks the end (2026-10-14)](ports/abl/research/2026-10-14-what-still-blocks-the-end.md)
             - [Fitting the whole game in 8 MB (2026-10-14)](ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md)
+            - [The limits ABL is close to (2026-10-14)](ports/abl/research/2026-10-14-the-limits-abl-is-close-to.md)
     - [The Book of Three](ports/book-of-three/README.md)
     - [Desert Nightmare](ports/desert-nightmare/README.md)
     - [Dooms 2](ports/dooms2/README.md)
