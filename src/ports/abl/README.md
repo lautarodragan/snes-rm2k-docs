@@ -61,7 +61,7 @@ What is **not** here:
   that runs it on the console—, which live in their own repository,
   the-advocate, and are consumed from the PATH. The architecture decisions
   —mode 3 always, the ExHiROM cartridge, the tables in bank 0— are in
-  [The cartridge](../../cartridge/README.md), how each part of the port
+  [The cartridge](../../internals/README.md), how each part of the port
   works in [Internals](../../internals/README.md), the console in
   [Reference](../../reference/README.md), and where the ROM doesn't do what
   RM2k does in the [divergences](../../divergences/README.md);

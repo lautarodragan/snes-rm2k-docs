@@ -17,6 +17,9 @@ enable = true
 level = 0
 
 [output.html.redirect]
+"/cartridge/index.html" = "../internals/index.html"
+"/cartridge/mode-3.html" = "../internals/mode-3.html"
+"/cartridge/exhirom.html" = "../internals/exhirom.html"
 "/decisions/agotar-el-presupuesto-de-teletransportes-es-un-error.html" = "running-out-of-the-teleport-budget-is-an-error.html"
 "/decisions/atravesar-paredes-vale-para-el-salto.html" = "walking-through-walls-also-applies-to-jumps.html"
 "/decisions/call-event-a-un-cuerpo-compartido.html" = "call-event-into-a-shared-body.html"

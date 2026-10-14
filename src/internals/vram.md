@@ -18,7 +18,7 @@ System whose frame needs more —a gradient behind a frame that lets it
 through— is fused until it fits, and the bank stays the same: see [A
 window with a gradient is fused until it
 fits](../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md). Why the background is
-8-bit to begin with: [Mode 3 by default](../cartridge/mode-3.md).
+8-bit to begin with: [Mode 3 by default](mode-3.md).
 
 There are six, and `vram_layout` returns **the first one that fits**, so
 adding one at the end doesn't change the layout of any map that already

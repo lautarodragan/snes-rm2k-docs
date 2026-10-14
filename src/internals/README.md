@@ -4,11 +4,14 @@ These pages describe how each part of the port works **today**: the maps
 and their grid, the split of color and video memory, the event bytecode,
 the audio and the data the MSU-1 serves. The broad picture —[from a game
 to a ROM](../pipeline.md), [the tools](../tools.md), [what gives way when
-a game doesn't fit](../fitting.md), [the cartridge](../cartridge/README.md)
-and [how it is tested](../testing.md)— is in the chapters before; these
+a game doesn't fit](../fitting.md) and [how it
+is tested](../testing.md)— is in the chapters before; these
 go one level down, close to the code.
 
 - [The pipeline](pipeline.md): which binary turns what into what.
+- [Mode 3 by default](mode-3.md): how the background is drawn, and why.
+- [ExHiROM, 8 MB](exhirom.md): how the ROM is laid out, and the tables
+  that live in bank 0.
 - [Maps](maps.md): the map is stored as 16×16 blocks, and lives in WRAM.
 - [The CGRAM split](cgram.md): the converter decides it, map by map.
 - [The VRAM split](vram.md): the layouts, where the ceiling is, and what
