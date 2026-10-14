@@ -97,6 +97,7 @@
         - [A blocked step in a forced route](divergences/a-blocked-step-in-a-forced-route.md)
         - [Walking through walls lasts as long as the route](divergences/walking-through-walls-lasts-as-long-as-the-route.md)
         - [Finished routes give up their slot](divergences/finished-routes-give-up-their-slot.md)
+        - [What walking by a movement type does not model](divergences/what-walking-by-a-movement-type-does-not-model.md)
         - [What erasing an event does not model](divergences/what-erasing-an-event-does-not-model.md)
         - [A skipped call](divergences/a-skipped-call.md)
         - [Variables saturate at sixteen bits](divergences/variables-saturate-at-16-bits.md)

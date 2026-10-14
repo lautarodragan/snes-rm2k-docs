@@ -103,6 +103,7 @@ of its routine.
 | A page waiting its turn is one bit per event, not a queue | `mark_waiting` | — |
 | Which page is active, frozen until the refresh | `pick_pages`, `apply_pages` | — |
 | The page's own routes, and the speed they bring | `page_routes`, `animate_ev_route` | `route::own`, in the compiler |
+| The movement types —random, vertical, horizontal, toward the hero and away from him—: a route of one command that repeats, and the step it decides | `walk_choose`, `walk_blocked`, `walk_may_take`, in `walk_by_type.s`, from `ev_route_frame` | `route::own` and `ROUTE_BY_TYPE`, in the compiler |
 | The route frequency, and facing the hero | `step_route`, `toward_hero`, `after_step`, `after_turn` | `wait_after_step`, `wait_after_turn`, in `rm2k-snes-mapdata` |
 | Frequency goes up and down in the middle of a route (orders 30 and 31) | `step_route` | `route::min_frequency`, in the compiler |
 | Diagonals, and which way they leave the character facing | `cell_allowed_diag`, `face_diagonal` | — |
