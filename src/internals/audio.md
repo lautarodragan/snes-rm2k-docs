@@ -67,6 +67,15 @@ writes            --dsp_music-->        the SPC700 driver
   `effect_places` in `bank.rs`; the ROM notes which effect it uploaded to
   each place in `FAR_EFFECT_IN` (`record_effect`, in
   `runtime/audio_package.s`).
+- **Two keys whose samples came out the same share their entry**: a copy
+  that reached the same rate as what it copies, or two keys of a program
+  that pick the same zone, have the same BRR and loop, and they are stored
+  and uploaded once. The tracks are built with one entry per key —the
+  allocation, the copies and the ceilings' fingerprint count that way— and
+  renumbered afterwards: `Bank::directory` in `bank.rs` and
+  `merge_identical` in `compile.rs`, which checks that every track writes
+  the same to the DSP with the same samples behind its SRCN. Until
+  2026-10-14 each key had its own, and ABL's `release` stored 201 KB twice.
 - **Sound effects** —`PlaySound`— steal two voices from the music while
   they last, the ones the voice assignment fills first with percussion:
   `runtime/sound_effects.s` and `effects.rs`. The ones that go whole
