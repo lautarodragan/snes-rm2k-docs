@@ -10,6 +10,12 @@ create-missing = false
 [output.html]
 git-repository-url = "https://github.com/lautarodragan/the-advocate-docs"
 
+# The sidebar's sections fold, all closed but the top level: taro's, from
+# 2026-10-14, with the chapters grown past a screen.
+[output.html.fold]
+enable = true
+level = 0
+
 [output.html.redirect]
 "/decisions/agotar-el-presupuesto-de-teletransportes-es-un-error.html" = "running-out-of-the-teleport-budget-is-an-error.html"
 "/decisions/atravesar-paredes-vale-para-el-salto.html" = "walking-through-walls-also-applies-to-jumps.html"
