@@ -37,6 +37,15 @@ as text.
   Graveyard" where RM2k draws one of the ExFont's symbols. Draft:
   [`exfont-glyphs-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/exfont-glyphs-in-messages.md).
 
+* **In the busiest towns part of the people stand still**: a map whose
+  people walk around on their own takes at most eight of them walking
+  —Limm (141) has fifty-six, Thessa (164) thirty-six—, and the rest stay
+  at their cell. See [What walking by a movement type does not model](../../divergences/what-walking-by-a-movement-type-does-not-model.md).
+* **Events whose page asks for a switch past the 1024th pick the wrong
+  page**: on map 433, "Level", the eight figures that should flee lie
+  dead from the start. 735 pages on 253 maps ask for one. Draft:
+  [`page-conditions-on-switches-past-1023-read-other-ram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/page-conditions-on-switches-past-1023-read-other-ram.md).
+
 ## Its own System again (2026-10-12)
 
 It builds with `VDBlutsys` and no longer with A Blurred Line's System:

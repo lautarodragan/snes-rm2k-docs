@@ -21,11 +21,6 @@ in the [divergences](../../divergences/README.md), not here.
   seconds**: each new rain cuts the one still sounding instead of
   overlapping it. With MSU-1 it overlaps as in RM2k. Draft:
   [`abl-rain-cuts-itself-without-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-rain-cuts-itself-without-msu-1.md).
-* **The people who pace back and forth in the original stand still**: in
-  Sector 34 With Car, Yun Town, the Green Cuisine Deli (Marcy) and the Yun
-  Mayor's House. Only the ones that walk a route of their own move.
-  Draft:
-  [`events-that-walk-by-a-movement-type-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/events-that-walk-by-a-movement-type-stand-still.md).
 * **It does not rain in Paradise**: when Talan follows the crying girl
   the original starts the rain, and the port does not draw it —the map's
   sprite palettes have no room for the drops—. Draft:
