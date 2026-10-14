@@ -173,6 +173,9 @@ It isn't written here, because here it went stale without anyone noticing:
     reaches](research/2026-10-01-the-maps-through-the-msu-1.md) (2026-10-01)
   - [The whole game without MSU-1: the
     count](research/2026-10-01-the-whole-game-without-msu-1.md) (2026-10-01)
+  - [What still blocks the end: the story's path, and what stops the rest
+    of the game from going in](research/2026-10-14-what-still-blocks-the-end.md)
+    (2026-10-14)
 - **Decisions** about its content and its cartridge, in
   [decisions](decisions/README.md).
 
