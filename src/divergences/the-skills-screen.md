@@ -26,8 +26,10 @@ Smaller things that go with it:
   keeps no states, so an actor is either standing or at 0 HP, and one at 0
   HP cannot open its list.
 * **Teleport and escape skills are always grey**: whether RM2k allows them
-  depends on the map and on what the game permitted, which this port does
-  not track. No game it was measured on teaches one.
+  depends on the map and on what the game permitted, which this port
+  tracks since 2026-10-15 but does not consult here (see
+  [What a map's permissions do not model](what-a-maps-permissions-do-not-model.md)).
+  No game it was measured on teaches one.
 
 ## Why
 
