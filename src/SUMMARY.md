@@ -125,6 +125,7 @@
         - [What the End Game screen does not model](divergences/what-the-end-game-screen-does-not-model.md)
         - [What the title menu does not model](divergences/what-the-title-menu-does-not-model.md)
         - [The skills screen: eight rows and two lines of description](divergences/the-skills-screen.md)
+        - [The shop's party window, and the gold on the message's line](divergences/the-shops-party-window.md)
         - [What healing skills from the menu do not model](divergences/what-healing-skills-from-the-menu-do-not-model.md)
     - [Controls]()
         - [Autofire of A with X](divergences/autofire-of-a-with-x.md)
