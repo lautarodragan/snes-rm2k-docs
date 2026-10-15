@@ -52,4 +52,4 @@ objects.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Decorative events become background](../optimizations/lossy.md#decorative-events-become-background), in Optimizations.
+What it saves, and where it lives in the code: [Decorative events become background](../optimizations/lossy/events.md#decorative-events-become-background), in Optimizations.

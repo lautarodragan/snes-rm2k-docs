@@ -2,7 +2,7 @@
 
 How the music's samples share the cartridge and the ARAM. Sharing
 them is [lossless](../audio.md#a-single-sample-bank-uploaded-in-packages-per-map);
-the rate each one gets is [lossy](../../lossy.md#each-sample-at-the-rate-its-worst-package-allows).
+the rate each one gets is [lossy](../../lossy/audio.md#each-sample-at-the-rate-its-worst-package-allows).
 
 ## What
 

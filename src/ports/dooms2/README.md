@@ -31,7 +31,7 @@ stream of both songs says, start to end.
 
 Since later on 2026-10-11 it builds with its own System: the actor
 choice's windows, 69 tiles for a bank of 64, have their least visible
-cells merged —[A window with a gradient is fused until it fits](../../optimizations/a-window-with-a-gradient.md)—.
+cells merged —[A window with a gradient is fused until it fits](../../optimizations/lossy/tiles/a-window-with-a-gradient.md)—.
 Map 1 is not the windows' business: with its own System its slot screen
 and menu gather 482 tiles of 448, and those are faces.
 

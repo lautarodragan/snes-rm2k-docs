@@ -17,7 +17,7 @@ cartridge writes the letters into, and 16 for its frame and its arrow. A
 System whose frame needs more —a gradient behind a frame that lets it
 through— is fused until it fits, and the bank stays the same: see [A
 window with a gradient is fused until it
-fits](../optimizations/a-window-with-a-gradient.md). Why the background is
+fits](../optimizations/lossy/tiles/a-window-with-a-gradient.md). Why the background is
 8-bit to begin with: [Mode 3 by default](mode-3.md).
 
 There are six, and `vram_layout` returns **the first one that fits**, so

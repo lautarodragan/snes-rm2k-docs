@@ -112,7 +112,7 @@ A battle animation on the map is drawn in a box that is the same for
 every map —a row of the sprite bank, four 32x32 objects—, so its frames
 are converted once and every map that shows it shares them in the
 cartridge. What the box costs in fidelity is in
-[Lossy](../lossy.md#battle-animations-on-the-map-shrunk-to-a-box).
+[Lossy](../lossy/pictures-and-animations.md#battle-animations-on-the-map-shrunk-to-a-box).
 
 - **Saves**: ROM —one copy of each animation's frames, not one per map—.
 - **Where**: `rm2k-snes/convert/src/animations.rs`.

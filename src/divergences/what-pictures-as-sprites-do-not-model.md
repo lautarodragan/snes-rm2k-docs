@@ -54,4 +54,4 @@ once.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Pictures in sprites: scaled, fifteen colours](../optimizations/lossy.md#pictures-in-sprites-scaled-fifteen-colours), in Optimizations.
+What it saves, and where it lives in the code: [Pictures in sprites: scaled, fifteen colours](../optimizations/lossy/pictures-and-animations.md#pictures-in-sprites-scaled-fifteen-colours), in Optimizations.

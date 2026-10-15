@@ -30,4 +30,4 @@ with the number in the message if they do not fit.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [More than four still events that animate](../optimizations/lossy.md#more-than-four-still-events-that-animate), in Optimizations.
+What it saves, and where it lives in the code: [More than four still events that animate](../optimizations/lossy/events.md#more-than-four-still-events-that-animate), in Optimizations.

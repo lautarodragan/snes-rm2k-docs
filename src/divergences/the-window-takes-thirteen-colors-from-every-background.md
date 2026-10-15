@@ -66,4 +66,4 @@ fewer colors leaves more for each background.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [The message window takes its colours from every background](../optimizations/lossy.md#the-message-window-takes-its-colours-from-every-background), in Optimizations.
+What it saves, and where it lives in the code: [The message window takes its colours from every background](../optimizations/lossy/colours.md#the-message-window-takes-its-colours-from-every-background), in Optimizations.

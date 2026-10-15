@@ -58,7 +58,7 @@ defects of the implementation:
   layer between the floor and the hero, so the only one is above. It is
   what FF5 does, and taro did not like it.
 
-Translucent events are [baked](lossy.md#translucent-events-are-baked)
+Translucent events are [baked](lossy/events.md#translucent-events-are-baked)
 instead. **It is a decision about that one thing, not a ban on colour
 math**: translucent pictures in sprites use it, since 2026-10-02 —there
 blending is on only in object palettes 4 to 7, so the hero and the events
@@ -79,14 +79,14 @@ goes into `tests/rpgmaker/test_cores.py` in the ABL port.
 ### Fusing a gradient window's colours, or whole windows
 
 Before [a window with a gradient is fused until it
-fits](lossy.md#a-window-with-a-gradient-is-fused-until-it-fits), three
+fits](lossy/tiles.md#a-window-with-a-gradient-is-fused-until-it-fits), three
 other ways were tried: fusing colours until the tiles fit, which left
 windows with four colours or two; a tiled background instead of a
 stretched one, which was not enough and drew a sawtooth all over the
 window; and fusing whole windows with a k-means, which fit but broke
 frames.
 
-- **More**: [A window with a gradient, fused until it fits](a-window-with-a-gradient.md#the-ways-that-were-not-taken).
+- **More**: [A window with a gradient, fused until it fits](lossy/tiles/a-window-with-a-gradient.md#the-ways-that-were-not-taken).
 
 ### Calling every common event into a shared body
 

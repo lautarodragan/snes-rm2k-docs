@@ -26,4 +26,4 @@ converter writes down each map's merges next to the ROM.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Seven palettes on a map with battle animations](../optimizations/lossy.md#seven-palettes-on-a-map-with-battle-animations), in Optimizations.
+What it saves, and where it lives in the code: [Seven palettes on a map with battle animations](../optimizations/lossy/colours.md#seven-palettes-on-a-map-with-battle-animations), in Optimizations.
