@@ -206,7 +206,7 @@ largest:
   known problem: 2, `DisableSaving`, is parallel with no switch (see
   `party_common_events` in `indices.rs`).
 * **A shared `CallEvent`**: the compiler pastes the call in place
-  ([decisiones/call-event-is-compiled-inline.md](../decisions/call-event-is-compiled-inline.md)),
+  ([decisiones/call-event-is-compiled-inline.md](../optimizations/common-event-calls.md#pasted-in-place)),
   and the console calls in cascade: 21 calls 25 eighteen times, which
   calls eight of 23 to 31 per color. **Pasted, 39 is 140,193 commands**;
   25 alone, compiled today, is 14,947 bytes. What's needed is an
@@ -361,7 +361,7 @@ zoom with a fade**, and declare it.
   at 50% that change every six frames: 28 KB each, they can't be uploaded
   in six vblanks), the smoke on 207 at 40% and the shadow on 311. Color
   math is ruled out
-  ([decisiones/translucent-events-dont-use-color-math.md](../decisions/translucent-events-dont-use-color-math.md)).
+  ([decisiones/translucent-events-dont-use-color-math.md](../optimizations/tried-and-left-out.md#colour-math-for-translucent-events)).
   The smoke and the shadow opaque; the montage, as white flashes without
   a photo. All three are debt.
 * **The console's highlight** is a red rectangle at 50% over a label of

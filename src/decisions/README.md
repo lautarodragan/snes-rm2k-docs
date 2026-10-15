@@ -14,7 +14,10 @@ line's comment and isn't repeated here.
 What does **not** go here: what we would like to do and nobody is doing,
 which is the wishlist of tasks in the-advocate-work; where the ROM doesn't do
 what RM2k does, which is [the divergences](../divergences/README.md); and
-what is half done today, which is the tasks in progress. If a decision
+what is half done today, which is the tasks in progress; and **what only
+saves** —ROM, RAM, VRAM, colours, CPU time— once it is settled, which is
+[the optimizations](../optimizations/README.md): since 2026-10-15 the
+decisions that were only that live there, as entries. If a decision
 stops holding because a later one replaced it, **it isn't edited
 silently**: it is changed saying which one replaced it, or it is deleted
 and the commit message tells it.
@@ -55,8 +58,6 @@ redirect table of `book.toml` (see [Contributing](../contributing/README.md)).
 - [A door to the same map doesn't reload the map](a-door-to-the-same-map-doesnt-reload-the-map.md)
 - [Running out of the teleport budget is an error](running-out-of-the-teleport-budget-is-an-error.md)
 - [ConditionalBranch: five of the twelve kinds](conditional-branch-five-of-the-twelve-kinds.md)
-- [CallEvent is compiled inline](call-event-is-compiled-inline.md)
-- [CallEvent into a shared body](call-event-into-a-shared-body.md)
 - [The test page switches itself off](the-test-page-switches-itself-off.md)
 
 ## Move routes
@@ -72,16 +73,8 @@ redirect table of `book.toml` (see [Contributing](../contributing/README.md)).
 - [Every event is drawn](every-event-is-drawn.md)
 - [A graphic that doesn't fit isn't drawn](a-graphic-that-doesnt-fit-isnt-drawn.md)
 - [The possible leaders are an approximation](the-possible-leaders-are-an-approximation.md)
-- [The possible leaders share one CGRAM slot](the-possible-leaders-share-one-cgram-slot.md)
-- [The timer has no palette of its own](the-timer-has-no-palette-of-its-own.md)
-- [Poses are uploaded on the fly](poses-are-uploaded-on-the-fly.md)
-- [Translucent events are baked](translucent-events-are-baked.md)
-- [Translucent events don't use color math](translucent-events-dont-use-color-math.md)
 - [Large pictures in mode 1](large-pictures-in-mode-1.md)
-- [The grid lives in WRAM](the-grid-lives-in-wram.md)
 
 ## Audio
 
-- [A single sample bank](a-single-sample-bank.md)
 - [The playing track wins, and the sound effects wait](the-playing-track-wins-and-the-sound-effects-wait.md)
-- [Boot is sized for the boot package](boot-is-sized-for-the-boot-package.md)

@@ -1,6 +1,7 @@
-# A window with a gradient is fused until it fits
+# A window with a gradient, fused until it fits
 
-## What
+A lossy optimization —see [Lossy](lossy.md)—: what the console does
+with a System whose windows do not fit their bank of tiles.
 
 **A System whose windows don't fit their bank of tiles is drawn with
 fewer tiles, and the game keeps its own System.** Since 2026-10-11.
@@ -40,9 +41,10 @@ Every screen that gives way says so in a warning of the build. A System
 that fits goes through none of it: A Blurred Line's cartridge came out
 byte for byte the same.
 
-## Why
+## The ways that were not taken
 
-Two other ways were tried and measured on 2026-10-11, with the four games:
+Two other ways were tried and measured on 2026-10-11, with the four games
+—they are also in [Tried and left out](tried-and-left-out.md)—:
 
 * **A tiled background instead of a stretched one.** Not enough, and it
   shows more. With the background tiled, the message window's frame still
@@ -62,17 +64,14 @@ Fusing colours until the tiles fit was tried before, on 2026-10-05, and it
 left The Frozen World's window with 4 colours and The Book of Three's with
 2.
 
-## How it applies
+## Where
 
 `rm2k-snes-screens`: `fit_frame` in `message_window.rs`, the module
 `fit.rs` —which decides once, and both `convert` and `render` draw with
 what it decided—, and End Game's colours in `end_game.rs`. The pieces
 that change pixels are Adeleine's.
 
-What still stops the four games after this is not the windows: see each
-one's page under Ports.
-
 Since 2026-10-12 a game can skip all of this for a System by giving it
 a background of its own: see [The windows' background is the project's, by
-System](the-windows-background-is-the-projects-by-system.md). The fusing
+System](../decisions/the-windows-background-is-the-projects-by-system.md). The fusing
 stays for the Systems that keep theirs.

@@ -52,5 +52,5 @@ the common event compiles in place of its `CallEvent`. It is guarded by
 Until 2026-10-02 that cost space: the whole common event was copied into
 every map with encounters, because `CallEvent` compiled in place. Since that
 day the autostart page calls it with `OP_CALL` to a shared body —see
-[CallEvent to a shared body](../decisions/call-event-into-a-shared-body.md)—,
+[CallEvent to a shared body](../optimizations/common-event-calls.md)—,
 and it is in the cartridge only once.

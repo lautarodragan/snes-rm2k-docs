@@ -9,8 +9,9 @@ cell's alpha.
 
 Where the box comes from, and the full list of what is lost —the rounded
 alpha, the screen flash that does not reach it, the target without a row,
-the `global` ones—, is in the docstring of `tools/port/animacion.py` in
-the-advocate, which is where it is decided. taro accepted the price on
+the `global` ones—, is in the module documentation of
+`rm2k-snes/images/src/animation.rs` and `rm2k-snes/convert/src/animations.rs`
+in the-advocate, which is where it is decided. taro accepted the price on
 2026-09-12.
 
 ## Measured
@@ -30,3 +31,7 @@ A map that fills all eight sprite palettes and also needs the timer: there
 the box is left without a palette, and the converter says so and does not
 draw it. See
 [Seven palettes on a map with animations](seven-palettes-on-a-map-with-animations.md).
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Battle animations on the map, shrunk to a box](../optimizations/lossy.md#battle-animations-on-the-map-shrunk-to-a-box), in Optimizations.

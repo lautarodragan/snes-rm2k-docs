@@ -49,7 +49,7 @@ The cap on the maps (`below`), which the survey set because the sample
 directory went past 255, is gone: that limit degrades now. Since later
 on 2026-10-11 it builds with its own System, `thunter`: its gradient is
 fused where the banks don't hold it —[A window with a gradient is fused
-until it fits](../../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—.
+until it fits](../../optimizations/a-window-with-a-gradient.md)—.
 Since 2026-10-12 `thunter`'s windows are drawn over the average colour of
 its gradient —[The windows' background is the project's, by System](../../decisions/the-windows-background-is-the-projects-by-system.md)—, until the runtime draws the gradient, and none of
 its screens is fused any more.
