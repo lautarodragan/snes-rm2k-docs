@@ -22,11 +22,12 @@ as text.
 Found on 2026-10-15 by comparing the port with the original, played to the
 end under Wine (see "Its walkthrough"):
 
-* **The battle with the horsemen in Yern's woods never ends** (map 16): the
-  scene inside it plays, but no enemy is left to fight and the command menu
-  comes back forever. The story cannot go on past it. Its troop has nine
-  members and the cartridge carries eight. Draft:
-  [`book-of-three-a-troop-of-nine`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-a-troop-of-nine.md).
+* **One horseman fewer in Yern's woods** (map 16): the procession that
+  rides through the scene inside the horsemen's battle has four riders,
+  not five. Its troop has nine members and a battle holds eight, so the
+  converter leaves out one the scene only shows and takes away; the one
+  that stays to be fought is there, and the battle plays to its end. See
+  [A battle holds eight enemies](../../divergences/a-battle-holds-eight-enemies.md).
 * **Characters that walk into a scene are missing**: whoever a scene places
   and dresses with a move route, on an event with no graphic of its own,
   is never drawn, though their lines and moves go on. It shows around
@@ -65,7 +66,7 @@ end under Wine (see "Its walkthrough"):
 the game from the start: Caer Dallben, Coll's forge and its fire —the
 sword, the practice battle, Coll and Dallben—, Dallben's cottage, the
 Book of Three, Hen Wen's escape, Caer Minule and its item shop, and Yern's
-woods up to the horsemen, with a golden at each milestone, in snes9x and
+woods through the horsemen's battle, with a golden at each milestone, in snes9x and
 bsnes against the same one. It runs with `just boot`. It was born on
 2026-10-12, when taro played up to the forge and found the game stuck
 there: the fire's page puts a weapon on Taran, which did not compile

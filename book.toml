@@ -9,6 +9,8 @@ create-missing = false
 
 [output.html]
 git-repository-url = "https://github.com/lautarodragan/the-advocate-docs"
+# The sidebar lists pages, not their headings: taro's, from 2026-10-15.
+sidebar-header-nav = false
 
 # The sidebar's sections fold, all closed but the top level: taro's, from
 # 2026-10-14, with the chapters grown past a screen.
