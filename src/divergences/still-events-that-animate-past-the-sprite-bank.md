@@ -60,6 +60,15 @@ its three looks.
 
 On those maps, the still events of the looks given up stand still.
 
+## What it costs
+
+Frame time, where the frame was already full. The runtime walks the rows
+only on the tick a column changes —`animate_still` in
+`runtime/animated_stills.s`, with the why—, and each group uploads one pose
+then. A Blurred Line's race, whose 29 parked cars now animate in four
+groups, went from 45 extra frames in 976 driving ticks to 49 on map 49's
+lap, and its test's limit from five per hundred to six.
+
 ## When it stops being enough
 
 A map where what is left matters. One with fused ground could trade some
