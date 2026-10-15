@@ -8,7 +8,7 @@ fit wait for the next `PlayBGM`**, which silences the old track and
 completes the package.
 
 It is from 2026-09-26, with the per-package budget (see
-[A single sample bank](../optimizations/the-sample-bank.md)), and taro
+[A single sample bank](../optimizations/lossless/audio/the-sample-bank.md)), and taro
 decided it by choosing option A of step 6 of the task
 [`quality-of-the-music`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/quality-of-the-music.md) in the-advocate-work.
 

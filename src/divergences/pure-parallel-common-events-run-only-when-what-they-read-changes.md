@@ -62,4 +62,4 @@ expensive enough to matter on the frames it does run.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [The pure parallel common events run only when what they read changes](../optimizations/lossless.md#the-pure-parallel-common-events-run-only-when-what-they-read-changes), in Optimizations.
+What it saves, and where it lives in the code: [The pure parallel common events run only when what they read changes](../optimizations/lossless/events.md#the-pure-parallel-common-events-run-only-when-what-they-read-changes), in Optimizations.

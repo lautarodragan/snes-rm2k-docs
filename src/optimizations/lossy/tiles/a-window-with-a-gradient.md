@@ -1,6 +1,6 @@
 # A window with a gradient, fused until it fits
 
-A lossy optimization —see [Lossy](lossy.md)—: what the console does
+A lossy optimization —see [Lossy](../../lossy.md)—: what the console does
 with a System whose windows do not fit their bank of tiles.
 
 **A System whose windows don't fit their bank of tiles is drawn with
@@ -44,7 +44,7 @@ byte for byte the same.
 ## The ways that were not taken
 
 Two other ways were tried and measured on 2026-10-11, with the four games
-—they are also in [Tried and left out](tried-and-left-out.md)—:
+—they are also in [Tried and left out](../../tried-and-left-out.md)—:
 
 * **A tiled background instead of a stretched one.** Not enough, and it
   shows more. With the background tiled, the message window's frame still
@@ -73,5 +73,5 @@ that change pixels are Adeleine's.
 
 Since 2026-10-12 a game can skip all of this for a System by giving it
 a background of its own: see [The windows' background is the project's, by
-System](../decisions/the-windows-background-is-the-projects-by-system.md). The fusing
+System](../../../decisions/the-windows-background-is-the-projects-by-system.md). The fusing
 stays for the Systems that keep theirs.

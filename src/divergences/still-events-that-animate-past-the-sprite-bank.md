@@ -78,4 +78,4 @@ fewer events wanting a slot at once.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Still events that animate past the sprite bank](../optimizations/lossy.md#still-events-that-animate-past-the-sprite-bank), in Optimizations.
+What it saves, and where it lives in the code: [Still events that animate past the sprite bank](../optimizations/lossy/events.md#still-events-that-animate-past-the-sprite-bank), in Optimizations.

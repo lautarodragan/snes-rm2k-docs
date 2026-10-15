@@ -50,4 +50,4 @@ shapes, but not most of its cells: the open sea moves.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [A ChipSet animation that does not fit in WRAM stands still in part](../optimizations/lossy.md#a-chipset-animation-that-does-not-fit-in-wram-stands-still-in-part), in Optimizations.
+What it saves, and where it lives in the code: [A ChipSet animation that does not fit in WRAM stands still in part](../optimizations/lossy/tiles.md#a-chipset-animation-that-does-not-fit-in-wram-stands-still-in-part), in Optimizations.

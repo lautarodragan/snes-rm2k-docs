@@ -26,7 +26,7 @@ writes            --dsp_music-->        the SPC700 driver
   `musicdata.inc`: `BOOT_FRAMES_FLOOR` (`runtime/far_ram.s`) or the
   estimate for the boot map's package, whichever is larger. See [boot is
   sized for the boot
-  package](../optimizations/lossless.md#boot-is-sized-for-the-boot-package).
+  package](../optimizations/lossless/audio.md#boot-is-sized-for-the-boot-package).
 - **The stream is per note**: notes, releases, changes of volume or pitch,
   and waits, which the 65816 expands into the same writes that used to go
   in the stream. The format is in "the per-note format" in `stream.rs`, and
@@ -54,7 +54,7 @@ writes            --dsp_music-->        the SPC700 driver
 - **A single sample bank for the whole cartridge, uploaded in packages, one
   per map**, and each sample with the budget of its worst package: `Bank`
   and `allocate` in `bank.rs`, and the reason in [a single sample
-  bank](../optimizations/the-sample-bank.md). `package_load`
+  bank](../optimizations/lossless/audio/the-sample-bank.md). `package_load`
   (`runtime/audio_package.s`) uploads it while the music plays; if
   the theme that is playing and the new package don't fit together, the
   theme wins: [the playing theme wins and the effects

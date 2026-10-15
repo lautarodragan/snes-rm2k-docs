@@ -34,4 +34,4 @@ draw it. See
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Battle animations on the map, shrunk to a box](../optimizations/lossy.md#battle-animations-on-the-map-shrunk-to-a-box), in Optimizations.
+What it saves, and where it lives in the code: [Battle animations on the map, shrunk to a box](../optimizations/lossy/pictures-and-animations.md#battle-animations-on-the-map-shrunk-to-a-box), in Optimizations.

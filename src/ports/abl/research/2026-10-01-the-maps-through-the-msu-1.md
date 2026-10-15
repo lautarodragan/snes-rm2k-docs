@@ -173,7 +173,7 @@ block table.
 
 **The poses can't come from the `.msu`.** They are uploaded when a
 character changes pose, in vblank ([the poses are uploaded on the
-fly](../../../optimizations/poses-on-the-fly.md)), and having
+fly](../../../optimizations/lossless/characters-and-sprites/poses-on-the-fly.md)), and having
 them at hand would require copying them to WRAM on entering: with 26 NPCs
 of twelve poses that is hundreds of KB. They are 941 KB of the whole game
 and they stay in the ROM.

@@ -206,7 +206,7 @@ largest:
   known problem: 2, `DisableSaving`, is parallel with no switch (see
   `party_common_events` in `indices.rs`).
 * **A shared `CallEvent`**: the compiler pastes the call in place
-  ([decisiones/call-event-is-compiled-inline.md](../optimizations/common-event-calls.md#pasted-in-place)),
+  ([decisiones/call-event-is-compiled-inline.md](../optimizations/lossless/events/common-event-calls.md#pasted-in-place)),
   and the console calls in cascade: 21 calls 25 eighteen times, which
   calls eight of 23 to 31 per color. **Pasted, 39 is 140,193 commands**;
   25 alone, compiled today, is 14,947 bytes. What's needed is an

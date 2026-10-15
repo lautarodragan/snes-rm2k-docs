@@ -12,7 +12,7 @@ it goes up. It was built: the poses compress well, but decompressing one
 costs a large slice of a frame in the main loop, and the test suite lost
 frames —the race ran slower, and tests went red—. The poses stay raw, and
 what was saved instead came from storing them [without their empty
-tiles](lossless.md#a-pose-goes-up-without-its-empty-tiles).
+tiles](lossless/characters-and-sprites.md#a-pose-goes-up-without-its-empty-tiles).
 
 - **More**: [The S-DD1, for the poses](../research/2026-10-11-the-s-dd1.md),
   [Fitting the whole game in 8 MB](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).
@@ -58,7 +58,7 @@ defects of the implementation:
   layer between the floor and the hero, so the only one is above. It is
   what FF5 does, and taro did not like it.
 
-Translucent events are [baked](lossy.md#translucent-events-are-baked)
+Translucent events are [baked](lossy/events.md#translucent-events-are-baked)
 instead. **It is a decision about that one thing, not a ban on colour
 math**: translucent pictures in sprites use it, since 2026-10-02 —there
 blending is on only in object palettes 4 to 7, so the hero and the events
@@ -79,14 +79,14 @@ goes into `tests/rpgmaker/test_cores.py` in the ABL port.
 ### Fusing a gradient window's colours, or whole windows
 
 Before [a window with a gradient is fused until it
-fits](lossy.md#a-window-with-a-gradient-is-fused-until-it-fits), three
+fits](lossy/tiles.md#a-window-with-a-gradient-is-fused-until-it-fits), three
 other ways were tried: fusing colours until the tiles fit, which left
 windows with four colours or two; a tiled background instead of a
 stretched one, which was not enough and drew a sawtooth all over the
 window; and fusing whole windows with a k-means, which fit but broke
 frames.
 
-- **More**: [A window with a gradient, fused until it fits](a-window-with-a-gradient.md#the-ways-that-were-not-taken).
+- **More**: [A window with a gradient, fused until it fits](lossy/tiles/a-window-with-a-gradient.md#the-ways-that-were-not-taken).
 
 ### Calling every common event into a shared body
 
@@ -95,7 +95,7 @@ map requests a refresh on every variable write, and in a page that runs
 every frame that left half of Lashe City at thirty frames per second.
 Parallel pages paste the body in place.
 
-- **More**: [CallEvent: a shared body, or pasted in place](common-event-calls.md#why).
+- **More**: [CallEvent: a shared body, or pasted in place](lossless/events/common-event-calls.md#why).
 
 ### Refreshing before every command
 
@@ -114,5 +114,5 @@ tiles repeat byte for byte between maps, because each map quantizes its
 own palette; and a shared pool did not fit in any VRAM layout.
 
 - **More**: [Graphics and sound, from RM2k to the SNES](../research/graphics-and-sound-from-rm2k-to-the-snes.md),
-  [Only the tiles the map draws go to VRAM](lossless.md#only-the-tiles-the-map-draws-go-to-vram),
+  [Only the tiles the map draws go to VRAM](lossless/the-map.md#only-the-tiles-the-map-draws-go-to-vram),
   [Fitting the whole game in 8 MB](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).

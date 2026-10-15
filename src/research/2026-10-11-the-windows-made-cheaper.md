@@ -94,7 +94,7 @@ else (`checks.rs` in `rm2k-snes-screens`). And the background of a
 window is stretched as RM2k stretches it, so a gradient is a different
 cell on every row of every window: that is what made the four surveyed
 games fuse their windows ([A window with a gradient is fused until it
-fits](../optimizations/a-window-with-a-gradient.md)).
+fits](../optimizations/lossy/tiles/a-window-with-a-gradient.md)).
 
 The Systems of the eight games, as their windows use them:
 

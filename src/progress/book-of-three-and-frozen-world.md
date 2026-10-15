@@ -46,7 +46,7 @@ Of the causes ranked below:
   bytes instead of a paste, with an eight-level stack, and the map's
   bytecode goes from 386,706 bytes to 57,261 —one bank of the cartridge
   instead of six—, with no page anywhere near the 64 KB a jump reaches.
-  See [CallEvent: a shared body, or pasted in place](../optimizations/common-event-calls.md)
+  See [CallEvent: a shared body, or pasted in place](../optimizations/lossless/events/common-event-calls.md)
   and the task
   [`callevent-as-a-real-call`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/callevent-as-a-real-call.md).
 * **Still open**: Frozen World's combat on map 1 as played —nobody has

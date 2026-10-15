@@ -38,7 +38,7 @@ banks have the shape of two LoROM banks, so the readers didn't change:
 the pointer used to point into the cartridge, now it points into WRAM. A
 battle overwrites the `$7F` half, and `back_from_battle` decompresses it
 again. What reserving that RAM cost and how it is reverted:
-[the grid lives in WRAM](../optimizations/the-grid-in-wram.md).
+[the grid lives in WRAM](../optimizations/lossless/the-map/the-grid-in-wram.md).
 
 The same happens with the tiles of the background, of the layer above, of
 the sprites, and with the drawings of the ChipSet animation: they travel as

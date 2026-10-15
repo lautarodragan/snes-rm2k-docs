@@ -96,4 +96,4 @@ in `tasks/` in the-advocate-work.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Big pictures in mode 1, 105 colours](../optimizations/lossy.md#big-pictures-in-mode-1-105-colours), in Optimizations.
+What it saves, and where it lives in the code: [Big pictures in mode 1, 105 colours](../optimizations/lossy/pictures-and-animations.md#big-pictures-in-mode-1-105-colours), in Optimizations.

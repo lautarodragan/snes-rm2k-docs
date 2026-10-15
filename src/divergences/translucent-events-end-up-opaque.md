@@ -6,7 +6,7 @@ RM2k's "Trans" draws the event at 160 out of 255 over whatever is behind it.
 Here that blend is computed at conversion time and is **baked** into the
 graphic, which is exact in a still picture and opaque in motion. Why it can
 be done is in
-[Translucent events are baked](../optimizations/lossy.md#translucent-events-are-baked).
+[Translucent events are baked](../optimizations/lossy/events.md#translucent-events-are-baked).
 
 What is lost:
 
@@ -41,4 +41,4 @@ In this game there are none; in another, the way out is color math.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Translucent events are baked](../optimizations/lossy.md#translucent-events-are-baked), in Optimizations.
+What it saves, and where it lives in the code: [Translucent events are baked](../optimizations/lossy/events.md#translucent-events-are-baked), in Optimizations.

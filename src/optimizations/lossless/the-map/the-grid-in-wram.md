@@ -1,6 +1,6 @@
 # The grid lives in WRAM
 
-A lossless optimization —see [Lossless](lossless.md)—, and the one of them that was taken as a trial: it says how to know it needs reverting, and how.
+A lossless optimization —see [Lossless](../../lossless.md)—, and the one of them that was taken as a trial: it says how to know it needs reverting, and how.
 
 ## What
 
@@ -89,7 +89,7 @@ used.
 
 **Since 2026-10-01 the block table, its passability and the events'
 bytecode depend on this**: they live in WRAM right behind the grid, and
-`lz2_grid` decompresses them along with it (see [Maps](../internals/maps.md)). Reverting the grid also requires returning them to the
+`lz2_grid` decompresses them along with it (see [Maps](../../../internals/maps.md)). Reverting the grid also requires returning them to the
 cartridge, uncompressed: in `rm2k-snes-mapdata`, take `map_ram` and
 `map_code` out of `COMPRESSED_KINDS` and store them again as standalone
 blocks with their labels in the register and in the page table; and in the

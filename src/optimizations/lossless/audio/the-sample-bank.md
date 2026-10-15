@@ -1,8 +1,8 @@
 # A single sample bank
 
 How the music's samples share the cartridge and the ARAM. Sharing
-them is [lossless](lossless.md#a-single-sample-bank-uploaded-in-packages-per-map);
-the rate each one gets is [lossy](lossy.md#each-sample-at-the-rate-its-worst-package-allows).
+them is [lossless](../audio.md#a-single-sample-bank-uploaded-in-packages-per-map);
+the rate each one gets is [lossy](../../lossy/audio.md#each-sample-at-the-rate-its-worst-package-allows).
 
 ## What
 
@@ -30,7 +30,7 @@ of the same step, chosen by taro). What goes to the ARAM is never the bank
 but a package, so what has to fit in the 64 KB is each package with its
 sound effects, and the track that may come playing from the previous map
 (see
-[the-playing-track-wins-and-the-sound-effects-wait](../decisions/the-playing-track-wins-and-the-sound-effects-wait.md)).
+[the-playing-track-wins-and-the-sound-effects-wait](../../../decisions/the-playing-track-wins-and-the-sound-effects-wait.md)).
 Until that day the **whole** bank had to fit, and nineteen of `release`'s
 thirty-two tracks didn't bring any programs of their own.
 

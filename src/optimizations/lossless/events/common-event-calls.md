@@ -1,6 +1,6 @@
 # CallEvent: a shared body, or pasted in place
 
-Two lossless optimizations —see [Lossless](lossless.md)— for RM2k's
+Two lossless optimizations —see [Lossless](../../lossless.md)— for RM2k's
 `CallEvent`, which in RM2k pushes another frame on the interpreter's
 stack. The port has one such stack, the foreground interpreter's: a call
 is a call when that interpreter runs it and the callee is a body the
@@ -158,7 +158,7 @@ compile and call.
 **10 calls** are made for real, on four maps —9, 11, 114 and one more— and
 216 are still skipped, almost all to common events that stop at
 `ControlVars` and at the original's own menus: that has its own page in
-[a-skipped-call](../divergences/a-skipped-call.md).
+[a-skipped-call](../../../divergences/a-skipped-call.md).
 
 The price in cartridge is **+608 bytes of bytecode in the whole game,
 +0.9%**, and three maps take it: 11 (+344), 9 (+195) and 114 (+69).

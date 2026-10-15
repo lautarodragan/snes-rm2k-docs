@@ -1,6 +1,6 @@
 # Poses are uploaded on the fly
 
-A lossless optimization —see [Lossless](lossless.md)—: how the characters fit in the 512 object tiles the PPU addresses.
+A lossless optimization —see [Lossless](../../lossless.md)—: how the characters fit in the 512 object tiles the PPU addresses.
 
 ## What
 
@@ -44,7 +44,7 @@ losing anything: 52% of the poses' 8x8 tiles are fully transparent —the
 the cartridge stored them all. Now **a pose is a 16-bit mask of the tiles
 that draw something, and only those tiles**: 571 KB less in the whole
 game, 395 KB in `release`. Measured in
-[the research of that day](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).
+[the research of that day](../../../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).
 
 The object still reads its sixteen tiles, so **an empty one is zeroed in
 the slot**, not skipped: skipping it would mean smaller objects, which is
