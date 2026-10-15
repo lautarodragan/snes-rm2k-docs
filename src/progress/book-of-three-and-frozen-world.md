@@ -18,7 +18,7 @@ after the branch on an actor's HP (Calandria, the same day):
 | | maps | common events | troop pages |
 |---|---|---|---|
 | **Book of Three** | 1,282 of 1,282 | 25 of 25 | 651 of 746 (the other 95 are empty) |
-| **Frozen World** | 3,871 of 3,891 (maps 1 and 2 still out) | 94 of 100 | 0 of 80 (all empty) |
+| **Frozen World** | 3,871 of 3,891 (maps 1 and 2 still out; map 2 came in later that day, not counted here) | 94 of 100 | 0 of 80 (all empty) |
 
 Of the causes ranked below:
 
@@ -32,7 +32,13 @@ Of the causes ranked below:
   `Reraise KO'd chars`, the last common event left out), and the elemental
   attributes in battle (Chajá, the same day: see
   [What attributes do not model](../divergences/what-attributes-do-not-model.md)).
-* **Still open**: Frozen World's combat on maps 1 and 2, the switches past
+* **Map 2 of Frozen World is in** since later on 2026-10-15 (Carpintero):
+  a map whose code does not fit in WRAM keeps it in the cartridge, which
+  also let map 3 back after the teleport boxes. Map 1 now gets past its
+  flash and its code (347,625 bytes, six banks of the cartridge) and stops
+  at its music: draft
+  [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
+* **Still open**: Frozen World's combat on map 1, the switches past
   1,023, `ChangeMapTileset`, `ChangeActorFace`, and the HP percentages past
   327 HP (16-bit variables).
 

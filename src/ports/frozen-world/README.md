@@ -7,21 +7,20 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **There is no combat**: maps 1 ("Battle Screen") and 2 ("Plate
-  Placement") are the game's fighting, run by events, and they are not in
-  the cartridge. The 324 pages on 72 maps that would take the hero to one
-  of them show a box, `Teleport to missing map 1` or `2`, where the jump
+* **There is no combat**: map 1 ("Battle Screen") is the game's fighting,
+  run by events, and it is not in the cartridge: it stops at its music,
+  which does not fit in the sound chip's memory. The pages that would take
+  the hero to it show a box, `Teleport to missing map 1`, where the jump
   was (see [a teleport to a map not
   carried](../../divergences/a-teleport-to-a-map-not-carried.md)), and
   the level-ups, steal and study skills that only the fights call are not
   reached (read in the data, not played; see [what is left
-  out](../../progress/book-of-three-and-frozen-world.md)).
-  Drafts: [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md) (map 1) and
-  [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 2).
-* **The cartridge does not build with the teleport boxes**: the pages that
-  used to be left out now compile, and map 3's code stream is 29,912 bytes
-  against the 19,968 that fit in WRAM. Draft:
-  [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md).
+  out](../../progress/book-of-three-and-frozen-world.md)). Draft:
+  [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
+* **Map 2 ("Plate Placement") is in, not played**, and some plates may
+  keep the graphic they had where a route changes it: twenty of those
+  changes find the ROM's table full and are ignored. Draft:
+  [`frozen-world-map-2-route-graphic-changes-past-the-table`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-2-route-graphic-changes-past-the-table.md).
 * **Events whose page asks for a switch past the 1024th may pick the
   wrong page**: 45 pages on 27 maps ask for one, and the console reads
   that switch from other RAM. Which ones show was not looked at. Draft:
@@ -44,6 +43,8 @@ Two maps, and the project now takes every map of the game:
   rangedmelee[0], which an NPC of the map also uses. On the console they
   share a palette and both would flash".
 - **2**: "a stream of map_code is 38179 bytes and 19968 fit in WRAM".
+  Since 2026-10-15 it is in: a map whose code does not fit in WRAM keeps
+  it in the cartridge.
 
 The cap on the maps (`below`), which the survey set because the sample
 directory went past 255, is gone: that limit degrades now. Since later
