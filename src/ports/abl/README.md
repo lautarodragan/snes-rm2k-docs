@@ -25,6 +25,9 @@ in the [divergences](../../divergences/README.md), not here.
   the original starts the rain, and the port does not draw it —the map's
   sprite palettes have no room for the drops—. Draft:
   [`abl-it-does-not-rain-in-paradise`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-it-does-not-rain-in-paradise.md).
+* **Paradise Burning's flames stand still** (map 148): its sixty-one fires
+  flicker in the original and are drawn on one frame. Draft:
+  [`abl-the-sixty-one-torches-of-map-148-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-the-sixty-one-torches-of-map-148-stand-still.md).
 
 ## The port
 
