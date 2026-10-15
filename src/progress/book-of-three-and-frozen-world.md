@@ -35,12 +35,16 @@ Of the causes ranked below:
 * **Map 2 of Frozen World is in** since later on 2026-10-15 (Carpintero):
   a map whose code does not fit in WRAM keeps it in the cartridge, which
   also let map 3 back after the teleport boxes. Map 1 now gets past its
-  flash and its code (347,625 bytes, six banks of the cartridge) and stops
-  at its music: draft
+  flash and its code (347,625 bytes, six banks of the cartridge), and since
+  later that day past its music too (Aguará): its audio package does not
+  fit in the ARAM, so its six battle themes are uploaded by their `PlayBGM`
+  and 25 of its 41 sound effects are left out of the map, both in
+  `degradations.json`. **Every map of the game is in the cartridge.** Task
   [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
-* **Still open**: Frozen World's combat on map 1, the switches past
-  1,023, `ChangeMapTileset`, `ChangeActorFace`, and the HP percentages past
-  327 HP (16-bit variables).
+* **Still open**: Frozen World's combat on map 1 as played —nobody has
+  fought yet—, the switches past 1,023, `ChangeMapTileset`,
+  `ChangeActorFace`, and the HP percentages past 327 HP (16-bit
+  variables).
 
 taro's question, after the same one for A Blurred Line: what is left out of
 these two games, by which variant of each command, and what fixing it would

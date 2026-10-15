@@ -7,15 +7,14 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **There is no combat**: map 1 ("Battle Screen") is the game's fighting,
-  run by events, and it is not in the cartridge: it stops at its music,
-  which does not fit in the sound chip's memory. The pages that would take
-  the hero to it show a box, `Teleport to missing map 1`, where the jump
-  was (see [a teleport to a map not
-  carried](../../divergences/a-teleport-to-a-map-not-carried.md)), and
-  the level-ups, steal and study skills that only the fights call are not
-  reached (read in the data, not played; see [what is left
-  out](../../progress/book-of-three-and-frozen-world.md)). Draft:
+* **In a fight the music starts after a pause, and most of the battle
+  screen's sound effects are silent.** Map 1 ("Battle Screen") is in the
+  cartridge since 2026-10-15, but its music does not fit in the sound
+  chip's memory: each of its six battle themes is uploaded when the fight
+  starts it, with the picture frozen for about a second, and 25 of its 41
+  sound effects —the ones at the end of its list: `Cold8`, `Holy5`,
+  `Pollen`… `Buzzer2`— are left out and do not play there (read in the
+  build's `degradations.json`, not played; nobody has fought yet). Task:
   [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
 * **Map 2 ("Plate Placement") is in, not played**, and some plates may
   keep the graphic they had where a route changes it: twenty of those
@@ -32,7 +31,10 @@ Two maps, and the project now takes every map of the game:
 
 - **1**: "a page makes the hero flash, and actor 11 is drawn with
   rangedmelee[0], which an NPC of the map also uses. On the console they
-  share a palette and both would flash".
+  share a palette and both would flash". Since 2026-10-15 it is in: the
+  flash became a warning, its code stays in the cartridge, and its audio
+  package —six songs and forty-one sound effects— is relieved instead of
+  stopping the build (see "Known issues", above).
 - **2**: "a stream of map_code is 38179 bytes and 19968 fit in WRAM".
   Since 2026-10-15 it is in: a map whose code does not fit in WRAM keeps
   it in the cartridge.
