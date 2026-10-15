@@ -25,10 +25,6 @@ as text.
   the battle pauses for as long as the animation would last, and then the
   fight ends as in the original. See
   [What troop pages do not model](../../divergences/what-troop-pages-do-not-model.md).
-* **Talking to Hen Wen a second time does nothing**, in Caer Dallben
-  East: the page turns the hero away with a move command the port does not
-  compile. Draft:
-  [`book-of-three-hen-wens-second-talk-does-nothing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-hen-wens-second-talk-does-nothing.md).
 
 ## Its walkthrough
 

@@ -106,7 +106,9 @@ of its routine.
 | The movement types —random, vertical, horizontal, toward the hero and away from him—: a route of one command that repeats, and the step it decides | `walk_choose`, `walk_blocked`, `walk_may_take`, in `walk_by_type.s`, from `ev_route_frame` | `route::own` and `ROUTE_BY_TYPE`, in the compiler |
 | The route frequency, and facing the hero | `step_route`, `toward_hero`, `after_step`, `after_turn` | `wait_after_step`, `wait_after_turn`, in `rm2k-snes-mapdata` |
 | Frequency goes up and down in the middle of a route (orders 30 and 31) | `step_route` | `route::min_frequency`, in the compiler |
-| Diagonals, and which way they leave the character facing | `cell_allowed_diag`, `face_diagonal` | — |
+| Diagonals, and which way they leave the character facing: an event's and, since 2026-10-14, the hero's | `cell_allowed_diag`, `face_diagonal`, `try_diagonal` | — |
+| The relative turns (16 to 20) and moving forward (11), from where the character faces | `turn_relative`, `facing_now`, `forward` and `relative` in `step_route` | — |
+| On the hero, what looks at the hero looks at himself: toward is down and away is up | — | `route::on_hero`, in the compiler |
 | Changing the graphic in the middle of a route (order 34) | `load_route_graphics`, `refresh_npc` | `Graphics`, in the compiler |
 | Collision with events | `cell_blocked`, `event_crossable` | — |
 | The graphic follows the page, and the tile rules over the terrain | `page_graphic`, `pass_with_event`, `fit_npc` | `drawable_npcs`, in `wally` |
