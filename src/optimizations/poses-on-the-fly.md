@@ -1,5 +1,7 @@
 # Poses are uploaded on the fly
 
+A lossless optimization —see [Lossless](lossless.md)—: how the characters fit in the 512 object tiles the PPU addresses.
+
 ## What
 
 **One pose per character lives in VRAM.** The twelve poses of each

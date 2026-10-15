@@ -63,7 +63,7 @@ gradient's average colour.
   window's frame took 28 tiles of 16, the actor choice's windows 158 of
   64, the shop's 166 of 96, and the item and equipment windows had to
   leave 160 pairs to their text; all of them are fused —[A window with a
-  gradient is fused until it fits](../../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—.
+  gradient is fused until it fits](../../optimizations/a-window-with-a-gradient.md)—.
 - **The ROM doesn't**: "a piece of 65536 bytes needs a new bank, and the
   127 banks the cartridge has for data are taken". It keeps A Blurred
   Line's System, which builds.

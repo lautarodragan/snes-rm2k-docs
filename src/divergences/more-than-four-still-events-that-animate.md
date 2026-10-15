@@ -4,7 +4,7 @@
 
 A still event with continuous animation stops sharing the VRAM slot of its
 (CharSet, index, pose) and needs **all twelve poses of its own**, like the
-ones that walk. The cap is `ANIMATES_STILL_MAX` in `tools/port/sprites.py` in
+ones that walk. The cap is `ANIMATES_STILL_MAX` in `rm2k-snes/wally/src/moves.rs` in
 the-advocate, and it is **per map and all or nothing**: with more of those, the
 map animates none of them. In RM2k they all animate.
 
@@ -27,3 +27,7 @@ On map 52 the still events that animate in RM2k are still.
 A map over the cap that does matter. There you have to look at that map's
 sprite budget and raise the cap, not change the rule: the converter stops
 with the number in the message if they do not fit.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [More than four still events that animate](../optimizations/lossy.md#more-than-four-still-events-that-animate), in Optimizations.

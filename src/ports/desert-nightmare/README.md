@@ -34,7 +34,7 @@ maps was looked at in an emulator.
 
 Since later on 2026-10-11 it builds with its own System: End Game's
 colours are merged until its pairs fit the palette —[A window with a
-gradient is fused until it fits](../../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md)—.
+gradient is fused until it fits](../../optimizations/a-window-with-a-gradient.md)—.
 
 ## The empty party (2026-10-10)
 

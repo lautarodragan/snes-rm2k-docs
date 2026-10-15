@@ -49,3 +49,7 @@ objects.
 ## How to reproduce it
 
 `wally map` on the map's request with `"decorative": true`.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Decorative events become background](../optimizations/lossy.md#decorative-events-become-background), in Optimizations.
