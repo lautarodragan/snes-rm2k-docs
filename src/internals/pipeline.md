@@ -58,7 +58,11 @@ is lost, and where, as precisely as whoever lost it knows:
   its `code` and `name`; `page` is null when a whole event is lost;
 - **a pasted body**: a common event, or another event's page, that a
   `CallEvent` pastes into the page goes in `via`, with the command each
-  one was at, under the call's command;
+  one was at, under the call's command. A `CallEvent` compiled as a call
+  —`OP_CALL`, `OP_CALL_PAGE`— has no `via`: the callee's losses are its
+  own, under the common event or the page it is, and the call's own loss,
+  if any, is at the call —a callee with no code, `call-skipped`; a chain
+  deeper than the console's call stack, `call-stack-exceeded`—;
 - **a common event** that runs as a shared body or a parallel one:
   `common` and its `command`, and the file's `commons` says how it runs
   —its trigger and switch— and which pages call it;
