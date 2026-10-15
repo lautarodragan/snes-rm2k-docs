@@ -28,11 +28,13 @@ Of the causes ranked below:
   random range, the literal backslash, `\V` in a choice option and before an
   `InputNumber`, `ControlVars` from an item count, the choice's cancel
   branch (it was never a fifth option), the hero's moves in a route
-  (Hen Wen's second talk), and the branch on an actor's HP (Book of Three's
-  `Reraise KO'd chars`, the last common event left out).
+  (Hen Wen's second talk), the branch on an actor's HP (Book of Three's
+  `Reraise KO'd chars`, the last common event left out), and the elemental
+  attributes in battle (Chajá, the same day: see
+  [What attributes do not model](../divergences/what-attributes-do-not-model.md)).
 * **Still open**: Frozen World's combat on maps 1 and 2, the switches past
-  1,023, `ChangeMapTileset`, `ChangeActorFace`, the HP percentages past
-  327 HP (16-bit variables), and the elemental attributes in battle.
+  1,023, `ChangeMapTileset`, `ChangeActorFace`, and the HP percentages past
+  327 HP (16-bit variables).
 
 taro's question, after the same one for A Blurred Line: what is left out of
 these two games, by which variant of each command, and what fixing it would

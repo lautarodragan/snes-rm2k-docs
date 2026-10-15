@@ -47,3 +47,5 @@ By date:
 - [The skills menu](2026-10-12-the-skills-menu.md) — 2026-10-12
 - [The zoom, baked at run time](2026-10-12-the-zoom-baked-at-run-time.md)
   — 2026-10-12
+- [Frozen World's battle system](2026-10-15-frozen-worlds-battle-system.md)
+  — 2026-10-15

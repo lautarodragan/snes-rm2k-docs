@@ -122,6 +122,7 @@
         - [What the enemies' AI does not model](divergences/what-the-enemies-ai-does-not-model.md)
         - [What troop pages do not model](divergences/what-troop-pages-do-not-model.md)
         - [What battle conditions do not model](divergences/what-battle-conditions-do-not-model.md)
+        - [What attributes do not model](divergences/what-attributes-do-not-model.md)
     - [Other screens]()
         - [What the Game Over screen does not model](divergences/what-the-game-over-screen-does-not-model.md)
         - [What the End Game screen does not model](divergences/what-the-end-game-screen-does-not-model.md)
@@ -148,6 +149,7 @@
     - [The skills menu](research/2026-10-12-the-skills-menu.md)
     - [The zoom, baked at run time](research/2026-10-12-the-zoom-baked-at-run-time.md)
     - [What the compiler ignores silently](research/2026-10-14-what-the-compiler-ignores-silently.md)
+    - [Frozen World's battle system](research/2026-10-15-frozen-worlds-battle-system.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)
