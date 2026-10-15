@@ -106,6 +106,7 @@
         - [A loop that never waits does not compile](divergences/a-loop-that-never-waits-does-not-compile.md)
         - [What ChangeExp and ChangeLevel do not model](divergences/what-changeexp-and-changelevel-do-not-model.md)
         - [The save does not keep the events](divergences/the-save-does-not-keep-the-events.md)
+        - [What a map's permissions do not model](divergences/what-a-maps-permissions-do-not-model.md)
     - [Messages and windows]()
         - [The message window takes 10 KB of VRAM](divergences/the-message-window-takes-10-kb-of-vram.md)
         - [The window takes thirteen colors from every background](divergences/the-window-takes-thirteen-colors-from-every-background.md)
