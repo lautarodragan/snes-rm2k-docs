@@ -28,6 +28,17 @@ cost of every operation for one sentinel.
 * What is lost is the exact value: a game that sets 999999 and then shows
   it with `\V[n]`, or compares it against something above 32,767, sees
   something else. No page of A Blurred Line does.
+* Multiplying clamps to the word, as RM2k clamps to its own range: the
+  product is taken whole, in 32 bits, and what passes 32,767 or -32,768
+  stays at the edge (easyrpg's `VarMult`). Dividing and the modulo cannot
+  leave the word, except -32,768 / -1, which clamps the same way. What
+  is lost is a product that a later command brings back into range: The
+  Frozen World's HP percentages are the HP times 100 divided by the
+  maximum, and with more than 327 HP the product stays at 32,767, so the
+  percentage comes out low. That is the combat, which is not in the
+  cartridge yet. The compiler is the same `ControlVars`; the ROM,
+  `var_arith` in `runtime/variable_arithmetic.s`; the test,
+  `test_multiply_divide_and_modulo_are_rm2ks`.
 * The gold copied into a variable was already capped at 32,767 —`op_var`,
   in `runtime/interpreter_variables.s` in the-advocate—, for the same
   reason: Sern's forge, which keeps the party's gold in a variable while
