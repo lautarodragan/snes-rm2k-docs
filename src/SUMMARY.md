@@ -9,6 +9,10 @@
     - [The engine against RPG Maker 2000](progress/engine-vs-rm2k.md)
     - [The Book of Three and The Frozen World](progress/book-of-three-and-frozen-world.md)
 - [How it is tested](testing.md)
+- [Optimizations](optimizations/README.md)
+    - [Lossless](optimizations/lossless.md)
+    - [Lossy](optimizations/lossy.md)
+    - [Tried and left out](optimizations/tried-and-left-out.md)
 
 - [Internals](internals/README.md)
     - [The pipeline](internals/pipeline.md)
