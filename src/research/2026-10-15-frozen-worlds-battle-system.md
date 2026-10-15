@@ -254,7 +254,7 @@ the ports at `0ddf815`:
   sprite cache are what is short.
 * **WRAM**: no room for 60 to 90 KB of code. The grid, the loading buffer
   and the battle scene own the upper halves of both banks
-  ([The grid lives in WRAM](../decisions/the-grid-lives-in-wram.md)).
+  ([The grid lives in WRAM](../optimizations/the-grid-in-wram.md)).
 * **The screen is 256 wide and RM2k's 320**: map 1 is 20 cells across and
   the cartridge shows 16. The battle's people are between columns 2 and
   15, so it fits; the `CommandData` and removers stand at 17 to 19 and

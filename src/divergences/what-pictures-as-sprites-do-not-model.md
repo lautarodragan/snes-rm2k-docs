@@ -51,3 +51,7 @@ and the battle animation's box the eighth.
 When 207 gets into the cartridge —the smoke is the only translucent one
 that is looked at up close— or the portable console, which shows nine at
 once.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Pictures in sprites: scaled, fifteen colours](../optimizations/lossy.md#pictures-in-sprites-scaled-fifteen-colours), in Optimizations.

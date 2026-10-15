@@ -41,3 +41,7 @@ walls, and that after another one takes its slot walks on its own or gets
 pushed: it would walk with what its page says. And a map with more than
 twelve moving at once, where the route that finds no slot is lost without
 warning, as always.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Finished routes give up their slot](../optimizations/lossless.md#finished-routes-give-up-their-slot), in Optimizations.

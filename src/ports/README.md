@@ -6,7 +6,7 @@ is a whole project**:
 
 - **`rm2k-snes.toml`**: what the game decides —its name and title, which
   maps go in which cartridge, the starting map, the knobs (see [What a game
-  can choose](../fitting.md#what-a-game-can-choose))—. The tools find the
+  can choose](../optimizations/lossy.md#what-a-game-can-choose))—. The tools find the
   project by looking for this file upwards from where they run, the way
   cargo finds its `Cargo.toml`, so everything is run from the game's
   directory.

@@ -23,3 +23,7 @@ left without a box because of the timer was 9.
 
 The characters on those maps may have an extra merged color or two; the
 converter writes down each map's merges next to the ROM.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Seven palettes on a map with battle animations](../optimizations/lossy.md#seven-palettes-on-a-map-with-battle-animations), in Optimizations.

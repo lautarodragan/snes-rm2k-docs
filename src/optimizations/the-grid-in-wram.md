@@ -1,5 +1,7 @@
 # The grid lives in WRAM
 
+A lossless optimization —see [Lossless](lossless.md)—, and the one of them that was taken as a trial: it says how to know it needs reverting, and how.
+
 ## What
 
 **The map's grid is decompressed whole into WRAM when the map loads, and

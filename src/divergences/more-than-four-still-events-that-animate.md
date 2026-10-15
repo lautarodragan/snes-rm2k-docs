@@ -27,3 +27,7 @@ On map 52 the still events that animate in RM2k are still.
 A map over the cap that does matter. There you have to look at that map's
 sprite budget and raise the cap, not change the rule: the converter stops
 with the number in the message if they do not fit.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [More than four still events that animate](../optimizations/lossy.md#more-than-four-still-events-that-animate), in Optimizations.

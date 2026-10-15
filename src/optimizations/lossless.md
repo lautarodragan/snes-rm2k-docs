@@ -48,7 +48,8 @@ two LoROM banks, so the readers did not change.
 - **Where**: `GRID` in `runtime/far_ram.s`, `lz2_grid` in
   `runtime/decompress.s`, `map_ram_pointers` in `record.rs` of
   `rm2k-snes/mapdata/`.
-- **More**: [The grid lives in WRAM](../decisions/the-grid-lives-in-wram.md),
+- **More**: [The grid lives in WRAM](the-grid-in-wram.md), with what it
+  costs, how to know it needs reverting and how;
   [Maps](../internals/maps.md).
 
 ### The map's tiles in LZ2
@@ -66,13 +67,28 @@ big for the buffer goes in two streams.
 ### Only the tiles the map draws go to VRAM
 
 The ROM does not take the whole ChipSet to VRAM, as RM2k does, but the
-unique 8x8 tiles of what the map draws.
+unique 8x8 tiles of what the map draws: the converter renders the map and
+takes the tiles from there. An expanded ChipSet is hundreds of 8x8 tiles,
+and they do not fit in what is left for the background next to the
+message window. Nothing changes on screen: each map draws as in RM2k.
 
-- **Saves**: VRAM; an expanded ChipSet does not fit next to the message
-  window.
-- **Costs**: two maps with the same ChipSet do not share their tiles.
-- **Where**: Wally, `rm2k-snes/wally/`.
-- **More**: [The map takes to VRAM only what it draws](../divergences/the-map-takes-to-vram-only-what-it-draws.md).
+On 2026-09-07, counting only the ids some map of ABL uses, `ChipSet3`
+gave 420 tiles and `BLchp1` 523; map 1 drew 341 and map 2, 278, against
+the 420 of the ChipSet they share, and the pool of the two, 437, fit in no
+VRAM layout of that day. The full count is in [the study on RM2k graphics
+on the SNES](../research/graphics-and-sound-from-rm2k-to-the-snes.md),
+"Sharing tiles between maps".
+
+- **Saves**: VRAM.
+- **Costs**: two maps with the same ChipSet do not share their tiles,
+  which would save cartridge bytes and the VRAM reload between them.
+- **When it stops being enough**: a game whose maps use more distinct
+  background tiles than any layout holds. No layout saves that: VRAM would
+  have to be reloaded while the map scrolls, a different engine from this
+  one —except for a painted map, below—.
+- **Where**: Wally, `rm2k-snes/wally/`; the layout, `vram_layout` in
+  `vram.rs` of `rm2k-snes/mapdata/`.
+- **More**: [The VRAM split](../internals/vram.md).
 
 ### The VRAM layout is chosen map by map
 
@@ -151,7 +167,7 @@ and the PPU addresses 512.
   an NPC waits, never the hero.
 - **Where**: `vram_queue`, `vram_queue_hero` and `vram_drain` in
   `runtime/load_graphics.s`.
-- **More**: [Poses are uploaded on the fly](../decisions/poses-are-uploaded-on-the-fly.md).
+- **More**: [Poses are uploaded on the fly](poses-on-the-fly.md).
 
 ### A pose goes up without its empty tiles
 
@@ -165,7 +181,7 @@ one does not.
 - **Costs**: one word of bank 0's RAM per 32x32 block of the sprite bank.
 - **Where**: `vram_drain` in `runtime/load_graphics.s`; `pose_record` in
   `rm2k-snes/mapdata/`.
-- **More**: [Poses are uploaded on the fly](../decisions/poses-are-uploaded-on-the-fly.md#and-a-pose-goes-up-without-its-empty-tiles).
+- **More**: [Poses are uploaded on the fly](poses-on-the-fly.md#and-a-pose-goes-up-without-its-empty-tiles).
 
 ### Distant still characters take turns on one slot
 
@@ -192,26 +208,47 @@ asking waits without being drawn until someone leaves the screen.
 
 ### The possible leaders share one CGRAM slot
 
-Only one leads at a time, so the possible leaders share a palette, and
-the console uploads the colours of whoever leads. The exception is a
-leader who is also an NPC on that map.
+Only one leads at a time, so giving each possible leader a palette of
+its own would keep it taken by someone who is not on screen: they share
+one, and the console uploads the colours of whoever leads. The exception
+is a leader who is also an NPC on that map —Kersh on ABL's maps 1 and 6,
+Talan on 3—, who gets their own, because both rows are in use at once.
 
 - **Saves**: sprite palettes.
 - **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`.
-- **More**: [The possible leaders share one CGRAM slot](../decisions/the-possible-leaders-share-one-cgram-slot.md).
+- **More**: [The possible leaders are an approximation](../decisions/the-possible-leaders-are-an-approximation.md),
+  who counts as one.
 
 ### The graphics only the hero shows go in the leaders' slot
 
-A graphic only the hero ever shows —`ChangeSpriteAssociation`, move route
-command 34 on the hero— is drawn like a possible leader, with colours of
-its own, instead of being quantized into each map's palettes.
+A graphic only the hero ever shows is drawn like a possible leader: in
+the leaders' CGRAM slot, with colours of its own that the console uploads
+when the hero takes it. Since 2026-10-11. "Only the hero" means no move
+route gives it to an event: the graphics of `ChangeSpriteAssociation`, and
+those of move route command 34 on the hero; the event compiler's scan says
+which graphics a route gives an event (`graphics_on_events`), and the
+converter hands the rest to Wally as `hero_graphics`. One that an event of
+the map also draws as a page graphic is left out: that one needs its
+colours in the map's palette.
 
-- **Saves**: ROM —one pose bank for the whole cartridge instead of one per
-  map— and sprite palettes in every map; and it shows the graphic with its
+Before, they were split among each map's eight sprite palettes like any
+other graphic of command 34, and two things came out of that, measured on
+Vampires Dawn on 2026-10-11: the cartridge carried **a pose bank per map**
+for each of them —a pose bank is the twelve poses as one map quantized
+them—, and they were seen with the wrong colours in most maps. In the
+leaders' slot the bank is the same in every map, and they take no palette
+from the map. On that day's emission request of Vampires Dawn: 1,498 pose
+banks to 1,163, and the maps with some graphic drawn with someone else's
+palette from 365 to 77.
+
+- **Saves**: ROM —a pose bank for the whole cartridge instead of one per
+  map— and sprite palettes in every map; and the graphic is seen with its
   own colours.
-- **Where**: `own` in Wally; `hero_colors` and `route_graphic` in
-  `rm2k-snes/mapdata/`; `hero_poses_of_graphic` in `runtime/party.s`.
-- **More**: [The graphics only the hero shows go in the leaders' slot](../decisions/the-graphics-only-the-hero-shows.md).
+- **Where**: `own` in Wally, and the colours of every graphic of command
+  34 that ends in a leaders' palette; `hero_colors` and `route_graphic` in
+  `rm2k-snes/mapdata/`; `route_gfx_colors`, `hero_poses_of_graphic` in
+  `runtime/party.s`, and `graphic_hero`, which runs `apply_tint`.
+- **More**: [Move route command 34 on the hero](../decisions/move-route-command-34-on-the-hero.md).
 
 ### Finished routes give up their slot
 
@@ -248,7 +285,7 @@ with the map is byte for byte the one without it.
 - **Where**: `OP_CALL` in `rm2k-snes/bytecode/src/events.rs` and its
   `op_call` in the interpreter; `refresh` in `compile.rs` of
   `rm2k-snes/events/`.
-- **More**: [CallEvent into a shared body](../decisions/call-event-into-a-shared-body.md).
+- **More**: [CallEvent: a shared body, or pasted in place](common-event-calls.md).
 
 ### `CallEvent` pasted in place, with no interpreter stack
 
@@ -259,7 +296,7 @@ before the caller continues, so no stack of interpreters is needed.
 - **Saves**: RAM —no interpreter per call— and the cost of a call in
   parallel pages.
 - **Where**: the event compiler, `rm2k-snes/events/`.
-- **More**: [CallEvent is compiled inline](../decisions/call-event-is-compiled-inline.md).
+- **More**: [CallEvent: a shared body, or pasted in place](common-event-calls.md#pasted-in-place).
 
 ### The pure parallel common events run only when what they read changes
 
@@ -400,7 +437,7 @@ uses, since `back_from_battle` decompresses the grid again anyway.
 
 - **Saves**: far RAM.
 - **Where**: `SCN_BATTLERS` in `runtime/battle_scene.s`.
-- **More**: [The grid lives in WRAM](../decisions/the-grid-lives-in-wram.md).
+- **More**: [The grid lives in WRAM](the-grid-in-wram.md#what-is-lost).
 
 ## Audio
 
@@ -435,7 +472,7 @@ effects has to fit in the 64 KB, not the whole bank.
 - **Where**: `Bank` and `allocate` in `bank.rs` of
   `rm2k-snes/rm2k-snes-audio/`; `package_load` in
   `runtime/audio_package.s`.
-- **More**: [A single sample bank](../decisions/a-single-sample-bank.md).
+- **More**: [A single sample bank](the-sample-bank.md).
 
 ### Effects share places in the directory
 
@@ -471,13 +508,30 @@ the music left.
 
 ### Boot is sized for the boot package
 
-Boot waits for the driver, the directory and the boot map's audio
-package, not for a full ARAM.
+Boot waits for loading the map, the driver and the directory through the
+IPL, and the boot map's audio package, with a margin —not for a full
+ARAM—. Since the per-map packages, the IPL uploads only the driver and the
+directory, and the samples go through the driver's command 3, three bytes
+at a time, so what goes up at power-on is a single package and boot can
+be measured against it. It replaced a boot sized for the ARAM ceiling,
+which froze the map at power-on for almost two seconds.
+
+**Each cartridge carries its own** `BOOT_FRAMES`, since 2026-10-11: the
+estimate for its boot package, or `BOOT_FRAMES_FLOOR`, whichever is
+larger. The floor keeps a cartridge with a small package on the frame it
+always started on, with a byte-for-byte identical ROM; it lives in the
+runtime and not in each game's project because what it protects is the
+runtime's —the loop starting on the same frame whatever small data goes
+in—. The only ceiling left is the byte the ROM counts boot frames in.
 
 - **Saves**: frames at power-on.
-- **Where**: `boot_frames` in `rm2k-snes/rm2k-snes-audio/src/emit.rs`;
-  `BOOT_FRAMES_FLOOR` in `runtime/far_ram.s`.
-- **More**: [Boot is sized for the boot package](../decisions/boot-is-sized-for-the-boot-package.md).
+- **Costs**: if the boot map's package grows, that cartridge's boot grows
+  with it, by itself. The tests read it from the symbol table, so it moves
+  no golden.
+- **Where**: `boot_frames` in `rm2k-snes/rm2k-snes-audio/src/emit.rs`,
+  which `rm2k-snes-audio cartridge` writes into the cartridge's
+  `musicdata.inc`; `BOOT_FRAMES_FLOOR` in `runtime/far_ram.s`.
+- **More**: [Audio](../internals/audio.md).
 
 ## CPU time in the frame
 

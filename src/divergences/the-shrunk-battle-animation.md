@@ -31,3 +31,7 @@ A map that fills all eight sprite palettes and also needs the timer: there
 the box is left without a palette, and the converter says so and does not
 draw it. See
 [Seven palettes on a map with animations](seven-palettes-on-a-map-with-animations.md).
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Battle animations on the map, shrunk to a box](../optimizations/lossy.md#battle-animations-on-the-map-shrunk-to-a-box), in Optimizations.

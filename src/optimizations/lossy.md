@@ -1,11 +1,40 @@
 # Lossy optimizations
 
 What **trades fidelity for fit**: something RM2k draws or plays is drawn
-or played a little differently so that the game fits the console. The
-rule behind all of them is in [When a game doesn't fit](../fitting.md):
-lose the least, say so, and keep building. Each one warns in the build
-when it applies, and what each map lost is in the converter's log or in
-the game's `build/<cartridge>/adeleine/` images.
+or played a little differently so that the game fits the console.
+
+A game made for a PC asks for things a Super Nintendo doesn't have: more
+colors in a window than a palette holds, more distinct tiles than video
+memory, more sounds than the sound chip can index. The tools treat each of
+those limits the same way: **lose the least, say so, and keep building**.
+The build prints a warning naming what was lost, and what was decided is
+written down next to the game —the converter's log, the game's
+`build/<cartridge>/adeleine/` images, its patches—, so it can be reviewed
+and changed.
+
+Refusing to build would be the safer-looking answer, and the worse one: a
+game that runs with a missing effect can be played, measured and fixed; a
+game that doesn't build can only be guessed about.
+
+## What a game can choose
+
+Some of those choices belong to the game, not the tools, and are knobs in
+its `rm2k-snes.toml`:
+
+- **Another System graphic**, when the game's own is not the one the port
+  should show, or costs what the cartridge doesn't have: one from the
+  game, from the RTP, or one made for the port.
+- **A background of its own for a System's windows**, a colour or a
+  gradient: see [the windows' background, a colour of the
+  project's](#the-windows-background-a-colour-of-the-projects).
+- **Decorative events as background**: see [decorative events become
+  background](#decorative-events-become-background). It is off by default,
+  because it changes how those maps are drawn.
+
+What is left out of an event page that uses a command the console can't
+run yet is not an optimization but a gap: it is in [The engine against
+RPG Maker 2000](../progress/engine-vs-rm2k.md), and the converter's report
+lists, for every map, which commands keep which pages out.
 
 ## Colours
 
@@ -20,8 +49,7 @@ however many there are, so this is the only way out for it.
   pixels.
 - **Where**: `reduce_colors` in `snes/adeleine/src/pack.rs`; what it
   decided stays in the game's patches.
-- **More**: [When a game doesn't fit](../fitting.md),
-  [The CGRAM split](../internals/cgram.md).
+- **More**: [The CGRAM split](../internals/cgram.md).
 
 ### The message window takes its colours from every background
 
@@ -44,22 +72,36 @@ nearest by luma.
 - **Loses**: some colours of the borrowing graphic.
 - **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`.
 - **More**: [Every event is drawn](../decisions/every-event-is-drawn.md),
-  [A graphic that doesn't fit isn't drawn](../decisions/a-graphic-that-doesnt-fit-isnt-drawn.md).
+  the principle; [A graphic that doesn't fit isn't drawn](../decisions/a-graphic-that-doesnt-fit-isnt-drawn.md).
 
 ### The timer borrows a character's palette
 
-The timer's digits go into the palette of a character with thirteen
-colours or fewer; on a full map a character is lowered to fourteen, and if
-not even that, the timer is lent the palette whose colours change the
-digits the least.
+The timer has no palette of its own: its digits go into the palette of
+any character that uses thirteen colours or fewer. Having one cost an
+undrawn event on ABL's map 2 —the middle cell of the door Core breaks—.
+
+On a map that fills the eight palettes at fifteen colours, room is made by
+lowering a character to fourteen —the one that moves the fewest pixels,
+never a leader, and only in a palette with a single character—. If not
+even that is enough —every palette full, and each shared or lent—, the
+timer is **lent** a palette, as an event is: the one whose nearest colours
+change the digits the least, each glyph colour drawn with its nearest, and
+the converter says which in a warning. It only stops if all eight palettes
+are the leaders'.
+
+Since the palette belongs to a character, the tint cannot skip it whole:
+`upload_timer_pal` uploads untinted only the digits' entries, and only
+while they are visible.
 
 - **Loses**: the colours the character shares with the digits go untinted
-  while the timer is visible; in the last case, the digits' exact colours.
-- **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`,
-  `timer_digits` in `rm2k-snes/wally/src/sprites/extras.rs`;
-  `upload_timer_pal` in `runtime/tint.s`.
-- **More**: [The timer has no palette of its own](../decisions/the-timer-has-no-palette-of-its-own.md),
-  [The timer and its neighbor share colors](../divergences/the-timer-and-its-neighbor-share-colors.md).
+  while the timer is visible; when lent, the digits' exact colours.
+- **Where**: the end of `drawable_npcs` in
+  `rm2k-snes/wally/src/sprites/split.rs`, `timer_digits` in
+  `rm2k-snes/wally/src/sprites/extras.rs`; `upload_timer_pal` in
+  `runtime/tint.s`.
+- **More**: [The timer and its neighbor share colors](../divergences/the-timer-and-its-neighbor-share-colors.md);
+  the idea of reserving a palette only while the timer runs, in the task
+  [`timer-palette`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/timer-palette.md).
 
 ### Seven palettes on a map with battle animations
 
@@ -81,7 +123,7 @@ make room.
 - **Loses**: detail where two tiles were almost the same.
 - **Where**: `fuse_lower` in `rm2k-snes/wally/src/background/fuse.rs`,
   over Adeleine's `snes/adeleine/src/fuse.rs`.
-- **More**: [When a game doesn't fit](../fitting.md).
+- **More**: [The VRAM split](../internals/vram.md).
 
 ### A window with a gradient is fused until it fits
 
@@ -95,7 +137,7 @@ them; End Game merges colours.
 - **Where**: `fit_frame` in `rm2k-snes/screens/src/message_window.rs`,
   `fit.rs` and `end_game.rs` in `rm2k-snes/screens/`; Adeleine's
   `group_tiles`, `merge_least_visible_tiles` and `merge_until`.
-- **More**: [A window with a gradient is fused until it fits](../decisions/a-window-with-a-gradient-is-fused-until-it-fits.md).
+- **More**: [A window with a gradient, fused until it fits](a-window-with-a-gradient.md).
 
 ### The windows' background, a colour of the project's
 
@@ -156,17 +198,29 @@ cells, and the rest stay on their first drawing.
 
 ### Translucent events are baked
 
-The blend of a translucent page is computed in the converter against the
-layer below its cell and stays in the graphic: no colour math, no
-dithering.
+The blend of a page's "Trans" —RM2k draws the event at 160 out of 255— is
+computed in the converter against the layer below its cell and stays in
+the graphic: no colour math, no dithering, no separate palettes. It can be
+done exactly because the translucent pages A Blurred Line has are all
+static —`move_type` 0 and no route of their own—: if neither the object
+nor what is behind it moves, the blend always gives the same result.
+
+The other two ways are not enough there. Colour math applies to every
+sprite in palettes 4 to 7 at once, and was tried and left out —see [Tried
+and left out](tried-and-left-out.md#colour-math-for-translucent-events)—.
+Dithering, which is what games of the era did, does not simulate
+transparency over a dark background: the fires on ABL's map 9 sit on
+almost pure black, and dithering punches holes in the flame.
 
 - **Loses**: nothing is seen through them; over an animated tile the
   blend is right for one frame; two over different backgrounds are two
-  graphics.
-- **Where**: `rm2k-snes/wally/src/sheets.rs`, with `translucent` from
-  `rm2k-render`.
-- **More**: [Translucent events are baked](../decisions/translucent-events-are-baked.md),
-  [Translucent events end up opaque](../divergences/translucent-events-end-up-opaque.md).
+  graphics. The CharSets in the project's `[graphics] opaque` —the save
+  point— go opaque instead.
+- **Where**: `decorate_translucent` in `rm2k-snes/convert/src/game.rs`,
+  which names the graphic; `rm2k-snes/wally/src/sheets.rs`, which draws it
+  with `translucent` from `rm2k-render`.
+- **More**: [Translucent events end up opaque](../divergences/translucent-events-end-up-opaque.md),
+  the divergence, with what was measured and when it stops being enough.
 
 ### Decorative events become background
 
@@ -201,7 +255,7 @@ does not fit, the map is built without them.
 - **Loses**: big animations look small; a fading cell disappears at once.
 - **Where**: `fit_size` in `rm2k-snes/images/src/animation.rs`.
 - **More**: [The shrunk battle animation](../divergences/the-shrunk-battle-animation.md),
-  [When a game doesn't fit](../fitting.md).
+  [Seven palettes on a map with animations](../divergences/seven-palettes-on-a-map-with-animations.md).
 
 ### Pictures in sprites: scaled, fifteen colours
 
@@ -265,7 +319,7 @@ the tracks that use a sample, those play a copy that does not pay for it.
 - **Loses**: instrument brightness where packages are full.
 - **Where**: `allocate` and `copies` in `bank.rs` of
   `rm2k-snes/rm2k-snes-audio/`.
-- **More**: [A single sample bank](../decisions/a-single-sample-bank.md).
+- **More**: [A single sample bank](the-sample-bank.md).
 
 ### Past 256 samples, the least used are dropped
 
@@ -274,4 +328,26 @@ are dropped and the notes that needed them are silent.
 
 - **Loses**: those notes.
 - **Where**: `compile.rs` of `rm2k-snes/rm2k-snes-audio/`.
-- **More**: [When a game doesn't fit](../fitting.md).
+- **More**: [Audio](../internals/audio.md).
+
+## Tables of a fixed size
+
+### Graphics a move route switches to
+
+A map holds a fixed number of the graphics move route command 34 switches
+to; the rest are ignored.
+
+- **Loses**: those changes of graphic.
+- **Where**: `ROUTE_GFX_MAX` in `rm2k-snes/events/src/registry.rs` and, the
+  same number, in `rm2k-snes/mapdata/src/record.rs`.
+- **More**: [Move route command 34 on the hero](../decisions/move-route-command-34-on-the-hero.md).
+
+### Variables
+
+The console keeps a fixed number of variables, each with a one-byte slot.
+Event pages that need one that didn't get a slot are left out, and the
+build lists them.
+
+- **Loses**: those pages.
+- **Where**: `variable_slot` in `rm2k-snes/events/src/compile.rs`.
+- **More**: [Variables saturate at sixteen bits](../divergences/variables-saturate-at-16-bits.md).

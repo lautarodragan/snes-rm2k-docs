@@ -11,7 +11,7 @@ are several dozen, the first three of the game among them. And there is a
 cause that **no split fixes**: a lone 17-color tile doesn't fit in a
 15-color palette no matter how many there are, and that is fixed by merging
 colors: `adeleine.reduce_colors` (see [When a game doesn't
-fit](../fitting.md)).
+fit](../optimizations/lossy.md)).
 
 So the converter decides the cut map by map, and **the background gets
 first pick**: it keeps the palettes it needs for the colors it really uses,
