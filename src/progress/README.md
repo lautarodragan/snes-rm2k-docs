@@ -10,3 +10,5 @@ changes what it measures updates it, or says at its top that it is behind.
   everything RM2k has and what state each thing is in, in the port.
 - [The Book of Three and The Frozen World](book-of-three-and-frozen-world.md):
   what each of the two games leaves out, by cause, and what is fixed.
+- [The test game](the-test-game.md): the game of our own the engine's ROM
+  tests move to, out of A Blurred Line: what it has, and what has moved.
