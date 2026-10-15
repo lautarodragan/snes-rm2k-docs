@@ -111,6 +111,7 @@
         - [What `ChangeSystemGraphics` does not model](divergences/what-changesystemgraphics-does-not-model.md)
         - [The eight frames of a message closing](divergences/the-eight-frames-of-a-message-closing.md)
         - [The timer and its neighbor share colors](divergences/the-timer-and-its-neighbor-share-colors.md)
+        - [What names in messages do not model](divergences/what-names-in-messages-do-not-model.md)
     - [Battle]()
         - [The way into battle, in mosaic](divergences/the-way-into-battle-in-mosaic.md)
         - [What the battle menu does not model](divergences/what-the-battle-menu-does-not-model.md)
