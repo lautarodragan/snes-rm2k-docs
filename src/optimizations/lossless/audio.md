@@ -31,7 +31,7 @@ effects has to fit in the 64 KB, not the whole bank.
 - **Where**: `Bank` and `allocate` in `bank.rs` of
   `rm2k-snes/rm2k-snes-audio/`; `package_load` in
   `runtime/audio_package.s`.
-- **More**: [A single sample bank](../the-sample-bank.md).
+- **More**: [A single sample bank](audio/the-sample-bank.md).
 
 ## Effects share places in the directory
 

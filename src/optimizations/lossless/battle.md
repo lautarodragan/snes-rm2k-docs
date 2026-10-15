@@ -52,4 +52,4 @@ uses, since `back_from_battle` decompresses the grid again anyway.
 
 - **Saves**: far RAM.
 - **Where**: `SCN_BATTLERS` in `runtime/battle_scene.s`.
-- **More**: [The grid lives in WRAM](../the-grid-in-wram.md#what-is-lost).
+- **More**: [The grid lives in WRAM](the-map/the-grid-in-wram.md#what-is-lost).

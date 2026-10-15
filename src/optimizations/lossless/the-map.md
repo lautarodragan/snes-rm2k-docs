@@ -41,7 +41,7 @@ two LoROM banks, so the readers did not change.
 - **Where**: `GRID` in `runtime/far_ram.s`, `lz2_grid` in
   `runtime/decompress.s`, `map_ram_pointers` in `record.rs` of
   `rm2k-snes/mapdata/`.
-- **More**: [The grid lives in WRAM](../the-grid-in-wram.md), with what it
+- **More**: [The grid lives in WRAM](the-map/the-grid-in-wram.md), with what it
   costs, how to know it needs reverting and how;
   [Maps](../../internals/maps.md).
 

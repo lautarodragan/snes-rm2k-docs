@@ -13,7 +13,7 @@ and the PPU addresses 512.
   an NPC waits, never the hero.
 - **Where**: `vram_queue`, `vram_queue_hero` and `vram_drain` in
   `runtime/load_graphics.s`.
-- **More**: [Poses are uploaded on the fly](../poses-on-the-fly.md).
+- **More**: [Poses are uploaded on the fly](characters-and-sprites/poses-on-the-fly.md).
 
 ## A pose goes up without its empty tiles
 
@@ -27,7 +27,7 @@ one does not.
 - **Costs**: one word of bank 0's RAM per 32x32 block of the sprite bank.
 - **Where**: `vram_drain` in `runtime/load_graphics.s`; `pose_record` in
   `rm2k-snes/mapdata/`.
-- **More**: [Poses are uploaded on the fly](../poses-on-the-fly.md#and-a-pose-goes-up-without-its-empty-tiles).
+- **More**: [Poses are uploaded on the fly](characters-and-sprites/poses-on-the-fly.md#and-a-pose-goes-up-without-its-empty-tiles).
 
 ## Distant still characters take turns on one slot
 

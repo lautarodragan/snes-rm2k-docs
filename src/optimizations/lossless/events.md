@@ -11,7 +11,7 @@ with the map is byte for byte the one without it.
 - **Where**: `OP_CALL` in `rm2k-snes/bytecode/src/events.rs` and its
   `op_call` in the interpreter; `refresh` in `compile.rs` of
   `rm2k-snes/events/`.
-- **More**: [CallEvent: a shared body, or pasted in place](../common-event-calls.md).
+- **More**: [CallEvent: a shared body, or pasted in place](events/common-event-calls.md).
 
 ## `CallEvent` pasted in place, with no interpreter stack
 
@@ -22,7 +22,7 @@ before the caller continues, so no stack of interpreters is needed.
 - **Saves**: RAM —no interpreter per call— and the cost of a call in
   parallel pages.
 - **Where**: the event compiler, `rm2k-snes/events/`.
-- **More**: [CallEvent: a shared body, or pasted in place](../common-event-calls.md#pasted-in-place).
+- **More**: [CallEvent: a shared body, or pasted in place](events/common-event-calls.md#pasted-in-place).
 
 ## Identical pages are stored once
 

@@ -319,7 +319,7 @@ the tracks that use a sample, those play a copy that does not pay for it.
 - **Loses**: instrument brightness where packages are full.
 - **Where**: `allocate` and `copies` in `bank.rs` of
   `rm2k-snes/rm2k-snes-audio/`.
-- **More**: [A single sample bank](the-sample-bank.md).
+- **More**: [A single sample bank](lossless/audio/the-sample-bank.md).
 
 ### Past 256 samples, the least used are dropped
 

@@ -95,7 +95,7 @@ map requests a refresh on every variable write, and in a page that runs
 every frame that left half of Lashe City at thirty frames per second.
 Parallel pages paste the body in place.
 
-- **More**: [CallEvent: a shared body, or pasted in place](common-event-calls.md#why).
+- **More**: [CallEvent: a shared body, or pasted in place](lossless/events/common-event-calls.md#why).
 
 ### Refreshing before every command
 

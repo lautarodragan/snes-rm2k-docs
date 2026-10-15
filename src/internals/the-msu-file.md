@@ -233,7 +233,7 @@ the samples                `upload_sample`, which uploads them to ARAM
 
 **The poses stay in the ROM**, and they are the biggest thing there is
 (4.3 MB in Vampires Dawn): they are uploaded on the fly, in the vblank —see
-[poses are uploaded on the fly](../optimizations/poses-on-the-fly.md)—,
+[poses are uploaded on the fly](../optimizations/lossless/characters-and-sprites/poses-on-the-fly.md)—,
 and a seek per pose is not affordable. Nor what the CPU reads while the map
 is played: the event pages, the panorama's tilemap, the music streams, the
 texts.

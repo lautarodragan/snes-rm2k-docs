@@ -47,7 +47,7 @@ does not exist.
 
 What does not fit in a bank cannot be walked with an index. The cell grid
 of a large map is read with a 24-bit pointer; it lives decompressed in the
-upper half of the two WRAM banks —see [The grid lives in WRAM](../optimizations/the-grid-in-wram.md)—,
+upper half of the two WRAM banks —see [The grid lives in WRAM](../optimizations/lossless/the-map/the-grid-in-wram.md)—,
 which has the shape of a LoROM bank: going past `$FFFF` leads to the next
 bank's `$8000`, not to its `$0000`. `ptr_more` and `ptr_minus` are the only
 routines that know it.
