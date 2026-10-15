@@ -5,7 +5,9 @@
 - [From a game to a ROM](pipeline.md)
 - [The tools](tools.md)
 - [When a game doesn't fit](fitting.md)
-- [The engine against RPG Maker 2000](engine-vs-rm2k.md)
+- [Project progress](progress/README.md)
+    - [The engine against RPG Maker 2000](progress/engine-vs-rm2k.md)
+    - [The Book of Three and The Frozen World](progress/book-of-three-and-frozen-world.md)
 - [How it is tested](testing.md)
 
 - [Internals](internals/README.md)
@@ -145,7 +147,6 @@
     - [The skills menu](research/2026-10-12-the-skills-menu.md)
     - [The zoom, baked at run time](research/2026-10-12-the-zoom-baked-at-run-time.md)
     - [What the compiler ignores silently](research/2026-10-14-what-the-compiler-ignores-silently.md)
-    - [The Book of Three and The Frozen World: what is left out](research/2026-10-14-book-of-three-and-frozen-world-left-out.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)

@@ -1,13 +1,38 @@
 # The Book of Three and The Frozen World: what is left out
 
-> **Measured on 2026-10-14**, by Calandria, with the tools at `14e200fc`
-> (the-advocate) and the ports at `f775b66` (the-advocate-ports), over each
-> game's `release` cartridge and its `culprits.json` (what `just culprits`
-> writes). It is a snapshot: the numbers are from that day and this file is
-> not updated; how to redo each count is at the end. The task is
+
+> **A progress page, kept up to date.** It was born on 2026-10-14 as a
+> research by Calandria (tools `14e200fc`, ports `f775b66`); on 2026-10-15
+> taro moved it here so it can be kept current instead of frozen. The
+> section below, **Where it stands**, is updated whenever one of its causes
+> is fixed; the rest of the page is the measurement of 2026-10-14 and says
+> so where its numbers are older. The task is
 > [`book-of-three-and-frozen-world-what-is-left-out`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-and-frozen-world-what-is-left-out.md).
-> Nothing was changed in the tools or in the games; the only builds run were
-> two throwaway ones with an exclusion removed, to see if it still holds.
+
+## Where it stands
+
+Updated on 2026-10-15, with the tools at `a1bf0599` and the ports at
+`41e0cea`, from `just culprits` in each game:
+
+| | maps | common events | troop pages |
+|---|---|---|---|
+| **Book of Three** | 1,282 of 1,282 | 24 of 25 | 651 of 746 (the other 95 are empty) |
+| **Frozen World** | 3,871 of 3,891 (maps 1 and 2 still out) | 94 of 100 | 0 of 80 (all empty) |
+
+Of the causes ranked below:
+
+* **Fixed**: the two scripted fights (`ShowBattleAnimationB` accepted
+  undone), the party's special commands (`ControlVars` multiply and
+  divide, `ChangeItems` and `ChangeMonsterHP` by a variable), the chests'
+  random range, the literal backslash, `\V` in a choice option and before an
+  `InputNumber`, `ControlVars` from an item count, the choice's cancel
+  branch (it was never a fifth option), and the hero's moves in a route
+  (Hen Wen's second talk).
+* **In progress**: Book of Three's `Reraise KO'd chars`, the only common
+  event left (a branch on an actor's HP).
+* **Still open**: Frozen World's combat on maps 1 and 2, the switches past
+  1,023, `ChangeMapTileset`, `ChangeActorFace`, the HP percentages past
+  327 HP (16-bit variables), and the elemental attributes in battle.
 
 taro's question, after the same one for A Blurred Line: what is left out of
 these two games, by which variant of each command, and what fixing it would
@@ -16,7 +41,7 @@ compiler's refusal says nothing, so each group below was found by reading
 the arm of `compile_command` (or `branch_bytes`, `compile_number`, the choice
 code) against the operands the report lists, and checked against the dump.
 The pages that are in and have a parameter nothing reads are the other
-research, [What the compiler ignores silently](2026-10-14-what-the-compiler-ignores-silently.md);
+research, [What the compiler ignores silently](../research/2026-10-14-what-the-compiler-ignores-silently.md);
 its rows for these two games are at the end.
 
 ## Summary
@@ -325,7 +350,7 @@ cause is already a task, it is in the next section.
 
 ## Silent holes: the rows for these two games
 
-From [What the compiler ignores silently](2026-10-14-what-the-compiler-ignores-silently.md),
+From [What the compiler ignores silently](../research/2026-10-14-what-the-compiler-ignores-silently.md),
 and measured again where that page did not say:
 
 | hole | Book of Three | Frozen World | matters? |

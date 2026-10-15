@@ -1,5 +1,11 @@
 # The engine against RPG Maker 2000
 
+> **Behind.** The board was taken on 2026-10-06 and much has changed since
+> —the event's touch, the movement types, the cancel branch, `ControlVars`
+> multiply and divide, the hero's route moves, among others—. It is to be
+> redone from a newer commit; until then, the pages in this section and the
+> research of 2026-10-14 are fresher.
+
 **[Open the board](engine-vs-rm2k/index.html)**
 
 The board lists everything RPG Maker 2000 has —the event commands of its

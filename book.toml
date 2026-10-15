@@ -17,6 +17,9 @@ enable = true
 level = 0
 
 [output.html.redirect]
+"/engine-vs-rm2k.html" = "progress/engine-vs-rm2k.html"
+"/engine-vs-rm2k/index.html" = "../progress/engine-vs-rm2k/index.html"
+"/research/2026-10-14-book-of-three-and-frozen-world-left-out.html" = "../progress/book-of-three-and-frozen-world.html"
 "/cartridge/index.html" = "../internals/index.html"
 "/cartridge/mode-3.html" = "../internals/mode-3.html"
 "/cartridge/exhirom.html" = "../internals/exhirom.html"
