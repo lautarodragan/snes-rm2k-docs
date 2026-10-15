@@ -555,8 +555,8 @@ the layer above's palette is the last row:
 ![The meadow as Wally leaves it, and its colour memory](tools/wally-meadow.png)
 
 The layers came back identical to what `rm2k-render` drew: nothing was
-lost on this map. The ones where something is are the next section of
-this page.
+lost on this map. The ones where something is are further down this
+page, under "The same ChipSet, three times".
 
 **`rm2k-snes-events`**, the event compiler, called twice. RM2k has about
 130 event commands and a page is a script of them; the console runs a
@@ -703,6 +703,83 @@ More: [ExHiROM, 8 MB](internals/exhirom.md), [The cartridge goes to 8
 MB](decisions/the-cartridge-goes-to-8-mb.md), [RAM is placed by the
 linker](decisions/ram-is-placed-by-the-linker.md).
 
+## The same ChipSet, three times: nothing lost, a little, too much
+
+Which colours a map loses depends on the map, not on the ChipSet: on how
+many colours it draws behind the hero, which share one 8-bit background
+with a budget, and how many in front of them, where every 8x8 cell draws
+with one of the palettes the background leaves. The test game has three
+maps on the same `Exterior` ChipSet, made for this: each one as RPG Maker
+2000 draws it, as the console draws it, and where the two differ at 15
+bits, marked in red. The console's side is the test game's golden for
+that map —what snes9x drew, and bsnes the same—; the original's is a
+capture of RPG_RT running the folder the test game makes, cut to the
+console's window.
+
+**The meadow: nothing lost.** Grass, bushes, flowers and four trees whose
+crowns are the only thing in front of the hero. The converter's report
+for it:
+
+```text
+Map 1 'Meadow': 40x30 cells of 8x8 px
+  19 distinct colors, 19 in CGRAM of 96 available, 0 merged
+  17 unique tiles of 1200 cells (99% reuse)
+  layer above the hero: 5 tiles, 16 colors in 1 palette(s) from 7, 0 merged
+```
+
+![The meadow: RM2k, the console, and where they differ](tools/grade-meadow.png)
+
+The red is the two characters: each sprite gets fifteen colours, and the
+elder and the hero have a few more, so Adeleine merged those —the first
+example of this page, on the elder—. The map itself is identical.
+
+**The garden: a little.** The meadow's grass with a path, a fence around
+a well, and in front of the hero two roofs, a dome and a tent —what a
+game author marks ★ in the ChipSet so that the hero walks under them—.
+The background keeps every colour it draws; the layer in front asks for
+48 and gets the three palettes the background leaves, so sixteen go:
+
+```text
+Map 2 'Garden': 40x30 cells of 8x8 px
+  61 distinct colors, 61 in CGRAM of 64 available, 0 merged
+  49 unique tiles of 1200 cells (96% reuse)
+  layer above the hero: 71 tiles, 48 colors in 3 palette(s) from 5, 16 merged
+```
+
+![The garden: RM2k, the console, and where they differ](tools/grade-garden.png)
+
+The dome comes out a shade greyer and the tent a shade flatter; the
+roofs lose a pixel along their edges. It is the loss a player does not
+notice unless the two are side by side.
+
+**The showcase: too much.** Ninety-six of the ChipSet's lower tiles, one
+each, and its forty most coloured upper tiles, every one of them in front
+of the hero through a second ChipSet entry with every upper tile ★. No
+game draws a map like this; it is as much as the biggest VRAM layout
+holds, and the worst the engine allows: the background asks for more than
+its budget, and the layer in front, which would need at least five
+palettes for its 64 colours, is left one:
+
+```text
+Map 3 'Showcase': 40x30 cells of 8x8 px
+  117 distinct colors, 96 in CGRAM of 96 available, 21 merged
+  320 unique tiles of 1200 cells (73% reuse)
+  layer above the hero: 150 tiles, 16 colors in 1 palette(s) from 7, 49 merged
+```
+
+![The showcase: RM2k, the console, and where they differ](tools/grade-showcase.png)
+
+The front row is where it shows: the barrels, the pots, the lanterns and
+the stones drawn with fifteen colours between all of them, browner and
+greyer than they were. The background, two rows above, lost twenty-one
+of its hundred and seventeen and it takes the red mask to find them,
+because what Adeleine merges first is what shows the least.
+
+The three maps live in the-advocate's `test-game/`, sketched as text
+—`src/maps/Map0001.toml` to `Map0003.toml`— and each has its golden in
+`tests/golden/`, so a change in Adeleine or in Wally that moves a merge
+shows on a map small enough to look at.
+
 ## Two decisions worth knowing before reading any of it
 
 - **Adeleine decides which colours are lost**, and Voodoo only converts a
@@ -724,14 +801,18 @@ converter's queries —`scan`, `compile`, `leaders`, `map-context`,
 
 ### How the pictures on this page were made
 
-Every picture above comes out of `figures/tools/make.py`, at the root of
-this book's repository: it counts pixels, writes each tool's request,
-runs the tool from the PATH and pastes the answers side by side. It takes
-the EasyRPG RTP, a SoundFont and the test game's `build/` —made with `just
-game` in the-advocate's `test-game/`— as flags, and prints what each
-command printed, which is where the numbers quoted above were read from
-on the day the pictures were made; the tools move, so the way to know
-today's is to run it again.
+Every picture above comes out of two scripts in `figures/tools/`, at the
+root of this book's repository. `make.py` counts pixels, writes each
+tool's request, runs the tool from the PATH and pastes the answers side
+by side; it takes the EasyRPG RTP, a SoundFont and the test game's
+`build/` —made with `just game` in the-advocate's `test-game/`— as flags,
+and prints what each command printed, which is where the numbers quoted
+above were read from on the day the pictures were made; the tools move,
+so the way to know today's is to run it again. `grades.py` makes the
+three-way pictures of the graded maps from the test game's goldens and
+the originals kept next to it in `originals/`: a capture of RPG_RT, which
+nothing here can run, so those are made by hand when a map changes. The
+converter's reports are from the test game's `build/release/converter.log`.
 
 The pictures are the [EasyRPG RTP](https://github.com/EasyRPG/RTP)'s:
 `ChipSet/Exterior.png` by Jason Perry, CC0, and `CharSet/People1.png`
