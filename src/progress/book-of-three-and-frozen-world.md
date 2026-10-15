@@ -12,11 +12,12 @@
 ## Where it stands
 
 Updated on 2026-10-15, with the tools at `a1bf0599` and the ports at
-`41e0cea`, from `just culprits` in each game:
+`41e0cea`, from `just culprits` in each game; Book of Three's common events,
+after the branch on an actor's HP (Calandria, the same day):
 
 | | maps | common events | troop pages |
 |---|---|---|---|
-| **Book of Three** | 1,282 of 1,282 | 24 of 25 | 651 of 746 (the other 95 are empty) |
+| **Book of Three** | 1,282 of 1,282 | 25 of 25 | 651 of 746 (the other 95 are empty) |
 | **Frozen World** | 3,871 of 3,891 (maps 1 and 2 still out) | 94 of 100 | 0 of 80 (all empty) |
 
 Of the causes ranked below:
@@ -26,10 +27,9 @@ Of the causes ranked below:
   divide, `ChangeItems` and `ChangeMonsterHP` by a variable), the chests'
   random range, the literal backslash, `\V` in a choice option and before an
   `InputNumber`, `ControlVars` from an item count, the choice's cancel
-  branch (it was never a fifth option), and the hero's moves in a route
-  (Hen Wen's second talk).
-* **In progress**: Book of Three's `Reraise KO'd chars`, the only common
-  event left (a branch on an actor's HP).
+  branch (it was never a fifth option), the hero's moves in a route
+  (Hen Wen's second talk), and the branch on an actor's HP (Book of Three's
+  `Reraise KO'd chars`, the last common event left out).
 * **Still open**: Frozen World's combat on maps 1 and 2, the switches past
   1,023, `ChangeMapTileset`, `ChangeActorFace`, the HP percentages past
   327 HP (16-bit variables), and the elemental attributes in battle.

@@ -3,8 +3,11 @@
 ## What
 
 **`ConditionalBranch`: five of the twelve kinds.** Switch, variable, gold,
-item and actor, and of the actor kind three of its seven questions —is in
-the party, knows the skill, has the item equipped—.
+item and actor, and of the actor kind four of its seven questions —is in
+the party, has at least this many HP, knows the skill, has the item
+equipped—. The HP one came on 2026-10-15, for The Book of Three's parallel
+common event `Reraise KO'd chars`; of the three left, the level is asked 321
+times by Vampires Dawn and the state 9, and the name by no game.
 
 ## Why
 
