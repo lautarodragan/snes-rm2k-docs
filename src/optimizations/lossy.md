@@ -122,6 +122,25 @@ merged too.
   `rm2k-snes/wally/src/background/panorama.rs`.
 - **More**: [Panoramas](../research/2026-10-05-panoramas.md).
 
+### A map that shows its panorama gives up its layer above
+
+In mode 3 the panorama takes BG2, which is where the layer above the hero
+would go. A map that does draw something above the hero has it
+**flattened**: what it draws there goes into the background, and the 8x8
+cells it covers at least half of go to BG1's priority 1, in front of the
+hero. A map that would put too much on the wrong side of the hero that way
+goes in mode 1 instead: the map at 4 bits in BG1 and BG2 and the panorama
+at 2 bits in BG3.
+
+- **Loses**: flattened, the hero's depth against what is above him is
+  decided per 8x8 cell, not per pixel; in mode 1, the map's colours go to
+  4 bits per tile, and the panorama's to 2.
+- **Where**: `Way::Flattened` and `Way::Mode1` in
+  `rm2k-snes/wally/src/background/panorama.rs`; `ABOVE_LOST_MAX` in
+  `rm2k-snes/wally/src/layers.rs`.
+- **More**: [Mode 3 by default](../internals/mode-3.md),
+  [Panoramas](../research/2026-10-05-panoramas.md).
+
 ### A ChipSet animation that does not fit in WRAM stands still in part
 
 The drawings of the water and the animated tiles have a fixed WRAM area;

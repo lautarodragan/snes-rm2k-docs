@@ -24,8 +24,9 @@ fit in any VRAM layout of that day. The full count is in
 ## How it looks today
 
 It is not seen: each map draws the same as in RM2k. Each map's layout is
-chosen by `vram_layout` in `tools/port/vram.py` in the-advocate, and
-`docs/port/vram.md` in the-advocate explains where the possible ones come from.
+chosen by `vram_layout` in `vram.rs` of `rm2k-snes/mapdata/` in the-advocate,
+and [The VRAM split](../internals/vram.md) explains where the possible ones
+come from.
 
 ## When it stops being enough
 

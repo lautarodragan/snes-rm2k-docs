@@ -4,7 +4,7 @@
 
 The `ShowPicture` pictures that cover the screen go in BG1, with the console
 in mode 1 while they are shown —see `runtime/big_picture.s` and
-`tools/port/picture.py` in the-advocate, and
+`rm2k-snes/images/src/fullscreen.rs` in the-advocate, and
 [Large pictures in mode 1](../decisions/large-pictures-in-mode-1.md)—,
 and they do not do everything they do in RM2k:
 

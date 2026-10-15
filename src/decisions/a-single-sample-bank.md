@@ -42,7 +42,7 @@ anyone's rate (see `copies` in
 `rm2k-snes/rm2k-snes-audio/src/bank.rs` in the-advocate). And the tracks
 a map turns on only to leave —`lufsorr` on map 3, which plays when there
 are no sound effects left— don't count in the map's package: see
-`Temas.de_salida` in `tools/port/eventos.py`.
+`Songs::exit_songs` in `rm2k-snes/rm2k-snes-audio/src/cartridge.rs`.
 
 **What it costs**: each package fills almost the whole ARAM, so uploading
 it takes longer —the battle, 58 frames on entering instead of 36—; taro

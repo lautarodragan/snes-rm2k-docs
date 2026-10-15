@@ -223,6 +223,18 @@ twelve moving at once, not twelve on the whole map.
 - **Where**: `reclaim_slot` in `runtime/event_pages.s`.
 - **More**: [Finished routes give up their slot](../divergences/finished-routes-give-up-their-slot.md).
 
+### Battle animations: one box for the whole ROM
+
+A battle animation on the map is drawn in a box that is the same for
+every map —a row of the sprite bank, four 32x32 objects—, so its frames
+are converted once and every map that shows it shares them in the
+cartridge. What the box costs in fidelity is in
+[Lossy](lossy.md#battle-animations-on-the-map-shrunk-to-a-box).
+
+- **Saves**: ROM —one copy of each animation's frames, not one per map—.
+- **Where**: `rm2k-snes/convert/src/animations.rs`.
+- **More**: [The shrunk battle animation](../divergences/the-shrunk-battle-animation.md).
+
 ## Events
 
 ### A common event's shared body, called with `OP_CALL`
@@ -284,6 +296,16 @@ declaration, instead of a chain of comparisons.
 
 ## Text and windows
 
+### A repeated box is stored once
+
+`OP_MESSAGE` carries an offset into one block of text for the whole
+cartridge, not the text itself, so a box the game repeats —whole boxes
+repeat often— is stored once: the content is the key.
+
+- **Saves**: ROM in the messages.
+- **Where**: `rm2k-snes/events/src/messages.rs`.
+- **More**: [Events](../internals/events.md).
+
 ### DTE in the messages
 
 The byte values the text never uses each stand for a pair of letters, one
@@ -336,6 +358,40 @@ no mode or base changes mid-frame.
 - **Where**: `battle.rs` in `rm2k-snes/screens/`; `ba_win_tick` in
   `runtime/battle_scene.s`.
 - **More**: [The VRAM split](../internals/vram.md#battle-doesnt-use-the-layout).
+
+### Each distinct troop page once
+
+A game copies its battle systems' pages into every troop, so the troops'
+pages are compiled and deduplicated by their bytecode: each distinct body
+is stored once, and every troop that has it points to it.
+
+- **Saves**: ROM in the troops' bytecode.
+- **Where**: `rm2k-snes/events/src/troops.rs`.
+- **More**: [What troop pages do not model](../divergences/what-troop-pages-do-not-model.md).
+
+### The battlers and the light backdrops in LZ2
+
+The troop's battlers and the backdrops the ROM carries travel as LZ2 and
+are decompressed when the battle starts.
+
+- **Saves**: ROM.
+- **Where**: `rm2k-snes/convert/src/scene.rs`; `runtime/battle_scene.s`.
+- **More**: [The `.msu` file](../internals/the-msu-file.md#what-does-not-fit-in-the-rom).
+
+### Encounters and experience, precomputed
+
+The encounter odds are integer arithmetic the converter prepares: the
+reciprocal of each map's `encounter_steps`, in 1/65536, and the step at
+which each row of the table is crossed; the ROM does not divide. And a
+victory's experience comes summed per troop, since every enemy in a
+victory is dead.
+
+- **Saves**: CPU —no division on the console—.
+- **Where**: `base` and `step_thresholds` in
+  `rm2k-snes/battle/src/encounters.rs`, read by `runtime/encounters.s`;
+  `troop_exp` in `rm2k-snes/battle/src/rules.rs`, read by `ba_exp_allocate`
+  in `runtime/battle_loop.s`.
+- **More**: the comments of those routines.
 
 ### The battlers in the grid's half of `$7E`
 
@@ -423,7 +479,70 @@ package, not for a full ARAM.
   `BOOT_FRAMES_FLOOR` in `runtime/far_ram.s`.
 - **More**: [Boot is sized for the boot package](../decisions/boot-is-sized-for-the-boot-package.md).
 
+## CPU time in the frame
+
+### The hottest NPC code in bank 1, unrolled
+
+What runs for every NPC row on every frame lives in bank 1, run from the
+fast mirror, because bank 0 had no room to make it faster: hiding the 128
+objects at the start of each frame is unrolled, and a row that moved is
+moved to its place in the sorted table in one search and one block move
+—`mvn`/`mvp`—, instead of re-sorting the table or swapping one place at a
+time.
+
+- **Saves**: scan lines of every frame, on every map.
+- **Where**: `oam_hide` and `fit_far` in `runtime/far_npcs.s`.
+- **More**: the header of `runtime/far_npcs.s`.
+
+### The tint's tables are copied, not rebuilt
+
+While a flash lasts, the palette is rebuilt every frame; the tint's three
+channel tables —products and divisions— are kept in a pristine copy and
+restored by copying it, and the flash's own table saves the tint's
+computation per entry. A picture's tint reuses the same tables and
+restores them the same way.
+
+- **Saves**: CPU on every frame of a flash or a tinted picture.
+- **Where**: `tint_tables`, `restore_tables` and `flash_channel_table` in
+  `runtime/character_flash.s`; `pic_palette` in `runtime/picture.s`.
+- **More**: the comments of those routines.
+
+### A DSP write the register already has is skipped
+
+The music decoder keeps a copy of what it wrote to each DSP register, and
+does not write again a value the register already holds.
+
+- **Saves**: writes through the SPC700's ports, every music frame.
+- **Where**: `mus_write` and `MUS_SHADOW` in `runtime/music.s`.
+- **More**: [Audio](../internals/audio.md).
+
 ## The cartridge
+
+### Identical blocks are stored once
+
+Every data block the converter emits —tiles, grids, block tables,
+bytecode, and the rest— has an identity of its own, `<class>_<n>`, and
+the map stores which one it points to: two maps with the same bytes in a
+class share the block.
+
+- **Saves**: ROM, wherever maps repeat data.
+- **Where**: `Materials::store` in `rm2k-snes/mapdata/src/materials.rs`.
+- **More**: [Graphics and sound, from RM2k to the SNES](../research/graphics-and-sound-from-rm2k-to-the-snes.md).
+
+### Tables of pointers, stored once by their text
+
+A table whose bytes are pointers the linker sets cannot be compared by
+its bytes, so it is shared by its text, which names the same labels when
+it points to the same things. The per-map leader table and the per-map
+table of the poses of each character that changes pose go this way: most
+maps bring one another map already brought.
+
+- **Saves**: ROM.
+- **Where**: `Materials::store_text` and `Materials::store_symbolic` in
+  `rm2k-snes/mapdata/src/materials.rs`; `actor_table_asm` and
+  `npc_poses_asm` in `record.rs`.
+- **More**: [Fitting the whole game in 8 MB](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md),
+  the research that measured them.
 
 ### The fast half first
 

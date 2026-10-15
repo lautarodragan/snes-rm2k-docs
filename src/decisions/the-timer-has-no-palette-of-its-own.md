@@ -9,7 +9,7 @@ character that uses thirteen colors or fewer.
 
 Having it separate cost an undrawn event on map 2 —the middle cell of the
 door Core breaks—, and an event that isn't drawn still takes up room in
-`npcs_dibujables`.
+`drawable_npcs`.
 
 What this costs today, and the idea of reserving it only while the timer
 runs, is in [`timer-palette`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/timer-palette.md) in the-advocate-work.

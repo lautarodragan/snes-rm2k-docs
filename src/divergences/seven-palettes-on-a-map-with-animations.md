@@ -11,7 +11,7 @@ palettes.
 
 **Unless the timer does not fit in seven**: then the timer wins, it goes back
 to eight and that map does not draw animations. The rule is
-`map_palette_cap`, in `tools/port/obj_extras.py` in the-advocate, which says how
+`palette_cap`, in `rm2k-snes/wally/src/map.rs` in the-advocate, which says how
 many palettes the characters share.
 
 ## Measured

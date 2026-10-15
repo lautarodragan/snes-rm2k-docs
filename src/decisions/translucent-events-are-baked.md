@@ -6,8 +6,10 @@
 —`translucent`, which in RM2k draws the event at opacity 160 out of 255—
 is computed in the converter against the layer below its cell and stays in
 the graphic. No color math, no dithering, no separate palettes. How, in
-`decorar_translucido` (`tools/rpgmaker/rm2k.py` in the-advocate); the
-exception, the save point, which goes opaque, in `SIN_TRAMA`, next to it.
+`decorate_translucent` (`rm2k-snes/convert/src/game.rs` in the-advocate),
+which names the graphic, and `rm2k-snes/wally/src/sheets.rs`, which draws
+it; the exceptions, which go opaque —the save point—, are the project's
+`[graphics] opaque`.
 
 ## Why
 

@@ -4,7 +4,7 @@
 
 A still event with continuous animation stops sharing the VRAM slot of its
 (CharSet, index, pose) and needs **all twelve poses of its own**, like the
-ones that walk. The cap is `ANIMATES_STILL_MAX` in `tools/port/sprites.py` in
+ones that walk. The cap is `ANIMATES_STILL_MAX` in `rm2k-snes/wally/src/moves.rs` in
 the-advocate, and it is **per map and all or nothing**: with more of those, the
 map animates none of them. In RM2k they all animate.
 

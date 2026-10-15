@@ -26,7 +26,7 @@ kept out of how many there were, how many palettes the layer above took,
 starting from which, and how many colors it had to merge.
 
 Converting both layers together is not a convenience: neither one can
-decide the cut on its own, so `convert_layers()` is the only place where
-it is written. Before, each caller converted one and then the other, and
+decide the cut on its own, so `convert_with`, in `rm2k-snes/wally/src/background/layers.rs`
+in the-advocate, is the only place where it is written. Before, each caller converted one and then the other, and
 whether the three copies of the order matched was a matter of luck —exactly
 the kind of error that had already loosened the comparison once.

@@ -18,7 +18,7 @@ In RM2k it is `Push<ExecutionType::Call>`, a stack of interpreters; here
 none is needed, because the callee runs in full before the caller
 continues, so pasting its bytecode in place gives the same result. **No
 call in this game is recursive**, measured, and nesting is capped at
-`LLAMADA_MAX`.
+`CALL_MAX`, in `rm2k-snes/events/src/compile.rs`.
 
 It is the only one of the four pieces of that round that **doesn't touch
 the interpreter**: what changes is the bytecode that is emitted, not who
