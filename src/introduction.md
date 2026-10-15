@@ -36,4 +36,4 @@ memory, 128 sprites, 15 colors per sprite palette. When a game asks for
 more than the console has, the tools prefer to **degrade gracefully** —drop
 a detail, warn about it, and keep going— over refusing to build. A game
 that runs with a missing effect can be played and measured; one that does
-not build can't. [What gives way](fitting.md), and how.
+not build can't. [What gives way](optimizations/lossy.md), and how.

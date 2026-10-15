@@ -1,5 +1,7 @@
 # The grid lives in WRAM
 
+A lossless optimization —see [Lossless](lossless.md)—, and the one of them that was taken as a trial: it says how to know it needs reverting, and how.
+
 ## What
 
 **The map's grid is decompressed whole into WRAM when the map loads, and
@@ -69,14 +71,14 @@ there— will too.
 The grid goes back to the cartridge, not in LZ2: uncompressed, or in 4×4
 chunks.
 
-1. In `tools/port/snes_convert.py`, take `map_celdas` out of
-   `CLASES_COMPRIMIDAS` and emit it again with `materiales.guardar(...,
-   alinear=2)`: it doesn't need to be whole in one bank, `ptr_more` walks
-   it.
+1. In `rm2k-snes/mapdata/src/materials.rs`, take `map_cells` out of
+   `COMPRESSED_KINDS` and store it again as a standalone block, aligned
+   to two bytes: it doesn't need to be whole in one bank, `ptr_more`
+   walks it.
 2. In the ROM, the two reads of `GRID` —`cell_ptr` in `hero.s` and
-   `fill_window` in `map_window.s`— go back to reading
-   `map_table + M_PTR_MAP_CELLS`, and the two calls to `lz2_grid` —in
-   `enter_map_no_events` and in `back_from_battle`— are removed.
+   `fill_window` in `map_window.s`— go back to reading the grid's pointer
+   in the map's record, and the two calls to `lz2_grid`, in
+   `enter_map.s`, are removed.
 3. `GRID` and its reservation in `far_ram.s`, `lz2_grid`, and the grid
    parts of `test_decompressed_load.py` and
    `test_wram_reservations.py` are deleted.
@@ -87,8 +89,7 @@ used.
 
 **Since 2026-10-01 the block table, its passability and the events'
 bytecode depend on this**: they live in WRAM right behind the grid, and
-`lz2_grid` decompresses them along with it (see `docs/port/maps.md` in
-the-advocate). Reverting the grid also requires returning them to the
+`lz2_grid` decompresses them along with it (see [Maps](../internals/maps.md)). Reverting the grid also requires returning them to the
 cartridge, uncompressed: in `rm2k-snes-mapdata`, take `map_ram` and
 `map_code` out of `COMPRESSED_KINDS` and store them again as standalone
 blocks with their labels in the register and in the page table; and in the

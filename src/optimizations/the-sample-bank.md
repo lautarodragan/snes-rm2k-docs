@@ -1,5 +1,9 @@
 # A single sample bank
 
+How the music's samples share the cartridge and the ARAM. Sharing
+them is [lossless](lossless.md#a-single-sample-bank-uploaded-in-packages-per-map);
+the rate each one gets is [lossy](lossy.md#each-sample-at-the-rate-its-worst-package-allows).
+
 ## What
 
 **Music tracks share a single sample bank** —one sample per General MIDI
@@ -26,7 +30,7 @@ of the same step, chosen by taro). What goes to the ARAM is never the bank
 but a package, so what has to fit in the 64 KB is each package with its
 sound effects, and the track that may come playing from the previous map
 (see
-[the-playing-track-wins-and-the-sound-effects-wait](the-playing-track-wins-and-the-sound-effects-wait.md)).
+[the-playing-track-wins-and-the-sound-effects-wait](../decisions/the-playing-track-wins-and-the-sound-effects-wait.md)).
 Until that day the **whole** bank had to fit, and nineteen of `release`'s
 thirty-two tracks didn't bring any programs of their own.
 
@@ -42,7 +46,7 @@ anyone's rate (see `copies` in
 `rm2k-snes/rm2k-snes-audio/src/bank.rs` in the-advocate). And the tracks
 a map turns on only to leave —`lufsorr` on map 3, which plays when there
 are no sound effects left— don't count in the map's package: see
-`Temas.de_salida` in `tools/port/eventos.py`.
+`Songs::exit_songs` in `rm2k-snes/rm2k-snes-audio/src/cartridge.rs`.
 
 **What it costs**: each package fills almost the whole ARAM, so uploading
 it takes longer —the battle, 58 frames on entering instead of 36—; taro

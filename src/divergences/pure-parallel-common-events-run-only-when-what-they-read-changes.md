@@ -59,3 +59,7 @@ as in the original.
 A pure common event whose result depends on something that changes
 without going through those paths; or one that is pure by its commands but
 expensive enough to matter on the frames it does run.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [The pure parallel common events run only when what they read changes](../optimizations/lossless.md#the-pure-parallel-common-events-run-only-when-what-they-read-changes), in Optimizations.

@@ -4,7 +4,7 @@
 
 The `ShowPicture` pictures that cover the screen go in BG1, with the console
 in mode 1 while they are shown —see `runtime/big_picture.s` and
-`tools/port/picture.py` in the-advocate, and
+`rm2k-snes/images/src/fullscreen.rs` in the-advocate, and
 [Large pictures in mode 1](../decisions/large-pictures-in-mode-1.md)—,
 and they do not do everything they do in RM2k:
 
@@ -93,3 +93,7 @@ On the `release` cartridge, on 2026-10-02, with the test pages of
 `test_big_pictures_golden.py`, against captures of the six scenes from
 the 2015 RPG_RT under Wine: see the task [`large-pictures-on-bg1-in-mode-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/large-pictures-on-bg1-in-mode-1.md),
 in `tasks/` in the-advocate-work.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Big pictures in mode 1, 105 colours](../optimizations/lossy.md#big-pictures-in-mode-1-105-colours), in Optimizations.
