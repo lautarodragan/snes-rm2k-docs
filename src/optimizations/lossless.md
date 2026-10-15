@@ -298,6 +298,23 @@ before the caller continues, so no stack of interpreters is needed.
 - **Where**: the event compiler, `rm2k-snes/events/`.
 - **More**: [CallEvent: a shared body, or pasted in place](common-event-calls.md#pasted-in-place).
 
+### Identical pages are stored once
+
+Two pages of a map whose compiled bytecode is the same point at the same
+code in the map's block, and so do two identical own routes: the page
+table already carries a 24-bit pointer per page. A battle screen made of
+one page per monster, all with the same commands, is the case it was made
+for.
+
+- **Saves**: WRAM, where the map's bytecode is decompressed; ROM only a
+  little, because LZ2 already finds most of the repetition. How much, per
+  map: the `map_code` table of the cartridge's `mapdata.inc`.
+- **Only within a map**: each map's block is its own stream, decompressed
+  alone.
+- **Where**: `lay_out_code` in `convert.rs` of `rm2k-snes/convert/`.
+- **More**: [Events](../internals/events.md); measured in
+  [Frozen World's battle system](../research/2026-10-15-frozen-worlds-battle-system.md).
+
 ### The pure parallel common events run only when what they read changes
 
 A parallel common event that only reads switches and equipment, and only
