@@ -101,6 +101,7 @@
         - [What walking by a movement type does not model](divergences/what-walking-by-a-movement-type-does-not-model.md)
         - [What erasing an event does not model](divergences/what-erasing-an-event-does-not-model.md)
         - [A skipped call](divergences/a-skipped-call.md)
+        - [A teleport to a map not carried](divergences/a-teleport-to-a-map-not-carried.md)
         - [Variables saturate at sixteen bits](divergences/variables-saturate-at-16-bits.md)
         - [The pure parallel common events run only when what they read changes](divergences/pure-parallel-common-events-run-only-when-what-they-read-changes.md)
         - [A loop that never waits does not compile](divergences/a-loop-that-never-waits-does-not-compile.md)
