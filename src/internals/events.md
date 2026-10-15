@@ -21,6 +21,17 @@ to `CODE_CARRY`, and the hero's forced route is copied whole: see
 `code_carry_before` in `runtime/decompress.s`. Jumps inside a page
 are relative to where it starts, so moving it is moving a pointer.
 
+**A map's block is laid out by the converter**: each page's bytecode and,
+behind it, its own route's commands, and the page table points at each
+with 24 bits. Since 2026-10-15 **two pages with the same bytes point at the
+same code**, and two identical routes too (`lay_out_code` in
+`rm2k-snes/convert/`). It holds because nothing in the runtime depends on
+where a page is: besides the relative jumps, nothing writes the block, and
+what tells two pages apart —a parallel's saved state, the refresh, the
+action key— is the page's place in the table, `page_ofs`, never its code
+pointer. **A routine that compared code pointers to know which page is
+running would break it.**
+
 The declaration is a `macro_rules!`, `bytecode!`: it gives one constant per
 opcode, which the compiler takes with a `use`, and the table from which
 `rm2k-snes-assemble` writes `event_opcodes.inc` into the cartridge's
