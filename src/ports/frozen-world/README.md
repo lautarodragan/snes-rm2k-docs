@@ -25,10 +25,6 @@ as text.
   switch table**: 28 pages on 24 maps and three common events do it, up to
   seven bytes past the end. What it breaks was not looked at. Draft:
   [`branches-and-switch-commands-past-switch-1023`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/branches-and-switch-commands-past-switch-1023.md).
-* **Three merchants sell nothing**: the shops on maps 50, 51 and 128 have
-  `\V[n]` (the gold) in an option's text, and the page does not compile.
-  Draft:
-  [`variables-in-a-choice-option-and-before-an-input-number`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-in-a-choice-option-and-before-an-input-number.md).
 * **Eight event pages on maps 9, 47, 99, 129 and 149 never run**: they
   change the map's tileset, which is not done, and the page is left out
   whole. Draft:
