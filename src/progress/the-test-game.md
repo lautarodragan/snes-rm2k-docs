@@ -21,7 +21,8 @@ that moves out of A Blurred Line changes this page.
 
 ## Where it stands
 
-**The skeleton**, 2026-10-15: one map, the hero and one NPC, and one test.
+**The skeleton**, 2026-10-15: one map, the hero and one NPC, and its first
+tests.
 
 * **The game** is `test-game/` in the-advocate: a Ditto exact dump written
   by hand —liblcf's names, enums by name, defaults left out— and each map's
@@ -46,7 +47,16 @@ that moves out of A Blurred Line changes this page.
   composed; two goldens, the map and the message, in snes9x and in bsnes.
   The harness is a small one of its own and the core driver a copy of A
   Blurred Line's.
-* **What moved out of A Blurred Line**: nothing yet.
+* **The cases**: `test-game/cases/`, one JSON per test page, like a
+  port's; the harness chooses one by the case variable before the first
+  game frame, the way A Blurred Line's does.
+* **What moved out of A Blurred Line**: switches past 1023, on 2026-10-15
+  —`test_switches_past_1023.py`: a page conditioned on 1100, a
+  `ControlSwitches` and a branch on it, and the page not running before
+  its switch is on—. In A Blurred Line it needed a fork of its map 348,
+  since that game names no switch past 1008, and the cartridge taro plays
+  carried it; here the meadow carries the event, invisible. The task is
+  [`switches-past-1023-tested-in-the-test-game`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switches-past-1023-tested-in-the-test-game.md).
 
 Of the seven assumptions about A Blurred Line the research found in the
 tools when it first wrote a game from scratch, four are gone —a debug map
@@ -65,8 +75,8 @@ In the order the research gives, each a task of its own:
    screens, the models— as one Python package in the-advocate, imported by
    both games; then the copy of the core driver goes. What stays with A
    Blurred Line is its walkthrough and its places.
-2. **The cases**: the test game's own `cases/`, and the tests of
-   `tests/rpgmaker/` in A Blurred Line moving over one by one, each with
+2. **The cases**: the tests of `tests/rpgmaker/` in A Blurred Line
+   moving over one by one into the test game's `cases/`, each with
    goldens born anew —and looked at once, since a new golden defends
    whatever the ROM drew that day—.
 3. **What the moved tests need**, as they need it: more maps, a title,
