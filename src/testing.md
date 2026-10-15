@@ -16,6 +16,14 @@ Three rules come with that:
   garbage in work RAM and the other with zeros, so a difference between
   them means the ROM reads memory it never wrote.
 
+## The test game
+
+Most of those tests live in A Blurred Line's suite and test what RPG Maker
+2000 does, using that game as a stage. They are moving to a game of our
+own, in the-advocate, built from text with free assets and run with `just
+test-game`; where that stands is [its progress
+page](progress/the-test-game.md).
+
 ## The other games
 
 A Blurred Line's suite runs only A Blurred Line, so a change to the tools

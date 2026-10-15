@@ -7,6 +7,7 @@
 - [Project progress](progress/README.md)
     - [The engine against RPG Maker 2000](progress/engine-vs-rm2k.md)
     - [The Book of Three and The Frozen World](progress/book-of-three-and-frozen-world.md)
+    - [The test game](progress/the-test-game.md)
 - [How it is tested](testing.md)
 - [Optimizations](optimizations/README.md)
     - [Lossless](optimizations/lossless.md)

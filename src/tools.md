@@ -6,7 +6,7 @@ on the ones below it:
 | Layer | Knows about | Examples |
 |---|---|---|
 | `snes/` | the console's formats, nothing of RPG Maker | Adeleine (colors and palettes), Voodoo (images to tiles), Gunter (BRR samples), LZ2 compression, Goombario (a 65816 linter) |
-| `rm2k/` | RPG Maker 2000's formats, nothing of the console | Ditto (reads and writes the formats), the rules of the format (passability, pages, experience), a renderer |
+| `rm2k/` | RPG Maker 2000's formats, nothing of the console | Ditto (reads and writes the formats), the rules of the format (passability, pages, experience), a renderer, and `rm2k-sketch` (a map's tile layers drawn as text) |
 | `rm2k-snes/` | both | the event compiler, Wally (maps), battle, screens, images, audio, the cartridge builder, the converter |
 
 Two of them make decisions that are easy to misplace:
