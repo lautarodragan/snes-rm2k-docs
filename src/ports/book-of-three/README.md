@@ -30,9 +30,6 @@ as text.
   gold and items, called 82 times on 16 maps, does not compile and its
   calls are skipped. Draft:
   [`controlvars-random-ranges-wider-than-255`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/controlvars-random-ranges-wider-than-255.md).
-* **Choosing among the five Dreams is skipped**: a choice with five
-  options does not compile; six calls from five maps. Draft:
-  [`a-choice-with-more-than-four-options`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/a-choice-with-more-than-four-options.md).
 * **Talking to Hen Wen a second time does nothing**, in Caer Dallben
   East: the page turns the hero away with a move command the port does not
   compile. Draft:

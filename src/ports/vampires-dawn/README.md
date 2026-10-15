@@ -45,6 +45,10 @@ as text.
   page**: on map 433, "Level", the eight figures that should flee lie
   dead from the start. 735 pages on 253 maps ask for one. Draft:
   [`page-conditions-on-switches-past-1023-read-other-ram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/page-conditions-on-switches-past-1023-read-other-ram.md).
+* **Talking to the people the vampire can bite does nothing**: their
+  "Talk / Suck Blood / Convert / Leave" choice does not compile, on 210
+  pages of 48 maps. Read in the data, not played. Draft:
+  [`vampires-dawn-the-victims-choice-does-not-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-the-victims-choice-does-not-compile.md).
 
 ## Its own System again (2026-10-12)
 
