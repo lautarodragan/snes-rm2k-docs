@@ -141,7 +141,7 @@ because theirs does not fit even reduced), the BMPs converted to PNG
 that build alone, more than 44 —if they were the start map— are needed by 7
 of 9 in El Dorado, 126 of 151 in Frozen World and 30 of 89 in Dooms 2, up to
 119 frames. It is sized for ABL's on purpose
-([`decisiones/boot-is-sized-for-the-boot-package.md`](../decisions/boot-is-sized-for-the-boot-package.md));
+([`decisiones/boot-is-sized-for-the-boot-package.md`](../optimizations/lossless.md#boot-is-sized-for-the-boot-package));
 for another game it would have to come from the cartridge.
 
 ### Each one's cartridge

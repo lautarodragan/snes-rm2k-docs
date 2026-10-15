@@ -36,4 +36,4 @@ thirteen palettes out of eight and no split was possible, and it went on to
 fit with six borrowed graphics, the save point among them; the Hover-Tram
 (map 13) asked for eleven and went on to fit with two. The limit stopped
 being the number of palettes and became the sprite tile budget in VRAM:
-see `docs/port/vram.md` in the-advocate.
+see [The VRAM split](../internals/vram.md).

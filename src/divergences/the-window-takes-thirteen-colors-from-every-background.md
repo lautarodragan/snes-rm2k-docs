@@ -63,3 +63,7 @@ alone have thirty. And with a game whose backgrounds are already tight,
 each window color is one less for all of its maps. Since 2026-10-04 the
 number comes from the game's window and is not a constant: a System with
 fewer colors leaves more for each background.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [The message window takes its colours from every background](../optimizations/lossy.md#the-message-window-takes-its-colours-from-every-background), in Optimizations.

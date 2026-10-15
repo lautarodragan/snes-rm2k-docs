@@ -3,7 +3,7 @@
 ## What
 
 The timer's digits share a palette with a character —see
-[The timer has no palette of its own](../decisions/the-timer-has-no-palette-of-its-own.md)—,
+[The timer has no palette of its own](../optimizations/lossy.md#the-timer-borrows-a-characters-palette)—,
 and if the character has one of their two colors, black or pure red, **both
 use the same CGRAM entry**. While the timer is visible, that entry goes
 untinted, because in RM2k the digits are not tinted; so that color of the
@@ -45,3 +45,7 @@ when the color is already in the palette: two entries instead of the ones
 that are missing. It is not a palette, but the save point uses fifteen
 colors and on map 8 the eight palettes are full, so there someone would have
 to give up colors.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [The timer borrows a character's palette](../optimizations/lossy.md#the-timer-borrows-a-characters-palette), in Optimizations.

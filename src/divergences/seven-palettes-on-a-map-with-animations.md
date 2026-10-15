@@ -11,7 +11,7 @@ palettes.
 
 **Unless the timer does not fit in seven**: then the timer wins, it goes back
 to eight and that map does not draw animations. The rule is
-`map_palette_cap`, in `tools/port/obj_extras.py` in the-advocate, which says how
+`palette_cap`, in `rm2k-snes/wally/src/map.rs` in the-advocate, which says how
 many palettes the characters share.
 
 ## Measured
@@ -23,3 +23,7 @@ left without a box because of the timer was 9.
 
 The characters on those maps may have an extra merged color or two; the
 converter writes down each map's merges next to the ROM.
+
+## As an optimization
+
+What it saves, and where it lives in the code: [Seven palettes on a map with battle animations](../optimizations/lossy.md#seven-palettes-on-a-map-with-battle-animations), in Optimizations.
