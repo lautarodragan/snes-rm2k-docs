@@ -330,6 +330,19 @@ are dropped and the notes that needed them are silent.
 - **Where**: `compile.rs` of `rm2k-snes/rm2k-snes-audio/`.
 - **More**: [Audio](../internals/audio.md).
 
+### A package that does not fit even at the minimum is relieved
+
+A map whose package does not fit in the ARAM even with every sample at its
+lowest rate —The Frozen World's map 1, with 41 sound effects and six
+songs— is relieved instead of refused: its songs are uploaded when a
+`PlayBGM` asks for them, with a pause, and the last effects of its list are
+left out until the rest fits.
+
+- **Loses**: a pause at those `PlayBGM`s, and the effects left out, each
+  named in `degradations.json`.
+- **Where**: `relief.rs` of `rm2k-snes/rm2k-snes-audio/`.
+- **More**: [Audio](../internals/audio.md).
+
 ## Tables of a fixed size
 
 ### Graphics a move route switches to
@@ -351,3 +364,15 @@ build lists them.
 - **Loses**: those pages.
 - **Where**: `variable_slot` in `rm2k-snes/events/src/compile.rs`.
 - **More**: [Variables saturate at sixteen bits](../divergences/variables-saturate-at-16-bits.md).
+
+### A troop of more than eight enemies
+
+A battle holds eight enemies: each takes a fixed place in the battle's far
+RAM, and the hidden and scene masks are a byte per troop. A troop with
+more is fitted to eight, leaving out first the members no page shows, then
+those every page that shows them also kills; never one a page condition
+or a branch asks about.
+
+- **Loses**: those members, in the scenes the troop's pages play.
+- **Where**: `fit.rs` of `rm2k-snes/battle/`.
+- **More**: [A battle holds eight enemies](../divergences/a-battle-holds-eight-enemies.md).
