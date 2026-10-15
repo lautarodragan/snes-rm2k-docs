@@ -123,6 +123,42 @@ Where the rule is explained against the game: [Lossy:
 colours](optimizations/lossy/colours.md), [The CGRAM
 split](internals/cgram.md).
 
+**For example, `merge`.** A character of the EasyRPG RTP's `People1`
+—the elder of the test game, character 6— uses 21 colours at 15 bits over
+its twelve poses, and an object palette holds fifteen. The request is
+those 21 colours with the pixels each one covers and `"keep": 15`; the
+answer is six merges, each the cheapest left. Before, on the left; after,
+on the right:
+
+![The elder before and after merge](tools/adeleine-merge.png)
+
+The six pairs, in the order they were merged —each victim and the colour
+it went to—: two near-equal oranges of the skin first, then dark browns
+of the hair and the boots, a highlight of the skin, a grey of the
+outlines into the coat's darkest green, and two more browns; each the
+one that, by pixels times distance, shows the least:
+
+![The six merges](tools/adeleine-merge-pairs.png)
+
+**And `reduce`, on the hardest input there is.** The whole `Exterior`
+ChipSet —193 colours at 15 bits over 1,894 drawn cells— asked into
+eight, four, two and one palettes of fifteen, which is what the layer
+above the hero goes through: `pack` with eight palettes says it does not
+fit as it is, and `reduce` groups the cells and chooses each group's
+colours. Top row: the original and the eight- and four-palette answers;
+bottom row: two palettes and one. The crop is the sheet's middle band,
+the house and the stone walls:
+
+![The Exterior ChipSet reduced into 8, 4, 2 and 1 palettes](tools/adeleine-reduce.png)
+
+No map asks for this: a map draws a few dozen of these tiles, not the
+whole sheet, and on the console the layer *behind* the hero is 8 bits a
+pixel and takes its colours without any per-cell grouping —only the layer
+in front, at 4 bits, is split this way—. What the picture shows is the
+shape of the loss when there is one: a cell keeps the colours of the
+palette it was put in, and a palette is chosen for a group of cells that
+look alike.
+
 ### Voodoo: a picture into tiles
 
 Voodoo cuts an indexed picture into 8x8 tiles, numbers the distinct ones
@@ -146,6 +182,36 @@ That Adeleine decides and Voodoo only converts is a design decision, and
 it had a cost: Voodoo once had a `--merge` of its own, and it was removed
 so that the answer to "which colour was lost" lives in one place.
 
+**For example.** The meadow's background, as Wally leaves it —an indexed
+PNG whose indices are colour-memory entries—, converted at 8 bits a
+pixel:
+
+```text
+$ voodoo convert background.png --bpp 8 -o meadow.8bpp \
+      --palette meadow.cgram --tilemap meadow.map --json
+{"output": "meadow.8bpp", "bpp": 8, "columns": 40, "rows": 30, "cells": 1200,
+ "tiles": 17, "tile_bytes": 1088, "palettes": 1, "colors": 19, "animations": []}
+```
+
+Twelve hundred cells, seventeen distinct tiles: drawn once each, with a
+tilemap that counts them, they are the whole meadow's material —the grass
+in its few patterns, the bushes' corners, the flowers—:
+
+![The seventeen tiles of the meadow](tools/voodoo-tiles.png)
+
+`render` with the real tilemap gives the picture back identical to the
+one that went in. And the ChipSet reduced to eight palettes above, asked
+in at 4 bits, is refused:
+
+```text
+$ voodoo convert exterior-8.png --bpp 4 -o ex.4bpp --palette ex.cgram --tilemap ex.map
+error: the picture needs more than 1024 distinct tiles; a tilemap entry
+has ten bits for the tile number
+```
+
+Which is right: a tilemap entry has ten bits for the tile number, and
+what to do about a sheet that needs more is not Voodoo's to decide.
+
 ### LZ2: Nintendo's compression
 
 LC_LZ2 is the LZ format Nintendo used in its own Super NES games: a run of
@@ -166,6 +232,22 @@ maps' blocks, the screens and the pictures travel in it.
 
 `lz2 stats` prints each stream's size and what commands it has; the
 emission uses the library.
+
+**For example.** The meadow's seventeen tiles and its tilemap, the files
+Voodoo wrote above, compressed and measured:
+
+```text
+$ lz2 compress meadow.8bpp meadow.8bpp.lz2 meadow.map meadow.map.lz2
+$ lz2 stats meadow.8bpp.lz2 meadow.map.lz2
+{"file": "meadow.8bpp.lz2", "stream": 592, "output": 1088, "literal": 27,
+ "byte_fill": 9, "word_fill": 2, "increasing": 0, "repeat": 21}
+{"file": "meadow.map.lz2", "stream": 183, "output": 2400, "literal": 8,
+ "byte_fill": 0, "word_fill": 0, "increasing": 0, "repeat": 45}
+```
+
+The tilemap, which is mostly the same grass tile over and over, goes down
+to less than a tenth as repeats of its own output; the tiles, which are
+drawings, to about half. `decompress` gives both back byte for byte.
 
 ### Gunter: samples for the sound chip
 
@@ -189,6 +271,39 @@ SoundFont** and takes a sample out of it, and it **encodes PCM into BRR**.
 `decode` plays the codec back to a `.wav`, to hear what it did. The music
 stage uses it as a library: [Lossless: audio](optimizations/lossless/audio.md),
 [Lossy: audio](optimizations/lossy/audio.md).
+
+**For example.** General MIDI program 0, the piano, out of a free
+SoundFont —FluidR3—, into BRR and back:
+
+```text
+$ gunter sf2 FluidR3_GM.sf2 --extract program:0 -o piano.wav --json
+{"name": "P200 Piano D5(L)", "output": "piano.wav", "frames": 103887, "rate": 32000,
+ "root_key": 62, "tuning_cents": 0, "loops": true, "loop_start": 73030, "loop_end": 103885,
+ "env_delay_timecents": -12000, "env_attack_timecents": -8359, …}
+$ gunter encode piano.wav -o piano.brr --json
+{"output": "piano.brr", "samples": 103887, "rate": 32000, "blocks": 6493, "bytes": 58437,
+ "loop_block": null, "loop_sample": null, "worst_error_percent": 3.088, "within_limit": true}
+$ gunter decode piano.brr -o piano-back.wav --rate 32000
+$ gunter info piano.brr
+  6493 blocks, 103888 samples
+  last block: end, does not loop
+  filter 0: 2 blocks
+  filter 1: 219 blocks
+  filter 2: 3022 blocks
+  filter 3: 3250 blocks
+  ranges: 2x10 3x532 4x2060 5x1522 6x842 7x899 8x307 9x228 10x89 11x4
+```
+
+Sixteen-bit samples went in and nine bytes per sixteen samples came out,
+with the worst sample off by three percent of the peak; the same six
+hundred samples a little after the attack, before in blue and after in
+orange:
+
+![The piano before and after BRR](tools/gunter-brr.png)
+
+The two blocks with filter 0 are the first ones, which have no previous
+samples to lean on; the rest chose, block by block, the filter and the
+range that lost the least.
 
 ### Goombario: a linter for the 65816
 
@@ -276,7 +391,22 @@ grid = '''
   the way the editor does; a legend entry is one id.
 
 The test game's maps are written this way: [The test
-game](progress/the-test-game.md).
+game](progress/the-test-game.md). Its meadow is the sketch of the next
+example: twenty by fifteen cells, a border of bushes, four trees and some
+flowers over the grass, each a character and a legend line.
+
+What comes out is a dump's `.tiles`, a grid of RM2k's ids —`4000` is the
+first terrain autotile in its plain pattern, `10007` the bush on the
+upper layer— and the thing the renderer below reads:
+
+```text
+# 20x15, 300 tiles per layer
+# lower
+  4000  4000  4000  4000  4000  4000  4000  4000  4000  4000 …
+# upper
+ 10007 10007 10007 10007 10007 10007 10007 10007 10007 10007 …
+ 10007 10000 10000 10002 10000 10000 10000 10000 10000 10000 …
+```
 
 ### `rm2k-render`: draws like RM2k
 
@@ -301,6 +431,19 @@ animation's cells placed as RM2k places them; backdrops and enemies.
 The goldens of a port's suite are compared against the console, not
 against this; it is what the stages start from, and what the tests use to
 predict the console with.
+
+**For example.** The meadow's two layers, from the test game's dump:
+
+```text
+$ rm2k-render layers --map 1 --data build/data --game-dir build/game \
+      --rtp-dir empty/ --out meadow/
+```
+
+`lower.png`, what is drawn behind the hero on opaque black, and
+`upper.png`, what is drawn in front of them on transparency —here, the
+four trees' crowns, which the ChipSet's passability puts above—:
+
+![The meadow's lower and upper layers](tools/rm2k-render-meadow.png)
 
 ## Both sides: `rm2k-snes/`
 
@@ -390,6 +533,31 @@ sprites](optimizations/lossless/characters-and-sprites.md), [The CGRAM
 split](internals/cgram.md), [The VRAM split](internals/vram.md),
 [Maps](internals/maps.md).
 
+*For example*, the background half alone, on the meadow, with the
+message window's count from the screens:
+
+```text
+$ wally layers --data build/data --search-dir build/game \
+      --request layers.json --out meadow/
+```
+
+where `layers.json` is `{"map": 1, "map_files": {}, "chipset_files": {},
+"baked": [], "window_colors": 15}`. Out come the two layers as indexed
+pictures whose indices are colour-memory entries —what Adeleine decided—,
+their tiles and tilemaps, and `layers.json` with the numbers: the
+background used 19 colours of a budget of 96, with no merges, and the
+layer above took palette 7, with none either. On the right, the lower
+half of colour memory as the meadow leaves it, one square per entry:
+entry 0 is the backdrop, entries 1 to 15 are the message window's —not
+drawn by the map, so crossed—, the background's colours start at 16, and
+the layer above's palette is the last row:
+
+![The meadow as Wally leaves it, and its colour memory](tools/wally-meadow.png)
+
+The layers came back identical to what `rm2k-render` drew: nothing was
+lost on this map. The ones where something is are the next section of
+this page.
+
 **`rm2k-snes-events`**, the event compiler, called twice. RM2k has about
 130 event commands and a page is a script of them; the console runs a
 bytecode with every operand already resolved —an event is its index in the
@@ -430,6 +598,27 @@ the System's colours when it has more than fifteen. More: [Text and
 windows](optimizations/lossless/text-and-windows.md), [A window with a
 gradient](optimizations/lossy/tiles/a-window-with-a-gradient.md), [The
 windows, made cheaper](research/2026-10-11-the-windows-made-cheaper.md).
+
+*For example*, `window` on the test game, whose System is the RTP's:
+
+```text
+$ rm2k-snes-screens window --data build/data --game-dir build/game \
+      --rtp-dir empty/ --request empty.json --out window/
+```
+
+with `{}` in `empty.json`: the test game switches to no other System.
+
+The window draws with 30 of the System's colours and palette 0 gives it
+fifteen, so the answer is fifteen merges, each the least visible left:
+thirteen are greens of the gradient behind the text, which keeps its
+bands and loses the shades in between, and two are light blues that go
+to their neighbours. The whole System picture before and after, so that
+what moved can be seen —the window only draws with its upper half and the
+text colours—:
+
+![The System before and after the window's merges](tools/screens-window.png)
+
+![The fifteen merges](tools/screens-window-pairs.png)
 
 **`rm2k-snes-images`**, the pictures: the title and the Game Over at 8
 bits a pixel, the picture of a `ShowPicture` as a sprite or —too big for
@@ -532,6 +721,22 @@ can be run alone on a dump, with a request written by hand; the pieces it
 writes are the same ones the converter hands to the next stage. The
 converter's queries —`scan`, `compile`, `leaders`, `map-context`,
 `boxes`— answer a game's tests the same questions it asks itself.
+
+### How the pictures on this page were made
+
+Every picture above comes out of `figures/tools/make.py`, at the root of
+this book's repository: it counts pixels, writes each tool's request,
+runs the tool from the PATH and pastes the answers side by side. It takes
+the EasyRPG RTP, a SoundFont and the test game's `build/` —made with `just
+game` in the-advocate's `test-game/`— as flags, and prints what each
+command printed, which is where the numbers quoted above were read from
+on the day the pictures were made; the tools move, so the way to know
+today's is to run it again.
+
+The pictures are the [EasyRPG RTP](https://github.com/EasyRPG/RTP)'s:
+`ChipSet/Exterior.png` by Jason Perry, CC0, and `CharSet/People1.png`
+by VictorSena and `System/System.png` by andwhyisit, both CC BY 4.0. The
+piano is the one FluidR3's General MIDI bank carries at program 0.
 
 The tools are installed on the PATH with `just install`, from the root of
 the-advocate, the tools' repository; its `LAYOUT.md` says where each one
