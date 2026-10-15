@@ -24,5 +24,7 @@ of the hardware or of the formats, or come from a dated page that says
 when they were measured.
 
 The paths —`runtime/…`, `rm2k-snes/…`, `snes/…`— are in the-advocate.
-What gives way when a game does not fit, told from the game's side, is in
-[When a game doesn't fit](../fitting.md).
+
+Until 2026-10-15 several of these lived elsewhere: as decisions, as a
+divergence, and the rule of the lossy ones as its own chapter, "When a
+game doesn't fit". Their old addresses redirect here.

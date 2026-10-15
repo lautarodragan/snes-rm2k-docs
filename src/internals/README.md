@@ -4,7 +4,7 @@ These pages describe how each part of the port works **today**: the maps
 and their grid, the split of color and video memory, the event bytecode,
 the audio and the data the MSU-1 serves. The broad picture —[from a game
 to a ROM](../pipeline.md), [the tools](../tools.md), [what gives way when
-a game doesn't fit](../fitting.md) and [how it
+a game doesn't fit](../optimizations/lossy.md) and [how it
 is tested](../testing.md)— is in the chapters before; these
 go one level down, close to the code.
 

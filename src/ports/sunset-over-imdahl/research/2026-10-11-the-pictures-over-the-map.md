@@ -237,7 +237,7 @@ instead of over the ruins.
 ## Mode 1 for a painted map
 
 **Not done: it changes [Mode 3, always](../../../internals/mode-3.md) and
-[Color math isn't used](../../../decisions/translucent-events-dont-use-color-math.md), and
+[Color math isn't used](../../../optimizations/tried-and-left-out.md#colour-math-for-translucent-events), and
 that is taro's to decide.** Written here because Sunset makes the case
 for it.
 

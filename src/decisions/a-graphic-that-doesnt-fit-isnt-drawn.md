@@ -1,8 +1,9 @@
 # A graphic that doesn't fit isn't drawn
 
 > **Partly superseded**, noted on 2026-09-29 (Guayabo, while sorting the
-> decisions by repo): since 2026-09-08 (`ac8f356b` in the-advocate) `fits`, in
-> `tools/port/sprites.py`, **lends** a palette to these graphics, just as it
+> decisions by repo): since 2026-09-08 (`ac8f356b` in the-advocate) `fits`, then in
+> `tools/port/sprites.py` and today `drawable_npcs` in
+> `rm2k-snes/wally/src/sprites/split.rs`, **lends** a palette to these graphics, just as it
 > does to events ([every-event-is-drawn](every-event-is-drawn.md)).
 > A graphic is only left undrawn if every palette belongs to a leader, which
 > is what [move-route-command-34-on-the-hero](move-route-command-34-on-the-hero.md) says.
