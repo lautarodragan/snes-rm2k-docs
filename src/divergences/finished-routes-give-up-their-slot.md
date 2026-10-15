@@ -44,4 +44,4 @@ warning, as always.
 
 ## As an optimization
 
-What it saves, and where it lives in the code: [Finished routes give up their slot](../optimizations/lossless.md#finished-routes-give-up-their-slot), in Optimizations.
+What it saves, and where it lives in the code: [Finished routes give up their slot](../optimizations/lossless/characters-and-sprites.md#finished-routes-give-up-their-slot), in Optimizations.

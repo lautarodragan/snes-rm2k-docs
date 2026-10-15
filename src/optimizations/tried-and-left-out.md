@@ -12,7 +12,7 @@ it goes up. It was built: the poses compress well, but decompressing one
 costs a large slice of a frame in the main loop, and the test suite lost
 frames —the race ran slower, and tests went red—. The poses stay raw, and
 what was saved instead came from storing them [without their empty
-tiles](lossless.md#a-pose-goes-up-without-its-empty-tiles).
+tiles](lossless/characters-and-sprites.md#a-pose-goes-up-without-its-empty-tiles).
 
 - **More**: [The S-DD1, for the poses](../research/2026-10-11-the-s-dd1.md),
   [Fitting the whole game in 8 MB](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).
@@ -114,5 +114,5 @@ tiles repeat byte for byte between maps, because each map quantizes its
 own palette; and a shared pool did not fit in any VRAM layout.
 
 - **More**: [Graphics and sound, from RM2k to the SNES](../research/graphics-and-sound-from-rm2k-to-the-snes.md),
-  [Only the tiles the map draws go to VRAM](lossless.md#only-the-tiles-the-map-draws-go-to-vram),
+  [Only the tiles the map draws go to VRAM](lossless/the-map.md#only-the-tiles-the-map-draws-go-to-vram),
   [Fitting the whole game in 8 MB](../ports/abl/research/2026-10-14-fitting-the-whole-game-in-8-mb.md).

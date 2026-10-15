@@ -26,7 +26,7 @@ writes            --dsp_music-->        the SPC700 driver
   `musicdata.inc`: `BOOT_FRAMES_FLOOR` (`runtime/far_ram.s`) or the
   estimate for the boot map's package, whichever is larger. See [boot is
   sized for the boot
-  package](../optimizations/lossless.md#boot-is-sized-for-the-boot-package).
+  package](../optimizations/lossless/audio.md#boot-is-sized-for-the-boot-package).
 - **The stream is per note**: notes, releases, changes of volume or pitch,
   and waits, which the 65816 expands into the same writes that used to go
   in the stream. The format is in "the per-note format" in `stream.rs`, and
