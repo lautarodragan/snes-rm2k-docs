@@ -13,14 +13,10 @@ as text.
 * **One of its parallel common events never runs**: `Reraise KO'd chars`
   does not compile. What that loses in play was not looked at. Draft:
   [`book-of-three-reraise-and-eilonwy-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-reraise-and-eilonwy-dont-compile.md).
-* **Taran's Last Stand and Eilonwy's Absorb Essence do nothing in
-  battle**: the page each of them runs, in 52 of the troops, does not
-  compile. Draft:
-  [`changeitems-and-changemonsterhp-by-a-variable`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changeitems-and-changemonsterhp-by-a-variable.md).
 * **Gwydion's Blazing Star and Dyrnwyn are not drawn**, in the fights
-  against the three Cauldron-Born (map 26) and the Horned King (map 78):
-  the battle pauses for as long as the animation would last, and then the
-  fight ends as in the original. See
+  against the three Cauldron-Born (map 26) and the Horned King (map 78),
+  and neither is Taran's Last Stand: the battle pauses for as long as the
+  animation would last, and then the page goes on as in the original. See
   [What troop pages do not model](../../divergences/what-troop-pages-do-not-model.md).
 
 ## Its walkthrough
