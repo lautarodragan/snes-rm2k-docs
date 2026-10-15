@@ -12,7 +12,8 @@ data/ + patches/manual/
                                      screens, images, battle,
                                      mapdata, patches, audio)
                                                                   <rom>.msu (battle backdrops),
-                                                                  patches/ (decisions)
+                                                                  patches/ (decisions),
+                                                                  degradations.json
 runtime/*.s + those .inc    --rm2k-snes-assemble----------> <rom>.sfc + <rom>.sfc.sym
                                     (bank packing, ca65 + ld65)   and, with [rom] msu = "required",
                                                                   what does not fit, behind <rom>.msu
@@ -25,6 +26,50 @@ The paths on the right belong to the game's project —where its
 `[rom] name`. `rm2k-snes-cartridges` runs all of that for each cartridge
 the project declares. How A Blurred Line calls it, with which recipes and
 which flags: [its pipeline](../ports/abl/pipeline.md).
+
+## What the cartridge does with less than RM2k
+
+Next to each ROM the converter writes `degradations.json`: **every place
+where the cartridge runs something with less than RM2k does** —a command
+accepted without being done, a parameter read and dropped, a graphic
+change skipped, a teleport to a map the cartridge does not carry turned
+into a message box, a ChipSet animation cut to fit, a map's rain or
+battle animations not drawn—. A page left out whole is not in it: that is
+`rm2k-snes-events culprits`. Nor are the colours the converter merged,
+which are the patches' (`patches/`, above).
+
+It is **complete by construction**: each entry is noted where the loss
+happens, not kept in a list by hand. The event compiler notes the
+commands, in the arm of `compile.rs` that compiles each one, and its
+`losses.rs` keeps where it is; Wally notes what a map does not draw, the
+emission what it cut, the screens what they cut or merged, and the
+converter its own decisions —the events left out for RAM, a hero's flash
+on a shared palette—; `degradations.rs` in `rm2k-snes-convert` gathers
+them and writes the file. A page that does not compile takes its losses
+back, as it takes its texts back, so what is listed is what reaches the
+cartridge.
+
+Each entry has a `kind`, a stable slug to count by —`bgm-fade-in-dropped`,
+`route-repeat-dropped`, `tint-gradient-dropped`…—, a `text` that says what
+is lost, and where, as precisely as whoever lost it knows:
+
+- **a map's page**: `map`, `event`, `page` (RM2k's numbers), the event's
+  cell as `x` and `y`, and the index of the `command` in the page, with
+  its `code` and `name`; `page` is null when a whole event is lost;
+- **a pasted body**: a common event, or another event's page, that a
+  `CallEvent` pastes into the page goes in `via`, with the command each
+  one was at, under the call's command;
+- **a common event** that runs as a shared body or a parallel one:
+  `common` and its `command`, and the file's `commons` says how it runs
+  —its trigger and switch— and which pages call it;
+- **a troop's page**: `troop` and `page`, and its `command` in RM2k's list;
+- **a map**: only `map`, and `events` when it is about some of them;
+- **the cartridge**: no place, for its screens and its battle text.
+
+The list is sorted that way —the maps by map, event, page and command,
+then the common events, the troops and the cartridge— and `counts` says
+how many of each kind there are. The converter prints the total as it
+writes it.
 
 ## When a cartridge is rebuilt
 
