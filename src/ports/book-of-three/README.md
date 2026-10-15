@@ -17,19 +17,14 @@ as text.
 * **Taran's Last Stand and Cash Reward and Eilonwy's Absorb Essence do
   nothing in battle**: the page each of them runs, in 52 of the troops,
   does not compile. Drafts:
-  [`controlvars-multiply-and-divide`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/controlvars-multiply-and-divide.md),
-  [`changeitems-and-changemonsterhp-by-a-variable`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changeitems-and-changemonsterhp-by-a-variable.md)
+  [`controlvars-multiply-and-divide`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/controlvars-multiply-and-divide.md)
   and
-  [`show-battle-animation-b-in-troop-pages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/show-battle-animation-b-in-troop-pages.md).
-* **Two scripted fights may not end**: the three Cauldron-Born (map 26)
-  and the Horned King with Dyrnwyn (map 78) are ended by a page that uses
-  `ShowBattleAnimationB`, which does not compile. Read in the data, not
-  played. Draft:
-  [`show-battle-animation-b-in-troop-pages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/show-battle-animation-b-in-troop-pages.md).
-* **The chests give nothing random**: the common event that rolls their
-  gold and items, called 82 times on 16 maps, does not compile and its
-  calls are skipped. Draft:
-  [`controlvars-random-ranges-wider-than-255`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/controlvars-random-ranges-wider-than-255.md).
+  [`changeitems-and-changemonsterhp-by-a-variable`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changeitems-and-changemonsterhp-by-a-variable.md).
+* **Gwydion's Blazing Star and Dyrnwyn are not drawn**, in the fights
+  against the three Cauldron-Born (map 26) and the Horned King (map 78):
+  the battle pauses for as long as the animation would last, and then the
+  fight ends as in the original. See
+  [What troop pages do not model](../../divergences/what-troop-pages-do-not-model.md).
 * **Choosing among the five Dreams is skipped**: a choice with five
   options does not compile; six calls from five maps. Draft:
   [`a-choice-with-more-than-four-options`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/a-choice-with-more-than-four-options.md).

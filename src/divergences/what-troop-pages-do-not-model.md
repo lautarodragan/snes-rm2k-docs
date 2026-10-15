@@ -96,6 +96,17 @@ experience, no gold, no end screen, and the map's page goes on past the
 `EnemyEncounter`'s handlers, whichever there are. The battle leaves with its
 usual mosaic, from the screen it was showing.
 
+**`ShowBattleAnimationB` is not drawn**, since 2026-10-14: the battle
+scene plays no animation on the monsters, so its frames, its sounds and its
+flashes are lost. What is kept is its length: if the page waits for it, it
+waits as many frames as the animation lasts, so the lines around it keep
+their pace. It is a declared debt —the converter warns about it— that lets
+in The Book of Three's two scripted endings, Gwydion's Blazing Star against
+the three Cauldron-Born (troop 96) and Dyrnwyn against the Horned King
+(troop 136), both of which end the battle with `TerminateBattle` right
+after it. See `TROOP_ACCEPTED_UNDONE` in `rm2k-snes/events/src/troops.rs`
+in the-advocate.
+
 **What the pages change in the party they change in the saved game, between
 stretches.** The console keeps the battle's HP in `BA_ONE`; before each
 stretch of a page it copies them to `FAR_HP` and afterwards brings them
