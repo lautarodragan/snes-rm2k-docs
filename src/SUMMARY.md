@@ -85,7 +85,7 @@
         - [Pictures drawn into the map](divergences/pictures-drawn-into-the-map.md)
     - [Events and movement]()
         - [The phase of still events that animate](divergences/the-phase-of-still-events-that-animate.md)
-        - [More than four still events that animate](divergences/more-than-four-still-events-that-animate.md)
+        - [Still events that animate past the sprite bank](divergences/still-events-that-animate-past-the-sprite-bank.md)
         - [Drawn events that do not fit in the table](divergences/drawn-events-that-do-not-fit-in-the-table.md)
         - [Events that do not fit in the RAM](divergences/events-that-do-not-fit-in-the-ram.md)
         - [What turning toward the hero does not model](divergences/what-turning-toward-the-hero-does-not-model.md)

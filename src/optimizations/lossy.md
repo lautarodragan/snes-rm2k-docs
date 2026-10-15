@@ -234,14 +234,21 @@ painted into the background and stops being an event.
 - **Where**: `rm2k-snes/wally/src/decor.rs`.
 - **More**: [Baked decorative events](../divergences/baked-decorative-events.md).
 
-### More than four still events that animate
+### Still events that animate past the sprite bank
 
-A still event that animates needs all twelve of its poses, like a walker.
-Past a cap per map, none of that map's still events animate.
+A still event that animates changes pose on the fly, so it needs a VRAM
+slot that still events showing its pose cannot share; the ones with the
+same graphic, pose and speed share one among themselves, since they always
+show the same column. A map whose slots don't fit gives up whole looks
+—a graphic and pose, all its speeds— until they do, before anything else
+is lost.
 
-- **Loses**: on those maps, still events stand still.
-- **Where**: `animates_still` in Wally, `rm2k-snes/wally/src/sprites/npc.rs`.
-- **More**: [More than four still events that animate](../divergences/more-than-four-still-events-that-animate.md).
+- **Loses**: on those maps, the still events of the looks given up stand
+  still.
+- **Saves**: a sprite slot per speed of each look given up.
+- **Where**: `moves` in Wally, `rm2k-snes/wally/src/moves.rs`, and
+  `fewer_still_animations` in `rm2k-snes/wally/src/map.rs`.
+- **More**: [Still events that animate past the sprite bank](../divergences/still-events-that-animate-past-the-sprite-bank.md).
 
 ## Pictures and animations
 

@@ -51,8 +51,6 @@ end under Wine (see "Its walkthrough"):
 * **Looking at the map shows nothing**: its sound plays and it waits for a
   key, over the screen as it was. Draft:
   [`book-of-three-the-map-item-shows-nothing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-map-item-shows-nothing.md).
-* **The opening's flames stand still** (map 3). Draft:
-  [`book-of-three-the-intros-torches-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-intros-torches-stand-still.md).
 * **Some places' music plays louder than in the original**: the South
   Mountains and the northern map ask for their song at 70%, the hills and
   the Eagle Mountains at 50%, and the port plays it at full volume. Draft:

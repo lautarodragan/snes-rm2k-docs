@@ -21,3 +21,13 @@ is which one each event starts on.
 ## How it looks today
 
 Nothing that can be seen on a still screen.
+
+## What leans on it
+
+Since 2026-10-15 still events that animate with the same graphic, pose
+and speed **share a VRAM slot**: one uploads the pose and the rest are
+drawn with it —`moves` in Wally, in the-advocate—. That is right because
+the phase is global, and it is also what RM2k shows for them, since the
+map creates them all at once. A counter per event would give each of
+them its own slot back, with the cost described in
+[Still events that animate past the sprite bank](still-events-that-animate-past-the-sprite-bank.md).
