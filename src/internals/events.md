@@ -21,6 +21,21 @@ to `CODE_CARRY`, and the hero's forced route is copied whole: see
 `code_carry_before` in `runtime/decompress.s`. Jumps inside a page
 are relative to where it starts, so moving it is moving a pointer.
 
+**Except a map whose bytecode does not fit in WRAM**, since 2026-10-15:
+over its LZ2 reserve —19,968 bytes, which is also what `CODE_CARRY`
+holds— or over what the grid leaves of `$7F`. That map keeps it in the
+cartridge, uncompressed, in blocks of up to a bank cut where a page
+starts, and its page table points there (`code_in_rom` in
+`rm2k-snes-mapdata`). The runtime does not tell the two apart: the
+interpreter, the routes and the battle animation take the bank from the
+page's pointer, and `carry_one` leaves a pointer outside `$7F` where it
+is, since the cartridge does not change with the map. Its `map_code`
+entry names an empty stream with a length of 0, so nothing is
+decompressed and no carried pointer is mistaken for one of its own. Only
+those maps and not all: the others' code would cost more ROM
+uncompressed —A Blurred Line's, about 68 KB more— to save a decompression
+of a few KB per load.
+
 **A map's block is laid out by the converter**: each page's bytecode and,
 behind it, its own route's commands, and the page table points at each
 with 24 bits. Since 2026-10-15 **two pages with the same bytes point at the

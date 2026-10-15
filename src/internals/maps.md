@@ -60,7 +60,9 @@ another map: see [Events](events.md). The address is not computed by the
 ROM: the converter puts it in the map's record (`map_ram_pointers` in
 `record.rs`), and the test below checks that it matches where things ended
 up. The converter stops if a map doesn't fit: what the grid takes of `$7F`
-plus what goes behind it can't exceed its 32 KB.
+plus what goes behind it can't exceed its 32 KB. The bytecode is the
+exception: a map whose code does not fit keeps it in the cartridge (see
+[Events](events.md)).
 
 What is left in VRAM and WRAM after loading is compared by
 `tests/rpgmaker/test_decompressed_load.py` in the ABL port against what
