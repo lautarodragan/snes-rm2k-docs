@@ -121,6 +121,7 @@
         - [What the enemies' AI does not model](divergences/what-the-enemies-ai-does-not-model.md)
         - [What troop pages do not model](divergences/what-troop-pages-do-not-model.md)
         - [What battle conditions do not model](divergences/what-battle-conditions-do-not-model.md)
+        - [What attributes do not model](divergences/what-attributes-do-not-model.md)
     - [Other screens]()
         - [What the Game Over screen does not model](divergences/what-the-game-over-screen-does-not-model.md)
         - [What the End Game screen does not model](divergences/what-the-end-game-screen-does-not-model.md)
