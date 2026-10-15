@@ -59,6 +59,20 @@ writes            --dsp_music-->        the SPC700 driver
   the theme that is playing and the new package don't fit together, the
   theme wins: [the playing theme wins and the effects
   wait](../decisions/the-playing-track-wins-and-the-sound-effects-wait.md).
+- **A package that does not fit in the ARAM even with every sample at the
+  minimum is relieved, not a stop** (`relief.rs`, since 2026-10-15): its
+  songs go separate —each uploaded when its `PlayBGM` asks for it, with a
+  pause, as `[music] apart_themes` does; all of them if none plays on
+  entering, from the end of the list until the rest fits if the first does—,
+  and then the sound effects at the end of its list are left out until the
+  music fits at the effects' own rate, 6 kHz. A package that fits at the
+  minimum is not touched, however low its music goes: how far a map's
+  effects push its music down is the game's decision by ear
+  (`paid_by_music`). Each relief is a loss in `degradations.json`
+  —`songs-uploaded-on-play`, `sound-effects-left-out`,
+  `package-waits-for-playbgm`—, which the converter reads from the stage's
+  `audio.json`. The case is The Frozen World's battle screen: six songs it
+  picks one of per fight and forty-one effects, ~89 KB of effects alone.
 - **The SPC700 directory** has one entry per music sample —its number in
   the cartridge, which is the stream's SRCN— and behind them some **places
   the effects share**: two effects that never go in the same package go to

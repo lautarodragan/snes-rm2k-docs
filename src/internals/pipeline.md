@@ -42,10 +42,12 @@ It is **complete by construction**: each entry is noted where the loss
 happens, not kept in a list by hand. The event compiler notes the
 commands, in the arm of `compile.rs` that compiles each one, and its
 `losses.rs` keeps where it is; Wally notes what a map does not draw, the
-emission what it cut, the screens what they cut or merged, and the
-converter its own decisions —the events left out for RAM, a hero's flash
-on a shared palette—; `degradations.rs` in `rm2k-snes-convert` gathers
-them and writes the file. A page that does not compile takes its losses
+emission what it cut, the screens what they cut or merged, the converter
+its own decisions —the events left out for RAM, a hero's flash on a shared
+palette—, and the audio stage what a package that did not fit in the ARAM
+lost, which it leaves in its `audio.json` under `losses` because it runs
+last; `degradations.rs` in `rm2k-snes-convert` gathers them and writes the
+file after the music. A page that does not compile takes its losses
 back, as it takes its texts back, so what is listed is what reaches the
 cartridge.
 
