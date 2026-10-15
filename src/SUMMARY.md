@@ -147,6 +147,7 @@
     - [The zoom, baked at run time](research/2026-10-12-the-zoom-baked-at-run-time.md)
     - [What the compiler ignores silently](research/2026-10-14-what-the-compiler-ignores-silently.md)
     - [Frozen World's battle system](research/2026-10-15-frozen-worlds-battle-system.md)
+    - [Zounds, an RPG Maker 2003 game](research/2026-10-15-zounds-an-rpg-maker-2003-game.md)
 
 - [Ports](ports/README.md)
     - [A Blurred Line](ports/abl/README.md)

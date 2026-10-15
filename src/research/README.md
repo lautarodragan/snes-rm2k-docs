@@ -49,3 +49,5 @@ By date:
   — 2026-10-12
 - [Frozen World's battle system](2026-10-15-frozen-worlds-battle-system.md)
   — 2026-10-15
+- [Zounds, an RPG Maker 2003 game](2026-10-15-zounds-an-rpg-maker-2003-game.md)
+  — 2026-10-15
