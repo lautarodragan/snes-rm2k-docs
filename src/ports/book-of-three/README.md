@@ -10,9 +10,6 @@ as text.
 * **A skill that turns a switch on, used from the pause menu, is
   silent**: the original plays its sound effect. Draft:
   [`switch-skills-from-the-menu-play-no-sound`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switch-skills-from-the-menu-play-no-sound.md).
-* **One of its parallel common events never runs**: `Reraise KO'd chars`
-  does not compile. What that loses in play was not looked at. Draft:
-  [`book-of-three-reraise-and-eilonwy-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-reraise-and-eilonwy-dont-compile.md).
 * **Gwydion's Blazing Star and Dyrnwyn are not drawn**, in the fights
   against the three Cauldron-Born (map 26) and the Horned King (map 78),
   and neither is Taran's Last Stand: the battle pauses for as long as the
