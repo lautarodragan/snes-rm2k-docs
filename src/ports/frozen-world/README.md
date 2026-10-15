@@ -18,6 +18,11 @@ as text.
   out](../../progress/book-of-three-and-frozen-world.md)).
   Drafts: [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md) (map 1) and
   [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 2).
+* **The cartridge does not build with the teleport boxes**: the converter
+  stops at map 3, "a page makes the hero flash, and actor 11 is drawn with
+  rangedmelee[0], which an NPC of the map also uses", a page the missing
+  teleports used to hide. Draft:
+  [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md).
 * **Events whose page asks for a switch past the 1024th may pick the
   wrong page**: 45 pages on 27 maps ask for one, and the console reads
   that switch from other RAM. Which ones show was not looked at. Draft:
