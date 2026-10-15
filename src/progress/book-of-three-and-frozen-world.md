@@ -41,6 +41,14 @@ Of the causes ranked below:
   and 25 of its 41 sound effects are left out of the map, both in
   `degradations.json`. **Every map of the game is in the cartridge.** Task
   [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
+* **Map 1's calls are calls** since the same evening (Carpintero): a
+  `CallEvent` to a map event's page is `OP_CALL_PAGE` into the page's own
+  bytes instead of a paste, with an eight-level stack, and the map's
+  bytecode goes from 386,706 bytes to 57,261 —one bank of the cartridge
+  instead of six—, with no page anywhere near the 64 KB a jump reaches.
+  See [CallEvent: a shared body, or pasted in place](../optimizations/common-event-calls.md)
+  and the task
+  [`callevent-as-a-real-call`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/callevent-as-a-real-call.md).
 * **Still open**: Frozen World's combat on map 1 as played —nobody has
   fought yet—, the switches past 1,023, `ChangeMapTileset`,
   `ChangeActorFace`, and the HP percentages past 327 HP (16-bit
