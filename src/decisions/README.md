@@ -64,7 +64,7 @@ redirect table of `book.toml` (see [Contributing](../contributing/README.md)).
 - [Move route command 9, towards the hero](move-route-command-9-towards-the-hero.md)
 - [Move route commands 26 and 27 on the hero](move-route-commands-26-and-27-on-the-hero.md)
 - [Move route command 34 on the hero](move-route-command-34-on-the-hero.md)
-- [Diagonals go on events](diagonals-go-on-events.md)
+- [Diagonals went on events, until the other games](diagonals-go-on-events.md)
 - [Walking through walls also applies to jumps](walking-through-walls-also-applies-to-jumps.md)
 
 ## Graphics and memory
