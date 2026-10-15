@@ -24,12 +24,6 @@ under Wine and easyrpg-player's `Game_Party::UseSkill` and
 * **The party's rows show HP and not SP**: the choice is the medicine's,
   over the pause menu's party panel, which has no SP line. The SP the skill
   spent are seen back in the list's status line.
-* **Attributes are not applied**: `CalcSkillEffect` multiplies by the
-  target's rate for the skill's attributes; the port does not, as its
-  battle does not. Of the healing skills the six games teach, only Book of
-  Three's Slug Bug has an attribute, and no actor of that game has a rank
-  other than the one that leaves it at 100%; equipment that changes a rank
-  was not looked at.
 * **States other than death are not kept outside battle**, so a skill that
   only cures them —Antidote, Medicine, Blessing— is of no use: nothing
   happens and no SP go, where RPG_RT cures a state that lasted past the
