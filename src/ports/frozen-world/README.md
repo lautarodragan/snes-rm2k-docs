@@ -16,15 +16,6 @@ as text.
   out](../../progress/book-of-three-and-frozen-world.md)).
   Drafts: [`flashing-hero-shares-a-palette-with-an-npc`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/flashing-hero-shares-a-palette-with-an-npc.md) (map 1) and
   [`map-streams-that-dont-fit-in-wram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/map-streams-that-dont-fit-in-wram.md) (map 2).
-* **Events whose page asks for a switch past the 1024th may pick the
-  wrong page**: 45 pages on 27 maps ask for one, and the console reads
-  that switch from other RAM. Which ones show was not looked at. Draft:
-  [`page-conditions-on-switches-past-1023-read-other-ram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/page-conditions-on-switches-past-1023-read-other-ram.md).
-
-* **A command that turns on a switch past the 1024th writes outside the
-  switch table**: 28 pages on 24 maps and three common events do it, up to
-  seven bytes past the end. What it breaks was not looked at. Draft:
-  [`branches-and-switch-commands-past-switch-1023`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/branches-and-switch-commands-past-switch-1023.md).
 * **Eight event pages on maps 9, 47, 99, 129 and 149 never run**: they
   change the map's tileset, which is not done, and the page is left out
   whole. Draft:

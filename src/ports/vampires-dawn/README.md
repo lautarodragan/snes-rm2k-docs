@@ -41,10 +41,6 @@ as text.
   people walk around on their own takes at most eight of them walking
   —Limm (141) has fifty-six, Thessa (164) thirty-six—, and the rest stay
   at their cell. See [What walking by a movement type does not model](../../divergences/what-walking-by-a-movement-type-does-not-model.md).
-* **Events whose page asks for a switch past the 1024th pick the wrong
-  page**: on map 433, "Level", the eight figures that should flee lie
-  dead from the start. 735 pages on 253 maps ask for one. Draft:
-  [`page-conditions-on-switches-past-1023-read-other-ram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/page-conditions-on-switches-past-1023-read-other-ram.md).
 * **Talking to the people the vampire can bite does nothing**: their
   "Talk / Suck Blood / Convert / Leave" choice does not compile, on 210
   pages of 48 maps. Read in the data, not played. Draft:
