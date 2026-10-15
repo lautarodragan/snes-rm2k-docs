@@ -15,19 +15,73 @@ as text.
   and neither is Taran's Last Stand: the battle pauses for as long as the
   animation would last, and then the page goes on as in the original. See
   [What troop pages do not model](../../divergences/what-troop-pages-do-not-model.md).
+* **Part of the lava tunnels' animation stands still** (map 46): it does
+  not fit in WRAM. See
+  [A ChipSet animation that does not fit in WRAM](../../divergences/a-chipset-animation-that-does-not-fit-in-wram.md).
+
+Found on 2026-10-15 by comparing the port with the original, played to the
+end under Wine (see "Its walkthrough"):
+
+* **The battle with the horsemen in Yern's woods never ends** (map 16): the
+  scene inside it plays, but no enemy is left to fight and the command menu
+  comes back forever. The story cannot go on past it. Its troop has nine
+  members and the cartridge carries eight. Draft:
+  [`book-of-three-a-troop-of-nine`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-a-troop-of-nine.md).
+* **Characters that walk into a scene are missing**: whoever a scene places
+  and dresses with a move route, on an event with no graphic of its own,
+  is never drawn, though their lines and moves go on. It shows around
+  Gurgi (map 21), at the river (22), before the ambush (26), in the cell
+  (32), at the way out of the Tylwyth Teg (83) and on about ten more maps.
+  Draft:
+  [`characters-a-route-gives-a-graphic-are-not-drawn`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/characters-a-route-gives-a-graphic-are-not-drawn.md).
+* **The story's battles all play the default battle theme**: the original
+  sets each scripted fight's own music and victory music. Draft:
+  [`book-of-three-story-battles-play-the-default-theme`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-story-battles-play-the-default-theme.md).
+* **Fades are cuts**: where a scene fades the screen to black, to night or
+  back to day, the port jumps to the end of the fade and waits its time.
+  Draft:
+  [`tint-screen-snaps-instead-of-fading`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/tint-screen-snaps-instead-of-fading.md).
+* **A night's rest has no fade or jingle**, in scenes and at the free
+  resting places: the party is healed at once. Draft:
+  [`book-of-three-inns-in-scenes-are-not-staged`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-inns-in-scenes-are-not-staged.md).
+* **The closing pictures are not drawn** (maps 69 and 72): those moments of
+  the ending are a plain or black screen for as long as they last. Draft:
+  [`book-of-three-the-last-pictures-are-not-drawn`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-last-pictures-are-not-drawn.md).
+* **Looking at the map shows nothing**: its sound plays and it waits for a
+  key, over the screen as it was. Draft:
+  [`book-of-three-the-map-item-shows-nothing`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-map-item-shows-nothing.md).
+* **The opening's flames stand still** (map 3). Draft:
+  [`book-of-three-the-intros-torches-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-intros-torches-stand-still.md).
+* **Some places' music plays louder than in the original**: the South
+  Mountains and the northern map ask for their song at 70%, the hills and
+  the Eagle Mountains at 50%, and the port plays it at full volume. Draft:
+  [`a-maps-own-music-ignores-its-volume-and-tempo`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/a-maps-own-music-ignores-its-volume-and-tempo.md).
+* **One song starts at full volume** instead of fading in (map 21). Draft:
+  [`playbgm-fade-in-is-dropped`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/playbgm-fade-in-is-dropped.md).
 
 ## Its walkthrough
 
 `tests/test_book_of_three.py`, at the root of the-advocate-ports, plays
 the game from the start: Caer Dallben, Coll's forge and its fire —the
-sword, the practice battle, Coll and Dallben—, Dallben's cottage and the
-Book of Three, with a golden at each milestone, in snes9x and bsnes
-against the same one. It runs with `just boot`. It was born on
+sword, the practice battle, Coll and Dallben—, Dallben's cottage, the
+Book of Three, Hen Wen's escape, Caer Minule and its item shop, and Yern's
+woods up to the horsemen, with a golden at each milestone, in snes9x and
+bsnes against the same one. It runs with `just boot`. It was born on
 2026-10-12, when taro played up to the forge and found the game stuck
 there: the fire's page puts a weapon on Taran, which did not compile
 ([the task](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-the-forge-and-a-walkthrough.md)).
-The goldens up to the forge are what taro played; the ones after it were
-not compared against RM2k.
+The goldens up to the forge are what taro played.
+
+The rest of the game, to its end, is `tests/test_book_of_three_milestones.py`:
+twenty milestones, each started from a case —the switches, party and level
+a player has at that point, and a teleport to where its scene starts— and
+then played with A taps until control comes back. The same cases started
+the original under Wine, and on 2026-10-15 every milestone was compared by
+eye with it, as were the walkthrough's goldens after the forge
+([the task](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/book-of-three-against-the-original.md)).
+What the cases jump over is not played: the walks between milestones
+—the overworld, the dungeons, Spiral Castle's halls, the Tylwyth Teg's
+maze— and the optional places.
 
 ## What it leaves out (2026-10-11)
 
