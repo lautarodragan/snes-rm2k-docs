@@ -59,7 +59,7 @@ One page per part of the port:
 
 * [Translucent events are baked](lossy/events.md#translucent-events-are-baked)
 * [Decorative events become background](lossy/events.md#decorative-events-become-background)
-* [More than four still events that animate](lossy/events.md#more-than-four-still-events-that-animate)
+* [Still events that animate past the sprite bank](lossy/events.md#still-events-that-animate-past-the-sprite-bank)
 
 ## [Pictures and animations](lossy/pictures-and-animations.md)
 
