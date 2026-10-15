@@ -117,6 +117,7 @@
         - [Escape is the fifth command](divergences/escape-is-the-fifth-command.md)
         - [What the enemies' AI does not model](divergences/what-the-enemies-ai-does-not-model.md)
         - [What troop pages do not model](divergences/what-troop-pages-do-not-model.md)
+        - [A battle holds eight enemies](divergences/a-battle-holds-eight-enemies.md)
         - [What battle conditions do not model](divergences/what-battle-conditions-do-not-model.md)
         - [What attributes do not model](divergences/what-attributes-do-not-model.md)
     - [Other screens]()
