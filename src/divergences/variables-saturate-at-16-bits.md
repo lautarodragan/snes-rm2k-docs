@@ -39,6 +39,12 @@ cost of every operation for one sentinel.
   cartridge yet. The compiler is the same `ControlVars`; the ROM,
   `var_arith` in `runtime/variable_arithmetic.s`; the test,
   `test_multiply_divide_and_modulo_are_rm2ks`.
+* An actor's experience copied into a variable —`ControlVars` from an
+  actor, number 1, since 2026-10-16— is capped at 32,767 the same way:
+  RM2k's reaches 999,999. The compiler notes it on the page as
+  `variable-saturated`, because at run time it is silent. Zounds' common
+  event 3 copies its hero's every frame, into variable 79, which the
+  game shows and compares against the next level's.
 * The gold copied into a variable was already capped at 32,767 —`op_var`,
   in `runtime/interpreter_variables.s` in the-advocate—, for the same
   reason: Sern's forge, which keeps the party's gold in a variable while

@@ -52,8 +52,12 @@ brought within sixteen bits. Task:
 What playing the port shows today that the original does not. It is kept
 current: whoever fixes one removes its line in the same change.
 
-* **The intro does not play, and the hero does not move on map 106**: the
-  intro is made of pictures, and the ROM does not run its pages. Draft:
+* **The picture-made screens do not show**: the notes on screen (common
+  event 40), the menus made of pictures and whatever a `ShowPicture`
+  draws. The intro itself goes by: the credits on map 106 for five seconds,
+  then the action key takes it to the continent (107) and the cutscenes on
+  maps 1, 4, 5 and 6, until the player walks on map 7, since 2026-10-16.
+  Draft:
   [`zounds-pictures-and-the-picture-made-screens`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-pictures-and-the-picture-made-screens.md).
 * **Most dialogue is missing**: the boxes with accented letters and the
   hero's own name, `Unamë`, do not compile, because the font lacks those
