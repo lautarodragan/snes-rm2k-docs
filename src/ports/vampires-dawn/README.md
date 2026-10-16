@@ -30,9 +30,8 @@ as text.
   and `Staerke`. Drafts:
   [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
   and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
-* **Messages show no faces, and coloured words come out in the plain
-  colour.** Tasks: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md)
-  and [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
+* **Coloured words come out in the plain colour.** Task:
+  [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 * **Where a message has a half space, the words on both sides of it come
   together**: the console drops RM2k's `\_`. See [What message escapes do not model](../../divergences/what-message-escapes-do-not-model.md).
 * **An icon in a message shows as `$` and a letter**: a sign reads "$s
