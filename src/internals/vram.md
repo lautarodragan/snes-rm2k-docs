@@ -269,7 +269,8 @@ the right, where RM2k puts it—, which the text does not use because it
 starts past the face. The composer copies the face's tiles into the line's
 buffer after priming its background, as it composes a letter, and the line
 goes up as always; the 36 cells' tilemap words say palette 1 while a face is
-up, rewritten in the vblank of the box's first line when the side changes.
+up, rewritten when the side changes over the vblanks of the box's first
+lines —one side per vblank, next to the line's own upload—.
 Its colours are in [the CGRAM split](cgram.md#a-messages-face-borrows-palette-1-on-the-windows-lines).
 Each face the game names is in ROM once, drawn by `faces.rs` in
 `rm2k-snes-screens`, and the runtime side is `runtime/message_face.s`. What
