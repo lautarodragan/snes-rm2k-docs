@@ -24,6 +24,17 @@ same layer as the one above the map, and mode 3 does not have a third.
   all panorama, asks "Skip Intro ?" without a background, and the ROM shows
   it over a black band where RM2k shows the picture.
 
+**On a painted map the first one is the other way round.** There the
+painting is BG1 in mode 1, and on the window's lines BG1 and BG2 trade
+places so the letters go in front of the cells of the painting that are in
+front of the hero —see [A painted map keeps only what the screen
+shows](../internals/vram.md#a-painted-map-keeps-only-what-the-screen-shows)—:
+the text is BG1 with priority 1, which in mode 1 goes in front of the
+objects of priority 2, so the hero and the events on his layer or below go
+**under** the text, as in RM2k. An event "above the hero" is priority 3
+there, and it still goes over it. The second one stays: the edges of the
+roofs that go exact in BG2 are not visible on those lines.
+
 And one that is not about the layer: the red "continue" arrow RM2k draws at
 the foot of the window is not there, with or without a background. It
 predates this.

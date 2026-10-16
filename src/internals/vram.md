@@ -255,7 +255,17 @@ What goes in front of the hero is the painting itself: the cells the
 pictures cover whole go to BG1's priority 1; the ones they cover in part go
 in BG2 at priority 1, the painting's own cell with only the covered pixels,
 in the layer above's 128 tiles; the edges that do not fit, by whole cells.
-BG1 is hidden under the message window, as in a flattened map.
+BG1 is hidden under the message window, as in a flattened map. A window
+**without its background** cannot hide it —what is under it has to be
+seen— and in mode 1 BG2 never goes in front of BG1 priority 1, so on its
+lines BG1 and BG2 trade places: BG1 shows the window's tilemap with BG2's
+tile base, and BG2 the painting with BG1's, by HDMA on the two masks'
+channels, which such a window does not use —6 writes `BG1SC`, 3
+`BG12NBA`— and channel 2 writing BG1's scroll. The letters, priority 1,
+go in front of the painting's cells in front of the hero. See
+`msg_swap_build` in `runtime/message_place.s`; until 2026-10-16 those
+cells covered the letters, and GateStreet's messages came out with a glyph
+or two.
 
 **Only a cartridge with a painted map assembles any of this**: without
 `paint_table` in its `.inc`, `painted.s` and its calls are empty, and the
