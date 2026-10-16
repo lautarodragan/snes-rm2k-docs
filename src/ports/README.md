@@ -1,8 +1,8 @@
 # Ports
 
-RPG Maker 2000 games taken to the Super Nintendo with the tools. They live
-in the the-advocate-ports repository, **one directory per game, and each one
-is a whole project**:
+RPG Maker 2000 games —and one of 2003— taken to the Super Nintendo with the
+tools. They live in the the-advocate-ports repository, **one directory per
+game, and each one is a whole project**:
 
 - **`rm2k-snes.toml`**: what the game decides —its name and title, which
   maps go in which cartridge, the starting map, the knobs (see [What a game
@@ -37,6 +37,7 @@ The ports:
 | [`frozen-world/`](frozen-world/README.md) | The Frozen World | from the survey |
 | [`sunset-over-imdahl/`](sunset-over-imdahl/README.md) | Sunset Over Imdahl | from the survey |
 | [`vampires-dawn/`](vampires-dawn/README.md) | Vampires Dawn | from the survey |
+| [`zounds/`](zounds/README.md) | Zounds | taro's own game, made in RPG Maker 2003: the first 2003 game, since 2026-10-15 |
 
 ## The seven of the survey
 
