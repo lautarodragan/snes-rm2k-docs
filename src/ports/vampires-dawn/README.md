@@ -30,6 +30,12 @@ as text.
   and `Staerke`. Drafts:
   [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
   and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
+  When the bat compiles, it will not fly over anything on the castle's
+  maps (28, 56, 89, 90): the game opens every cell for it by swapping the
+  map's tileset, which the console does not do. See
+  [What `ChangeMapTileset` does not model](../../divergences/what-changemaptileset-does-not-model.md);
+  draft:
+  [`changemaptileset-is-not-done`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-done.md).
 * **Coloured words come out in the plain colour.** Task:
   [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 * **Where a message has a half space, the words on both sides of it come
