@@ -22,8 +22,6 @@ as text.
 * **The menu and the other screens keep the intro's System** for the whole
   game: the original switches to `Systemset_Spiel` in its common event
   `Init`, and only the message window follows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
-* **Coloured words come out in the plain colour.** Task:
-  [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 
 ## The lights, drawn into the map (2026-10-16)
 
