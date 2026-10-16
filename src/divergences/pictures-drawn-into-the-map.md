@@ -12,8 +12,19 @@ into the panorama, and what the opaque ones cover goes in front of the hero
 by the priority bit of the panorama's cells, in mode 3. On a painted map
 —`[graphics] painted_maps`, see [the VRAM split](../internals/vram.md#a-painted-map-keeps-only-what-the-screen-shows)—
 the cells they cover whole go in front by BG1's priority, and the edges
-exactly, in BG2. Their commands are accepted without being done: the
-conversion did them.
+exactly, in BG2. **On a ChipSet map** —one with no panorama fixed to it,
+as Desert Nightmare's interiors, which it lights with a mask per map at
+transparency 20 to 65— the translucent ones are blended into the tiles of
+both layers, the lower one and the layer above the hero, at their RM2k
+opacity, and the opaque ones are drawn into the layer above. Their
+commands are accepted without being done: the conversion did them.
+
+It is drawn in because the console has no layer for it: in mode 3 the map
+takes BG1 and BG2 —the layer above, the message window, the panorama—,
+colour math works per layer, and the objects cannot cover the screen. What
+colour math would give if it had one was measured on Desert Nightmare's WC
+(see "Measured"): a 50 % blend or a subtraction is five times farther from
+RM2k than the drawn-in mask, at 15 bits.
 
 What the ROM does not do that RM2k does:
 
@@ -51,7 +62,16 @@ On 2026-10-11, on Sunset Over Imdahl, with captures of snes9x of maps 28,
 2, 13, 33, 7 and 22 against the 2015 RPG_RT under Wine: see the task
 [`sunset-the-pictures-over-the-map`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sunset-the-pictures-over-the-map.md) in the-advocate-work, and the
 study, [The pictures over the map](../ports/sunset-over-imdahl/research/2026-10-11-the-pictures-over-the-map.md).
-No test of the ROM runs it: A Blurred Line has it off.
+
+On 2026-10-16, on Desert Nightmare's WC —map 7, `Lichteffekt_Tankstelle_WC`
+at transparency 35—, the console's capture against the 2015 RPG_RT under
+Wine, over the mask's pixels and without the heroine: a mean error of 0.35
+of 31 levels at 15 bits, the same as the mask blended in software
+(rounding and the capture). Over the same capture, what the colour math
+the console has would give: a 50 % blend 1.76, map / 2 1.71, a subtracted
+constant 1.73. See the task [`pictures-that-go-over-the-map-outside-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/pictures-that-go-over-the-map-outside-sunset.md).
+The ChipSet side runs in the test game's `test_map_picture.py`; A Blurred
+Line has the knob off.
 
 ## When it stops being enough
 
