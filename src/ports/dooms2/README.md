@@ -7,13 +7,20 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
-* **There is no character choice**: the game starts on map 2. Map 1, where
-  the original lets you choose, is not in the cartridge —with it, the slot
-  screen and the menu don't fit in their bank— and an event page that would
-  take the hero there is left out whole. Draft:
+* **Three characters have no face in the pause menu and in the save
+  slots**: Will (actor 9) and the two Junes (10 and 11), the candidates
+  the story unlocks last. With map 1 in the cartridge the party can hold
+  eleven actors, and their ten faces plus the screens' text ask for more
+  tiles than the bank has, so the converter leaves faces out, the last
+  actors' first, instead of stopping —`faces-left-out` in
+  `degradations.json`—. Since 2026-10-16; until then map 1 was out and the
+  game started on map 2 with Will always in the party. Task:
   [`dooms-2-slots-and-menu-dont-fit-in-their-bank`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/dooms-2-slots-and-menu-dont-fit-in-their-bank.md).
 
 ## What it leaves out (2026-10-11)
+
+> Since 2026-10-16 map 1 is in and the game starts on it: see "Known
+> issues". What follows is the snapshot of 2026-10-11, kept as it was.
 
 One map, and its error doesn't name it —it was checked by putting it
 back alone—:
