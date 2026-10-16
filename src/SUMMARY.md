@@ -98,6 +98,7 @@
         - [What pictures as sprites do not model](divergences/what-pictures-as-sprites-do-not-model.md)
         - [What large pictures do not model](divergences/what-large-pictures-do-not-model.md)
         - [Pictures drawn into the map](divergences/pictures-drawn-into-the-map.md)
+        - [What `ChangeMapTileset` does not model](divergences/what-changemaptileset-does-not-model.md)
     - [Events and movement]()
         - [The phase of still events that animate](divergences/the-phase-of-still-events-that-animate.md)
         - [Still events that animate past the sprite bank](divergences/still-events-that-animate-past-the-sprite-bank.md)
