@@ -260,6 +260,23 @@ BG1 is hidden under the message window, as in a flattened map.
 `paint_table` in its `.inc`, `painted.s` and its calls are empty, and the
 ROM comes out byte for byte as before.
 
+## A message's face uses the window's own cells
+
+Since 2026-10-15, a box's face —`ChangeFaceGraphic`'s, 48x48— takes **no
+VRAM beyond the window's**: it is drawn into the text area's cells it
+covers, six by six —cells 1 to 6 of rows 1 to 6 on the left, 23 to 28 on
+the right, where RM2k puts it—, which the text does not use because it
+starts past the face. The composer copies the face's tiles into the line's
+buffer after priming its background, as it composes a letter, and the line
+goes up as always; the 36 cells' tilemap words say palette 1 while a face is
+up, rewritten when the side changes over the vblanks of the box's first
+lines —one side per vblank, next to the line's own upload—.
+Its colours are in [the CGRAM split](cgram.md#a-messages-face-borrows-palette-1-on-the-windows-lines).
+Each face the game names is in ROM once, drawn by `faces.rs` in
+`rm2k-snes-screens`, and the runtime side is `runtime/message_face.s`. What
+it does not model is in [What faces do not
+model](../divergences/what-faces-do-not-model.md).
+
 ## Battle doesn't use the layout
 
 A battle overwrites the whole VRAM and `back_from_battle` restores it:

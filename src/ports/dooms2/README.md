@@ -12,7 +12,6 @@ as text.
   screen and the menu don't fit in their bank— and an event page that would
   take the hero there is left out whole. Draft:
   [`dooms-2-slots-and-menu-dont-fit-in-their-bank`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/dooms-2-slots-and-menu-dont-fit-in-their-bank.md).
-* **Messages show no faces.** Task: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md).
 
 ## What it leaves out (2026-10-11)
 

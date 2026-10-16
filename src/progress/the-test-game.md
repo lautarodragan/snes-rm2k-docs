@@ -57,6 +57,12 @@ tests.
   since that game names no switch past 1008, and the cartridge taro plays
   carried it; here the meadow carries the event, invisible. The task is
   [`switches-past-1023-tested-in-the-test-game`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/switches-past-1023-tested-in-the-test-game.md).
+* **What was born here, on 2026-10-15**: the faces of the message window
+  —`test_faces.py`, the case `faces`: Actor1's face from the RTP on the
+  left, on the right and mirrored, kept over a box with no command, changed,
+  and cleared; five goldens—. None of the three games that show faces has a
+  page that does all of it, and A Blurred Line shows none. The task is
+  [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md).
 
 Of the seven assumptions about A Blurred Line the research found in the
 tools when it first wrote a game from scratch, four are gone —a debug map

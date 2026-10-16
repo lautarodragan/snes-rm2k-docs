@@ -30,3 +30,26 @@ decide the cut on its own, so `convert_with`, in `rm2k-snes/wally/src/background
 in the-advocate, is the only place where it is written. Before, each caller converted one and then the other, and
 whether the three copies of the order matched was a matter of luck —exactly
 the kind of error that had already loosened the comparison once.
+
+## A message's face borrows palette 1 on the window's lines
+
+Since 2026-10-15, a box's face —`ChangeFaceGraphic`'s— takes **no entry
+from any map**. The message window is palette 0 and every other entry below
+128 is the map's, so the face's fifteen colours go in **palette 1, entries
+17 to 31, only while the window's lines are drawn**: HDMA channel 5 writes
+them on the window's first fifteen lines, one colour a line, before the face
+starts on line 16, and writes the map's own back —from `cgram_shadow`,
+tinted as they are on screen— on the fifteen lines after the face ends on
+63. Over a window with its background no pixel of the map is on those lines,
+so the swap shows nowhere; what shows in a bare window is in [What faces do
+not model](../divergences/what-faces-do-not-model.md). The channel runs
+in indirect mode: its tables are in ROM, one per window position, and what
+one of the vblanks of the box's first lines fills is the 120 bytes of
+colours they point at, in far RAM —`runtime/message_face.s`; a table with
+the colours inline would have been 166, and A Blurred Line's release
+cartridge had 12 to spare before the pool grew—; the
+channel is one the map leaves free —the battle's shake uses it, with no
+window up, and 7 is `vram_drain`'s general DMA every vblank—. One colour a
+line is what commercial games wrote to CGRAM in the horizontal blank; what
+the console can take was measured in section 2 of [The windows, made
+cheaper](../research/2026-10-11-the-windows-made-cheaper.md).
