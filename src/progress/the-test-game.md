@@ -63,6 +63,16 @@ tests.
   and cleared; five goldens—. None of the three games that show faces has a
   page that does all of it, and A Blurred Line shows none. The task is
   [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md).
+* **And on 2026-10-16, the first picture**: the lantern, map 5, where a
+  parallel event lays `Picture/Night` —a near-black mask with a cone of
+  light, ours, drawn by a script— over the map at transparency 35, fixed
+  to it, the way Desert Nightmare lights its interiors; the project has
+  `[graphics] map_pictures`, so it is drawn into the map, its layer above
+  included —`test_map_picture.py`, the case `lantern`: in the dark, and
+  under the lantern with the camera scrolled; two goldens—. A Blurred
+  Line has the knob off, and Sunset Over Imdahl's maps are paintings, so
+  the ChipSet side of the rule runs only here. The task is
+  [`pictures-that-go-over-the-map-outside-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/pictures-that-go-over-the-map-outside-sunset.md).
 
 Of the seven assumptions about A Blurred Line the research found in the
 tools when it first wrote a game from scratch, four are gone —a debug map

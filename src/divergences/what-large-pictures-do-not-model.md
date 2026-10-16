@@ -49,7 +49,11 @@ and they do not do everything they do in RM2k:
   [Sunset Over Imdahl](../ports/sunset-over-imdahl/README.md). Since the
   same day a project can have the ones that stay put on a map drawn into
   the map instead —[Pictures drawn into the map](pictures-drawn-into-the-map.md)—;
-  Sunset does, and the rest of its pictures are still big ones.
+  Sunset does, and since 2026-10-16 Desert Nightmare too, whose ~150
+  `Lichteffekt_*` masks light its interiors and nights that way, and the
+  rest of their pictures are still big ones. A translucent big one the rule
+  does not take —zoomed, moved, placed by a variable— is listed in the
+  build's `degradations.json` as `translucent-picture-hides-the-map`.
 * **Showing it and erasing it turn the screen off**: measured, two frames
   when showing one and fourteen when erasing it, which reloads the map like
   the return from battle. The game's appear and go away over the black
