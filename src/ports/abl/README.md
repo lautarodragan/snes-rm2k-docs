@@ -8,6 +8,10 @@ behind each one is a draft or a task in the tasks repository, named here
 as text. Where the ROM does what RM2k does in another way, on purpose, is
 in the [divergences](../../divergences/README.md), not here.
 
+* **Some names are cut in the save slots**: a save whose leader is
+  Advocate, Royal Dalia or the ABL 2.0 save shows "Advocat", "Royal D" or
+  "ABL 2.0" where the original shows the whole name: the slot's name field
+  is seven letters. Draft: [`abl-the-last-leaders-names-are-cut-in-the-slot-screen`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-the-last-leaders-names-are-cut-in-the-slot-screen.md).
 * **Radin's Mix Formula and Sern's Weapon Forging do nothing**: chosen
   from Tech Skill they close the menu and nothing happens, where the
   original takes you to Radin's and Sern's menus. Emily's Change Tape
