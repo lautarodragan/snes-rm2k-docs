@@ -60,12 +60,6 @@ current: whoever fixes one removes its line in the same change.
   and the guard's scene there goes up the stairs to map 8 with the screen
   back, since the same day. Draft:
   [`zounds-pictures-and-the-picture-made-screens`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-pictures-and-the-picture-made-screens.md).
-* **On a real SNES the credits do not advance**: with the MSU-1 tracks on
-  an FX Pak, the game boots, the title works, and the credits on map 106
-  stay with their music whatever is pressed. In every emulator tried
-  —snes9x, bsnes, mesen-s, Mednafen's `snes_faust`— an A or B press after
-  the five seconds leaves them. Task:
-  [`zounds-the-credits-do-not-advance-on-the-console`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-the-credits-do-not-advance-on-the-console.md).
 * **Most dialogue is missing**: the boxes with accented letters and the
   hero's own name, `Unamë`, do not compile, because the font lacks those
   letters, and the pages that show them are left out. It is where the
