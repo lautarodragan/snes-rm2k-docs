@@ -73,8 +73,9 @@ background   544   512   480   448   416
 
 And it is the same with the background tilemap free or nailed at $5800:
 moving it doesn't shift the ceiling. What does change is which layouts
-respect the save-slot screen, which overwrites $2000..$4000 and counts on
-`load_map` to restore it: with the tilemap at $5800, 347 sprites leave 448
+respect the save-slot screen, which overwrites $2000..$4000 —and, like the
+pause menu, $4000..$4C00 with its cursor's BG1— and counts on `load_map` to
+restore it: with the tilemap at $5800, 347 sprites leave 448
 for the background; moving it, 480. That is what it was moved for.
 
 Two of the layouts are below the ceiling —"+bg" could give 544 and

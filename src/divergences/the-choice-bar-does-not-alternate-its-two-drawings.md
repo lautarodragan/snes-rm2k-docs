@@ -8,7 +8,9 @@ and RM2k alternates them every ten frames: easyrpg's `Window::Draw` draws
 21. The ROM draws **only the first one**, in the choice bar of the message
 window (`msg_bar_source` in `runtime/message_arrow.s` in the-advocate) and
 in all the screens that already had the bar —items, equipment, shop,
-battle—, which come from `Skin::cursor` in `rm2k-snes-screens`.
+battle, the actor choice, and since 2026-10-16 the pause menu's commands
+and the save slots—, which come from `Skin::cursor` in
+`rm2k-snes-screens`.
 
 ## Why
 
@@ -24,7 +26,8 @@ In *A Blurred Line* it is not seen: the two drawings of its System,
 `ablskin`, are identical pixel by pixel —a dark red, (83,0,0), with a
 transparent border—. Measured on 2026-10-04 with the 2015 RPG_RT under Wine:
 forty consecutive captures of the title menu and of a choice give the same
-color.
+color; on 2026-10-16, six of the pause menu over more than a second, the
+same bytes.
 
 ## How it looks today
 
