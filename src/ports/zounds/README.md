@@ -39,7 +39,8 @@ the port's project is `zounds/` in the-advocate-ports, built on 2026-10-15,
 The repository references 197 assets it never had —the RPG Maker 2003
 RTP, the 2000 RTP under other RTPs' names, and 55 that are nowhere—. On
 the port's branch each name has a stand-in: six songs that are A Blurred
-Line's, with the same name, are the real ones; twenty are the 2000 RTP's
+Line's, with the same name, are the real ones; seven more were found again
+by name in a public MIDI archive, for a private build only; twenty are the 2000 RTP's
 own files, found through EasyRPG's RTP table; the other 171 are a copy of
 some file of the game from the same folder, so a missing chipset is some
 chipset and a missing sound some sound. The debug enemy's numbers were
@@ -60,7 +61,7 @@ current: whoever fixes one removes its line in the same change.
   [`latin-1-letters-stop-a-box`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/latin-1-letters-stop-a-box.md).
 * **The stand-in assets**: wrong chipsets on the maps that asked for the
   RTP's or the lost ones, one sound for 113 missing sounds, one song for
-  ten missing songs. See above.
+  the three songs still missing (`waltz`, `boat1`, `boat2`). See above.
 * **Map 30 is left out**: 200x200, its cells do not fit WRAM. Draft:
   [`a-200x200-map-does-not-fit-the-cell-stream`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/a-200x200-map-does-not-fit-the-cell-stream.md).
 * **Four maps lose their events past the 120th**: the grids of info, rock
