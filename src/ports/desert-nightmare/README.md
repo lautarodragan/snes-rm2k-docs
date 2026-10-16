@@ -7,6 +7,9 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
+* **Coloured words in messages come out in the plain colour**: the console
+  drops RM2k's `\c[n]`. Task: [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md);
+  see [What message escapes do not model](../../divergences/what-message-escapes-do-not-model.md).
 * **The start menu ("With Intro / No Intro / Quit") shows over a pattern of
   garbage** instead of the burning face behind it. Draft:
   [`desert-nightmare-start-menu-over-garbage`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/desert-nightmare-start-menu-over-garbage.md).

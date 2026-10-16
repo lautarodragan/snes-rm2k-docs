@@ -33,6 +33,8 @@ as text.
 * **Messages show no faces, and coloured words come out in the plain
   colour.** Tasks: [`draw-the-faces`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/draw-the-faces.md)
   and [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
+* **Where a message has a half space, the words on both sides of it come
+  together**: the console drops RM2k's `\_`. See [What message escapes do not model](../../divergences/what-message-escapes-do-not-model.md).
 * **An icon in a message shows as `$` and a letter**: a sign reads "$s
   Graveyard" where RM2k draws one of the ExFont's symbols. Draft:
   [`exfont-glyphs-in-messages`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/exfont-glyphs-in-messages.md).
