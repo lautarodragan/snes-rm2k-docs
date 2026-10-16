@@ -338,7 +338,10 @@ each wrote theirs by hand once agreed on a wrong one. Ditto reads the
 formats **once**, with the defaults from liblcf's schema, and everything
 else reads what it wrote.
 
-- **Reads**: `RPG_RT.ldb`, `RPG_RT.lmt`, `Map*.lmu`.
+- **Reads**: `RPG_RT.ldb`, `RPG_RT.lmt`, `Map*.lmu`, of RPG Maker 2000 and
+  of 2003: the version is told by one field of the database, and it changes
+  what is written back and nothing of what is read —a flag field's width,
+  which sections are always there, three of an actor's defaults—.
 - **Writes**: the same document as JSON, in **two views from one run**: the
   *exact dump*, with the binary's own shape, which is the one it can write
   back; and the *resolved view*, every field written and every enum a
