@@ -77,9 +77,10 @@ current: whoever fixes one removes its line in the same change.
 * **Four maps lose their events past the 120th**: the grids of info, rock
   and coin events on maps 47, 51, 57 and 178. Draft:
   [`zounds-maps-over-120-events`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-maps-over-120-events.md).
-* **The five `.wav` songs are silent**: the title, battle and victory
-  themes, the mountains' (map 33) and the small caves' (maps 89, 91, 92
-  and 177), which the map tree sets; they want the MSU-1. Draft:
+* **Without MSU-1 the five `.wav` songs are silent**: the title, battle
+  and victory themes, the mountains' (map 33) and the small caves' (maps
+  89, 91, 92 and 177), which the map tree sets. With MSU-1 they play from
+  their tracks. Draft:
   [`zounds-wav-music-through-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-wav-music-through-msu-1.md).
 * **No boat**: the fishing game's vehicle. Draft:
   [`vehicles-enterexitvehicle-and-the-boat`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vehicles-enterexitvehicle-and-the-boat.md).

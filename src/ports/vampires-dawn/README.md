@@ -23,8 +23,8 @@ as text.
   lost—, and `Stone`'s frame loses most of its 57 colours to fit in the
   starting System's fifteen. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **An event page that uses any variable past the 256th does nothing**:
-  the game names 600, and those pages are left out. Which scenes that
-  touches was not looked at. Draft: [`variables-past-256`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-past-256.md).
+  the game names more, and those pages are left out. Which scenes that
+  touches was not looked at. Draft: [`variables-are-capped-at-256-slots`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/variables-are-capped-at-256-slots.md).
 * **Summoning and turning into a wolf or a bat do nothing**: their
   parallel common events do not compile, nor do `Lebensstatus`, `Geschick`
   and `Staerke`. Drafts:
