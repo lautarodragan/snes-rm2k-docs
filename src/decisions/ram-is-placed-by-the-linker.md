@@ -56,21 +56,37 @@ addresses chosen by hand.
   declaration, in the order `main.s` includes the files, is taken as
   sixteen bits by `ca65`, and the link fails with a range error: that use
   goes with `f:`. The header of `far_ram.s` says the same.
-* **The area is small**: far RAM is nearly full. `$7E2000-$7E7FFF` is the
-  map written by hand, with only small gaps; the upper half of `$7E` is
-  [the grid](../optimizations/lossless/the-map/the-grid-in-wram.md), and `$7F` is shared in time by
-  the battle and the loads. `FARBSS` lives in the unused end of the battle
-  scene's reservation. `just space` prints what it has left. **It grows
-  by taking over a stretch of the map written by hand**, moving whatever
-  lived there into the segment: the area is moved in `banks.rs`, and what
-  limited it gets an `.assert` against `__FARRAM_START__`, like the scene's
-  state.
-* **The map written by hand does not move**, because moving it moves the
-  ROM and some of it is saved or cleared as a block. The same holds for
-  what is already in `low_ram.s` and `zero_page.s`.
+* **The area is all of `$7E2000-$7E7FFF`**, since 2026-10-16: 24 KB
+  between bank 0's low RAM, which the console mirrors below, and
+  [the grid](../optimizations/lossless/the-map/the-grid-in-wram.md) in the
+  upper half of `$7E`; `$7F` is shared in time by the battle and the loads.
+  Until that day most of it was a map of addresses written by hand, with
+  holes between its regions and regions sized for any game, and `FARBSS`
+  was a stretch of it that grew by taking over its neighbours'; that day
+  every region went into the segment, as the
+  [measurement](../research/2026-10-15-the-wram-and-sram-map.md) suggested,
+  and the switches' table, `SWITCHES`, went into the same area. `just
+  space` prints what the whole area has left.
+* **A region whose size the game decides is sized by the game**: its name
+  and its why stay in `far_ram.s`, which comes before the cartridge's
+  `.inc`, and its `.res` goes in `far_ram_game.s`, right after it
+  —`ACTORS_N`, `VARIABLES_N`, `EXP_K`…—. That is also what keeps one table
+  of a game with many actors from running into the next.
+* **Many keep sixteen-bit names**: the code that runs with the data bank
+  at `$7E`, or points the WMADD window at them, names them by their
+  `.loword`, so the label is lowercase and the name the code uses is a
+  constant: `far_battle` and `FAR_BATTLE = .loword(far_battle)`. A block
+  walked as a range —what `clear_variables` clears in one pass, each line
+  of `save_table`— is one `.res` with offsets, or several in a row with an
+  `.assert` that they are adjacent: the linker places them in the order of
+  the text, and nothing else promises it. A size the `.res` needs before
+  the layout that defines it exists is written as a number, with an
+  `.assert` that it is exactly that (`TL_BYTES`).
+* **The same holds for what is in `low_ram.s` and `zero_page.s`**: it stays
+  where it is.
 * **What guards it**: ABL's `tests/tooling/test_wram_reservations.py`,
-  in the-advocate-ports, fails if a symbol that is not a `FARBSS` label
-  lands inside the area, with its bank or without it, which is what an
-  address chosen by hand there would be. What it does **not** see is the
-  map written by hand overlapping itself: that is guarded only by the
-  `.assert`s each range already had.
+  in the-advocate-ports, looks in the runtime's source for a far address
+  written by hand —a long one in the area, or a sixteen-bit one named
+  `FAR_*`—, since in the symbol table a `.loword` of a label and a number
+  written by hand look the same; and it checks that every long symbol in
+  the area is a label of the segments or falls inside one.
