@@ -16,15 +16,36 @@ as text.
 * **The hero walks through some walls.** On eight maps —2, 4, 5, 14, 61,
   62, 66 and 172— more events than the console holds are left out, and
   among them are invisible walls. Draft: [`invisible-walls-lost-when-trimming-events`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/invisible-walls-lost-when-trimming-events.md).
-* **In the gas station's toilet (map 7) the room goes dark for about eight
-  seconds**: a light mask that the original lays over the room at 35 %
-  replaces the map. Seen on 2026-10-06, not checked since. Draft:
-  [`pictures-that-go-over-the-map-outside-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/pictures-that-go-over-the-map-outside-sunset.md).
+* **The characters are not shaded by the lights.** Sandra stays at her
+  full colours in the WC's darkness and in every lit interior: the masks
+  are drawn into the map, not over her. See [Pictures drawn into the map](../../divergences/pictures-drawn-into-the-map.md).
 * **The menu and the other screens keep the intro's System** for the whole
   game: the original switches to `Systemset_Spiel` in its common event
   `Init`, and only the message window follows. See [What `ChangeSystemGraphics` does not model](../../divergences/what-changesystemgraphics-does-not-model.md).
 * **Coloured words come out in the plain colour.** Task:
   [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
+
+## The lights, drawn into the map (2026-10-16)
+
+The game lights its interiors and its nights with a `ShowPicture` per map:
+~150 `Lichteffekt_*` masks the size of the map, fixed to it, at
+transparency 20 to 65 —most 35 to 45—, a near-black with the lamps' cones
+in a gradient, never erased while one is there. Each was a big picture on
+the console, with the map hidden under it: the WC (map 7) went dark for the
+whole scene. Since this day the project has `[graphics] map_pictures`, and
+they are drawn into the map's tiles at their RM2k opacity, the layer above
+the hero included: 155 pictures in 126 of the 189 maps, in the build's
+log, map by map ("drawn into the map"). On the WC, the console's capture
+against RPG_RT 2015 under Wine differs by 0.35 of 31 levels at 15 bits over
+the mask; what the console's colour math would have given instead —a 50 %
+blend, a subtraction— is five times farther, and there is no layer free
+for it in mode 3 anyway. The measurement and the captures are in the task
+[`pictures-that-go-over-the-map-outside-sunset`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/pictures-that-go-over-the-map-outside-sunset.md);
+what is lost, in [Pictures drawn into the map](../../divergences/pictures-drawn-into-the-map.md).
+The translucent ones the rule does not take —the flashlight on 82, which a
+`MovePicture` moves; `GO_Text` and the intro's texts, fading over the
+screen— stay big ones, listed in `degradations.json` as
+`translucent-picture-hides-the-map`.
 
 ## What it leaves out (2026-10-11)
 
