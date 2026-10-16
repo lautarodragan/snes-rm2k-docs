@@ -51,3 +51,5 @@ By date:
   — 2026-10-15
 - [Zounds, an RPG Maker 2003 game](2026-10-15-zounds-an-rpg-maker-2003-game.md)
   — 2026-10-15
+- [The WRAM and SRAM map, measured](2026-10-15-the-wram-and-sram-map.md)
+  — 2026-10-15
