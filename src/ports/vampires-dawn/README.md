@@ -30,6 +30,10 @@ as text.
   and `Staerke`. Drafts:
   [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
   and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
+* **In the menu, the shops and the battle the umlauts are lost**: the text
+  screens draw ASCII, so "Rüstung" is "Rustung" and the gold is
+  "Goldmunzen" there, and an `ß` is `ss`. The message boxes draw them. See
+  [Letters the font does not have](../../divergences/letters-the-font-does-not-have.md).
 * **Coloured words come out in the plain colour.** Task:
   [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md).
 * **Where a message has a half space, the words on both sides of it come
