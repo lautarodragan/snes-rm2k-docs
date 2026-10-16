@@ -59,6 +59,11 @@ its own would keep it taken by someone who is not on screen: they share
 one, and the console uploads the colours of whoever leads. The exception
 is a leader who is also an NPC on that map —Kersh on ABL's maps 1 and 6,
 Talan on 3—, who gets their own, because both rows are in use at once.
+Their own **while one is left for the other events**: Dooms 2's first map
+shows every candidate of its character choice as an event, and they would
+take all eight. The ones past that share a palette of the map like any
+event, and their row of the actor table carries that palette's colours, so
+the console's upload when they lead repaints nothing.
 
 - **Saves**: sprite palettes.
 - **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`.
