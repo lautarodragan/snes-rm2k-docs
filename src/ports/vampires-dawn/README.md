@@ -30,6 +30,12 @@ as text.
   and `Staerke`. Drafts:
   [`vampires-dawn-summons-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-summons-dont-compile.md)
   and [`vampires-dawn-transformations-dont-compile`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vampires-dawn-transformations-dont-compile.md).
+  When the bat compiles, it will not fly over anything on the castle's
+  maps (28, 56, 89, 90): the game opens every cell for it by swapping the
+  map's tileset, which the console does not do. See
+  [What `ChangeMapTileset` does not model](../../divergences/what-changemaptileset-does-not-model.md);
+  draft:
+  [`changemaptileset-is-not-done`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-done.md).
 * **In the menu, the shops and the battle the umlauts are lost**: the text
   screens draw ASCII, so "Rüstung" is "Rustung" and the gold is
   "Goldmunzen" there, and an `ß` is `ss`. The message boxes draw them. See

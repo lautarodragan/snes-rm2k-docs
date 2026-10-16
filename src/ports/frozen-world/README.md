@@ -20,10 +20,13 @@ as text.
   keep the graphic they had where a route changes it: twenty of those
   changes find the ROM's table full and are ignored. Draft:
   [`frozen-world-map-2-route-graphic-changes-past-the-table`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-2-route-graphic-changes-past-the-table.md).
-* **Eight event pages on maps 9, 47, 99, 129 and 149 never run**: they
-  change the map's tileset, which is not done, and the page is left out
-  whole. Draft:
-  [`changemaptileset-is-not-compiled`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-compiled.md).
+* **When time stops or starts again, the place does not change**: in the
+  bazaar (maps 9 and 149) and in the temple's scenes (47 and 99) the
+  original swaps the map's tileset for one with the water and the
+  waterfalls still, and back; on the console the water keeps moving. See
+  [What `ChangeMapTileset` does not model](../../divergences/what-changemaptileset-does-not-model.md).
+  Draft:
+  [`changemaptileset-is-not-done`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-done.md).
 
 ## What it leaves out (2026-10-11)
 
