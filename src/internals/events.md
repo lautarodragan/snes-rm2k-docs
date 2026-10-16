@@ -19,7 +19,10 @@ keeps running after a `Teleport` to another map —a cutscene that jumps and
 keeps talking, and every case in the test suite— takes its bytecode along
 to `CODE_CARRY`, and the hero's forced route is copied whole: see
 `code_carry_before` in `runtime/decompress.s`. Jumps inside a page
-are relative to where it starts, so moving it is moving a pointer.
+are relative to where it starts, so moving it is moving a pointer. A
+**parallel** page that teleports carries nothing: as in RM2k, it goes on
+in the same frame until it waits or ends, and it ends with the old map
+(`op_teleport`, since 2026-10-16).
 
 **Except a map whose bytecode does not fit in WRAM**, since 2026-10-15:
 over its LZ2 reserve —19,968 bytes, which is also what `CODE_CARRY`
