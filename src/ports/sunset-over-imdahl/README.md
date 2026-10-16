@@ -7,6 +7,9 @@ current: whoever fixes one removes its line in the same change. The work
 behind each one is a draft or a task in the tasks repository, named here
 as text.
 
+* **Coloured words in messages come out in the plain colour**: the console
+  drops RM2k's `\c[n]`. Task: [`message-colours-and-speed`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/message-colours-and-speed.md);
+  see [What message escapes do not model](../../divergences/what-message-escapes-do-not-model.md).
 * **On a painted map, an event "above the hero" is drawn over the roofs.**
   The guard at (13,23) on the square, map 2, shows over the roof that
   should hide him. Draft: [`events-above-the-hero-over-the-painted-roofs`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/events-above-the-hero-over-the-painted-roofs.md).
