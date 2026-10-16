@@ -192,6 +192,7 @@
             - [The pictures over the map (2026-10-11)](ports/sunset-over-imdahl/research/2026-10-11-the-pictures-over-the-map.md)
             - [Mode 1 for the painted maps (2026-10-11)](ports/sunset-over-imdahl/research/2026-10-11-mode-1-for-the-painted-maps.md)
     - [Vampires Dawn](ports/vampires-dawn/README.md)
+    - [Zounds](ports/zounds/README.md)
 
 - [Contributing](contributing/README.md)
     - [JetBrains](contributing/jetbrains.md)
