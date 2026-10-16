@@ -23,6 +23,11 @@ as text.
   camera reverses while a row of the painting is still being uploaded.
   Measured, not noticed in play. Draft:
   [`camera-turning-back-over-a-half-uploaded-row-loses-a-frame`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/camera-turning-back-over-a-half-uploaded-row-loses-a-frame.md).
+* **Some scenes further on may not happen.** Nine pages of the game are
+  still left out by the event compiler, two of them scenes that start on
+  their own on the story's way (the statue in summer, map 14, and the
+  ruined plains, map 35); not played that far. Draft:
+  [`sunset-nine-pages-still-left-out`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sunset-nine-pages-still-left-out.md).
 * **The menu and the other screens keep the game's first System.** The
   opening scene (map 11) switches to `SaveMeny`, and only the message
   window follows: the dialogue comes out in its white text, the menu in
