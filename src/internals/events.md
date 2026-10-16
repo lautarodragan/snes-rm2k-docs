@@ -125,6 +125,8 @@ of its routine.
 | --- | --- | --- |
 | Stepping on an event, and stepping on it at the end of a forced route —a door is that: a touch page with a `Teleport` inside— | `try_touch`, `action_in_cell` | — |
 | Talking to an event with the action key | `try_action`, `queue_by_action` | — |
+| Which key a `KeyInputProc` reads —the pad's, by edge or held—, and the keys the pad does not have, which never come: shift, the numbers and the operators of RM2k 1.50's and 2003's long forms | `op_key`, `key_value` | the `KEY_INPUT_PROC` arm of the compiler, which reads each engine's layout and compiles the long forms that ask for the same keys as the short one |
+| An actor's data into a variable: its HP, SP and maximums; its level and experience —the experience saturates at the word—; its attack, defense, spirit and agility with the equipment; and what it has equipped | `actor_stat` in `level.s`, `actor_stat_other` in `actor_stats.s` | the `VAR_ACTOR` operand of `ControlVars`, in the compiler; `actor_level` in `rm2k-snes-mapdata`, for an actor who never fights |
 | An event's touch (trigger 2): touch from the hero's side, and an event on the hero's layer whose step the hero refuses | `queue_by_action`, `collide_with_hero` | `pages::triggerable`, in the compiler |
 | A page waiting its turn is one bit per event, not a queue | `mark_waiting` | — |
 | Which page is active, frozen until the refresh | `pick_pages`, `apply_pages` | — |
