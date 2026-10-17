@@ -44,6 +44,7 @@ One page per part of the port:
 * [The message window takes its colours from every background](lossy/colours.md#the-message-window-takes-its-colours-from-every-background)
 * [An event without a palette borrows one](lossy/colours.md#an-event-without-a-palette-borrows-one)
 * [The timer borrows a character's palette](lossy/colours.md#the-timer-borrows-a-characters-palette)
+* [The raindrops are lent a palette](lossy/colours.md#the-raindrops-are-lent-a-palette)
 * [Seven palettes on a map with battle animations](lossy/colours.md#seven-palettes-on-a-map-with-battle-animations)
 
 ## [Tiles](lossy/tiles.md)

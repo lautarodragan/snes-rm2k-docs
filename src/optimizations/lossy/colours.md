@@ -65,6 +65,28 @@ while they are visible.
   the idea of reserving a palette only while the timer runs, in the task
   [`timer-palette`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/timer-palette.md).
 
+## The raindrops are lent a palette
+
+The drops are three greys, a 4x16 streak each, and they go into the first
+sprite palette with room for the three —never a leader's, which the
+console overwrites, nor the timer's, which is uploaded untinted—, or a new
+one. With no room anywhere they are **lent** one, as the timer is: each
+palette takes in the greys it has room for, the farthest from what it has
+first, and the one whose nearest colours are then closest to the rest
+wins; what it still lacks is drawn with its nearest, and the converter
+says so with `rain-colors-lent`. Nobody loses a colour for it.
+
+Until 2026-10-17 such a map drew no rain: 47 of Vampires Dawn's, whose
+rain is a parallel common event that can run on any map, and 32 of A
+Blurred Line's, Paradise among them. taro's word that day is that the rain
+is not given up. Most greys end up a step away on one channel; the worst,
+Vampires Dawn's 50, draws the darkest as `[2, 4, 0]`.
+
+- **Loses**: the drops' exact greys, on the maps that lend.
+- **Where**: `rain_drops` and `lend_to_rain` in
+  `rm2k-snes/wally/src/sprites/extras.rs`.
+- **More**: the task [`rain-drops-cost-a-cache-its-slots`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/rain-drops-cost-a-cache-its-slots.md).
+
 ## Seven palettes on a map with battle animations
 
 The battle animation's box needs a sprite palette to itself, so on maps
