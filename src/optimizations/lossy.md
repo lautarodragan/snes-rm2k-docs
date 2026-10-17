@@ -74,7 +74,7 @@ One page per part of the port:
 
 * [Each sample at the rate its worst package allows](lossy/audio.md#each-sample-at-the-rate-its-worst-package-allows)
 * [Past 256 samples, the least used are dropped](lossy/audio.md#past-256-samples-the-least-used-are-dropped)
-* [A package that does not fit even at the minimum is relieved](lossy/audio.md#a-package-that-does-not-fit-even-at-the-minimum-is-relieved)
+* [A package whose music would go below 6 kHz is relieved](lossy/audio.md#a-package-whose-music-would-go-below-6-khz-is-relieved)
 
 ## [Tables of a fixed size](lossy/tables-of-a-fixed-size.md)
 
