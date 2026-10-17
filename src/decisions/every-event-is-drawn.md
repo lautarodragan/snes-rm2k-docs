@@ -37,3 +37,13 @@ fit with six borrowed graphics, the save point among them; the Hover-Tram
 (map 13) asked for eleven and went on to fit with two. The limit stopped
 being the number of palettes and became the sprite tile budget in VRAM:
 see [The VRAM split](../internals/vram.md).
+
+## How it applies
+
+Since 2026-10-17 the palette a graphic borrows is the one it is drawn
+nearest with —each pixel of the poses the map shows, times how far its
+colour lands—, and each missing colour goes to its nearest in CIE Lab, which
+sees hue where luma barely sees blue. The door above is the reason, told
+the other way round: counting the pixels that miss, over all twelve poses,
+lent a chest of greys the browns' palette on A Blurred Line's map 38. See
+[The palette a character is lent](../research/2026-10-17-the-palette-a-character-is-lent.md).
