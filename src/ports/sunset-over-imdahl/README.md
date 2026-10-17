@@ -19,6 +19,10 @@ as text.
   one of those; not checked. Draft: [`roof-edges-that-dont-fit-in-the-127`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/roof-edges-that-dont-fit-in-the-127.md).
 * **Characters are not shaded or lit** by the painted shadows, lights and
   fogs, which only touch the painting.
+* **In the busiest towns some people appear late**: when more of them are
+  on screen than the sprite slots hold, the last ones wait for someone to
+  leave. Measured on maps 3, 4, 12, 56 and 58, not looked at in play.
+  Draft: [`sunset-towns-crowds-wait-for-a-slot`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sunset-towns-crowds-wait-for-a-slot.md).
 * **Turning back while walking on a square can drop a frame**, when the
   camera reverses while a row of the painting is still being uploaded.
   Measured, not noticed in play. Draft:
