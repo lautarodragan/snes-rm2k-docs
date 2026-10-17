@@ -28,8 +28,13 @@ those entries merges colours.
 ## An event without a palette borrows one
 
 Every event is drawn: one that does not get its own palette takes the one
-it is missing the fewest colours from, each missing colour going to the
-nearest by luma.
+it is drawn nearest with —each pixel of the poses the map shows, times how
+far its colour lands—, each missing colour going to its nearest as it
+looks, in CIE Lab. Until 2026-10-17 it took the one it missed the fewest
+pixels of, over all twelve poses, and the nearest was by luma, which
+barely sees blue: a chest of greys on A Blurred Line's map 38 was drawn
+golden. The measurements of the change are in [The palette a character is
+lent](../../research/2026-10-17-the-palette-a-character-is-lent.md).
 
 - **Loses**: some colours of the borrowing graphic.
 - **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`.

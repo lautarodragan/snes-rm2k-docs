@@ -115,7 +115,9 @@ rest are grouped into palettes**, so that there is a single answer to
   one and a highlight of a few pixels survives. It never invents a colour,
   and it is deterministic. As a library it also groups similar 8x8 tiles
   into fewer, for a picture with more distinct tiles than video memory
-  holds.
+  holds, and measures how far apart two colours of the console look, in
+  CIE Lab, for whoever has to draw a colour with one it is not: Wally, with
+  a character drawn with someone else's palette.
 - **Refuses**: nothing it can answer; exit 1 when no amount of merging
   fits.
 
