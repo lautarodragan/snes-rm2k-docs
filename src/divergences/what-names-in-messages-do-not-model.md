@@ -32,10 +32,11 @@ What does not come out as in RM2k:
   not wrap a line a name makes long either, but its window is wider.
 * **A name longer than 32 letters is cut** in a message, so that the line's
   length still fits in its byte. No line that long fits the window anyway.
-* **A letter the console's font does not have** —RM2k's has Latin-1, the
-  console's only ASCII— is a `?` in a name written when the box opens, as in
-  the menu. A baked name with one leaves its page out, like any other text
-  with a letter the font lacks.
+* **A letter the console's text screens do not have** —RM2k's font has
+  Latin-1, the text screens draw ASCII— is its plain stand-in in a name
+  written when the box opens, as in the menu: Zounds' Unamë is Uname there.
+  A baked name is part of the box's text, and the box draws its Latin-1.
+  See [Letters the font does not have](letters-the-font-does-not-have.md).
 * **The menu and the slot screen cut a renamed name** to the cells they
   give a name, the same as the database's.
 * `EnterHeroName`, the screen where the player types a name, is still not
