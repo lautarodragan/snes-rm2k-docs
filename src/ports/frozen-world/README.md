@@ -16,6 +16,11 @@ as text.
   `Pollen`… `Buzzer2`— are left out and do not play there (read in the
   build's `degradations.json`, not played; nobody has fought yet). Task:
   [`frozen-world-map-1-audio-package-does-not-fit-in-aram`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-map-1-audio-package-does-not-fit-in-aram.md).
+* **Every turn of a fight goes black for about a second, twice**: going
+  from the command grid to the battle screen and back, the screen stays
+  black ~1 s and ~0.5 s while the sound chip gets each map's sounds again
+  (measured in an emulator, 2026-10-17). Draft:
+  [`frozen-world-every-turn-re-uploads-the-battle-screens-audio`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-every-turn-re-uploads-the-battle-screens-audio.md).
 * **Map 2 ("Plate Placement") is in, not played**, and some plates may
   keep the graphic they had where a route changes it: twenty of those
   changes find the ROM's table full and are ignored. Draft:

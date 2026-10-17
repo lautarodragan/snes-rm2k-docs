@@ -53,6 +53,14 @@ frame. Between those moments it would give the same result.
   `runtime/common_events.s`.
 - **More**: [The pure parallel common events run only when what they read changes](../../divergences/pure-parallel-common-events-run-only-when-what-they-read-changes.md).
 
+Since 2026-10-17 a map's parallel page follows the same rule when it is
+pure the same way, or also sets the panorama —`ChangePBG`—: The Frozen
+World's `BackdropSetter`, 113 `if switch → ChangePBG` on its battle screen,
+cost ~110 of the frame's 262 lines.
+
+- **Where**: `pure_page` in `rm2k-snes/events/src/commons.rs`, bit 7 of
+  the page's trigger; `pure_due` in `runtime/event_pages.s`.
+
 ## The refresh runs at three moments
 
 The active pages are recomputed when the interpreter lets go, at the
@@ -64,6 +72,23 @@ opcode reads which page is active.
   switches on by the bunch—.
 - **Where**: `pick_pages` and `apply_pages` in `runtime/event_pages.s`.
 - **More**: [The refresh runs at three moments](../../decisions/the-refresh-runs-at-three-moments.md).
+
+## A refresh only when something changes, and only for what changed
+
+A switch or a variable written with the value it already had asks for no
+refresh: a variable is noted with the value it had, and the refresh is
+asked only if, where it is looked at, it is not that value any more —a
+parallel page that computes a percentage in place goes through two other
+values every frame and comes back—. And a refresh sets up again only the
+events whose active page changed, which is RM2k's `SetupFromPage`.
+
+- **Saves**: CPU —The Frozen World's Plate Placement refreshed its 425
+  pages every frame and ran at six frames per tick; its battle screen at
+  four—.
+- **Where**: `set_switch`, `var_note` and `var_settle` in
+  `runtime/variables.s`; `page_applied` in `runtime/event_pages.s`.
+- **More**: the task
+  [`frozen-world-the-battle-maps-lag`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-the-battle-maps-lag.md).
 
 ## One dispatch table for the opcodes
 
