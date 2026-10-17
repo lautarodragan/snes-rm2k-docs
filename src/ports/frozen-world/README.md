@@ -28,6 +28,17 @@ as text.
   Draft:
   [`changemaptileset-is-not-done`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/changemaptileset-is-not-done.md).
 
+* **The B menu's lit option is a pale bar without its text**: the three
+  pictures of the menu share fifteen colours, and the white letters on the
+  white-to-blue bar come out the bar's colour. You still see which option
+  is lit. Draft:
+  [`frozen-world-the-menu-s-lit-option-loses-its-text`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-the-menu-s-lit-option-loses-its-text.md).
+* **On some maps the B menu still opens without being drawn**: the ones
+  with no room left in their sprites for its pictures, which the
+  converter's log names ("the common events' pictures … aren't drawn
+  here"). Draft:
+  [`frozen-world-the-b-menu-is-blind-on-the-maps-without-room`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/frozen-world-the-b-menu-is-blind-on-the-maps-without-room.md).
+
 ## What it leaves out (2026-10-11)
 
 Two maps, and the project now takes every map of the game:
