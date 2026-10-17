@@ -52,9 +52,16 @@ and events, with the fixed cap and with this.
 
 What is left are maps that are over even with none animating, or where
 animating would make events wait for a slot of the cache: Sunset's and
-Vampires Dawn's crowded towns, and A Blurred Line's 148, sixty-one
-torches whose ground is fused to fit. Vampires Dawn's 102 animates one of
-its three looks.
+Vampires Dawn's crowded towns. Vampires Dawn's 102 animates one of its
+three looks.
+
+A Blurred Line's 148 was there until 2026-10-16, and not for lack of room:
+its sixty-one torches have pages without commands, which the event
+compiler took to turn toward the hero, so each kept a slot of its own.
+RM2k never turns an event whose page has nothing to run, and since then
+they don't, and share two slots, one per speed. That fix also animates
+Vampires Dawn's 176; see
+[`abl-the-sixty-one-torches-of-map-148-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-the-sixty-one-torches-of-map-148-stand-still.md).
 
 ## How it looks today
 
@@ -72,9 +79,9 @@ lap, and its test's limit from five per hundred to six.
 ## When it stops being enough
 
 A map where what is left matters. One with fused ground could trade some
-more fused tiles for its animation —today the animation goes first, and
-A Blurred Line's 148 would need two slots—; one with a cache would need
-fewer events wanting a slot at once.
+more fused tiles for its animation —today the animation goes first—; one
+with a cache would need fewer events wanting a slot at once, which twins
+sharing a slot inside the cache would give: today nobody shares there.
 
 ## As an optimization
 
