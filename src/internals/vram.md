@@ -130,13 +130,27 @@ So in a map that doesn't fit even with turns, and **only there**, nobody
 has a slot: whoever comes on screen asks for one, the ROM uploads their
 pose, and a slot that has gone two frames without being drawn can be taken
 by someone else. The still ones that show the same pose share theirs, as
-always; the one that walks has its own while it is seen. `wally` decides it
+always; the one that walks has its own while it is seen, and so does a
+still one that animates, which its twins —the same look at the same speed—
+ask for too. `wally` decides it
 —`Mode::Cache` in its `map.rs`, with the count in `sprites::cache`—, and
 gives the cache all the blocks that fit in the best layout for its
-background; the table is emitted by `cache_table` in `rm2k-snes-mapdata`,
+background, after the extras; the table is emitted by `cache_table` in `rm2k-snes-mapdata`,
 and what the ROM does is in `runtime/cache_slots.s`. Map 127 ends up
-with the hero, the spin slot and 30 in the cache: 32 blocks, 512 tiles, in
-"+sprite".
+with the hero, the spin slot and 29 in the cache, and the raindrops where
+the thirty-second block would go: 512 tiles, in "+sprite".
+
+## The timer and the raindrops
+
+The timer's glyphs and the raindrops are a strip two tiles tall at the end
+of the sprite bank —eleven glyphs and three greys across—, read by tile
+number as 8x8 objects. Since 2026-10-17 the strip goes into **the columns
+the last row of blocks leaves free**, when it is partly taken and they are
+enough, and only otherwise starts a new row (`strip_base` in Wally's
+`sprites/extras.rs`). Until then it always started one, and in a map with a
+cache —which gets as many slots as fit after the extras— the rain cost up
+to four: Vampires Dawn's 51 went from 30 to 26 when its rain came back.
+Now it costs a slot only where the slots would fill the last row exactly.
 
 What is seen at once in map 127 can't be counted by the converter: the
 celebration and the dance that follows are never together, but by where

@@ -14,14 +14,23 @@ so all the ones with the same graphic, pose and speed show the same pose on
 every frame: **one uploads it and the rest are drawn with its slot**. The
 six torches of The Book of Three's opening hall cost four slots, one per
 speed. One that turns toward the hero, changes graphic with its page or is
-sent walking by a test page keeps a slot of its own, and in a map with a
-cache of slots nobody shares.
+sent walking by a test page keeps a slot of its own.
+
+**In a map with a cache of slots too**, since 2026-10-17: there nobody owns
+a slot, so the twins ask the cache for their leader's —the first by event
+index—, whichever of them comes into view first gets it and uploads its
+column, and the leader keeps it up to date even when it is out of view
+(`cache_want` and `cache_took` in `runtime/cache_slots.s`). And in a cache
+a twin that only appears and disappears with its page —a blank page and
+the lamp on a switch, as Sunset Over Imdahl's— shares as well, because its
+row walks like a walker's and the page only shows or hides it. Until that
+day each one that animated wanted a slot of its own while in view.
 
 A map whose slots don't fit **gives up whole looks** —a (CharSet, index,
 pose), all its speeds at once— from the one with the fewest events, until
 the map fits without losing anything else: before dropping its pictures,
 its battle animations, fusing its ground, or making events wait for a slot
-of the cache —where each one that animates wants a slot of its own while
+of the cache —where each speed of a look that animates wants a slot while
 in view—. In RM2k they all animate.
 
 Why by look and not event by event: two equal fountains, one moving and
@@ -63,6 +72,15 @@ they don't, and share two slots, one per speed. That fix also animates
 Vampires Dawn's 176; see
 [`abl-the-sixty-one-torches-of-map-148-stand-still`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-the-sixty-one-torches-of-map-148-stand-still.md).
 
+On 2026-10-17, with the-advocate `ceb31253` and the ports `bd92975`, the
+twins sharing inside a cache and the raindrops in the free columns of the
+last row of blocks —see [The VRAM split](../internals/vram.md)— took
+Vampires Dawn from 7 maps and 151 events to none, and Sunset Over Imdahl
+from 8 maps and 152 events to 4 and 81: its 1, 3, 12 and 14, painted towns
+where animating the rest would make events wait for a slot of the cache,
+or they wait already. See
+[`rain-drops-cost-a-cache-its-slots`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/rain-drops-cost-a-cache-its-slots.md).
+
 ## How it looks today
 
 On those maps, the still events of the looks given up stand still.
@@ -80,8 +98,10 @@ lap, and its test's limit from five per hundred to six.
 
 A map where what is left matters. One with fused ground could trade some
 more fused tiles for its animation —today the animation goes first—; one
-with a cache would need fewer events wanting a slot at once, which twins
-sharing a slot inside the cache would give: today nobody shares there.
+with a cache whose events wait for a slot even with nothing animating
+—Sunset Over Imdahl's towns, painted maps with sixteen blocks of sprites,
+four of them the battle animation's box— would need more room in VRAM, not
+fewer events wanting a slot.
 
 ## As an optimization
 

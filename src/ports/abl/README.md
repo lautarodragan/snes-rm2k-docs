@@ -25,10 +25,6 @@ in the [divergences](../../divergences/README.md), not here.
   seconds**: each new rain cuts the one still sounding instead of
   overlapping it. With MSU-1 it overlaps as in RM2k. Draft:
   [`abl-rain-cuts-itself-without-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-rain-cuts-itself-without-msu-1.md).
-* **It does not rain in Paradise**: when Talan follows the crying girl
-  the original starts the rain, and the port does not draw it —the map's
-  sprite palettes have no room for the drops—. Draft:
-  [`abl-it-does-not-rain-in-paradise`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/abl-it-does-not-rain-in-paradise.md).
 
 ## The port
 

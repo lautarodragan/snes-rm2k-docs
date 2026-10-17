@@ -28,8 +28,13 @@ those entries merges colours.
 ## An event without a palette borrows one
 
 Every event is drawn: one that does not get its own palette takes the one
-it is missing the fewest colours from, each missing colour going to the
-nearest by luma.
+it is drawn nearest with —each pixel of the poses the map shows, times how
+far its colour lands—, each missing colour going to its nearest as it
+looks, in CIE Lab. Until 2026-10-17 it took the one it missed the fewest
+pixels of, over all twelve poses, and the nearest was by luma, which
+barely sees blue: a chest of greys on A Blurred Line's map 38 was drawn
+golden. The measurements of the change are in [The palette a character is
+lent](../../research/2026-10-17-the-palette-a-character-is-lent.md).
 
 - **Loses**: some colours of the borrowing graphic.
 - **Where**: `drawable_npcs` in `rm2k-snes/wally/src/sprites/split.rs`.
@@ -64,6 +69,31 @@ while they are visible.
 - **More**: [The timer and its neighbor share colors](../../divergences/the-timer-and-its-neighbor-share-colors.md);
   the idea of reserving a palette only while the timer runs, in the task
   [`timer-palette`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/timer-palette.md).
+
+## The raindrops are lent a palette
+
+The drops are three greys, a 4x16 streak each, and they go into the first
+sprite palette with room for the three —never a leader's, which the
+console overwrites, nor the timer's, which is uploaded untinted—, or a new
+one. With no room anywhere they are **lent** one, as the timer is: each
+palette takes in the greys it has room for, the farthest from what it has
+first, and the one whose nearest colours are then closest to the rest
+wins; what it still lacks is drawn with its nearest, and the converter
+says so with `rain-colors-lent`. Nobody loses a colour for it.
+
+Until 2026-10-17 such a map drew no rain: 47 of Vampires Dawn's, whose
+rain is a parallel common event that can run on any map, and 32 of A
+Blurred Line's, Paradise among them. taro's word that day is that the rain
+is not given up. Near is measured in CIE Lab, as an event's lending is,
+so a grey goes to a grey: most end up a step or two away, and where the
+palette has a single grey the three shades are that one —Paradise, A
+Blurred Line's 108, draws its drops in `[8, 8, 8]`—.
+
+- **Loses**: the drops' exact greys, on the maps that lend, and on some
+  their three shades.
+- **Where**: `rain_drops` and `lend_to_rain` in
+  `rm2k-snes/wally/src/sprites/extras.rs`.
+- **More**: the task [`rain-drops-cost-a-cache-its-slots`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/rain-drops-cost-a-cache-its-slots.md).
 
 ## Seven palettes on a map with battle animations
 
