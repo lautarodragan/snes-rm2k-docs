@@ -58,15 +58,13 @@ current: whoever fixes one removes its line in the same change.
   then the action key takes it to the continent (107) and the cutscenes on
   maps 1, 4, 5 and 6, until the player walks on map 7, since 2026-10-16;
   and the guard's scene there goes up the stairs to map 8 with the screen
-  back, since the same day. Draft:
+  back, and the talk with the two guards there on to map 9, since the same
+  day. Draft:
   [`zounds-pictures-and-the-picture-made-screens`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-pictures-and-the-picture-made-screens.md).
-* **Most dialogue is missing**: the boxes with accented letters and the
-  hero's own name, `Unamë`, do not compile, because the font lacks those
-  letters, and the pages that show them are left out. It is where the
-  intro stops: on map 8, "To King's Room", the talk with the two guards
-  that leads on to the king is one of those pages, so the player walks
-  there and nothing happens. Draft:
-  [`latin-1-letters-stop-a-box`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/latin-1-letters-stop-a-box.md).
+* **In the menu, the shops and the battle the accents are lost**: the text
+  screens draw ASCII, so the hero is "Uname" there and an item's
+  "Líquido" is "Liquido". The message boxes draw them. See
+  [Letters the font does not have](../../divergences/letters-the-font-does-not-have.md).
 * **The stand-in assets**: wrong chipsets on the maps that asked for the
   RTP's or the lost ones, one sound for 113 missing sounds, one song for
   the three songs still missing (`waltz`, `boat1`, `boat2`). See above.
