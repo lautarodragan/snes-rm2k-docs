@@ -59,16 +59,21 @@ writes            --dsp_music-->        the SPC700 driver
   the theme that is playing and the new package don't fit together, the
   theme wins: [the playing theme wins and the effects
   wait](../decisions/the-playing-track-wins-and-the-sound-effects-wait.md).
-- **A package that does not fit in the ARAM even with every sample at the
-  minimum is relieved, not a stop** (`relief.rs`, since 2026-10-15): its
-  songs go separate —each uploaded when its `PlayBGM` asks for it, with a
-  pause, as `[music] apart_themes` does; all of them if none plays on
-  entering, from the end of the list until the rest fits if the first does—,
-  and then the sound effects at the end of its list are left out until the
-  music fits at the effects' own rate, 6 kHz. A package that fits at the
-  minimum is not touched, however low its music goes: how far a map's
-  effects push its music down is the game's decision by ear
-  (`paid_by_music`). Each relief is a loss in `degradations.json`
+- **A package whose music would go below 6 kHz is relieved** (`relief.rs`,
+  since 2026-10-15; at this floor since 2026-10-16): its songs go separate
+  —each uploaded when its `PlayBGM` asks for it, with a pause, as `[music]
+  apart_themes` does; all of them if none plays on entering, from the end of
+  the list until the rest fits if the first does—, and then the sound
+  effects at the end of its list are left out until the music fits at the
+  effects' own rate, 6 kHz. Whether it is relieved is asked with every music
+  sample at that rate —or its own, if lower— next to every effect. A
+  package whose music stays at 6 kHz or above is not touched: how far a
+  map's effects push its music down to there is the game's decision by ear
+  (`paid_by_music`). The floor is taro's, after hearing A Blurred Line's map
+  3 both ways: until then a package was relieved only when it did not fit
+  even with every sample at the minimum, so one a few bytes lighter than
+  another kept every effect with its music at ~4.5 kHz, and the other lost
+  effects with its music at 6. Each relief is a loss in `degradations.json`
   —`songs-uploaded-on-play`, `sound-effects-left-out`,
   `package-waits-for-playbgm`—, which the converter reads from the stage's
   `audio.json`. The case is The Frozen World's battle screen: six songs it
