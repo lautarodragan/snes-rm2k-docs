@@ -110,7 +110,11 @@ writes            --dsp_music-->        the SPC700 driver
   silences the SPC700 meanwhile. The number of each track is the theme's
   place in the game's `Music/` —`track_numbers` in `game.rs`—, so it
   doesn't depend on the cartridge; `rm2k-snes-msu` builds them
-  (`tracks.rs`). With MSU-1, a package doesn't upload the samples of the
+  (`tracks.rs`), from the MIDI, a replacement, or the game's own `.wav`.
+  A theme can be both a `.wav` and a `.mid` under the same name: the
+  SPC700 plays the MIDI and the track comes from the `.wav` —`song_path`
+  and `track_source` in `game.rs`—, which is how a recorded theme gets
+  music without MSU-1. With MSU-1, a package doesn't upload the samples of the
   themes that have a track, unless the track was missing from the card:
   `song_per_msu`, in `runtime/audio_package.s`.
 - **Effects with MSU-1**: while the SPC700 plays no music, the effects also

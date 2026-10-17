@@ -41,9 +41,13 @@ RTP, the 2000 RTP under other RTPs' names, and 55 that are nowhere—. On
 the port's branch each name has a stand-in: six songs that are A Blurred
 Line's, with the same name, are the real ones; seven more were found again
 by name in a public MIDI archive, for a private build only; twenty are the 2000 RTP's
-own files, found through EasyRPG's RTP table; the other 171 are a copy of
-some file of the game from the same folder, so a missing chipset is some
-chipset and a missing sound some sound. The debug enemy's numbers were
+own files, found through EasyRPG's RTP table; 35 of the RPG Maker 2003
+RTP's are EasyRPG's free RTP (CC BY 4.0) under the game's names, since
+2026-10-16 —EasyRPG has 35 of the 95 the game uses: six charsets, two
+chipsets, two facesets, a panorama, the System2 and 23 sounds—; the other
+136 are a copy of some file of the game from the same folder, so a missing
+chipset is some chipset and a missing sound some sound. The debug
+enemy's numbers were
 brought within sixteen bits. Task:
 [`zounds-the-repository-lacks-197-assets`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-the-repository-lacks-197-assets.md).
 
@@ -66,17 +70,20 @@ current: whoever fixes one removes its line in the same change.
   "Líquido" is "Liquido". The message boxes draw them. See
   [Letters the font does not have](../../divergences/letters-the-font-does-not-have.md).
 * **The stand-in assets**: wrong chipsets on the maps that asked for the
-  RTP's or the lost ones, one sound for 113 missing sounds, one song for
-  the three songs still missing (`waltz`, `boat1`, `boat2`). See above.
+  RTP's or the lost ones, one sound for 90 missing sounds, one song for
+  the three songs still missing (`waltz`, `boat1`, `boat2`); and the
+  EasyRPG RTP's charsets, faces and sounds look and sound unlike RPG Maker
+  2003's. See above.
 * **Map 30 is left out**: 200x200, its cells do not fit WRAM. Draft:
   [`a-200x200-map-does-not-fit-the-cell-stream`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/a-200x200-map-does-not-fit-the-cell-stream.md).
 * **Four maps lose their events past the 120th**: the grids of info, rock
   and coin events on maps 47, 51, 57 and 178. Draft:
   [`zounds-maps-over-120-events`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-maps-over-120-events.md).
-* **Without MSU-1 the five `.wav` songs are silent**: the title, battle
-  and victory themes, the mountains' (map 33) and the small caves' (maps
-  89, 91, 92 and 177), which the map tree sets. With MSU-1 they play from
-  their tracks. Draft:
-  [`zounds-wav-music-through-msu-1`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-wav-music-through-msu-1.md).
+* **Without MSU-1 four `.wav` songs are silent**: the battle and victory
+  themes, the mountains' (map 33) and the small caves' (maps 89, 91, 92
+  and 177), which the map tree sets; no MIDI of them was found. The title
+  theme plays a fan MIDI of it. With MSU-1 all five play from their
+  tracks. Draft:
+  [`zounds-four-wav-songs-without-a-midi`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/zounds-four-wav-songs-without-a-midi.md).
 * **No boat**: the fishing game's vehicle. Draft:
   [`vehicles-enterexitvehicle-and-the-boat`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/vehicles-enterexitvehicle-and-the-boat.md).
