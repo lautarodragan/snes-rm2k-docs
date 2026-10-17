@@ -146,6 +146,22 @@ nothing: in the celebration they are 26. The measurement of the whole game,
 and which aids were tried, in the task [`sprite-slot-cache`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/sprite-slot-cache.md) in
 the-advocate-work.
 
+## The small pictures go at the end of the sprite bank
+
+The `ShowPicture` pictures that go in sprites are part of the map's sprite
+bank: Wally puts their tiles after the characters', the timer's and the
+raindrops', from a row of blocks on, and they are uploaded with the map, so
+showing one uploads only its palette. The converter cuts each picture into
+**32x32 objects**, four to a row of blocks of the name grid, and since
+2026-10-16 a block with four of its sixteen 8x8 cells drawn or fewer goes as
+**8x8 objects** instead, whose tiles fill what the last row of blocks leaves
+to its right and then go after it; and **the same pixels take their tiles
+once** —the same file under two numbers, a zero that ten digits share—.
+Each object of a picture says its tile and its size in the map's
+`picture_data`: see `picture_tables` in rm2k-snes-mapdata and `pic_draw` in
+`runtime/picture_far.s`, in the-advocate. A map whose pictures do not fit any
+layout is converted again without them.
+
 ## A big picture doesn't use the layout
 
 A `ShowPicture` picture that covers the screen goes in BG1, in mode 1, with
