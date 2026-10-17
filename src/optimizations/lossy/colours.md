@@ -79,10 +79,13 @@ says so with `rain-colors-lent`. Nobody loses a colour for it.
 Until 2026-10-17 such a map drew no rain: 47 of Vampires Dawn's, whose
 rain is a parallel common event that can run on any map, and 32 of A
 Blurred Line's, Paradise among them. taro's word that day is that the rain
-is not given up. Most greys end up a step away on one channel; the worst,
-Vampires Dawn's 50, draws the darkest as `[2, 4, 0]`.
+is not given up. Near is measured in CIE Lab, as an event's lending is,
+so a grey goes to a grey: most end up a step or two away, and where the
+palette has a single grey the three shades are that one —Paradise, A
+Blurred Line's 108, draws its drops in `[8, 8, 8]`—.
 
-- **Loses**: the drops' exact greys, on the maps that lend.
+- **Loses**: the drops' exact greys, on the maps that lend, and on some
+  their three shades.
 - **Where**: `rain_drops` and `lend_to_rain` in
   `rm2k-snes/wally/src/sprites/extras.rs`.
 - **More**: the task [`rain-drops-cost-a-cache-its-slots`](https://github.com/lautarodragan/the-advocate-work/blob/main/tasks/rain-drops-cost-a-cache-its-slots.md).
