@@ -53,3 +53,25 @@ window up, and 7 is `vram_drain`'s general DMA every vblank—. One colour a
 line is what commercial games wrote to CGRAM in the horizontal blank; what
 the console can take was measured in section 2 of [The windows, made
 cheaper](../research/2026-10-11-the-windows-made-cheaper.md).
+
+## The small pictures take sprite palettes from the top
+
+A `ShowPicture` picture that goes in sprites draws with a whole sprite
+palette, counted **from the top** —7, then 6—: the map's characters take
+theirs from the bottom, and 4 to 7 are the ones the console's colour math
+can blend, which is what a half-transparent picture uses. How many the map
+leaves is Wally's, which leaves the pictures out as a whole when they do not
+fit.
+
+Since 2026-10-16 **the pictures of a map share palettes**: the converter
+puts a picture in the first palette that takes its colours —the ones it
+has, the ones that fit in what is left of fifteen, and the rest within two
+steps of 31 of one it has—, and each picture's entry in the map's table
+says which; the colours go in the cartridge once per palette. **A number the
+map tones** —a `ShowPicture` or `MovePicture` with a tone other than the
+neutral, as the event compiler's scan writes it down— shares only with
+itself, since the console tones a picture by toning its fifteen entries in
+`cgram_shadow`, and the vblank uploads the palettes a picture or a ramp left
+waiting. See `share_palettes` in `rm2k-snes/convert/src/pictures.rs` and
+`pic_palette` in `runtime/picture.s`, in the-advocate. Until that day each
+of the two slots the console had took a palette of its own, 7 and 6.
