@@ -20,7 +20,15 @@ write skills and the three permissions (save, menu, escape) —`pure` in
   `ChangeMainMenuAccess` or `ChangeEscapeAccess`.
 
 Between those moments it would give the same result every frame, so not
-running it does not change what is seen. In ABL there are three:
+running it does not change what is seen.
+
+**A map's parallel page follows the same rule** since 2026-10-17, when it
+is pure the same way or also sets the panorama (`ChangePBG`) —`pure_page`
+in the same file; the console has it in bit 7 of the page's trigger—. It
+runs on the frame after any of the above, after a `ChangePBG` from
+anywhere else, and after every refresh, which is when it may have become
+the active page. The Frozen World's `BackdropSetter`, on its battle screen,
+is one. In ABL there are three:
 2 `DisableSaving`, 8 `EnableSaving` and 37 `UpdateAG7 Skills`.
 
 ## Why
