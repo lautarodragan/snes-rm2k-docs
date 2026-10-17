@@ -14,12 +14,16 @@ does not fit, the map is built without them.
 
 ## Pictures in sprites: scaled, fifteen colours
 
-A small `ShowPicture` picture goes in sprites, with one sprite palette, and
-one tied to the screen is scaled from RM2k's 320x240 to the console's
-256x224.
+A small `ShowPicture` picture goes in sprites, in fifteen colours, and one
+tied to the screen is scaled from RM2k's 320x240 to the console's 256x224.
+The pictures of a map share sprite palettes when their colours fit
+together, the least used of them moved to the nearest the palette has, two
+steps of 31 at most.
 
-- **Loses**: gradients band; the scaling; transparency in three steps.
-- **Where**: `rm2k-snes/images/src/show_picture.rs`; `runtime/picture.s`.
+- **Loses**: gradients band; the scaling; transparency in three steps; a
+  shared picture's least used colours.
+- **Where**: `rm2k-snes/images/src/show_picture.rs`; `share_palettes` in
+  `rm2k-snes/convert/src/pictures.rs`; `runtime/picture.s`.
 - **More**: [What pictures as sprites do not model](../../divergences/what-pictures-as-sprites-do-not-model.md).
 
 ## Big pictures in mode 1, 105 colours

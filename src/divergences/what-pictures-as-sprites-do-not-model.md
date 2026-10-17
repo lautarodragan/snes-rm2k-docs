@@ -16,11 +16,25 @@ not do everything they do in RM2k:
   is the battle animation's box if it lands there: the hardware blends
   palettes 4 to 7 entirely. It is the `pic_blend` experiment, in
   `runtime/picture.s`, and it comes out with its commit.
-* **`MovePicture` neither moves nor enlarges**: it changes tone and
-  transparency. One that asks for another place or another zoom does not
-  compile and is accepted without being done.
-* **Two at a time**, one per number, the first two the map shows: the third
-  is not drawn.
+* **`MovePicture` does not enlarge**: it changes tone, transparency and
+  place —since 2026-10-16; until then not the place—, each picture with its
+  own ramp. One that asks for another zoom does not compile and is accepted
+  without being done. One that goes with the map stays where it is, as in
+  RM2k 2000; RM2k 2003 would move it.
+* **Sixteen numbers at a time on a map**, and what goes in is what the map's
+  characters leave: the pictures share the sprite palettes they get from
+  the top, and the 512 object tiles. A map whose pictures do not fit loses
+  all of them, not the last one: Zounds' menu on map 136, two faces of 180x59
+  and a bar as wide as the screen, needs 512 tiles. Until 2026-10-16 it was
+  two at a time, one palette each.
+* **Pictures that share a palette lose their least used colours** to the
+  nearest one the palette has, two steps of 31 away at most —the blends a
+  digit's scaling leaves at its edges—. A number the map tones does not
+  share: the console tones a picture by toning its palette.
+* **They count against the line's objects**: a block of a picture with four
+  of its sixteen cells drawn or fewer goes as 8x8 objects, and the console
+  shows 32 objects on a line. A picture over many characters on the same
+  lines can lose some of its pieces, or theirs.
 * **No rotation or waving, no enlarging, no saturation**, and nothing larger
   than 256x128: those belong to the BG1 plane (phase 3).
 * **Fifteen colors**, those of one sprite palette, counted by use: gradients
@@ -39,6 +53,11 @@ not do everything they do in RM2k:
 
 ## Measured
 
+On the test game's `test_pictures.py`, on 2026-10-16: six pictures on the
+meadow at once —three digits in one palette and one tile each, a panel, a
+second digit over it and a bar—, two of them sliding in sixty frames at the
+same time, and one toned without toning the others.
+
 On the `release` cartridge, on 2026-10-01: the sign on 4, the one on 81, the
 Fortitude's label on 95 and the shadow on 311 are drawn. The shadow lands in
 the same place on the map as in RPG_RT under Wine: its box gives
@@ -49,8 +68,11 @@ and the battle animation's box the eighth.
 ## When it stops being enough
 
 When 207 gets into the cartridge —the smoke is the only translucent one
-that is looked at up close— or the portable console, which shows nine at
-once.
+that is looked at up close— or the pictures of a common event compiled
+apart from the maps, which today are not shown at all: A Blurred Line's
+portable console, which shows nine at once, Zounds' pick-axe and notebook,
+Vampires Dawn's menus. See [More pictures at
+once](../research/2026-10-16-more-pictures-at-once.md).
 
 ## As an optimization
 
